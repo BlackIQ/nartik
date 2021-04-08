@@ -18,7 +18,7 @@
 <div class="container-fluid">
     <br>
     <div class="row">
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
 
         <div class="col-md-4">
             <h1 class="display-6 text-primary">ساخت حساب جدید</h1>
