@@ -1,9 +1,9 @@
 # NarTicks
 
-- **Nar**bon **Tick**ets web application, written in **PHP**.s
+- **Nar**bon **Tick**ets web application, written in **PHP**.
 
 ---
 
 For [Narbon](https://narbon.ir)
 
-**Neotrinost Inc. &copy; 2020 - 2021, All Rights Reserved**
+By **[Neotrinost](https://neotrinost.ir) Inc. &copy; 2020 - 2021, All Rights Reserved**
