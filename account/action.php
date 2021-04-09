@@ -19,10 +19,13 @@
     // REGISTER USER
     if (isset($_POST['reg_user'])) {
         // receive all input values from the form
-        $username = mysqli_real_escape_string($connection, $_POST['username']);
+        $name = mysqli_real_escape_string($connection, $_POST['fname']);
+        $lastname = mysqli_real_escape_string($connection, $_POST['lname']);
+        $phone = mysqli_real_escape_string($connection, $_POST['phone']);
         $email = mysqli_real_escape_string($connection, $_POST['email']);
-        $password_1 = mysqli_real_escape_string($connection, $_POST['password_1']);
-        $password_2 = mysqli_real_escape_string($connection, $_POST['password_2']);
+        $pass = mysqli_real_escape_string($connection, $_POST['pass']);
+        $conpass = mysqli_real_escape_string($connection, $_POST['conpass']);
+        $company = mysqli_real_escape_string($connection, $_POST['company']);
 
         // form validation: ensure that the form is correctly filled
         if (empty($username)) {
@@ -34,21 +37,20 @@
         if (empty($password_1)) {
             array_push($errors, "Password is required");
         }
-
-        if ($password_1 != $password_2) {
-                array_push($errors, "The two passwords do not match");
+        
+       if ($pass != $conpass) {
+            array_push($errors, "The two passwords do not match");
         }
 
         // register user if there are no errors in the form
         if (count($errors) == 0) {
-            $password = md5($password_1);//encrypt the password before saving in the database
-            $query = "INSERT INTO users (username, email, password) 
-                              VALUES('$username', '$email', '$password')";
+            $password = md5($pass);//encrypt the password before saving in the database
+            $query = "INSERT INTO pending (name, lastname, phone, email, password, company) VALUES ($name, $lastname, $phone, $email, $password, $company)";
             mysqli_query($connection, $query);
 
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
-            header('location: .');
+            header('location: http://192.168.1.6/NarTik');
         }
 
     }
