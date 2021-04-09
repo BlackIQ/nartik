@@ -24,45 +24,45 @@
                     <form action="index.php" method="post">
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control border-primary text-primary" placeholder="نام"
+                                <input type="text" name="fname" class="form-control border-primary text-primary" placeholder="نام"
                                        aria-label="نام">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control border-primary text-primary"
+                                <input type="text" name="lname" class="form-control border-primary text-primary"
                                        placeholder="نام خانوادگی" aria-label="نام خانوادگی">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control border-primary text-primary"
+                                <input type="text" name="phone" class="form-control border-primary text-primary"
                                        placeholder="شماره همراه" aria-label="شماره همراه">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control border-primary text-primary" placeholder="ایمیل"
+                                <input type="text" name="email" class="form-control border-primary text-primary" placeholder="ایمیل"
                                        aria-label="ایمیل">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <input type="password" class="form-control border-primary text-primary" placeholder="رمز"
+                                <input type="password" name="pass" class="form-control border-primary text-primary" placeholder="رمز"
                                        aria-label="رمز">
                             </div>
                             <div class="col">
-                                <input type="password" class="form-control border-primary text-primary"
+                                <input type="password" name="conpass" class="form-control border-primary text-primary"
                                        placeholder="تایید رمز" aria-label="تایید رمز">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <select class="form-control border-primary text-primary">
+                                <select name="company" class="form-control border-primary text-primary">
                                     <option selected>انتخاب شرکت</option>
-                                    <option>Company 1</option>
-                                    <option>Company 2</option>
-                                    <option>Company 3</option>
-                                    <option>Company 4</option>
+                                    <option value="1">Company 1</option>
+                                    <option value="2">Company 2</option>
+                                    <option value="3">Company 3</option>
+                                    <option value="4">Company 4</option>
                                 </select>
                             </div>
                         </div>
