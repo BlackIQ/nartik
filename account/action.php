@@ -52,7 +52,7 @@
 
     // LOGIN USER
     if (isset($_POST['login_user'])) {
-        $email = mysqli_real_escape_string($connection, $_POST['username']);
+        $email = mysqli_real_escape_string($connection, $_POST['email']);
         $password = mysqli_real_escape_string($connection, $_POST['password']);
 
         if (empty($email)) {
@@ -68,12 +68,13 @@
             $results = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($results) == 1) {
-                    $_SESSION['username'] = $username;
-                    $_SESSION['success'] = "You are now logged in";
-                    header('location: .');
+                $_SESSION['status'] = true;
+                $_SESSION['username'] = $lastname;
+                $_SESSION['success'] = "You are now logged in";
+                header('location: http://192.168.1.6/NarTik');
             }
             else {
-                    array_push($errors, "Wrong username/password combination");
+                array_push($errors, "Wrong username/password combination");
             }
         }
     }
