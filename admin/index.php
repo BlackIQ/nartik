@@ -2,8 +2,6 @@
 
 $ip = "127.0.0.1";
 
-$_SESSION['person'] = "admin";
-
 if ($_SESSION['person'] == "admin") {
     
 }
@@ -30,35 +28,37 @@ $result = mysqli_query($conn, $sql);
         <title>Admin Page</title>
     </head>
     <body>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Company</th>
-                    <th>Accept or Reject</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            ?>
-                            <tr>
-                                <th><?php echo $row['name']; ?></th>
-                                <td><?php echo $row['lastname']; ?></td>
-                                <td><?php echo $row['phone']; ?></td>
-                                <td><?php echo $row['email']; ?></td>
-                                <td><?php echo $row['company']; ?></td>
-                                <td>+ | -</td>
-                            </tr>
-                            <?php
+        <div class="container">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Company</th>
+                        <th>Accept or Reject</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
+                                <tr>
+                                    <th><?php echo $row['name']; ?></th>
+                                    <td><?php echo $row['lastname']; ?></td>
+                                    <td><?php echo $row['phone']; ?></td>
+                                    <td><?php echo $row['email']; ?></td>
+                                    <td><?php echo $row['company']; ?></td>
+                                    <td>+ | -</td>
+                                </tr>
+                                <?php
+                            }
                         }
-                    }
-                ?>
-            </tbody>
-        </table>
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
