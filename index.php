@@ -17,7 +17,12 @@ while ($row = mysqli_fetch_assoc($res)) {
 }
 
 if ($_SESSION['status'] == true) {
-    header("Location: http://$ip/NarTik/dashboard");
+    if ($_SESSION['person'] == "admin") {
+        header("Location: http://$ip/NarTik/admin");
+    }
+    else {
+        header("Location: http://$ip/NarTik/dashboard");
+    }
 }
 else {
     header("Location: http://$ip/NarTik/account");
