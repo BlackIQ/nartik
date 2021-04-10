@@ -91,14 +91,14 @@ if ($_SESSION['status'] == true) {
                     <hr class="border-primary border">
                     <br>
                     <form action="index.php" method="post">
-                        <?php include('server/errors.php'); ?>
+                        <?php include('error.php'); ?>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control border-primary text-primary" placeholder="ایمیل"
+                                <input type="text" name="email" class="form-control border-primary text-primary" placeholder="ایمیل"
                                        aria-label="ایمیل">
                             </div>
                             <div class="col">
-                                <input type="password" class="form-control border-primary text-primary"
+                                <input type="password" name="password" class="form-control border-primary text-primary"
                                        placeholder="رمز حساب" aria-label="رمز جساب">
                             </div>
                         </div>
