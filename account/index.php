@@ -1,4 +1,12 @@
-<?php include('action.php'); ?>
+<?php
+
+include('action.php');
+
+if ($_SESSION['status'] == true) {
+    header("Location: http://127.0.0.1/NarTik");
+}
+
+?>
 
 <!doctype html>
 <html lang="fa" dir="rtl">
@@ -22,6 +30,7 @@
                     <hr class="border-primary border">
                     <br>
                     <form action="index.php" method="post">
+                        <?php include('error.php'); ?>
                         <div class="row">
                             <div class="col">
                                 <input type="text" name="fname" class="form-control border-primary text-primary" placeholder="نام"
@@ -67,7 +76,7 @@
                             </div>
                         </div>
                         <br>
-                        <button type="submit" name="reg_user" class="btn btn-primary">ساخت حساب</button>
+                        <button type="submit" id="reg_user" name="reg_user" class="btn btn-primary">ساخت حساب</button>
                     </form>
                     <br>
                     <br>
@@ -80,6 +89,7 @@
                     <hr class="border-primary border">
                     <br>
                     <form action="index.php" method="post">
+                        <?php include('server/errors.php'); ?>
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="form-control border-primary text-primary" placeholder="ایمیل"
