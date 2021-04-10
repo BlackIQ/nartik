@@ -37,7 +37,7 @@
             $query = "INSERT INTO pending (name, lastname, phone, email, password, company) VALUES ('$name', '$lastname', '$phone', '$email', '$password', '$company')";
             if (mysqli_query($connection, $query)) {
                 $_SESSION['status'] = true;
-                $_SESSION['username'] = $lastname;
+                $_SESSION['email'] = $email;
                 $_SESSION['success'] = "You are now logged in";
                 header('location: http://192.168.1.6/NarTik');
             }
@@ -63,13 +63,13 @@
         }
 
         if (count($errors) == 0) {
-            $password = md5($password);
+//            $password = md5($password);
             $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
             $results = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($results) == 1) {
                 $_SESSION['status'] = true;
-                $_SESSION['username'] = $lastname;
+                $_SESSION['email'] = $email;
                 $_SESSION['success'] = "You are now logged in";
                 header('location: http://192.168.1.6/NarTik');
             }
