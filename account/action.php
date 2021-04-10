@@ -26,17 +26,6 @@
         $pass = mysqli_real_escape_string($connection, $_POST['pass']);
         $conpass = mysqli_real_escape_string($connection, $_POST['conpass']);
         $company = mysqli_real_escape_string($connection, $_POST['company']);
-
-        // form validation: ensure that the form is correctly filled
-        if (empty($username)) {
-            array_push($errors, "Username is required");
-        }
-        if (empty($email)) {
-            array_push($errors, "Email is required");
-        }
-        if (empty($password_1)) {
-            array_push($errors, "Password is required");
-        }
         
        if ($pass != $conpass) {
             array_push($errors, "The two passwords do not match");
@@ -45,7 +34,7 @@
         // register user if there are no errors in the form
         if (count($errors) == 0) {
             $password = md5($pass);//encrypt the password before saving in the database
-            $query = "INSERT INTO pending (name, lastname, phone, email, password, company) VALUES ($name, $lastname, $phone, $email, $password, $company)";
+            $query = "INSERT INTO pending (name, lastname, phone, email, password, company) VALUES ('$name', '$lastname', '$phone', '$email', '$password', '$company')";
             if (mysqli_query($connection, $query)) {
                 $_SESSION['status'] = true;
                 $_SESSION['username'] = $username;
