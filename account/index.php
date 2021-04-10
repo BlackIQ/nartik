@@ -3,7 +3,7 @@
 include('action.php');
 
 if ($_SESSION['status'] == true) {
-    header("Location: http://127.0.0.1/NarTik");
+    header("Location: http://192.168.1.6/NarTik");
 }
 
 ?>
