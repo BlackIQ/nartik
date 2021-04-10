@@ -37,7 +37,7 @@
             $query = "INSERT INTO pending (name, lastname, phone, email, password, company) VALUES ('$name', '$lastname', '$phone', '$email', '$password', '$company')";
             if (mysqli_query($connection, $query)) {
                 $_SESSION['status'] = true;
-                $_SESSION['username'] = $username;
+                $_SESSION['username'] = $lastname;
                 $_SESSION['success'] = "You are now logged in";
                 header('location: http://192.168.1.6/NarTik');
             }
