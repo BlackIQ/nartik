@@ -41,7 +41,7 @@
         // register user if there are no errors in the form
         if (count($errors) == 0) {
             $password = md5($pass);//encrypt the password before saving in the database
-            $query = "INSERT INTO pending (name, lastname, phone, email, password, company) VALUES ('$name', '$lastname', '$phone', '$email', '$password', '$company')";
+            $query = "INSERT INTO pending (firstname, lastnama, phone, email, password, company) VALUES ('$name', '$lastname', '$phone', '$email', '$password', '$company')";
             if (mysqli_query($connection, $query)) {
                 $_SESSION['status'] = true;
                 $_SESSION['email'] = $email;
