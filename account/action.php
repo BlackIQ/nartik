@@ -61,7 +61,7 @@
     if (isset($_POST['login_user'])) {
         $email = mysqli_real_escape_string($connection, $_POST['email']);
         $password = mysqli_real_escape_string($connection, $_POST['password']);
-
+        
         if (empty($email)) {
             array_push($errors, "Email is required");
         }
@@ -77,6 +77,7 @@
             if (mysqli_num_rows($results) == 1) {
                 $_SESSION['status'] = true;
                 $_SESSION['email'] = $email;
+                $_SESSION['person'] = "admin";
                 $_SESSION['success'] = "You are now logged in";
                 header('location: http://$ip/NarTik');
             }
