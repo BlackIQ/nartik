@@ -1,10 +1,14 @@
 <?php
 
+session_start();
+
+$ip = "127.0.0.1";
+
 if ($_SESSION['status'] == true) {
     echo $_SESSION['username'];
 }
 else {
-    header("Location: http://192.168.1.6/NarTik");
+    header("Location: http://$ip/NarTik/account");
 }
 
 ?>
