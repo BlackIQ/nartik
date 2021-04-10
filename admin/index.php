@@ -14,19 +14,11 @@ while ($row = mysqli_fetch_assoc($res)) {
     $ip = $row['ip'];
 }
 
-if ($_SESSION['person'] == "admin") {
-    
-}
-else {
-    header("Location: http://$ip/NarTik");
-}
+$_SESSION['person'] = "admin";
 
-$server = "localhost";
-$user = "narbon";
-$passwd = "narbon";
-$db = "nartik";
-
-$conn = mysqli_connect($server, $user, $passwd, $db);
+if ($_SESSION['person'] != "admin") {
+    header("Location: http://$ip/NarTik/dashboard");
+}
 
 $sql = "SELECT * FROM pending";
 $result = mysqli_query($conn, $sql);
@@ -41,6 +33,7 @@ $result = mysqli_query($conn, $sql);
     </head>
     <body>
         <div class="container">
+            <h1><?php echo $_SESSION['confirm']; ?></h1>
             <table class="table table-bordered text-center">
                 <thead>
                     <tr>
@@ -56,14 +49,19 @@ $result = mysqli_query($conn, $sql);
                     <?php
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
+                                $mail = $row['email'];
                                 ?>
                                 <tr>
-                                    <th><?php echo $row['name']; ?></th>
-                                    <td><?php echo $row['lastname']; ?></td>
+                                    <th><?php echo $row['firstname']; ?></th>
+                                    <td><?php echo $row['lastnama']; ?></td>
                                     <td><?php echo $row['phone']; ?></td>
                                     <td><?php echo $row['email']; ?></td>
                                     <td><?php echo $row['company']; ?></td>
-                                    <td>+ | -</td>
+                                    <td>
+                                        <a href="confirm.php?email=<?php echo $mail; ?>">+</a>
+                                        |
+                                        <a href="confirm.php?email=<?php echo $mail; ?>">-</a>
+                                    </td>
                                 </tr>
                                 <?php
                             }
