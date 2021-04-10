@@ -1,10 +1,14 @@
 <?php
 
+session_start();
+
+$ip = "127.0.0.1";
+
 if ($_SESSION['status'] == true) {
-    header("Location: http://192.168.1.6/NarTik/dashboard");
+    header("Location: http://$ip/NarTik/dashboard");
 }
 else {
-    header("Location: http://192.168.1.6/NarTik/account");
+    header("Location: http://$ip/NarTik/account");
 }
 
 ?>
