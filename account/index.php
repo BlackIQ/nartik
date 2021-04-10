@@ -2,8 +2,6 @@
 
 include('action.php');
 
-$ip = "127.0.0.1";
-
 if ($_SESSION['status'] == true) {
     header("Location: http://$ip/NarTik/dashboard");
 }

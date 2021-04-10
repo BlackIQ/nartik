@@ -1,6 +1,6 @@
 <?php
     session_start();
-
+    
     // variable declaration
     $username = "";
     $email    = "";
@@ -16,6 +16,13 @@
     // Create Connection
     $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
 
+    $getip = "SELECT * FROM development";
+    $res = mysqli_query($connection, $getip);
+
+    while ($row = mysqli_fetch_assoc($res)) {
+        $ip = $row['ip'];
+    }
+    
     // REGISTER USER
     if (isset($_POST['reg_user'])) {
         // receive all input values from the form
@@ -39,7 +46,7 @@
                 $_SESSION['status'] = true;
                 $_SESSION['email'] = $email;
                 $_SESSION['success'] = "You are now logged in";
-                header('location: http://192.168.1.6/NarTik');
+                header('location: http://$ip/NarTik');
             }
             else {
                 array_push($errors, mysqli_error($connection));
@@ -71,7 +78,7 @@
                 $_SESSION['status'] = true;
                 $_SESSION['email'] = $email;
                 $_SESSION['success'] = "You are now logged in";
-                header('location: http://192.168.1.6/NarTik');
+                header('location: http://$ip/NarTik');
             }
             else {
                 array_push($errors, "Wrong username/password combination");
