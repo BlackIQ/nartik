@@ -46,11 +46,15 @@
         if (count($errors) == 0) {
             $password = md5($pass);//encrypt the password before saving in the database
             $query = "INSERT INTO pending (name, lastname, phone, email, password, company) VALUES ($name, $lastname, $phone, $email, $password, $company)";
-            mysqli_query($connection, $query);
-
-            $_SESSION['username'] = $username;
-            $_SESSION['success'] = "You are now logged in";
-            header('location: http://192.168.1.6/NarTik');
+            if (mysqli_query($connection, $query)) {
+                $_SESSION['status'] = true;
+                $_SESSION['username'] = $username;
+                $_SESSION['success'] = "You are now logged in";
+                header('location: http://192.168.1.6/NarTik');
+            }
+            else {
+                array_push($errors, mysqli_error($connection));
+            }
         }
 
     }
