@@ -1,8 +1,8 @@
--- MariaDB dump 10.18  Distrib 10.5.8-MariaDB, for Linux (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.47-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: nartik
 -- ------------------------------------------------------
--- Server version	10.5.8-MariaDB
+-- Server version	10.1.47-MariaDB-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `admin` (
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` text COLLATE utf8mb4_unicode_ci,
+  `lastname` text COLLATE utf8mb4_unicode_ci,
+  `phone` text COLLATE utf8mb4_unicode_ci,
+  `email` text COLLATE utf8mb4_unicode_ci,
+  `password` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`row`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `admin`
+--
+
+LOCK TABLES `admin` WRITE;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES (1,'amir','mohammadi','09014784362','amir@yahoo.com','0481244859');
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `development`
 --
 
@@ -23,7 +51,7 @@ DROP TABLE IF EXISTS `development`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `development` (
-  `ip` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `ip` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -33,7 +61,7 @@ CREATE TABLE `development` (
 
 LOCK TABLES `development` WRITE;
 /*!40000 ALTER TABLE `development` DISABLE KEYS */;
-INSERT INTO `development` VALUES ('192.168.1.6');
+INSERT INTO `development` VALUES ('office.narbon.ir:4488');
 /*!40000 ALTER TABLE `development` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -46,12 +74,12 @@ DROP TABLE IF EXISTS `pending`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pending` (
   `row` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lastnama` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `firstname` text COLLATE utf8mb4_unicode_ci,
+  `lastnama` text COLLATE utf8mb4_unicode_ci,
+  `phone` text COLLATE utf8mb4_unicode_ci,
+  `email` text COLLATE utf8mb4_unicode_ci,
+  `password` text COLLATE utf8mb4_unicode_ci,
+  `company` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -75,12 +103,12 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `row` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lastnama` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `firstname` text COLLATE utf8mb4_unicode_ci,
+  `lastnama` text COLLATE utf8mb4_unicode_ci,
+  `phone` text COLLATE utf8mb4_unicode_ci,
+  `email` text COLLATE utf8mb4_unicode_ci,
+  `password` text COLLATE utf8mb4_unicode_ci,
+  `company` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -104,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-12  0:38:32
+-- Dump completed on 2021-04-12 13:34:10
