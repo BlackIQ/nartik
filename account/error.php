@@ -1,9 +1,8 @@
 <?php  if (count($errors) > 0) : ?>
-    <script>
-        window.alert(
-            <?php foreach ($errors as $error) : ?>
-                <?php echo "$error"; ?>
-            <?php endforeach ?>
-        );
-    </script>
+    <div class="alert alert-danger text-center" role="alert">
+        <?php foreach ($errors as $error) : ?>
+            <h4><?php echo $error ?></h4>
+        <?php endforeach ?>
+    </div>
+    <br>
 <?php  endif ?>
