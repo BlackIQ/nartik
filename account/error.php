@@ -2,7 +2,7 @@
     <script>
         window.alert(
             <?php foreach ($errors as $error) : ?>
-                <?php echo $error ?>
+                <?php echo "$error"; ?>
             <?php endforeach ?>
         );
     </script>
