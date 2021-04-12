@@ -57,7 +57,7 @@ if (mysqli_num_rows($result) > 0) {
             <h4 class="alert-heading">خوش آمدید <?php echo $fname; ?></h4>
             <p>شما میتوانید از حساب خود هم اکنون استفاده کنید.</p>
             <hr>
-            <p class="mb-0">تست فوتر</p>
+            <p class="mb-0"><a href="../account/logout.php">خروج از حساب کاربری</a></p>
         </div>
     </div>
 </div>
