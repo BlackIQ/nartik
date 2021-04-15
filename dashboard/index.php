@@ -1,9 +1,6 @@
 <?php
 include("check.php");
-//include("include/data.php");
-
-$icode = $_SESSION['icode'];
-
+include("include/data.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +8,7 @@ $icode = $_SESSION['icode'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Narbon - Dashboard</title>
+    <title>NarTik - Dashboard</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/datepicker3.css" rel="stylesheet">
@@ -60,8 +57,8 @@ include("panels/sidebar.php");
                     </span>
                 </div>
                 <div class="panel-body">
-                    <div>
-                        <form>
+                    <div class="container">
+                        <form class="col-md-8">
                             <div class="form-group">
                                 <label for="title">Title of report</label>
                                 <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Title of report">
@@ -69,6 +66,10 @@ include("panels/sidebar.php");
                             <div class="form-group">
                                 <label for="des">Explanation</label>
                                 <input type="des" class="form-control" id="des" aria-describedby="des" placeholder="Explanation">
+                            </div>
+                            <div class="form-group">
+                                <label for="record">Record your voice</label>
+                                <p class="text-primary"><i class="fa fa-microphone"></i></p>
                             </div>
                             <button type="submit" class="btn btn-primary">Report</button>
                         </form>
