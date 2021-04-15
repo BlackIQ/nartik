@@ -47,7 +47,7 @@ include("panels/sidebar.php");
 
     <div class="panel panel-container">
         <?php
-        include("pack/panels/bar.php");
+        include("panels/bar.php");
         ?>
     </div>
     <div class="row">
@@ -79,7 +79,7 @@ include("panels/sidebar.php");
     </div><!--/.row-->
 
     <?php
-    include("pack/panels/footer.php");
+    include("panels/footer.php");
     ?>
 </div>    <!--/.main-->
 
