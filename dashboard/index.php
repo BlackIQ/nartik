@@ -1,66 +1,107 @@
 <?php
+include("check.php");
+//include("include/data.php");
 
-session_start();
-
-$server = "localhost";
-$user = "narbon";
-$passwd = "narbon";
-$db = "nartik";
-
-$conn = mysqli_connect($server, $user, $passwd, $db);
-
-$getip = "SELECT * FROM development";
-$res = mysqli_query($conn, $getip);
-
-while ($row = mysqli_fetch_assoc($res)) {
-    $ip = $row['ip'];
-}
-
-$email = $_SESSION['email'];
-
-if ($_SESSION['status'] == true) {
-    
-}
-else {
-    header("Location: http://$ip/NarTik/account");
-}
-
-$sql = "SELECT * FROM users WHERE email = '$email'";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $fname = $row['firstname'];
-    }
-}
+$icode = $_SESSION['icode'];
 
 ?>
 
-<!doctype html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
-    <title>داشبورد</title>
-    <style>
-        body {
-            padding: 56px;
-            background-color: #f6f6f6;
-        }
-    </style>
+    <title>Narbon - Dashboard</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--Custom Font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-<div class="container">
+<?php
+include("panels/sidebar.php");
+?>
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
-        <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading">خوش آمدید <?php echo $fname; ?></h4>
-            <p>شما میتوانید از حساب خود هم اکنون استفاده کنید.</p>
-            <hr>
-            <p class="mb-0"><a href="../account/logout.php">خروج از حساب کاربری</a></p>
+        <ol class="breadcrumb">
+            <li><a href="../dashboard">
+                <em class="fa fa-home"></em>
+            </a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
         </div>
+    </div><!--/.row-->
+
+    <div class="panel panel-container">
+        <?php
+        include("pack/panels/bar.php");
+        ?>
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    New Report
+                    <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                        <em class="fa fa-toggle-up"></em>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <form>
+                            <div class="form-group">
+                                <label for="title">Title of report</label>
+                                <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Title of report">
+                            </div>
+                            <div class="form-group">
+                                <label for="des">Explanation</label>
+                                <input type="des" class="form-control" id="des" aria-describedby="des" placeholder="Explanation">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Report</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+
+    <?php
+    include("pack/panels/footer.php");
+    ?>
+</div>    <!--/.main-->
+
+<script src="../pack/js/jquery-1.11.1.min.js"></script>
+<script src="../pack/js/bootstrap.min.js"></script>
+<script src="../pack/js/chart.min.js"></script>
+<script src="../pack/js/chart-data.js"></script>
+<script src="../pack/js/easypiechart.js"></script>
+<script src="../pack/js/easypiechart-data.js"></script>
+<script src="../pack/js/bootstrap-datepicker.js"></script>
+<script src="../pack/js/custom.js"></script>
+<script>
+    window.onload = function () {
+        var chart1 = document.getElementById("line-chart").getContext("2d");
+        window.myLine = new Chart(chart1).Line(lineChartData, {
+            responsive: true,
+            scaleLineColor: "rgba(0,0,0,.2)",
+            scaleGridLineColor: "rgba(0,0,0,.05)",
+            scaleFontColor: "#c5c7cc"
+        });
+    };
+</script>
+
 </body>
 </html>
