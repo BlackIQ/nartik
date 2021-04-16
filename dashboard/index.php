@@ -294,8 +294,8 @@
         </div>
     </div><!--/.row-->
 
-    <div class="row">
-        <div class="col-sm-12">
+    <footer class="">
+        <div class="container-fluid">
             <p class="back-link"><a href="http://<?php echo $ip; ?>/Narbon">NarTik</a></p>
             <p class="back-link">Created by <a href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
             <p class="back-link">Powered By <a href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
@@ -309,7 +309,7 @@
                 <i class="fa fa-lg fa-instagram text-danger"></i>
             </p>
         </div>
-    </div>
+    </footer>
     
 </div>    <!--/.main-->
 
