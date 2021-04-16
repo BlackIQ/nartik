@@ -24,28 +24,25 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar bg-info navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="http://<?php echo $ip; ?>/NarTik"><span>NarTik</span></a>
+                <a class="navbar-brand" href="http://<?php echo $ip; ?>/NarTik">NarTik</a>
                 <ul class="nav navbar-top-links navbar-right">
-                    <li class="dropdown"><a class="dropdown-toggle count-info" href="http://<?php echo $ip; ?>/NarTik/account/logout.php">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" href="http://<?php echo $ip; ?>/NarTik/account/logout.php">
                             <em class="fa fa-sign-out"></em>
                         </a>
+                    </li>
                 </ul>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </nav>
     
 <div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12 main">
     <div class="row">
         <ol class="breadcrumb">
-            <li><a href="../dashboard">
+            <li><a href="../">
                 <em class="fa fa-home"></em>
             </a></li>
             <li class="active">Dashboard</li>
@@ -226,7 +223,7 @@
                         </div>
                         <br>
                         <div>
-                            <p class="text-danger"><i class="fa fa-sign-out"></i> Logout</p>
+                            <p><a class="text-danger" href="http://<?php echo $ip; ?>/NarTik/account/logout.php"><i class="fa fa-sign-out"></i> Logout</a></p>
                         </div>
                     </div>
                 </div>
