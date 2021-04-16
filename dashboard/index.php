@@ -9,10 +9,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NarTik - Dashboard</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/datepicker3.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="pack/css/bootstrap.min.css" rel="stylesheet">
+    <link href="pack/css/font-awesome.min.css" rel="stylesheet">
+    <link href="pack/css/datepicker3.css" rel="stylesheet">
+    <link href="pack/css/styles.css" rel="stylesheet">
 
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -316,14 +316,14 @@
     
 </div>    <!--/.main-->
 
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/chart.min.js"></script>
-<script src="js/chart-data.js"></script>
-<script src="js/easypiechart.js"></script>
-<script src="js/easypiechart-data.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/custom.js"></script>
+<script src="pack/js/jquery-1.11.1.min.js"></script>
+<script src="pack/js/bootstrap.min.js"></script>
+<script src="pack/js/chart.min.js"></script>
+<script src="pack/js/chart-data.js"></script>
+<script src="pack/js/easypiechart.js"></script>
+<script src="pack/js/easypiechart-data.js"></script>
+<script src="pack/js/bootstrap-datepicker.js"></script>
+<script src="pack/js/custom.js"></script>
 <script>
     window.onload = function () {
         var chart1 = document.getElementById("line-chart").getContext("2d");
