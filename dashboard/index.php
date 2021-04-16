@@ -1,6 +1,6 @@
 <?php
-include("check.php");
-include("include/data.php");
+//include("check.php");
+//include("include/data.php");
 ?>
 
 <!DOCTYPE html>
@@ -48,30 +48,189 @@ include("panels/sidebar.php");
         ?>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    New Report
+                    New Ticket
                     <span class="pull-right clickable panel-toggle panel-button-tab-left">
                         <em class="fa fa-toggle-up"></em>
                     </span>
                 </div>
                 <div class="panel-body">
-                    <div class="container">
-                        <form class="col-md-8">
+                    <div class="">
+                        <form class="">
                             <div class="form-group">
-                                <label for="title">Title of report</label>
+                                <label for="title">Title of Ticket</label>
                                 <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Title of report">
                             </div>
                             <div class="form-group">
                                 <label for="des">Explanation</label>
-                                <input type="des" class="form-control" id="des" aria-describedby="des" placeholder="Explanation">
+                                <input type="text" class="form-control" id="des" aria-describedby="des" placeholder="Explanation">
                             </div>
                             <div class="form-group">
                                 <label for="record">Record your voice</label>
-                                <p class="text-primary"><i class="fa fa-microphone"></i></p>
+                                <p class="text-primary"><i class="fa fa-microphone"></i> Click here to start recording</p>
                             </div>
-                            <button type="submit" class="btn btn-primary">Report</button>
+                            <button type="submit" class="btn btn-primary">Send ticket</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    My Tickets
+                    <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                        <em class="fa fa-toggle-up"></em>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div class="">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="">row</th>
+                                    <th class="">Title</th>
+                                    <th class="">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="">8</th>
+                                    <td class="">404 page</td>
+                                    <td class=""><i class="fa fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th class="">7</th>
+                                    <td class="">Server error</td>
+                                    <td class=""><i class="fa fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th class="">6</th>
+                                    <td class="">Recording issue</td>
+                                    <td class=""><i class="fa fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th class="">5</th>
+                                    <td class="">File cant upload</td>
+                                    <td class=""><i class="fa fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th class="">4</th>
+                                    <td class="">Style is not good</td>
+                                    <td class=""><i class="fa fa-times text-danger"></i></td>
+                                </tr>
+                                <tr>
+                                    <th class="">3</th>
+                                    <td class="">Cant login</td>
+                                    <td class=""><i class="fa fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th class="">2</th>
+                                    <td class="">Wrong Emails</td>
+                                    <td class=""><i class="fa fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th class="">1</th>
+                                    <td class="">First Ticket for test</td>
+                                    <td class=""><i class="fa fa-check text-success"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+        <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Profile
+                    <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                        <em class="fa fa-toggle-up"></em>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div class="">
+                        <div class="profile-sidebar">
+                            <div class="profile-userpic">
+                                <img src="pic.jpeg" class="img-responsive" alt="User Image">
+                            </div>
+                            <div class="profile-usertitle">
+                                <div class="profile-usertitle-name"><i class="fa fa-user color-blue"></i> Username</div>
+                                <div class="profile-usertitle-status"><i class="fa fa-id-card color-orange"></i> 0481244859</div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div>
+                            <h3 class="text-success"><i class="fa fa-user"></i> Amirhossein Mohammadi</h3>
+                            <h3 class="text-info"><i class="fa fa-bank"></i> Milad</h3>
+                            <br>
+                            <h4 class="text-primary"><i class="fa fa-at"></i> amirhosseinmohammadi1380@yahoo.com</h4>
+                            <h4 class="text-warning"><i class="fa fa-phone"></i> 09014784362</h4>
+                        </div>
+                        <br>
+                        <div>
+                            <p class="text-danger"><i class="fa fa-sign-out"></i> Logout</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Setting
+                    <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                        <em class="fa fa-toggle-up"></em>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div class="">
+                        <h3>Update Your profile</h3>
+                        <br>
+                        <form class="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Username">
+                                <small>Your current username : <b>Username</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="E-Mail">
+                                <small>Your current E-Mail : <b>amirhosseinmohammadi1380@yahoo.com</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Phone">
+                                <small>Your current Phone : <b>09014784362</b></small>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                        </form>
+                        <div>
+                            <hr>
+                        </div>
+                        <h3>Change Password</h3>
+                        <br>
+                        <form class="">
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Current Password">
+                                <small>Enter Your <b>current password</b></small>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="New Password">
+                                        <small>Enter Your <b>new password</b></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Confirm Password">
+                                        <small>Enter Your <b>new password again</b></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Change Password</button>
                         </form>
                     </div>
                 </div>
@@ -84,14 +243,14 @@ include("panels/sidebar.php");
     ?>
 </div>    <!--/.main-->
 
-<script src="../pack/js/jquery-1.11.1.min.js"></script>
-<script src="../pack/js/bootstrap.min.js"></script>
-<script src="../pack/js/chart.min.js"></script>
-<script src="../pack/js/chart-data.js"></script>
-<script src="../pack/js/easypiechart.js"></script>
-<script src="../pack/js/easypiechart-data.js"></script>
-<script src="../pack/js/bootstrap-datepicker.js"></script>
-<script src="../pack/js/custom.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/chart.min.js"></script>
+<script src="js/chart-data.js"></script>
+<script src="js/easypiechart.js"></script>
+<script src="js/easypiechart-data.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/custom.js"></script>
 <script>
     window.onload = function () {
         var chart1 = document.getElementById("line-chart").getContext("2d");
