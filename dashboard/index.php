@@ -41,39 +41,8 @@
             </div>
         </div><!-- /.container-fluid -->
     </nav>
-    <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-        <div class="profile-sidebar">
-            <div class="profile-userpic">
-                <img src="pic.jpeg" class="img-responsive" alt="User Image">
-            </div>
-            <div class="profile-usertitle">
-                <div class="profile-usertitle-name"><?php echo "Username"; ?></div>
-                <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="divider"></div>
-        <ul class="nav menu">
-            <li class="active"><a href="index.php"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-            <li>
-                <a class="" href="tickets.php">
-                    <span class="fa fa-envelope">&nbsp;</span> Tickets
-                </a>
-            </li>
-            <li>
-                <a class="" href="profile.php">
-                    <span class="fa fa-user">&nbsp;</span> Profile
-                </a>
-            </li>
-            <li>
-                <a class="" href="setting.php">
-                    <span class="fa fa-cogs">&nbsp;</span> Setting
-                </a>
-            </li>
-        </ul>
-    </div>
     
-<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+<div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12 main">
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="../dashboard">
@@ -278,15 +247,21 @@
                         <form class="">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Username">
-                                <small>Your current username : <b>Username</b></small>
+                                <small>Your current username is <b>BlackIQ</b></small>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="E-Mail">
-                                <small>Your current E-Mail : <b>amirhosseinmohammadi1380@yahoo.com</b></small>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Phone">
-                                <small>Your current Phone : <b>09014784362</b></small>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="E-Mail">
+                                        <small>Your current E-Mail is <b>amirhosseinmohammadi1380@yahoo.com</b></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Phone">
+                                        <small>Your current phone is <b>09014784362</b></small>
+                                    </div>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Update Profile</button>
                         </form>
