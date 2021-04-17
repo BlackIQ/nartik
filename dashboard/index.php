@@ -33,7 +33,7 @@ if ($_SESSION['status'] == true) {
     }
 
     $gettiks = "SELECT * FROM tiks WHERE userid = '$userid'";
-    $tikres = mysqli_query($connection, $getdata);
+    $tikres = mysqli_query($connection, $gettiks);
 
 }
 else {
