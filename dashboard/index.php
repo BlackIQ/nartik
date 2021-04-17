@@ -254,7 +254,7 @@ else {
                             <h3 class="text-info"><i class="fa fa-bank"></i> Milad</h3>
                             <br>
                             <h4 class="text-primary"><i class="fa fa-at"></i> <?php echo $email;?></h4>
-                            <h4 class="text-warning"><i class="fa fa-phone"></i> <?php $phone; ?>></h4>
+                            <h4 class="text-warning"><i class="fa fa-phone"></i> <?php echo $phone; ?></h4>
                         </div>
                         <br>
                         <div>
