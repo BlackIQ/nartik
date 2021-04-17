@@ -250,11 +250,11 @@ else {
                             <div class="clear"></div>
                         </div>
                         <div>
-                            <h3 class="text-success"><i class="fa fa-user"></i> <?php echo $fname . " " . $lname;?></h3>
-                            <h3 class="text-info"><i class="fa fa-bank"></i> Milad</h3>
+                            <h3 class="text-success"><i class="fa fa-user"></i>&nbsp;<?php echo $fname . " " . $lname;?></h3>
+                            <h3 class="text-info"><i class="fa fa-bank"></i>&nbsp;<?php echo $company;?></h3>
                             <br>
-                            <h4 class="text-primary"><i class="fa fa-at"></i> <?php echo $email;?></h4>
-                            <h4 class="text-warning"><i class="fa fa-phone"></i> <?php echo $phone; ?></h4>
+                            <h4 class="text-primary"><i class="fa fa-at"></i>&nbsp;<?php echo $email;?></h4>
+                            <h4 class="text-warning"><i class="fa fa-phone"></i>&nbsp;<?php echo $phone; ?></h4>
                         </div>
                         <br>
                         <div>
