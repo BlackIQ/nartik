@@ -60,10 +60,10 @@ else {
     <nav class="navbar bg-info navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://<?php echo $ip; ?>/NarTik">NarTik</a>
+                <a class="navbar-brand" href="../">NarTik</a>
                 <ul class="nav navbar-top-links navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toggle count-info" href="http://<?php echo $ip; ?>/NarTik/account/logout.php">
+                        <a class="dropdown-toggle count-info" href="../account/logout.php">
                             <em class="fa fa-sign-out"></em>
                         </a>
                     </li>
@@ -94,7 +94,7 @@ else {
             <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
                 <div class="panel panel-teal panel-widget border-right">
                     <div class="row no-padding"><em class="fa fa-xl fa-bank color-blue"></em>
-                        <div class="large"><?php echo "Milad"; ?></div>
+                        <div class="large"><?php echo $company; ?></div>
                         <br>
                         <div class="text-muted">Company</div>
                     </div>
@@ -242,21 +242,21 @@ else {
                                 <img src="pack/pic.jpeg" class="img-responsive" alt="User Image">
                             </div>
                             <div class="profile-usertitle">
-                                <div class="profile-usertitle-name"><i class="fa fa-user color-blue"></i> Username</div>
-                                <div class="profile-usertitle-status"><i class="fa fa-id-card color-orange"></i> 0481244859</div>
+                                <div class="profile-usertitle-name"><i class="fa fa-user color-blue"></i> <?php echo $username;?></div>
+                                <div class="profile-usertitle-status"><i class="fa fa-id-card color-orange"></i> <?php echo $userid;?></div>
                             </div>
                             <div class="clear"></div>
                         </div>
                         <div>
-                            <h3 class="text-success"><i class="fa fa-user"></i> Amirhossein Mohammadi</h3>
+                            <h3 class="text-success"><i class="fa fa-user"></i> <?php echo $fname . " " . $lname;?></h3>
                             <h3 class="text-info"><i class="fa fa-bank"></i> Milad</h3>
                             <br>
-                            <h4 class="text-primary"><i class="fa fa-at"></i> amirhosseinmohammadi1380@yahoo.com</h4>
-                            <h4 class="text-warning"><i class="fa fa-phone"></i> 09014784362</h4>
+                            <h4 class="text-primary"><i class="fa fa-at"></i> <?php echo $email;?></h4>
+                            <h4 class="text-warning"><i class="fa fa-phone"></i> <?php $phone; ?>></h4>
                         </div>
                         <br>
                         <div>
-                            <p><a class="text-danger" href="http://<?php echo $ip; ?>/NarTik/account/logout.php"><i class="fa fa-sign-out"></i> Logout</a></p>
+                            <p><a class="text-danger" href="../account/logout.php"><i class="fa fa-sign-out"></i> Logout</a></p>
                         </div>
                     </div>
                 </div>
@@ -277,19 +277,19 @@ else {
                         <form class="">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Username">
-                                <small>Your current username is <b>BlackIQ</b></small>
+                                <small>Your current username is <b><?php echo $username;?></b></small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="email" class="form-control" placeholder="E-Mail">
-                                        <small>Your current E-Mail is <b>amirhosseinmohammadi1380@yahoo.com</b></small>
+                                        <small>Your current E-Mail is <b><?php echo $email;?></b></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Phone">
-                                        <small>Your current phone is <b>09014784362</b></small>
+                                        <small>Your current phone is <b><?php echo $phone;?></b></small>
                                     </div>
                                 </div>
                             </div>
@@ -329,7 +329,7 @@ else {
 
     <footer class="">
         <div class="container-fluid">
-            <p class="back-link"><a href="http://<?php echo $ip; ?>/Narbon">NarTik</a></p>
+            <p class="back-link"><a href="../">NarTik</a></p>
             <p class="back-link">Created by <a href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
             <p class="back-link">Powered By <a href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
             <p class="back-link">
