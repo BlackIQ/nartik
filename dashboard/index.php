@@ -178,7 +178,7 @@ else {
                     <div class="">
                             <?php
 
-                    if (mysqli_num_rows($ressult) > 0) {
+                    if (mysqli_num_rows($tikres) > 0) {
                         ?>
                         <table class="table table-bordered table-hover">
                             <thead>
