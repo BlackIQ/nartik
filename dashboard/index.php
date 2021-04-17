@@ -176,19 +176,20 @@ else {
                 </div>
                 <div class="panel-body">
                     <div class="">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="">row</th>
-                                    <th class="">Title</th>
-                                    <th class="">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
                             <?php
 
-                            if (mysqli_num_rows($ressult) > 0) {
+                    if (mysqli_num_rows($ressult) > 0) {
+                        ?>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th class="">row</th>
+                                <th class="">Title</th>
+                                <th class="">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <?php
                                 while ($tiks = mysqli_fetch_assoc($ressult)) {
                                     ?>
                                     <tr>
@@ -207,14 +208,16 @@ else {
                                     </tr>
                                     <?php
                                 }
+                                ?>
+                            </tbody>
+                        </table>
+                                <?php
                             }
                             else {
                                 echo "<h2>You have no tickets yet !</h2>";
                             }
 
                             ?>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
