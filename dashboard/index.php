@@ -31,6 +31,10 @@ if ($_SESSION['status'] == true) {
     else {
         header("Location: http://office.narbon.ir:4488/NarTik");
     }
+
+    $gettiks = "SELECT * FROM tiks WHERE userid = '$userid'";
+    $tikres = mysqli_query($connection, $getdata);
+
 }
 else {
     header("Location: http://office.narbon.ir:4488/NarTik");
@@ -181,11 +185,33 @@ else {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th class="">8</th>
-                                    <td class="">404 page</td>
-                                    <td class=""><i class="fa fa-check text-success"></i></td>
-                                </tr>
+
+                            <?php
+
+                            if (mysqli_num_rows($ressult) > 0) {
+                                while ($tiks = mysqli_fetch_assoc($ressult)) {
+                                    ?>
+                                    <tr>
+                                        <th class=""><?php echo $tiks['row']; ?></th>
+                                        <td class=""><?php echo $tiks['title']; ?></td>
+                                        <td class="">
+                                            <?php
+                                                if (isset($tiks['answer'])) {
+                                                    echo "<i class='fa fa-check text-success'></i>";
+                                                }
+                                                else {
+                                                    echo "<i class='fa fa-times text-danger'></i>";
+                                                }
+                                            ?>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                            }
+
+                            ?>
+
+
                                 <tr>
                                     <th class="">7</th>
                                     <td class="">Server error</td>

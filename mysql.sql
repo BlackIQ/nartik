@@ -135,3 +135,22 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2021-04-12 13:34:10
+
+DROP TABLE IF EXISTS `tiks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tiks`
+(
+    `row`     int(11) NOT NULL AUTO_INCREMENT,
+    `userid`  text COLLATE utf8mb4_unicode_ci,
+    `title`   text COLLATE utf8mb4_unicode_ci,
+    `explane` text COLLATE utf8mb4_unicode_ci,
+    `da6a`    text COLLATE utf8mb4_unicode_ci,
+    `time`    text COLLATE utf8mb4_unicode_ci,
+    `file`    text COLLATE utf8mb4_unicode_ci,
+    `whole`   text COLLATE utf8mb4_unicode_ci,
+    `answer`   text COLLATE utf8mb4_unicode_ci,
+    `status`  text COLLATE utf8mb4_unicode_ci,
+    PRIMARY KEY (`row`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
