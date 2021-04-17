@@ -15,7 +15,7 @@ if ($_SESSION['status'] == true) {
     $mail = $_SESSION['email'];
 
     $getdata = "SELECT * FROM users WHERE email = '$mail'";
-    $ressult = mysqli_query($getdata, $connection);
+    $ressult = mysqli_query($connection, $getdata);
 
     if (mysqli_num_rows($ressult) > 0) {
         while ($row = mysqli_fetch_assoc($ressult)) {
