@@ -77,7 +77,6 @@
             if (mysqli_num_rows($results) == 1) {
                 $_SESSION['status'] = true;
                 $_SESSION['email'] = $email;
-                $_SESSION['person'] = "admin";
                 $_SESSION['success'] = "You are now logged in";
                 header('location: http://office.narbon.ir:4488/NarTik');
             }
