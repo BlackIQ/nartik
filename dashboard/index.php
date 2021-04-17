@@ -206,7 +206,7 @@
                     <div class="">
                         <div class="profile-sidebar">
                             <div class="profile-userpic">
-                                <img src="pic.jpeg" class="img-responsive" alt="User Image">
+                                <img src="pack/pic.jpeg" class="img-responsive" alt="User Image">
                             </div>
                             <div class="profile-usertitle">
                                 <div class="profile-usertitle-name"><i class="fa fa-user color-blue"></i> Username</div>
