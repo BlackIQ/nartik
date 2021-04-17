@@ -107,6 +107,8 @@ CREATE TABLE `users` (
   `lastnama` text COLLATE utf8mb4_unicode_ci,
   `phone` text COLLATE utf8mb4_unicode_ci,
   `email` text COLLATE utf8mb4_unicode_ci,
+  `username` text COLLATE utf8mb4_unicode_ci,
+  `userid` text COLLATE utf8mb4_unicode_ci,
   `password` text COLLATE utf8mb4_unicode_ci,
   `company` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`row`)
@@ -119,7 +121,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'meysam','mirzaee','09366171566','meysam62@yahoo.com','123456','2');
+INSERT INTO `users` (firstname, lastnama, phone, email, username, userid, password, company) VALUES ('Meysam','Mirzaee','09366171566','meysam62@yahoo.com','MrMeysam', '123456789', '123456','2');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

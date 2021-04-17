@@ -24,6 +24,8 @@ if ($_SESSION['status'] == true) {
             $phone = $row['phone'];
             $email = $row['email'];
             $company = $row['company'];
+            $username = $row['username'];
+            $userid = $row['userid'];
         }
     }
     else {
