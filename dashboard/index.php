@@ -23,9 +23,12 @@ if ($_SESSION['status'] == true) {
             $lname = $row['lastnama'];
             $phone = $row['phone'];
             $email = $row['email'];
-            $company = $row['company'];
             $username = $row['username'];
             $userid = $row['userid'];
+
+            if ($row['company'] == 2) {
+                $company = "Milad";
+            }
         }
     }
     else {
