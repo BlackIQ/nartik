@@ -2,13 +2,38 @@
 
 session_start();
 
+// MySQL Data
+$mysqlserver = "localhost";
+$mysqluser = "narbon";
+$mysqlpassword = "narbon";
+$mysqldatabase = "nartik";
+
+// Create Connection
+$connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
+
 if ($_SESSION['status'] == true) {
     if ($_SESSION['dir'] == "nartik") {
         $mail = $_SESSION['email'];
+
+        $getdata = "SELECT * FROM users WHERE email = '$mail'";
+        $ressult = mysqli_query($getdata, $connection);
+
+        if (mysqli_num_rows($ressult) > 0) {
+            while ($row = mysqli_fetch_assoc($ressult)) {
+                $fname = $row['firstname'];
+                $lname = $row['lastnama'];
+                $phone = $row['phone'];
+                $email = $row['email'];
+                $company = $row['company'];
+            }
+        }
     }
     else {
-        header("Location: ");
+        header("Location: http://office.narbon.ir:4488/NarTik");
     }
+}
+else {
+    header("Location: http://office.narbon.ir:4488/NarTik");
 }
 
 ?>
