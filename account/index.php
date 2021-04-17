@@ -18,7 +18,7 @@ if ($_SESSION['status'] == true) {
         <style>
             body {
                 padding: 56px;
-                background-color: #f6f6f6;
+                background-color: gray;
             }
         </style>
     </head>
@@ -26,47 +26,47 @@ if ($_SESSION['status'] == true) {
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <h1 class="display-6 text-primary">ساخت حساب جدید</h1>
-                    <hr class="border-primary border">
+                    <h1 class="display-6 text-white">ساخت حساب جدید</h1>
+                    <hr class="border-white border">
                     <br>
                     <form action="index.php" method="post">
                         <?php include('error.php'); ?>
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="fname" class="form-control border-primary text-primary" placeholder="نام"
+                                <input type="text" name="fname" class="form-control border-white text-white" placeholder="نام"
                                        aria-label="نام">
                             </div>
                             <div class="col">
-                                <input type="text" name="lname" class="form-control border-primary text-primary"
+                                <input type="text" name="lname" class="form-control border-white text-white"
                                        placeholder="نام خانوادگی" aria-label="نام خانوادگی">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="phone" class="form-control border-primary text-primary"
+                                <input type="text" name="phone" class="form-control border-white text-white"
                                        placeholder="شماره همراه" aria-label="شماره همراه">
                             </div>
                             <div class="col">
-                                <input type="text" name="email" class="form-control border-primary text-primary" placeholder="ایمیل"
+                                <input type="text" name="email" class="form-control border-white text-white" placeholder="ایمیل"
                                        aria-label="ایمیل">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <input type="password" name="pass" class="form-control border-primary text-primary" placeholder="رمز"
+                                <input type="password" name="pass" class="form-control border-white text-white" placeholder="رمز"
                                        aria-label="رمز">
                             </div>
                             <div class="col">
-                                <input type="password" name="conpass" class="form-control border-primary text-primary"
+                                <input type="password" name="conpass" class="form-control border-white text-white"
                                        placeholder="تایید رمز" aria-label="تایید رمز">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <select name="company" class="form-control border-primary text-primary">
+                                <select name="company" class="form-control border-white text-white">
                                     <option selected>انتخاب شرکت</option>
                                     <option value="1">Company 1</option>
                                     <option value="2">Company 2</option>
@@ -81,22 +81,20 @@ if ($_SESSION['status'] == true) {
                     <br>
                     <br>
                 </div>
-                
                 <div class="col-md-1"></div>
-                
                 <div class="col-md-5">
-                    <h1 class="display-6 text-primary">ورود به حساب کاربری</h1>
-                    <hr class="border-primary border">
+                    <h1 class="display-6 text-white">ورود به حساب کاربری</h1>
+                    <hr class="border-white border">
                     <br>
                     <form action="index.php" method="post">
                         <?php include('error.php'); ?>
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="email" class="form-control border-primary text-primary" placeholder="ایمیل"
+                                <input type="text" name="email" class="form-control border-white text-white" placeholder="ایمیل"
                                        aria-label="ایمیل">
                             </div>
                             <div class="col">
-                                <input type="password" name="password" class="form-control border-primary text-primary"
+                                <input type="password" name="password" class="form-control border-white text-white"
                                        placeholder="رمز حساب" aria-label="رمز جساب">
                             </div>
                         </div>
