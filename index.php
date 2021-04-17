@@ -2,25 +2,11 @@
 
 session_start();
 
-$server = "localhost";
-$user = "narbon";
-$passwd = "narbon";
-$db = "nartik";
-
-$conn = mysqli_connect($server, $user, $passwd, $db);
-
-$getip = "SELECT * FROM development";
-$res = mysqli_query($conn, $getip);
-
-while ($row = mysqli_fetch_assoc($res)) {
-    $ip = $row['ip'];
-}
-
 if ($_SESSION['status'] == true) {
-    header("Location: http://$ip/NarTik/dashboard");
+    header('location: http://office.narbon.ir:4488/NarTik/dashboard');
 }
 else {
-    header("Location: http://$ip/NarTik/account");
+    header('location: http://office.narbon.ir:4488/NarTik/account');
 }
 
 ?>

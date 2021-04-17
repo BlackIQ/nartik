@@ -46,7 +46,7 @@
                 $_SESSION['status'] = true;
                 $_SESSION['email'] = $email;
                 $_SESSION['success'] = "You are now logged in";
-                header('location: http://$ip/NarTik');
+                header('location: http://office.narbon.ir:4488/NarTik');
             }
             else {
                 array_push($errors, mysqli_error($connection));
@@ -79,7 +79,7 @@
                 $_SESSION['email'] = $email;
                 $_SESSION['person'] = "admin";
                 $_SESSION['success'] = "You are now logged in";
-                header('location: http://$ip/NarTik');
+                header('location: http://office.narbon.ir:4488/NarTik');
             }
             else {
                 array_push($errors, "Wrong username/password combination");
