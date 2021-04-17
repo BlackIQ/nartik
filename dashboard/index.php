@@ -12,20 +12,18 @@ $mysqldatabase = "nartik";
 $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
 
 if ($_SESSION['status'] == true) {
-    if ($_SESSION['dir'] == "nartik") {
-        $mail = $_SESSION['email'];
+    $mail = $_SESSION['email'];
 
-        $getdata = "SELECT * FROM users WHERE email = '$mail'";
-        $ressult = mysqli_query($getdata, $connection);
+    $getdata = "SELECT * FROM users WHERE email = '$mail'";
+    $ressult = mysqli_query($getdata, $connection);
 
-        if (mysqli_num_rows($ressult) > 0) {
-            while ($row = mysqli_fetch_assoc($ressult)) {
-                $fname = $row['firstname'];
-                $lname = $row['lastnama'];
-                $phone = $row['phone'];
-                $email = $row['email'];
-                $company = $row['company'];
-            }
+    if (mysqli_num_rows($ressult) > 0) {
+        while ($row = mysqli_fetch_assoc($ressult)) {
+            $fname = $row['firstname'];
+            $lname = $row['lastnama'];
+            $phone = $row['phone'];
+            $email = $row['email'];
+            $company = $row['company'];
         }
     }
     else {
