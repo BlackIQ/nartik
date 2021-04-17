@@ -1,6 +1,16 @@
 <?php
-//include("check.php");
-//include("include/data.php");
+
+session_start();
+
+if ($_SESSION['status'] == true) {
+    if ($_SESSION['dir'] == "nartik") {
+        $mail = $_SESSION['email'];
+    }
+    else {
+        header("Location: ");
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
