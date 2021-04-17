@@ -208,45 +208,11 @@ else {
                                     <?php
                                 }
                             }
+                            else {
+                                echo "<h2>You have no tickets yet !</h2>";
+                            }
 
                             ?>
-
-
-                                <tr>
-                                    <th class="">7</th>
-                                    <td class="">Server error</td>
-                                    <td class=""><i class="fa fa-check text-success"></i></td>
-                                </tr>
-                                <tr>
-                                    <th class="">6</th>
-                                    <td class="">Recording issue</td>
-                                    <td class=""><i class="fa fa-check text-success"></i></td>
-                                </tr>
-                                <tr>
-                                    <th class="">5</th>
-                                    <td class="">File cant upload</td>
-                                    <td class=""><i class="fa fa-check text-success"></i></td>
-                                </tr>
-                                <tr>
-                                    <th class="">4</th>
-                                    <td class="">Style is not good</td>
-                                    <td class=""><i class="fa fa-times text-danger"></i></td>
-                                </tr>
-                                <tr>
-                                    <th class="">3</th>
-                                    <td class="">Cant login</td>
-                                    <td class=""><i class="fa fa-check text-success"></i></td>
-                                </tr>
-                                <tr>
-                                    <th class="">2</th>
-                                    <td class="">Wrong Emails</td>
-                                    <td class=""><i class="fa fa-check text-success"></i></td>
-                                </tr>
-                                <tr>
-                                    <th class="">1</th>
-                                    <td class="">First Ticket for test</td>
-                                    <td class=""><i class="fa fa-check text-success"></i></td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
