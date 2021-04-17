@@ -176,21 +176,20 @@ else {
                 </div>
                 <div class="panel-body">
                     <div class="">
-                            <?php
-
-                    if (mysqli_num_rows($tikres) > 0) {
-                        ?>
                         <table class="table table-bordered table-hover">
                             <thead>
-                            <tr>
-                                <th class="">row</th>
-                                <th class="">Title</th>
-                                <th class="">Status</th>
-                            </tr>
+                                <tr>
+                                    <th class="">row</th>
+                                    <th class="">Title</th>
+                                    <th class="">Status</th>
+                                </tr>
                             </thead>
                             <tbody>
-                                <?php
-                                while ($tiks = mysqli_fetch_assoc($ressult)) {
+
+                            <?php
+
+                            if (mysqli_num_rows($tikres) > 0) {
+                                while ($tiks = mysqli_fetch_assoc($tikres)) {
                                     ?>
                                     <tr>
                                         <th class=""><?php echo $tiks['row']; ?></th>
@@ -208,16 +207,14 @@ else {
                                     </tr>
                                     <?php
                                 }
-                                ?>
-                            </tbody>
-                        </table>
-                                <?php
                             }
                             else {
                                 echo "<h2>You have no tickets yet !</h2>";
                             }
 
                             ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
