@@ -177,45 +177,45 @@ else {
                 </div>
                 <div class="panel-body">
                     <div class="">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="">row</th>
-                                    <th class="">Title</th>
-                                    <th class="">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            <?php
-
+                        <?php
                             if (mysqli_num_rows($tikres) > 0) {
-                                while ($tiks = mysqli_fetch_assoc($tikres)) {
-                                    ?>
+                                ?>
+                                <table class="table table-bordered table-hover">
+                                    <thead>
                                     <tr>
-                                        <th class=""><?php echo $tiks['row']; ?></th>
-                                        <td class=""><?php echo $tiks['title']; ?></td>
-                                        <td class="">
-                                            <?php
+                                        <th class="">row</th>
+                                        <th class="">Title</th>
+                                        <th class="">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    while ($tiks = mysqli_fetch_assoc($tikres)) {
+                                        ?>
+                                        <tr>
+                                            <th class=""><?php echo $tiks['row']; ?></th>
+                                            <td class=""><?php echo $tiks['title']; ?></td>
+                                            <td class="">
+                                                <?php
                                                 if (isset($tiks['answer'])) {
                                                     echo "<i class='fa fa-check text-success'></i>";
-                                                }
-                                                else {
+                                                } else {
                                                     echo "<i class='fa fa-times text-danger'></i>";
                                                 }
-                                            ?>
-                                        </td>
-                                    </tr>
-                                    <?php
-                                }
+                                                ?>
+                                            </td>
+                                        </tr>
+                                        <?php
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
+                                <?php
                             }
                             else {
                                 echo "<h2>You have no tickets yet !</h2>";
                             }
-
-                            ?>
-                            </tbody>
-                        </table>
+                        ?>
                     </div>
                 </div>
             </div>
