@@ -33,40 +33,40 @@ if ($_SESSION['status'] == true) {
                         <?php include('error.php'); ?>
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="fname" class="form-control border-white text-white" placeholder="نام"
+                                <input type="text" name="fname" class="form-control border-white" placeholder="نام"
                                        aria-label="نام">
                             </div>
                             <div class="col">
-                                <input type="text" name="lname" class="form-control border-white text-white"
+                                <input type="text" name="lname" class="form-control border-white"
                                        placeholder="نام خانوادگی" aria-label="نام خانوادگی">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="phone" class="form-control border-white text-white"
+                                <input type="text" name="phone" class="form-control border-white"
                                        placeholder="شماره همراه" aria-label="شماره همراه">
                             </div>
                             <div class="col">
-                                <input type="text" name="email" class="form-control border-white text-white" placeholder="ایمیل"
+                                <input type="text" name="email" class="form-control border-white" placeholder="ایمیل"
                                        aria-label="ایمیل">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <input type="password" name="pass" class="form-control border-white text-white" placeholder="رمز"
+                                <input type="password" name="pass" class="form-control border-white" placeholder="رمز"
                                        aria-label="رمز">
                             </div>
                             <div class="col">
-                                <input type="password" name="conpass" class="form-control border-white text-white"
+                                <input type="password" name="conpass" class="form-control border-white"
                                        placeholder="تایید رمز" aria-label="تایید رمز">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <select name="company" class="form-control border-white text-white">
+                                <select name="company" class="form-control border-white">
                                     <option selected>انتخاب شرکت</option>
                                     <option value="1">Company 1</option>
                                     <option value="2">Company 2</option>
@@ -90,11 +90,11 @@ if ($_SESSION['status'] == true) {
                         <?php include('error.php'); ?>
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="email" class="form-control border-white text-white" placeholder="ایمیل"
+                                <input type="text" name="email" class="form-control border-white" placeholder="ایمیل"
                                        aria-label="ایمیل">
                             </div>
                             <div class="col">
-                                <input type="password" name="password" class="form-control border-white text-white"
+                                <input type="password" name="password" class="form-control border-white"
                                        placeholder="رمز حساب" aria-label="رمز جساب">
                             </div>
                         </div>
