@@ -4,4 +4,4 @@ session_start();
 
 session_destroy();
 
-header("Location: http://office.narbon.ir/NarTik");
+header("Location: http://office.narbon.ir:4488/NarTik");
