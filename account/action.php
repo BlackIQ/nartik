@@ -15,13 +15,6 @@
 
     // Create Connection
     $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
-
-    $getip = "SELECT * FROM development";
-    $res = mysqli_query($connection, $getip);
-
-    while ($row = mysqli_fetch_assoc($res)) {
-        $ip = $row['ip'];
-    }
     
     // REGISTER USER
     if (isset($_POST['reg_user'])) {
