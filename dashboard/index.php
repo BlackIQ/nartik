@@ -53,9 +53,10 @@ else {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NarTik - Dashboard</title>
     <link href="http://office.narbon.ir:4488/pack/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://office.narbon.ir:4488/pack/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://office.narbon.ir:4488/pack/css/datepicker3.css" rel="stylesheet">
     <link href="http://office.narbon.ir:4488/pack/css/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
+
 
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -97,6 +98,7 @@ else {
             <h1 class="page-header">Dashboard</h1>
         </div>
     </div><!--/.row-->
+    
 
     <div class="panel panel-container">
         
@@ -141,7 +143,7 @@ else {
         
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     New Ticket
@@ -170,7 +172,9 @@ else {
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+    </div>
+    <div class="row">
+                <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     My Tickets
@@ -223,8 +227,61 @@ else {
                 </div>
             </div>
         </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Tickets Review
+                    <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                        <em class="fa fa-toggle-up"></em>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div class="">
+                        <?php
+                            if (mysqli_num_rows($tikres) > 0) {
+                                ?>
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="">row</th>
+                                        <th class="">Title</th>
+                                        <th class="">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    while ($tiks = mysqli_fetch_assoc($tikres)) {
+                                        ?>
+                                        <tr>
+                                            <th class=""><?php echo $tiks['row']; ?></th>
+                                            <td class=""><?php echo $tiks['title']; ?></td>
+                                            <td class="">
+                                                <?php
+                                                if (isset($tiks['answer'])) {
+                                                    echo "<i class='fa fa-check text-success'></i>";
+                                                } else {
+                                                    echo "<i class='fa fa-times text-danger'></i>";
+                                                }
+                                                ?>
+                                            </td>
+                                        </tr>
+                                        <?php
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
+                                <?php
+                            }
+                            else {
+                                echo "<h2>Select a ticket to show here !</h2>";
+                            }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div><!--/.row-->
-        <div class="row">
+    <div class="row">
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
