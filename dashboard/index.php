@@ -46,6 +46,11 @@ else {
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NarTik - Dashboard</title>
