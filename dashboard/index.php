@@ -117,7 +117,14 @@ else {
             <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
                 <div class="panel panel-blue panel-widget border-right">
                     <div class="row no-padding"><em class="fa fa-xl fa-envelope color-orange"></em>
-                        <div class="large"><?php echo "8"; ?></div>
+                        <div class="large">
+                            <?php
+                                $gtc = "SELECT count(*) as total FROM tiks WHERE userid = '$userid'";
+                                $gtcr = mysqli_query($connection, $gtc);
+                                $gtcrd = mysqli_fetch_assoc($gtcr);
+                                echo $gtcrd['total'];
+                            ?>
+                        </div>
                         <br>
                         <div class="text-muted">Total Tickets</div>
                     </div>
@@ -126,7 +133,14 @@ else {
             <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
                 <div class="panel panel-orange panel-widget border-right">
                     <div class="row no-padding"><em class="fa fa-xl fa-check text-success"></em>
-                        <div class="large"><?php echo "7"; ?></div>
+                        <div class="large">
+                            <?php
+                                $gtac = "SELECT count(*) as total FROM tiks WHERE userid = '$userid' AND answer != 'ny'";
+                                $gtacr = mysqli_query($connection, $gtc);
+                                $gtacrd = mysqli_fetch_assoc($gtacr);
+                                echo $gtacrd['total'];
+                            ?>
+                        </div>
                         <br>
                         <div class="text-muted">Answered Tickets</div>
                     </div>
@@ -135,7 +149,14 @@ else {
             <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
                 <div class="panel panel-red panel-widget ">
                     <div class="row no-padding"><em class="fa fa-xl fa-times color-red"></em>
-                        <div class="large"><?php echo "1"; ?></div>
+                        <div class="large">
+                            <?php
+                                $gtnc = "SELECT count(*) as total FROM tiks WHERE userid = '$userid' AND answer = 'ny'";
+                                $gtncr = mysqli_query($connection, $gtnc);
+                                $gtncrd = mysqli_fetch_assoc($gtncr);
+                                echo $gtncrd['total'];
+                            ?>
+                        </div>
                         <br>
                         <div class="text-muted">Not Seen Tickets</div>
                     </div>
