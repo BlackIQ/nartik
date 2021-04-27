@@ -157,7 +157,7 @@ else {
                             </div>
                             <div class="form-group">
                                 <label for="des">Explanation</label>
-                                <input type="text" class="form-control" id="des" aria-describedby="des" placeholder="Explanation">
+                                <textarea type="text" class="form-control" rows="5" id="des" aria-describedby="des" placeholder="Explanation">   </textarea>
                             </div>
                             <div class="form-group">
                                 <label for="record">Record your voice</label>
