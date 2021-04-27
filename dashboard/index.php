@@ -23,6 +23,7 @@ if ($_SESSION['status'] == true) {
             $lname = $row['lastname'];
             $phone = $row['phone'];
             $email = $row['email'];
+            $username = $row['username'];
             $userid = $row['id'];
             $company = $row['company'];
         }
@@ -262,7 +263,7 @@ else {
                             <div class="clear"></div>
                         </div>
                         <div>
-                            <h3 class="text-success"><i class="fa fa-user"></i>&nbsp;<?php echo $fname . "$nbsp;" . $lname;?></h3>
+                            <h3 class="text-success"><i class="fa fa-user"></i>&nbsp;<?php echo $fname . "&nbsp;" . $lname;?></h3>
                             <h3 class="text-info"><i class="fa fa-bank"></i>&nbsp;<?php echo $company;?></h3>
                             <br>
                             <h4 class="text-primary"><i class="fa fa-at"></i>&nbsp;<?php echo $email;?></h4>
