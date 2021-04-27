@@ -20,15 +20,11 @@ if ($_SESSION['status'] == true) {
     if (mysqli_num_rows($ressult) > 0) {
         while ($row = mysqli_fetch_assoc($ressult)) {
             $fname = $row['firstname'];
-            $lname = $row['lastnama'];
+            $lname = $row['lastname'];
             $phone = $row['phone'];
             $email = $row['email'];
-            $username = $row['username'];
-            $userid = $row['userid'];
-
-            if ($row['company'] == 2) {
-                $company = "Milad";
-            }
+            $userid = $row['id'];
+            $company = $row['company'];
         }
     }
     else {
@@ -204,9 +200,10 @@ else {
                                             <td class=""><?php echo $tiks['title']; ?></td>
                                             <td class="">
                                                 <?php
-                                                if (isset($tiks['answer'])) {
+                                                if ($tiks['answer'] != "ny") {
                                                     echo "<i class='fa fa-check text-success'></i>";
-                                                } else {
+                                                }
+                                                else {
                                                     echo "<i class='fa fa-times text-danger'></i>";
                                                 }
                                                 ?>
@@ -236,46 +233,8 @@ else {
                     </span>
                 </div>
                 <div class="panel-body">
-                    <div class="">
-                        <?php
-                            if (mysqli_num_rows($tikres) > 0) {
-                                ?>
-                                <table class="table table-bordered table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th class="">row</th>
-                                        <th class="">Title</th>
-                                        <th class="">Status</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php
-                                    while ($tiks = mysqli_fetch_assoc($tikres)) {
-                                        ?>
-                                        <tr>
-                                            <th class=""><?php echo $tiks['row']; ?></th>
-                                            <td class=""><?php echo $tiks['title']; ?></td>
-                                            <td class="">
-                                                <?php
-                                                if (isset($tiks['answer'])) {
-                                                    echo "<i class='fa fa-check text-success'></i>";
-                                                } else {
-                                                    echo "<i class='fa fa-times text-danger'></i>";
-                                                }
-                                                ?>
-                                            </td>
-                                        </tr>
-                                        <?php
-                                    }
-                                    ?>
-                                    </tbody>
-                                </table>
-                                <?php
-                            }
-                            else {
-                                echo "<h2>Select a ticket to show here !</h2>";
-                            }
-                        ?>
+                    <div>
+                        <h1>Select a ticket</h1>
                     </div>
                 </div>
             </div>
@@ -303,7 +262,7 @@ else {
                             <div class="clear"></div>
                         </div>
                         <div>
-                            <h3 class="text-success"><i class="fa fa-user"></i>&nbsp;<?php echo $fname . " " . $lname;?></h3>
+                            <h3 class="text-success"><i class="fa fa-user"></i>&nbsp;<?php echo $fname . "$nbsp;" . $lname;?></h3>
                             <h3 class="text-info"><i class="fa fa-bank"></i>&nbsp;<?php echo $company;?></h3>
                             <br>
                             <h4 class="text-primary"><i class="fa fa-at"></i>&nbsp;<?php echo $email;?></h4>
