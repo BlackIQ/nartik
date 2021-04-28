@@ -36,7 +36,7 @@
         // register user if there are no errors in the form
         if (count($errors) == 0) {
             $password = md5($pass);//encrypt the password before saving in the database
-            $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', $name', '$lastname', '$phone', '$email', '$username', 'Date and Time', '$company', '$password', 'pending')";
+            $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', 'Date and Time', '$company', '$password', 'pending')";
             if (mysqli_query($connection, $query)) {
                 $_SESSION['status'] = true;
                 $_SESSION['id'] = $id;
