@@ -70,8 +70,9 @@
             $results = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($results) == 1) {
+                $row = mysqli_fetch_assoc($result);
                 $_SESSION['status'] = true;
-                $_SESSION['id'] = $id;
+                $_SESSION['id'] = $row['id'];
                 $_SESSION['directory'] = 'nartik';
                 header('location: http://office.narbon.ir:4488/NarTik');
             }
