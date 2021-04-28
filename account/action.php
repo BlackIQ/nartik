@@ -26,6 +26,8 @@
         $pass = mysqli_real_escape_string($connection, $_POST['pass']);
         $conpass = mysqli_real_escape_string($connection, $_POST['conpass']);
         $company = mysqli_real_escape_string($connection, $_POST['company']);
+        $username = mysqli_real_escape_string($connection, $_POST['username']);
+        $id = mysqli_real_escape_string($connection, $_POST['id']);
         
        if ($pass != $conpass) {
             array_push($errors, "The two passwords do not match");
@@ -34,11 +36,11 @@
         // register user if there are no errors in the form
         if (count($errors) == 0) {
             $password = md5($pass);//encrypt the password before saving in the database
-            $query = "INSERT INTO pending (firstname, lastnama, phone, email, password, company) VALUES ('$name', '$lastname', '$phone', '$email', '$password', '$company')";
+            $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', $name', '$lastname', '$phone', '$email', '$username', 'Date and Time', '$company', '$password', 'pending')";
             if (mysqli_query($connection, $query)) {
                 $_SESSION['status'] = true;
-                $_SESSION['email'] = $email;
-                $_SESSION['success'] = "You are now logged in";
+                $_SESSION['id'] = $id;
+                $_SESSION['directory'] = 'nartik';
                 header('location: http://office.narbon.ir:4488/NarTik');
             }
             else {
