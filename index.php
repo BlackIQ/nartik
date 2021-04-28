@@ -28,9 +28,6 @@ if ($_SESSION['status'] == true) {
             $company = $row['company'];
         }
     }
-    else {
-        echo '<h1>Sorry, Something went wrong!</h1>';
-    }
 
     $gettiks = "SELECT * FROM tiks WHERE userid = '$userid'";
     $tikres = mysqli_query($connection, $gettiks);
@@ -73,10 +70,10 @@ else {
     <nav class="navbar bg-info navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="../">NarTik</a>
+                <a class="navbar-brand" href=".">NarTik</a>
                 <ul class="nav navbar-top-links navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toggle count-info" href="../account/logout.php">
+                        <a class="dropdown-toggle count-info" href="account/logout.php">
                             <em class="fa fa-sign-out"></em>
                         </a>
                     </li>
@@ -297,7 +294,7 @@ else {
                         </div>
                         <br>
                         <div>
-                            <p><a class="text-danger" href="../account/logout.php"><i class="fa fa-sign-out"></i> Logout</a></p>
+                            <p><a class="text-danger" href="account/logout.php"><i class="fa fa-sign-out"></i> Logout</a></p>
                         </div>
                     </div>
                 </div>
@@ -370,7 +367,7 @@ else {
 
     <footer class="">
         <div class="container-fluid">
-            <p class="back-link"><a href="../">NarTik</a></p>
+            <p class="back-link"><a href=".">NarTik</a></p>
             <p class="back-link">Created by <a href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
             <p class="back-link">Powered By <a href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
             <p class="back-link">
