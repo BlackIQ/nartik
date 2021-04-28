@@ -29,7 +29,7 @@ if ($_SESSION['status'] == true) {
         }
     }
     else {
-        header("Location: http://office.narbon.ir:4488/NarTik");
+        echo '<h1>Sorry, Something went wrong!</h1>';
     }
 
     $gettiks = "SELECT * FROM tiks WHERE userid = '$userid'";
@@ -37,7 +37,7 @@ if ($_SESSION['status'] == true) {
 
 }
 else {
-    header("Location: http://office.narbon.ir:4488/NarTik");
+    header("Location: http://office.narbon.ir:4488/NarTik/account");
 }
 
 
