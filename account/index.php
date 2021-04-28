@@ -55,6 +55,17 @@ if ($_SESSION['status'] == true) {
                         <br>
                         <div class="row">
                             <div class="col">
+                                <input type="text" name="username" class="form-control border-white" placeholder="نام کاربری"
+                                       aria-label="نام کاربری">
+                            </div>
+                            <div class="col">
+                                <input type="text" name="id" class="form-control border-white"
+                                       placeholder="کد ملی" aria-label="کد ملی">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
                                 <input type="password" name="pass" class="form-control border-white" placeholder="رمز"
                                        aria-label="رمز">
                             </div>
@@ -68,10 +79,10 @@ if ($_SESSION['status'] == true) {
                             <div class="col">
                                 <select name="company" class="form-control border-white">
                                     <option selected>انتخاب شرکت</option>
-                                    <option value="1">Company 1</option>
-                                    <option value="2">Company 2</option>
-                                    <option value="3">Company 3</option>
-                                    <option value="4">Company 4</option>
+                                    <option value="Narbon">Narbon</option>
+                                    <option value="Milad">Milad</option>
+                                    <option value="Apple">Apple</option>
+                                    <option value="Microsoft">Microsoft</option>
                                 </select>
                             </div>
                         </div>
