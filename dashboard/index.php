@@ -12,9 +12,9 @@ $mysqldatabase = "nartik";
 $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
 
 if ($_SESSION['status'] == true) {
-    $mail = $_SESSION['email'];
+    $id = $_SESSION['id'];
 
-    $getdata = "SELECT * FROM users WHERE email = '$mail'";
+    $getdata = "SELECT * FROM people WHERE type='user' AND id='$id'";
     $ressult = mysqli_query($connection, $getdata);
 
     if (mysqli_num_rows($ressult) > 0) {
