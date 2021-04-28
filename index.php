@@ -14,7 +14,7 @@ $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldat
 if ($_SESSION['status'] == true) {
     $id = $_SESSION['id'];
 
-    $getdata = "SELECT * FROM people WHERE type='user' AND id='$id'";
+    $getdata = "SELECT * FROM people WHERE type='user' AND email='$id'";
     $ressult = mysqli_query($connection, $getdata);
 
     if (mysqli_num_rows($ressult) > 0) {
