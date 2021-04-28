@@ -3,7 +3,7 @@
 include('action.php');
 
 if ($_SESSION['status'] == true) {
-    header("Location: http://office.narbon.ir:4488/NarTik/dashboard");
+    header("Location: http://office.narbon.ir:4488/NarTik");
 }
 
 ?>
