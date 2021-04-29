@@ -38,10 +38,8 @@
 //            $password = md5($pass); // encrypt the password before saving in the database
             $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', 'Date and Time', '$company', '$pass', 'pending')";
             if (mysqli_query($connection, $query)) {
-                $_SESSION['status'] = true;
-                $_SESSION['id'] = $id;
-                $_SESSION['directory'] = 'nartik';
-                header('location: http://office.narbon.ir:4488/NarTik');
+                $_SESSION['status'] = "pending";
+                array_push($errors, "Ok, You are in pending!");
             }
             else {
                 array_push($errors, mysqli_error($connection));
@@ -66,14 +64,27 @@
 
         if (count($errors) == 0) {
 //            $password = md5($password);
-            $query = "SELECT * FROM people WHERE type='user' AND email='$email' AND password='$password'";
+            $query = "SELECT * FROM people WHERE email='$email' AND password='$password'";
             $results = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($results) == 1) {
-                $_SESSION['status'] = true;
-                $_SESSION['id'] = $email;
-                $_SESSION['directory'] = 'nartik';
-                header('location: http://office.narbon.ir:4488/NarTik');
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $type = $row['type'];
+                }
+                if ($type == "user") {
+                    $_SESSION['status'] = true;
+                    $_SESSION['id'] = $email;
+                    header("Location : http://office.narbon.ir:4488/NarTik");
+                }
+                elseif ($type == "pending") {
+                    array_push($errors, "You are in pending!");
+                }
+                elseif ($type == "reject") {
+                    array_push($errors, "You are rejected!");
+                }
+                else {
+                    array_push($errors, "Unknown type!");
+                }
             }
             else {
                 array_push($errors, "Wrong username/password combination");
