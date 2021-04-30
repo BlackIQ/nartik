@@ -33,10 +33,10 @@ if ($_SESSION['status'] == true) {
         $gettiks = "SELECT * FROM tiks WHERE userid = '$userid'";
         $tikres = mysqli_query($connection, $gettiks);
     }
-    elseif ($_SESSION['type'] == 'pending') {
+    if ($_SESSION['type'] == 'pending') {
         echo 'You are in pending!';
     }
-    elseif ($_SESSION['type'] == 'reject') {
+    if ($_SESSION['type'] == 'reject') {
         echo 'You are in pending!';
     }
 }
