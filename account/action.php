@@ -38,9 +38,6 @@
 //            $password = md5($pass); // encrypt the password before saving in the database
             $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', 'Date and Time', '$company', '$pass', 'pending')";
             if (mysqli_query($connection, $query)) {
-                $_SESSION['status'] = true;
-                $_SESSION['type'] = "pending";
-                array_push($_SESSION, "Ok, You are in pending");
                 header('location: http://office.narbon.ir:4488/NarTik');
             }
             else {
@@ -71,7 +68,6 @@
 
             if (mysqli_num_rows($results) == 1) {
                 $_SESSION['status'] = true;
-                $_SESSION['type'] = "user";
                 $_SESSION['id'] = $email;
                 $_SESSION['directory'] = 'nartik';
                 header('location: http://office.narbon.ir:4488/NarTik');
