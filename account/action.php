@@ -83,10 +83,10 @@
         $password = mysqli_real_escape_string($connection, $_POST['password']);
         
         if (empty($email)) {
-            array_push($errors, "Email is required");
+            array_push($errors, "لطفا ایمیل را وارد کنید");
         }
         if (empty($password)) {
-            array_push($errors, "Password is required");
+            array_push($errors, "لطفا رمز را وارد کنید");
         }
 
         if (count($errors) == 0) {
