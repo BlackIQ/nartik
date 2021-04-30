@@ -12,29 +12,28 @@ $mysqldatabase = "nartik";
 $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
 
 if ($_SESSION['status'] == true) {
-    $id = $_SESSION['id'];
+    if ($_SESSION['type'] == 'user') {
+        $id = $_SESSION['id'];
 
-    $getdata = "SELECT * FROM people WHERE type='user' AND email='$id'";
-    $ressult = mysqli_query($connection, $getdata);
+        $getdata = "SELECT * FROM people WHERE type='user' AND email='$id'";
+        $ressult = mysqli_query($connection, $getdata);
 
-    if (mysqli_num_rows($ressult) > 0) {
-        while ($row = mysqli_fetch_assoc($ressult)) {
-            $fname = $row['firstname'];
-            $lname = $row['lastname'];
-            $phone = $row['phone'];
-            $email = $row['email'];
-            $username = $row['username'];
-            $userid = $row['id'];
-            $company = $row['company'];
+        if (mysqli_num_rows($ressult) > 0) {
+            while ($row = mysqli_fetch_assoc($ressult)) {
+                $fname = $row['firstname'];
+                $lname = $row['lastname'];
+                $phone = $row['phone'];
+                $email = $row['email'];
+                $username = $row['username'];
+                $userid = $row['id'];
+                $company = $row['company'];
+            }
         }
+
+        $gettiks = "SELECT * FROM tiks WHERE userid = '$userid'";
+        $tikres = mysqli_query($connection, $gettiks);
     }
-
-    $gettiks = "SELECT * FROM tiks WHERE userid = '$userid'";
-    $tikres = mysqli_query($connection, $gettiks);
-
-}
-elseif (isset($_SESSION['type'])) {
-    if ($_SESSION['type'] == 'pending') {
+    elseif ($_SESSION['type'] == 'pending') {
         echo 'You are in pending!';
     }
     elseif ($_SESSION['type'] == 'reject') {
