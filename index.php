@@ -33,6 +33,14 @@ if ($_SESSION['status'] == true) {
     $tikres = mysqli_query($connection, $gettiks);
 
 }
+elseif (isset($_SESSION['type'])) {
+    if ($_SESSION['type'] == 'pending') {
+        echo 'You are in pending!';
+    }
+    elseif ($_SESSION['type'] == 'reject') {
+        echo 'You are in pending!';
+    }
+}
 else {
     header("Location: http://office.narbon.ir:4488/NarTik/account");
 }
