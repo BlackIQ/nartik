@@ -101,7 +101,7 @@
                 header('location: http://office.narbon.ir:4488/NarTik');
             }
             else {
-                array_push($errors, "ایمیل یا رمز عبور درست نیست. لطفادوباره امتحان کنید");
+                array_push($errors, "ایمیل یا رمز عبور درست نیست. لطفا دوباره امتحان کنید");
             }
         }
     }
