@@ -29,7 +29,35 @@
         $username = mysqli_real_escape_string($connection, $_POST['username']);
         $id = mysqli_real_escape_string($connection, $_POST['id']);
         
-       if ($pass != $conpass) {
+        if (empty($name)) {
+            array_push($errors, "نام الزامیست");
+        }
+        if (empty($lastname)) {
+            array_push($errors, "نام خانوادگی الزامیست");
+        }
+        if (empty($phone)) {
+            array_push($errors, "شماره همراه الزامیست");
+        }
+        if (empty($email)) {
+            array_push($errors, "ایمیل الزامیست");
+        }
+        if (empty($username)) {
+            array_push($errors, "نام کاربری الزامیست");
+        }
+        if (empty($id)) {
+            array_push($errors, "شماره ملی الزامیست");
+        }
+        if (empty($pass)) {
+            array_push($errors, "رمز الزامیست");
+        }
+        if (empty($conpass)) {
+            array_push($errors, "تایید رمز الزامیست");
+        }
+        if (empty($company)) {
+            array_push($errors, "لطفا یک شرکت را انتخاب کنید");
+        }
+        
+        if ($pass != $conpass) {
             array_push($errors, "The two passwords do not match");
         }
 
