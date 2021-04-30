@@ -70,6 +70,7 @@
 
             if (mysqli_num_rows($results) == 1) {
                 $_SESSION['status'] = true;
+                $_SESSION['type'] = "user";
                 $_SESSION['id'] = $email;
                 $_SESSION['directory'] = 'nartik';
                 header('location: http://office.narbon.ir:4488/NarTik');
