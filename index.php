@@ -49,7 +49,7 @@ else {
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NarTik - Dashboard</title>
+    <title>نارتیک - داشبورد</title>
     <link href="http://office.narbon.ir:4488/pack/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://office.narbon.ir:4488/pack/css/datepicker3.css" rel="stylesheet">
     <link href="http://office.narbon.ir:4488/pack/css/styles.css" rel="stylesheet">
