@@ -332,28 +332,28 @@ else {
                         <div>
                             <hr>
                         </div>
-                        <h3>Change Password</h3>
+                        <h3>تغییر رمز</h3>
                         <br>
                         <form class="">
                             <div class="form-group">
                                 <input type="password" class="form-control" placeholder="Current Password">
-                                <small>Enter Your <b>current password</b></small>
+                                <small>رمز<b> کنونی خود </b> را ورد کنید</small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="New Password">
-                                        <small>Enter Your <b>new password</b></small>
+                                        <small>رمز<b> حدید خود </b> را وار کنید</small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Confirm Password">
-                                        <small>Enter Your <b>new password again</b></small>
+                                        <small>رمر<b> جدید خود </b> را دوباره تکرار کنید</small>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Change Password</button>
+                            <button type="submit" class="btn btn-primary">تغییر رمز</button>
                         </form>
                     </div>
                 </div>
