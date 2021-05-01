@@ -16,6 +16,10 @@
     // Create Connection
     $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
     
+    function sendpending() {
+        echo 'This is a function';
+    }
+    
     // REGISTER USER
     if (isset($_POST['reg_user'])) {
         // receive all input values from the form
