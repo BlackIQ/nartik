@@ -69,7 +69,7 @@ else {
     <nav class="navbar bg-info navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href=".">NarTik</a>
+                <a class="navbar-brand" href=".">نارتیک</a>
                 <ul class="nav navbar-top-links navbar-right">
                     <li class="dropdown">
                         <a class="dropdown-toggle count-info" href="account/logout.php">
@@ -87,13 +87,13 @@ else {
             <li><a href="../">
                 <em class="fa fa-home"></em>
             </a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">داشبود</li>
         </ol>
     </div><!--/.row-->
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Dashboard</h1>
+            <h1 class="page-header">داشبورد</h1>
         </div>
     </div><!--/.row-->
     
@@ -106,7 +106,7 @@ else {
                     <div class="row no-padding"><em class="fa fa-xl fa-bank color-blue"></em>
                         <div class="large"><?php echo $company; ?></div>
                         <br>
-                        <div class="text-muted">Company</div>
+                        <div class="text-muted">شرکت</div>
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@ else {
                             ?>
                         </div>
                         <br>
-                        <div class="text-muted">Total Tickets</div>
+                        <div class="text-muted">تیکت های ارسال شده</div>
                     </div>
                 </div>
             </div>
@@ -138,7 +138,7 @@ else {
                             ?>
                         </div>
                         <br>
-                        <div class="text-muted">Not Seen Tickets</div>
+                        <div class="text-muted">تیکت های ارسال نشده</div>
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@ else {
                             ?>
                         </div>
                         <br>
-                        <div class="text-muted">Answered Tickets</div>
+                        <div class="text-muted">تیکت های جواب گرفته</div>
                     </div>
                 </div>
             </div>
