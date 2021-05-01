@@ -264,7 +264,7 @@ else {
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Profile
+                    پروفایل
                     <span class="pull-right clickable panel-toggle panel-button-tab-left">
                         <em class="fa fa-toggle-up"></em>
                     </span>
@@ -290,7 +290,7 @@ else {
                         </div>
                         <br>
                         <div>
-                            <p><a class="text-danger" href="account/logout.php"><i class="fa fa-sign-out"></i> Logout</a></p>
+                            <p><a class="text-danger" href="account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب کاربری</a></p>
                         </div>
                     </div>
                 </div>
