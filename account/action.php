@@ -16,8 +16,8 @@
     // Create Connection
     $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
     
-    function sendpending() {
-        echo 'This is a function';
+    function sendpending ($user) {
+        echo 'This is a function for $user';
     }
     
     // REGISTER USER
