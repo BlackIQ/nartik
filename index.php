@@ -306,28 +306,28 @@ else {
                 </div>
                 <div class="panel-body">
                     <div class="">
-                        <h3>Update Your profile</h3>
+                        <h3>تنصیمات پروفایل</h3>
                         <br>
                         <form class="">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Username">
-                                <small>Your current username is <b><?php echo $username;?></b></small>
+                                <small>نام کاربری کنونی شما <b><?php echo $username;?></b></small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="email" class="form-control" placeholder="E-Mail">
-                                        <small>Your current E-Mail is <b><?php echo $email;?></b></small>
+                                        <small>ایمیل کنونی شما <b><?php echo $email;?></b></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Phone">
-                                        <small>Your current phone is <b><?php echo $phone;?></b></small>
+                                        <small>تلفن همراه کنونی شما <b><?php echo $phone;?></b></small>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                            <button type="submit" class="btn btn-primary">اپدیت پروفایل</button>
                         </form>
                         <div>
                             <hr>
