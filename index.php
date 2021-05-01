@@ -247,14 +247,14 @@ else {
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Tickets Review
+                    نمایش تیکت
                     <span class="pull-right clickable panel-toggle panel-button-tab-left">
                         <em class="fa fa-toggle-up"></em>
                     </span>
                 </div>
                 <div class="panel-body">
                     <div>
-                        <h1>Select a ticket</h1>
+                        <h1>یک تیکت را برای نمایش انتخاب کنید</h1>
                     </div>
                 </div>
             </div>
