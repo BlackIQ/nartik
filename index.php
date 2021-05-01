@@ -193,7 +193,7 @@ else {
                 <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    My Tickets
+                    تیکت های من
                     <span class="pull-right clickable panel-toggle panel-button-tab-left">
                         <em class="fa fa-toggle-up"></em>
                     </span>
@@ -206,9 +206,9 @@ else {
                                 <table class="table table-bordered table-hover">
                                     <thead>
                                     <tr>
-                                        <th class="">row</th>
-                                        <th class="">Title</th>
-                                        <th class="">Status</th>
+                                        <th class="">ردیف</th>
+                                        <th class="">موضوع</th>
+                                        <th class="">وضعیت</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -237,7 +237,7 @@ else {
                                 <?php
                             }
                             else {
-                                echo "<h2>You have no tickets yet !</h2>";
+                                echo "<h2>در حال حاضر هیچ تیکت برای نمایش وحود ندارید</h2>";
                             }
                         ?>
                     </div>
