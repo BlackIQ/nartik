@@ -162,7 +162,7 @@ else {
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    New Ticket
+                    تیکت جدید
                     <span class="pull-right clickable panel-toggle panel-button-tab-left">
                         <em class="fa fa-toggle-up"></em>
                     </span>
@@ -171,18 +171,18 @@ else {
                     <div class="">
                         <form class="">
                             <div class="form-group">
-                                <label for="title">Title of Ticket</label>
-                                <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Title of report">
+                                <label for="title">موضوع تیکت</label>
+                                <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="موضوع تیکت">
                             </div>
                             <div class="form-group">
-                                <label for="des">Explanation</label>
-                                <textarea type="text" class="form-control" rows="5" id="des" aria-describedby="des" placeholder="Explanation"></textarea>
+                                <label for="des">توضیحات</label>
+                                <textarea type="text" class="form-control" rows="5" id="des" aria-describedby="des" placeholder="توضیحات"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="record">Record your voice</label>
-                                <p class="text-primary"><i class="fa fa-microphone"></i> Click here to start recording</p>
+                                <label for="record">همراه با تیکت صدای خود را نیز برای ما ارسال کنید</label>
+                                <p class="text-primary"><i class="fa fa-microphone"></i> کلیک کنید تا شروع به صبط صدا شود</p>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send ticket</button>
+                            <button type="submit" class="btn btn-primary">ارسال تیکت</button>
                         </form>
                     </div>
                 </div>
