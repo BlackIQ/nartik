@@ -282,11 +282,11 @@ else {
                             <div class="clear"></div>
                         </div>
                         <div>
-                            <h3 class="text-success"><?php echo $fname . "&nbsp;" . $lname;?><i class="fa fa-user"></i> </h3>
-                            <h3 class="text-info"><i class="fa fa-bank"></i>&nbsp;<?php echo $company;?></h3>
+                            <h3 class="text-success"><?php echo $fname . "&nbsp;" . $lname;?> <i class="fa fa-user"></i></h3>
+                            <h3 class="text-info"><?php echo $company;?> <i class="fa fa-bank"></i></h3>
                             <br>
-                            <h4 class="text-primary"><i class="fa fa-at"></i>&nbsp;<?php echo $email;?></h4>
-                            <h4 class="text-warning"><i class="fa fa-phone"></i>&nbsp;<?php echo $phone; ?></h4>
+                            <h4 class="text-primary"><?php echo $email;?> <i class="fa fa-at"></i></h4>
+                            <h4 class="text-warning"><?php echo $phone; ?> <i class="fa fa-phone"></i></h4>
                         </div>
                         <br>
                         <div>
