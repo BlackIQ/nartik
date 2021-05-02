@@ -253,8 +253,10 @@ else {
                     </span>
                 </div>
                 <div class="panel-body">
-                    <div>
-                        <h1>یک تیکت را برای نمایش انتخاب کنید</h1>
+                    <div class="">
+                        <?php
+                        include("ticket.php");
+                        ?>
                     </div>
                 </div>
             </div>
