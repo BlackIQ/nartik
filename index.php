@@ -217,7 +217,7 @@ else {
                                         ?>
                                         <tr>
                                             <th class=""><?php echo $tiks['row']; ?></th>
-                                            <td class=""><?php echo $tiks['title']; ?></td>
+                                            <td class=""><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>"><?php echo $tiks['title']; ?></a></td>
                                             <td class="">
                                                 <?php
                                                 if ($tiks['answer'] != "ny") {
