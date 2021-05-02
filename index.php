@@ -199,7 +199,7 @@ else {
                     </span>
                 </div>
                 <div class="panel-body">
-                    <div class="">
+                    <div class="text-center">
                         <?php
                             if (mysqli_num_rows($tikres) > 0) {
                                 ?>
