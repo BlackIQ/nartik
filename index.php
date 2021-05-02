@@ -317,7 +317,7 @@ else {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="email" class="form-control" placeholder="E-Mail">
-                                        <small>ایمیل کنونی شما <b><?php echo $email;?></b></small>
+                                        <small><b><?php echo $email;?></b> ایمیل کنونی شما</small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
