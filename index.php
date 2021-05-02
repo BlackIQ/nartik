@@ -64,7 +64,7 @@ else {
     <script src="https://office.narbon.ir:4488/pack/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<body dir="rtl">
+<body style="text-align: right;">
     
     <nav class="navbar bg-info navbar-fixed-top" role="navigation">
         <div class="container-fluid">
