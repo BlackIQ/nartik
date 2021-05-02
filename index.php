@@ -199,7 +199,7 @@ else {
                     </span>
                 </div>
                 <div class="panel-body">
-                    <div class="text-center">
+                    <div style="text-align: center;">
                         <?php
                             if (mysqli_num_rows($tikres) > 0) {
                                 ?>
@@ -270,7 +270,7 @@ else {
                     </span>
                 </div>
                 <div class="panel-body">
-                    <div class="text-right">
+                    <div style="text-align: right;">
                         <div class="profile-sidebar">
                             <div class="profile-userpic">
                                 <img src="http://office.narbon.ir:4488/pack/pic.jpeg" class="img-responsive" alt="User Image">
