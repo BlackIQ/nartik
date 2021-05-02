@@ -1,5 +1,7 @@
 <?php
 
+include("action.php");
+
 session_start();
 
 // MySQL Data
