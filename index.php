@@ -270,7 +270,7 @@ else {
                     </span>
                 </div>
                 <div class="panel-body">
-                    <div class="">
+                    <div class="text-right">
                         <div class="profile-sidebar">
                             <div class="profile-userpic">
                                 <img src="http://office.narbon.ir:4488/pack/pic.jpeg" class="img-responsive" alt="User Image">
