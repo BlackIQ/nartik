@@ -290,7 +290,7 @@ else {
                         </div>
                         <br>
                         <div>
-                            <p><a class="text-danger" href="account/logout.php"> خروج از حساب کاربری<i class="fa fa-sign-out"></i></a></p>
+                            <p><a class="text-danger" href="account/logout.php">خروج از حساب کاربری <i class="fa fa-sign-out"></i></a></p>
                         </div>
                     </div>
                 </div>
