@@ -323,7 +323,7 @@ else {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Phone">
-                                        <small>تلفن همراه کنونی شما <b><?php echo $phone;?></b></small>
+                                        <small><b><?php echo $phone;?></b> تلفن همراه کنونی شما</small>
                                     </div>
                                 </div>
                             </div>
