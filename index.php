@@ -311,7 +311,7 @@ else {
                         <form class="">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Username">
-                                <small>نام کاربری کنونی شما <b><?php echo $username;?></b></small>
+                                <small><b><?php echo $username;?></b>نام کاربری کنونی شما </small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
