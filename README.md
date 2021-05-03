@@ -1,6 +1,6 @@
-# NarTicks
+# NarTick
 
-- **Nar**bon **Tick**ets web application, written in **PHP**.
+- **Nar**bon **Tick**et web application, written in **PHP**.
 
 ---
 
