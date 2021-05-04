@@ -218,7 +218,7 @@ else {
                                     while ($tiks = mysqli_fetch_assoc($tikres)) {
                                         ?>
                                         <tr>
-                                            <th class=""><?php echo $tiks['row']; ?></th>
+                                        <tr class=""><b><?php echo $tiks['row']; ?></b></tr>
                                             <td class=""><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>"><?php echo $tiks['title']; ?></a></td>
                                             <td class="">
                                                 <?php
