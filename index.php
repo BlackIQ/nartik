@@ -161,7 +161,7 @@ else {
         
     </div>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="tikreview">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     نمایش تیکت
@@ -205,7 +205,7 @@ else {
                                         ?>
                                         <tr>
                                             <td class=""><b><?php echo $tiks['row']; ?></b></td>
-                                            <td class=""><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>"><?php echo $tiks['title']; ?></a></td>
+                                            <td class=""><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></td>
                                             <td class="">
                                                 <?php
                                                 if ($tiks['answer'] != "ny") {
