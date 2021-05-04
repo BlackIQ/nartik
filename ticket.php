@@ -12,13 +12,13 @@ if (count($tik) > 0) {
             <h3><b><?php echo $tik[0]['title']; ?></b></h3>
             <h3><?php echo $tik[0]['explane']; ?></h3>
             <br>
-            <p>Sent in : <?php echo $tik[0]['dt']; ?></p>
+            <p>ارسال شده در <?php echo $tik[0]['dt']; ?></p>
             <br>
-            <h3>Answer</h3>
+            <h3>پاسخ</h3>
             <p>
                 <?php
                     if ($tik[0]['answer'] == 'ny') {
-                        echo 'No answers yet';
+                        echo 'هنوز به این تیکت پاسخی داده نشده است.<br>لطفا شکیبا باشید.';
                     }
                     else {
                         echo $tik[0]['answer'];
