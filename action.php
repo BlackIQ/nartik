@@ -32,7 +32,7 @@
             $dt = date("M , d , Y");
             $tikid = rand(1000, 9999);
             
-            $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text', '$dt', 'file2', '4:00', 'ny', false)";
+            $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$company','$text', '$dt', 'file2', '4:00', 'ny', false)";
             if (mysqli_query($connection, $query)) {
                 array_push($send, "تیکت شما با موفقست ارسال شد");
                 header('location: http://office.narbon.ir:4488/NarTik');
