@@ -277,11 +277,11 @@ else {
                             <h3 class="text-success"><?php echo $fname . "&nbsp;" . $lname;?> <i class="fa fa-user"></i></h3>
                             <h3 class="text-info"><?php echo $company;?> <i class="fa fa-bank"></i></h3>
                             <hr>
-                            <h3 class="text-info"><?php echo $username;?> <i class="fa fa-user"></i></h3>
-                            <h3 class="text-muted"><?php echo $userid;?> <i class="fa fa-id-card"></i></h3>
+                            <p class="text-info"><?php echo $username;?> <i class="fa fa-user"></i></p>
+                            <p class="text-muted"><?php echo $userid;?> <i class="fa fa-id-card"></i></p>
                             <br>
-                            <h4 class="text-primary"><?php echo $email;?> <i class="fa fa-at"></i></h4>
-                            <h4 class="text-warning"><?php echo $phone; ?> <i class="fa fa-phone"></i></h4>
+                            <p class="text-primary"><?php echo $email;?> <i class="fa fa-at"></i></p>
+                            <p class="text-warning"><?php echo $phone; ?> <i class="fa fa-phone"></i></p>
                         </div>
                         <br>
                         <div>
