@@ -273,19 +273,12 @@ else {
                 </div>
                 <div class="panel-body">
                     <div style="text-align: right;">
-                        <div class="profile-sidebar">
-                            <div class="profile-userpic">
-                                <img src="http://office.narbon.ir:4488/pack/pic.jpeg" class="img-responsive" alt="User Image">
-                            </div>
-                            <div class="profile-usertitle">
-                                <div class="profile-usertitle-name"><i class="fa fa-user color-blue"></i> <?php echo $username;?></div>
-                                <div class="profile-usertitle-status"><i class="fa fa-id-card color-orange"></i> <?php echo $userid;?></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
                         <div>
                             <h3 class="text-success"><?php echo $fname . "&nbsp;" . $lname;?> <i class="fa fa-user"></i></h3>
                             <h3 class="text-info"><?php echo $company;?> <i class="fa fa-bank"></i></h3>
+                            <hr>
+                            <h3 class="text-info"><?php echo $username;?> <i class="fa fa-user"></i></h3>
+                            <h3 class="text-muted"><?php echo $userid;?> <i class="fa fa-id-card"></i></h3>
                             <br>
                             <h4 class="text-primary"><?php echo $email;?> <i class="fa fa-at"></i></h4>
                             <h4 class="text-warning"><?php echo $phone; ?> <i class="fa fa-phone"></i></h4>
