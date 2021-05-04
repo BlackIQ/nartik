@@ -13,7 +13,7 @@ if (count($tik) > 0) {
             <h3><?php echo $tik[0]['explane']; ?></h3>
             <br>
             <p><?php echo $tik[0]['dt'] . "&nbsp;"; ?>ارسال شده در</p>
-            <br>
+            <hr>
             <h3>پاسخ</h3>
             <p>
                 <?php
