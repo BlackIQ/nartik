@@ -161,9 +161,9 @@ else {
         
     </div>
     <div class="row">
-        <div class="col-md-4" id="tikreview">
+        <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading"  id="tikreview">
                     نمایش تیکت
                     <span class="pull-right clickable panel-toggle panel-button-tab-left">
                         <em class="fa fa-toggle-up"></em>
