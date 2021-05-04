@@ -241,6 +241,9 @@ else {
                     </span>
                 </div>
                 <div class="panel-body">
+                    <div>
+                        <?php include("send.php"); ?>
+                    </div>
                     <div class="">
                         <form class="" method="post" action="index.php">
                             <div class="form-group">
