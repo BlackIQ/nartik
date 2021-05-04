@@ -25,6 +25,8 @@ if (count($tik) > 0) {
                     }
                 ?>
             </p>
+            <hr>
+            <button class="btn btn-defult"><a style="color: black;" href="index.php">بستن تیکت</a></button>
         </div>
         <?php
     }
