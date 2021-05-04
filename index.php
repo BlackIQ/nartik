@@ -164,28 +164,16 @@ else {
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    تیکت جدید
+                    نمایش تیکت
                     <span class="pull-right clickable panel-toggle panel-button-tab-left">
                         <em class="fa fa-toggle-up"></em>
                     </span>
                 </div>
                 <div class="panel-body">
                     <div class="">
-                        <form class="">
-                            <div class="form-group">
-                                <label for="title">موضوع تیکت</label>
-                                <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="موضوع تیکت">
-                            </div>
-                            <div class="form-group">
-                                <label for="des">توضیحات</label>
-                                <textarea type="text" class="form-control" rows="5" id="des" aria-describedby="des" placeholder="توضیحات"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="record">همراه با تیکت صدای خود را نیز برای ما ارسال کنید</label>
-                                <p class="text-primary"><i class="fa fa-microphone"></i> کلیک کنید تا شروع به صبط صدا شود</p>
-                            </div>
-                            <button type="submit" class="btn btn-primary">ارسال تیکت</button>
-                        </form>
+                        <?php
+                        include("ticket.php");
+                        ?>
                     </div>
                 </div>
             </div>
@@ -247,16 +235,28 @@ else {
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    نمایش تیکت
+                    تیکت جدید
                     <span class="pull-right clickable panel-toggle panel-button-tab-left">
                         <em class="fa fa-toggle-up"></em>
                     </span>
                 </div>
                 <div class="panel-body">
                     <div class="">
-                        <?php
-                        include("ticket.php");
-                        ?>
+                        <form class="">
+                            <div class="form-group">
+                                <label for="title">موضوع تیکت</label>
+                                <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="موضوع تیکت">
+                            </div>
+                            <div class="form-group">
+                                <label for="des">توضیحات</label>
+                                <textarea type="text" class="form-control" rows="5" id="des" aria-describedby="des" placeholder="توضیحات"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="record">همراه با تیکت صدای خود را نیز برای ما ارسال کنید</label>
+                                <p class="text-primary"><i class="fa fa-microphone"></i> کلیک کنید تا شروع به صبط صدا شود</p>
+                            </div>
+                            <button type="submit" class="btn btn-primary">ارسال تیکت</button>
+                        </form>
                     </div>
                 </div>
             </div>
