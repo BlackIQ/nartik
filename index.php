@@ -161,7 +161,7 @@ else {
         
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     تیکت جدید
@@ -190,9 +190,7 @@ else {
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-                <div class="col-md-6">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     تیکت های من
@@ -246,7 +244,7 @@ else {
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     نمایش تیکت
