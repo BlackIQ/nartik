@@ -283,7 +283,7 @@ else {
                             <p class="text-primary"><?php echo $email;?> <i class="fa fa-at"></i></p>
                             <p class="text-warning"><?php echo $phone; ?> <i class="fa fa-phone"></i></p>
                         </div>
-                        <br>
+                        <hr>
                         <div>
                             <p><a class="text-danger" href="account/logout.php">خروج از حساب کاربری <i class="fa fa-sign-out"></i></a></p>
                         </div>
