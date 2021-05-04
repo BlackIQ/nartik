@@ -242,20 +242,20 @@ else {
                 </div>
                 <div class="panel-body">
                     <div class="">
-                        <form class="">
+                        <form class="" method="post" action="index.php">
                             <div class="form-group">
                                 <label for="title">موضوع تیکت</label>
-                                <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="موضوع تیکت">
+                                <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="موضوع تیکت">
                             </div>
                             <div class="form-group">
                                 <label for="des">توضیحات</label>
-                                <textarea type="text" class="form-control" rows="5" id="des" aria-describedby="des" placeholder="توضیحات"></textarea>
+                                <textarea type="text" class="form-control" rows="5" name="text" id="des" aria-describedby="des" placeholder="توضیحات"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="record">همراه با تیکت صدای خود را نیز برای ما ارسال کنید</label>
                                 <p class="text-primary"><i class="fa fa-microphone"></i> کلیک کنید تا شروع به صبط صدا شود</p>
                             </div>
-                            <button type="submit" class="btn btn-primary">ارسال تیکت</button>
+                            <button type="submit" name="sendtik" class="btn btn-primary">ارسال تیکت</button>
                         </form>
                     </div>
                 </div>
