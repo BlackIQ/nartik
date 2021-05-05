@@ -15,7 +15,24 @@
 
     // Create Connection
     $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
-    
+
+    $id = $_SESSION['id'];
+
+    $getdata = "SELECT * FROM people WHERE type='user' AND email='$id'";
+    $ressult = mysqli_query($connection, $getdata);
+
+    if (mysqli_num_rows($ressult) > 0) {
+        while ($row = mysqli_fetch_assoc($ressult)) {
+            $fname = $row['firstname'];
+            $lname = $row['lastname'];
+            $phone = $row['phone'];
+            $email = $row['email'];
+            $username = $row['username'];
+            $userid = $row['id'];
+            $company = $row['company'];
+        }
+    }
+
     // Get data of ticket
     if (isset($_POST['sendtik'])) {
         $title = mysqli_real_escape_string($connection, $_POST["title"]);
@@ -32,7 +49,7 @@
             $dt = date("M , d , Y");
             $tikid = rand(1000, 9999);
             
-            $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', 'file2', '4:00', 'ny', false)";
+            $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', 'file', '4:00', 'ny', false)";
             if (mysqli_query($connection, $query)) {
                 array_push($send, true);
                 header('location: http://office.narbon.ir:4488/NarTik');
