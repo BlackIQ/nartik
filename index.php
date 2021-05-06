@@ -192,7 +192,7 @@ else {
                                     <tr>
                                         <td class=""><b>ردیف</b></td>
                                         <td class=""><b>موضوع</b></td>
-                                        <td class=""><b>وضعیت</b></td>
+                                        <td class=""><b>شماره تیکت</b></td>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -200,7 +200,7 @@ else {
                                     while ($tiks = mysqli_fetch_assoc($tikres)) {
                                         ?>
                                         <tr>
-                                            <td class=""><b><?php echo $tiks['row']; ?></b></td>
+                                            <td class=""><b><?php echo $tiks['tikid']; ?></b></td>
                                             <td class=""><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></td>
                                             <td class="">
                                                 <?php
