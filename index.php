@@ -47,6 +47,7 @@ else {
     <style>
         textarea {
             resize: none;
+            text-align: right;
         }
         input {
             text-align: right;
