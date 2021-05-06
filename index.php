@@ -31,7 +31,7 @@ if ($_SESSION['status'] == true) {
         }
     }
 
-    $gettiks = "SELECT * FROM tiks WHERE userid = '$userid'";
+    $gettiks = "SELECT * FROM tiks WHERE userid = '$userid' ORDER BY row DESC";
     $tikres = mysqli_query($connection, $gettiks);
 }
 else {
@@ -217,7 +217,7 @@ else {
                                                 ?>
                                             </td>
                                         </tr>
-                                        <?php
+                                        <?php 
                                     }
                                     ?>
                                     </tbody>
