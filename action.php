@@ -51,7 +51,7 @@
             
             $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', 'file', '4:00', 'ny', false)";
             if (mysqli_query($connection, $query)) {
-                array_push($send, true);
+                array_push($send, "تیکت شما با موفقیت ارسال شد");
                 header('location: http://office.narbon.ir:4488/NarTik');
             }
             else {
