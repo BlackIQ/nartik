@@ -136,7 +136,7 @@ else {
                             ?>
                         </div>
                         <br>
-                        <div class="text-muted">تیکت های ارسال نشده</div>
+                        <div class="text-muted">تیکت های جواب گرفته نشده</div>
                     </div>
                 </div>
             </div>
