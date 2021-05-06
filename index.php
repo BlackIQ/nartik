@@ -293,14 +293,14 @@ else {
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Setting
+                    تنظیمات
                     <span class="pull-right clickable panel-toggle panel-button-tab-left">
                         <em class="fa fa-toggle-up"></em>
                     </span>
                 </div>
                 <div class="panel-body">
                     <div class="">
-                        <h3>تنصیمات پروفایل</h3>
+                        <h3>تنظیمات پروفایل</h3>
                         <br>
                         <form class="">
                             <div class="form-group">
