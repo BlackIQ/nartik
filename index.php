@@ -48,6 +48,9 @@ else {
         textarea {
             resize: none;
         }
+        input.placeholder {
+            text-align: left;
+        }
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
