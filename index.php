@@ -190,9 +190,9 @@ else {
                                 <table class="table table-bordered table-hover">
                                     <thead>
                                     <tr>
-                                        <td class=""><b>ردیف</b></td>
-                                        <td class=""><b>موضوع</b></td>
                                         <td class=""><b>شماره تیکت</b></td>
+                                        <td class=""><b>موضوع</b></td>
+                                        <td class=""><b>ردیف</b></td>
                                     </tr>
                                     </thead>
                                     <tbody>
