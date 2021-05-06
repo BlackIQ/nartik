@@ -192,7 +192,7 @@ else {
                                     <tr>
                                         <td class=""><b>شماره تیکت</b></td>
                                         <td class=""><b>موضوع</b></td>
-                                        <td class=""><b>ردیف</b></td>
+                                        <td class=""><b>وضعیت</b></td>
                                     </tr>
                                     </thead>
                                     <tbody>
