@@ -304,19 +304,19 @@ else {
                         <br>
                         <form class="">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Username">
+                                <input type="text" class="form-control" placeholder="نام کاربری">
                                 <small><b><?php echo $username;?></b> نام کاربری کنونی شما</small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="E-Mail">
+                                        <input type="email" class="form-control" placeholder="ایمیل">
                                         <small><b><?php echo $email;?></b> ایمیل کنونی شما</small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Phone">
+                                        <input type="text" class="form-control" placeholder="شماره همراه">
                                         <small><b><?php echo $phone;?></b> تلفن همراه کنونی شما</small>
                                     </div>
                                 </div>
@@ -330,19 +330,19 @@ else {
                         <br>
                         <form class="">
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Current Password">
+                                <input type="password" class="form-control" placeholder="رمز کنونی">
                                 <small>رمز<b> کنونی خود </b> را ورد کنید</small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="New Password">
+                                        <input type="password" class="form-control" placeholder="رمز جدید">
                                         <small>رمز<b> حدید خود </b> را وار کنید</small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Confirm Password">
+                                        <input type="password" class="form-control" placeholder="تایید رمز جدید">
                                         <small>رمر<b> جدید خود </b> را دوباره تکرار کنید</small>
                                     </div>
                                 </div>
