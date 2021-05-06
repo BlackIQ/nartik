@@ -48,7 +48,7 @@ else {
         textarea {
             resize: none;
         }
-        input.placeholder {
+        input {
             text-align: right;
         }
     </style>
