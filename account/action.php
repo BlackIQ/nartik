@@ -68,9 +68,10 @@
         // register user if there are no errors in the form
         if (count($errors) == 0) {
 //            $password = md5($pass); // encrypt the password before saving in the database
-            $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', 'Date and Time', '$company', '$pass', 'pending')";
+            $dt = date("M , d , Y");
+            $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company', '$pass', 'pending')";
             if (mysqli_query($connection, $query)) {
-                header('location: http://office.narbon.ir:4488/NarTik');
+                array_push($errors, "شما با موفقیت در صف نارتیک قرار گرفته اید");
             }
             else {
                 array_push($errors, mysqli_error($connection));
