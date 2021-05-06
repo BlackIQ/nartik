@@ -49,7 +49,7 @@ else {
             resize: none;
         }
         input.placeholder {
-            text-align: left;
+            text-align: right;
         }
     </style>
     <meta charset="utf-8">
