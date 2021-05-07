@@ -308,19 +308,19 @@ else {
                         <br>
                         <form action="index.php" method="post" class="">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="نام کاربری">
+                                <input type="text" name="username" class="form-control" placeholder="نام کاربری">
                                 <small><b><?php echo $username;?></b> نام کاربری کنونی شما</small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="ایمیل">
+                                        <input type="email" name="email" class="form-control" placeholder="ایمیل">
                                         <small><b><?php echo $email;?></b> ایمیل کنونی شما</small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="شماره همراه">
+                                        <input type="text" name="phone" class="form-control" placeholder="شماره همراه">
                                         <small><b><?php echo $phone;?></b> تلفن همراه کنونی شما</small>
                                     </div>
                                 </div>
