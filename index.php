@@ -52,7 +52,7 @@ else {
         }
 
         body {
-            font-family: "nazanin"
+            font-family: "nazanin";
         }
         
         textarea {
