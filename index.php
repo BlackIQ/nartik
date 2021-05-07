@@ -45,6 +45,16 @@ else {
 <html>
 <head>
     <style>
+        @font-face {
+            font-family: 'segoeui';
+            src: url('../SEGOEUI.TTF');
+            font-style: normal;
+        }
+
+        body {
+            font-family: "segoeui";
+        }
+        
         textarea {
             resize: none;
             text-align: right;
