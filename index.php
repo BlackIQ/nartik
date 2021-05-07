@@ -325,7 +325,7 @@ else {
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">اپدیت پروفایل</button>
+                            <button type="submit" name="profupdate" class="btn btn-primary">اپدیت پروفایل</button>
                         </form>
                         <div>
                             <hr>
