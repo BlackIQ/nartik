@@ -110,6 +110,9 @@
                 array_push($profile, mysqli_error($connection));
             }
         }
+        else {
+            array_push($profile, "لطفا یک فیلد را پر کنید");
+        }
     }
     
 ?>
