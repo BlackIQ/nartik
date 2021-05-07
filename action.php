@@ -6,6 +6,7 @@
     $email    = "";
     $tik = array();
     $send = array();
+    $profile = array();
 
     // MySQL Data
     $mysqlserver = "localhost";
