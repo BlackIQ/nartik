@@ -100,6 +100,16 @@
                 array_push($profile, mysqli_error($connection));
             }
         }
+        if (isset(mysqli_real_escape_string($connection, $_POST["phone"]))) {
+            $newphone = mysqli_real_escape_string($connection, $_POST["phone"]);
+            $updatephone = "UPDATE people SET phone = '$newphone'";
+            if (mysqli_query($connection, $updatephone)) {
+                array_push($profile, "شماره همراه شما با موفقیت تغییر کرد");
+            }
+            else {
+                array_push($profile, mysqli_error($connection));
+            }
+        }
     }
     
 ?>
