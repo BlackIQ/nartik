@@ -47,12 +47,12 @@ else {
     <style>
         @font-face {
             font-family: 'segoeui';
-            src: url('../SEGOEUI.TTF');
+            src: url('SEGOEUI.TTF');
             font-style: normal;
         }
 
         body {
-            font-family: "segoeui";
+            font-family: "segoeui"
         }
         
         textarea {
