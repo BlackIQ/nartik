@@ -77,4 +77,19 @@
         }
     }
     
+    
+    // Get profile data
+    if (isset($_POST["profupdate"])) {
+        if (isset(mysqli_real_escape_string($connection, $_POST["username"]))) {
+            $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
+            $updateusename = "UPDATE people SET username = '$newusername'";
+            if (mysqli_query($connection, $updateusename)) {
+                array_push($profile, "نام کاربری شما با موفقیت تغییر کرد");
+            }
+            else {
+                array_push($profile, mysqli_error($connection));
+            }
+        }
+    }
+    
 ?>
