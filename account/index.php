@@ -85,11 +85,11 @@ if ($_SESSION['status'] == true) {
                         <div class="row">
                             <div class="col">
                                 <select name="company" class="form-control border-white">
-                                    <option selected>انتخاب شرکت</option>
-                                    <option value="Narbon">Narbon</option>
-                                    <option value="Milad">Milad</option>
-                                    <option value="Apple">Apple</option>
-                                    <option value="Microsoft">Microsoft</option>
+                                    <option velue="none" selected>انتخاب شرکت</option>
+                                    <option value="Narbon">ناربن</option>
+                                    <option value="Milad">میلاد</option>
+                                    <option value="Microsoft">مایکروسافت</option>
+                                    <option value="Apple</option>
                                 </select>
                             </div>
                         </div>
