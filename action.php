@@ -82,7 +82,7 @@
     if (isset($_POST["profupdate"])) {
         if (isset(mysqli_real_escape_string($connection, $_POST["username"]))) {
             $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
-            $updateusename = "UPDATE people SET username = '$newusername'";
+            $updateusename = "UPDATE people SET username = '$newusername' WHERE id = '$id'";
             if (mysqli_query($connection, $updateusename)) {
                 array_push($profile, "نام کاربری شما با موفقیت تغییر کرد");
             }
@@ -92,7 +92,7 @@
         }
         if (isset(mysqli_real_escape_string($connection, $_POST["email"]))) {
             $newemail = mysqli_real_escape_string($connection, $_POST["email"]);
-            $updateemail = "UPDATE people SET email = '$newemail'";
+            $updateemail = "UPDATE people SET email = '$newemail' WHERE id = '$id'";
             if (mysqli_query($connection, $updateemail)) {
                 array_push($profile, "ایمیل شما با موفقیت تغییر کرد");
             }
@@ -102,7 +102,7 @@
         }
         if (isset(mysqli_real_escape_string($connection, $_POST["phone"]))) {
             $newphone = mysqli_real_escape_string($connection, $_POST["phone"]);
-            $updatephone = "UPDATE people SET phone = '$newphone'";
+            $updatephone = "UPDATE people SET phone = '$newphone' WHERE id = '$id'";
             if (mysqli_query($connection, $updatephone)) {
                 array_push($profile, "شماره همراه شما با موفقیت تغییر کرد");
             }
