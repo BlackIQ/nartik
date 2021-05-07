@@ -306,7 +306,7 @@ else {
                     <div class="">
                         <h3>تنظیمات پروفایل</h3>
                         <br>
-                        <form class="">
+                        <form action="index.php" method="post" class="">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="نام کاربری">
                                 <small><b><?php echo $username;?></b> نام کاربری کنونی شما</small>
