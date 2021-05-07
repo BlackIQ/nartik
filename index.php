@@ -306,9 +306,6 @@ else {
                     <div class="">
                         <h3>تنظیمات پروفایل</h3>
                         <br>
-                        <?php
-                        include("profile.php");
-                        ?>
                         <form action="index.php" method="post" class="">
                             <div class="form-group">
                                 <input type="text" name="username" class="form-control" placeholder="نام کاربری">
