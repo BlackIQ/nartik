@@ -51,7 +51,7 @@ else {
             font-style: normal;
         }
 
-        body {
+        * {
             font-family: "nazanin";
         }
         
