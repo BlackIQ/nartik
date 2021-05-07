@@ -17,14 +17,14 @@ if ($_SESSION['status'] == true) {
         <title>مدریت جساب کاربری</title>
         <style>
             @font-face {
-                font-family: 'segoeui';
-                src: url('../SEGOEUI.TTF');
+                font-family: 'nazanin';
+                src: url('../nazanin.TTF');
                 font-style: normal;
             }
             
             body {
                 padding: 56px;
-                font-family: 'segoeui';
+                font-family: 'nazanin';
                 background-color: gray;
             }
         </style>

@@ -46,13 +46,13 @@ else {
 <head>
     <style>
         @font-face {
-            font-family: 'segoeui';
-            src: url('SEGOEUI.TTF');
+            font-family: 'nazanin';
+            src: url('nazanin.TTF');
             font-style: normal;
         }
 
         body {
-            font-family: "segoeui"
+            font-family: "nazanin"
         }
         
         textarea {
