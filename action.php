@@ -36,6 +36,8 @@
 
     // Get data of ticket
     if (isset($_POST['sendtik'])) {
+        date_default_timezone_set('Iran');
+        
         $title = mysqli_real_escape_string($connection, $_POST["title"]);
         $text = mysqli_real_escape_string($connection, $_POST["text"]);
         
@@ -47,7 +49,11 @@
         }
         
         if (count($send) == 0) {
-            $dt = date("M , d , Y");
+            $date = date("M , d , Y");
+            $time = date("H : i : s");
+            
+            $dt = $date . " | " . $time;
+            
             $tikid = rand(1000, 9999);
             
             $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', 'file', '4:00', 'ny', false)";
