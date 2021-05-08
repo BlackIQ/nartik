@@ -96,7 +96,7 @@ else {
 <div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12 main">
     <div class="row">
         <ol class="breadcrumb">
-            <li><a href="../">
+            <li><a href=".">
                 <em class="fa fa-home"></em>
             </a></li>
             <li class="active">داشبود</li>
@@ -182,7 +182,7 @@ else {
                 <div class="panel-body">
                     <div class="">
                         <?php
-                        include("ticket.php");
+                        include("alerts/ticket.php");
                         ?>
                     </div>
                 </div>
@@ -252,7 +252,7 @@ else {
                 </div>
                 <div class="panel-body">
                     <div>
-                        <?php include("send.php"); ?>
+                        <?php include("alerts/send.php"); ?>
                     </div>
                     <div class="">
                         <form class="" method="post" action="index.php">
