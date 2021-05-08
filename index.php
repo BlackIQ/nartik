@@ -204,7 +204,7 @@ else {
                                 <table class="table table-bordered table-hover">
                                     <thead>
                                     <tr>
-                                        <td class=""><b>شماره تیکت</b></td>
+                                        <td class=""><b>تاریخ</b></td>
                                         <td class=""><b>موضوع</b></td>
                                         <td class=""><b>وضعیت</b></td>
                                     </tr>
@@ -214,7 +214,7 @@ else {
                                     while ($tiks = mysqli_fetch_assoc($tikres)) {
                                         ?>
                                         <tr>
-                                            <td class=""><b><?php echo $tiks['tikid']; ?></b></td>
+                                            <td class=""><b><?php echo $tiks['dt']; ?></b></td>
                                             <td class=""><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></td>
                                             <td class="">
                                                 <?php
