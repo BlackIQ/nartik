@@ -47,7 +47,7 @@ else {
     <style>
         @font-face {
             font-family: 'nazanin';
-            src: url('nazanin.TTF');
+            src: url('../nazanin.TTF');
             font-style: normal;
         }
 
