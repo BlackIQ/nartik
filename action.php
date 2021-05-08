@@ -49,7 +49,7 @@
         }
         
         if (count($send) == 0) {
-            $date = date("M , d , Y");
+            $date = date("M / d / Y");
             $time = date("H : i : s");
             
             $dt = $date . " | " . $time;
