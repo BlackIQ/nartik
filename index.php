@@ -214,8 +214,8 @@ else {
                                     while ($tiks = mysqli_fetch_assoc($tikres)) {
                                         ?>
                                         <tr>
-                                            <td class=""><b><?php echo $tiks['dt']; ?></b></td>
-                                            <td class=""><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></td>
+                                            <td class=""><?php echo $tiks['dt']; ?></b></td>
+                                            <td class=""><b><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></b></td>
                                             <td class="">
                                                 <?php
                                                 if ($tiks['answer'] != "ny") {
