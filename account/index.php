@@ -16,8 +16,15 @@ if ($_SESSION['status'] == true) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
         <title>مدریت جساب کاربری</title>
         <style>
+            @font-face {
+                font-family: 'nazanin';
+                src: url('../../nazanin.TTF');
+                font-style: normal;
+            }
+            
             body {
                 padding: 56px;
+                font-family: 'nazanin';
                 background-color: gray;
             }
         </style>
@@ -79,10 +86,10 @@ if ($_SESSION['status'] == true) {
                             <div class="col">
                                 <select name="company" class="form-control border-white">
                                     <option selected>انتخاب شرکت</option>
-                                    <option value="Narbon">Narbon</option>
-                                    <option value="Milad">Milad</option>
-                                    <option value="Apple">Apple</option>
-                                    <option value="Microsoft">Microsoft</option>
+                                    <option value="Narbon">ناربن</option>
+                                    <option value="Milad">میلاد</option>
+                                    <option value="Microsoft">مایکروسافت</option>
+                                    <option value="Apple">اپل</option>
                                 </select>
                             </div>
                         </div>

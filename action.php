@@ -6,6 +6,7 @@
     $email    = "";
     $tik = array();
     $send = array();
+    $profile = array();
 
     // MySQL Data
     $mysqlserver = "localhost";
@@ -35,6 +36,8 @@
 
     // Get data of ticket
     if (isset($_POST['sendtik'])) {
+        date_default_timezone_set('Iran');
+        
         $title = mysqli_real_escape_string($connection, $_POST["title"]);
         $text = mysqli_real_escape_string($connection, $_POST["text"]);
         
@@ -46,7 +49,11 @@
         }
         
         if (count($send) == 0) {
-            $dt = date("M , d , Y");
+            $date = date("M / d / Y");
+            $time = date("H : i : s");
+            
+            $dt = $date . " | " . $time;
+            
             $tikid = rand(1000, 9999);
             
             $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', 'file', '4:00', 'ny', false)";
@@ -75,5 +82,43 @@
             array_push($tik, false);
         }
     }
+    
+    
+    // Get profile data
+//    if (isset($_POST["profupdate"])) {
+//        if (isset(mysqli_real_escape_string($connection, $_POST["username"]))) {
+//            $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
+//            $updateusename = "UPDATE people SET username = '$newusername' WHERE id = '$id'";
+//            if (mysqli_query($connection, $updateusename)) {
+//                array_push($profile, "نام کاربری شما با موفقیت تغییر کرد");
+//            }
+//            else {
+//                array_push($profile, mysqli_error($connection));
+//            }
+//        }
+//        if (isset(mysqli_real_escape_string($connection, $_POST["email"]))) {
+//            $newemail = mysqli_real_escape_string($connection, $_POST["email"]);
+//            $updateemail = "UPDATE people SET email = '$newemail' WHERE id = '$id'";
+//            if (mysqli_query($connection, $updateemail)) {
+//                array_push($profile, "ایمیل شما با موفقیت تغییر کرد");
+//            }
+//            else {
+//                array_push($profile, mysqli_error($connection));
+//            }
+//        }
+//        if (isset(mysqli_real_escape_string($connection, $_POST["phone"]))) {
+//            $newphone = mysqli_real_escape_string($connection, $_POST["phone"]);
+//            $updatephone = "UPDATE people SET phone = '$newphone' WHERE id = '$id'";
+//            if (mysqli_query($connection, $updatephone)) {
+//                array_push($profile, "شماره همراه شما با موفقیت تغییر کرد");
+//            }
+//            else {
+//                array_push($profile, mysqli_error($connection));
+//            }
+//        }
+//        else {
+//            array_push($profile, "لطفا یک فیلد را پر کنید");
+//        }
+//    }
     
 ?>

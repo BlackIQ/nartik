@@ -45,6 +45,16 @@ else {
 <html>
 <head>
     <style>
+        @font-face {
+            font-family: 'nazanin';
+            src: url('../nazanin.TTF');
+            font-style: normal;
+        }
+
+        * {
+            font-family: "nazanin";
+        }
+        
         textarea {
             resize: none;
             text-align: right;
@@ -86,7 +96,7 @@ else {
 <div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12 main">
     <div class="row">
         <ol class="breadcrumb">
-            <li><a href="../">
+            <li><a href=".">
                 <em class="fa fa-home"></em>
             </a></li>
             <li class="active">داشبود</li>
@@ -172,7 +182,7 @@ else {
                 <div class="panel-body">
                     <div class="">
                         <?php
-                        include("ticket.php");
+                        include("alerts/ticket.php");
                         ?>
                     </div>
                 </div>
@@ -194,7 +204,7 @@ else {
                                 <table class="table table-bordered table-hover">
                                     <thead>
                                     <tr>
-                                        <td class=""><b>شماره تیکت</b></td>
+                                        <td class=""><b>تاریخ</b></td>
                                         <td class=""><b>موضوع</b></td>
                                         <td class=""><b>وضعیت</b></td>
                                     </tr>
@@ -204,8 +214,8 @@ else {
                                     while ($tiks = mysqli_fetch_assoc($tikres)) {
                                         ?>
                                         <tr>
-                                            <td class=""><b><?php echo $tiks['tikid']; ?></b></td>
-                                            <td class=""><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></td>
+                                            <td class=""><?php echo $tiks['dt']; ?></b></td>
+                                            <td class=""><b><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></b></td>
                                             <td class="">
                                                 <?php
                                                 if ($tiks['answer'] != "ny") {
@@ -225,7 +235,7 @@ else {
                                 <?php
                             }
                             else {
-                                echo "<h2>در حال حاضر هیچ تیکت برای نمایش وحود ندارید</h2>";
+                                echo "<h2 style='text-align: right;'>در حال حاضر هیچ تیکت برای نمایش وحود ندارید</h2>";
                             }
                         ?>
                     </div>
@@ -242,7 +252,7 @@ else {
                 </div>
                 <div class="panel-body">
                     <div>
-                        <?php include("send.php"); ?>
+                        <?php include("alerts/send.php"); ?>
                     </div>
                     <div class="">
                         <form class="" method="post" action="index.php">
@@ -306,26 +316,26 @@ else {
                     <div class="">
                         <h3>تنظیمات پروفایل</h3>
                         <br>
-                        <form class="">
+                        <form action="index.php" method="post" class="">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="نام کاربری">
+                                <input type="text" name="username" class="form-control" placeholder="نام کاربری">
                                 <small><b><?php echo $username;?></b> نام کاربری کنونی شما</small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="ایمیل">
+                                        <input type="email" name="email" class="form-control" placeholder="ایمیل">
                                         <small><b><?php echo $email;?></b> ایمیل کنونی شما</small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="شماره همراه">
+                                        <input type="text" name="phone" class="form-control" placeholder="شماره همراه">
                                         <small><b><?php echo $phone;?></b> تلفن همراه کنونی شما</small>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">اپدیت پروفایل</button>
+                            <button type="submit" name="profupdate" class="btn btn-primary">اپدیت پروفایل</button>
                         </form>
                         <div>
                             <hr>
