@@ -60,6 +60,7 @@
             }
             else {
                 array_push($send, mysqli_error($connection));
+                $_POST = Null;
             }
         }
         
@@ -79,6 +80,7 @@
         }
         else {
             array_push($tik, false);
+            $_POST = Null;
         }
     }
     
