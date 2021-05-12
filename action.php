@@ -75,12 +75,12 @@
         if (mysqli_num_rows($getik) > 0) {
             while ($pen = mysqli_fetch_assoc($getik)) {
                 array_push($tik, $pen);
-                $_POST = Null;
+                $_GET = Null;
             }
         }
         else {
             array_push($tik, false);
-            $_POST = Null;
+            $_GET = Null;
         }
     }
     
