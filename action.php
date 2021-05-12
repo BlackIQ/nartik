@@ -1,9 +1,6 @@
 <?php
     session_start();
     
-    // variable declaration
-    $username = "";
-    $email    = "";
     $tik = array();
     $send = array();
     $profile = array();
