@@ -266,7 +266,7 @@ else {
                             </div>
                             <div class="form-group">
                                 <label for="record">همراه با تیکت صدای خود را نیز برای ما ارسال کنید</label>
-                                <p class="text-primary"><i class="fa fa-microphone"></i> کلیک کنید تا شروع به صبط صدا شود</p>
+                                <p class="text-primary">کلیک کنید تا شروع به صبط صدا شود <i class="fa fa-microphone"></i></p>
                             </div>
                             <button type="submit" name="sendtik" class="btn btn-primary">ارسال تیکت</button>
                         </form>
