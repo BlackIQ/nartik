@@ -56,11 +56,9 @@
             $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', 'file', '4:00', 'ny', false)";
             if (mysqli_query($connection, $query)) {
                 array_push($send, "تیکت شما با موفقیت ارسال شد");
-                $_POST = Null;
             }
             else {
                 array_push($send, mysqli_error($connection));
-                $_POST = Null;
             }
         }
         
@@ -75,12 +73,10 @@
         if (mysqli_num_rows($getik) > 0) {
             while ($pen = mysqli_fetch_assoc($getik)) {
                 array_push($tik, $pen);
-                $_GET = Null;
             }
         }
         else {
             array_push($tik, false);
-            $_GET = Null;
         }
     }
     
