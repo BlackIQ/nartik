@@ -55,12 +55,20 @@
             
             $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', 'file', '4:00', 'ny', false)";
             if (mysqli_query($connection, $query)) {
-                array_push($send, "تیکت شما با موفقیت ارسال شد");
-                window.location.replace("http://office.narbon.ir:4488/NarTik");
+                ?>
+                    <script>
+                        window.alert("تیکت شما با موفقیت ارسال شد");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
             }
             else {
-                array_push($send, mysqli_error($connection));
-                window.location.replace("http://office.narbon.ir:4488/NarTik");
+                ?>
+                    <script>
+                        window.alert("<?php echo mysqli_error($connection); ?>");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
             }
         }
         
