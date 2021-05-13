@@ -47,12 +47,14 @@
         
         if (count($send) == 0) {
             
+            $dlh = date("H") + 2;
+            
             $dt = date("M d, Y H:i:s");
-            $dt = date("M d, Y $deadhour:i:s");
+            $dl = date("M d, Y $dlh:i:s");
             
             $tikid = rand(1000, 9999);
             
-            $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, dl,file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', '$dl','file', '4:00', 'ny', false)";
+            $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, dl, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', '$dl','file', '4:00', 'ny', false)";
             if (mysqli_query($connection, $query)) {
                 ?>
                     <script>
