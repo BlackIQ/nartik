@@ -46,10 +46,9 @@
         }
         
         if (count($send) == 0) {
-            $date = date("M / d / Y");
-            $time = date("H : i : s");
             
-            $dt = $date . " | " . $time;
+            $dt = date("M d, Y") . " " . date("H:i:s");
+            $dt = date("M d, Y") . " " . date("$deadhour:i:s");
             
             $tikid = rand(1000, 9999);
             
