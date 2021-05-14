@@ -318,8 +318,7 @@ else {
                         <br>
                         <form action="index.php" method="post" class="">
                             <div class="form-group">
-                                <input type="text" name="username" class="form-control" placeholder="نام کاربری">
-                                <small><b><?php echo $username;?></b> نام کاربری کنونی شما</small>
+                                <input type="text" name="username" class="form-control" placeholder="<?php echo $username;?> نام کاربری کنونی شما">
                                 <br>
                                 <br>
                                 <button type="submit" name="usernameupdate" class="btn btn-primary btn-sm">تغییر نام کاربری</button>
@@ -328,8 +327,7 @@ else {
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" name="email" class="form-control" placeholder="ایمیل">
-                                        <small><b><?php echo $email;?></b> ایمیل کنونی شما</small>
+                                        <input type="email" name="email" class="form-control" placeholder="<?php echo $email;?> ایمیل کنونی شما">
                                         <br>
                                         <br>
                                         <button type="submit" name="mailupdate" class="btn btn-primary btn-sm">تغییر ایمیل</button>
@@ -337,8 +335,7 @@ else {
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="phone" class="form-control" placeholder="شماره همراه">
-                                        <small><b><?php echo $phone;?></b> تلفن همراه کنونی شما</small>
+                                        <input type="text" name="phone" class="form-control" placeholder="<?php echo $phone;?> شماره همراه کنونی شما">
                                         <br>
                                         <br>
                                         <button type="submit" name="phoneupdate" class="btn btn-primary btn-sm">تغییر شماره همراه</button>
