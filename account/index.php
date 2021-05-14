@@ -108,8 +108,8 @@ if ($_SESSION['status'] == true) {
                         <?php include('error.php'); ?>
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="email" class="form-control border-white" placeholder="ایمیل"
-                                       aria-label="ایمیل">
+                                <input type="text" name="id" class="form-control border-white" placeholder="کد ملی"
+                                       aria-label="کد ملی">
                             </div>
                             <div class="col">
                                 <input type="password" name="password" class="form-control border-white"
