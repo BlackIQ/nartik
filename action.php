@@ -138,9 +138,30 @@
         }
     }
     
-    // Get profile data
-    if (isset($_POST["profupdate"])) {
-        // echo 'Hi';
+    // Update username
+    if (isset($_POST["updateusername"])) {
+        $n_username = mysqli_real_escape_string($connection, $_POST["username"]);
+        
+        if (isset($n_username)) {
+            $u_username = "UPDATE people SET username='$n_username' WHERE id='$userid'";
+            
+            if (mysqli_query($connection, $u_username)) {
+                ?>
+                    <script>
+                        window.alert("نام کاربری با موفقیت تغییر کرد");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
+        }
+        else {
+            ?>
+                <script>
+                    window.alert("نام کاربری را وارد کنید");
+                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                </script>
+            <?php
+        }
     }
     
 ?>
