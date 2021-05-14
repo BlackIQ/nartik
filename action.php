@@ -93,26 +93,26 @@
     
     
     // Get profile data
-    if (isset($_POST["profupdate"]) && isset(mysqli_real_escape_string($connection, $_POST["username"]))) {
-        $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
-        
-        $updateusename = "UPDATE people SET username='$newusername' WHERE id='$userid'";
-        if (mysqli_query($connection, $updateusename)) {
-            ?>
+//    if (isset($_POST["profupdate"]) && isset(mysqli_real_escape_string($connection, $_POST["username"]))) {
+//        $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
+//        
+//        $updateusename = "UPDATE people SET username='$newusername' WHERE id='$userid'";
+//        if (mysqli_query($connection, $updateusename)) {
+//            ?>
                 <script>
                     window.alert("نام کاربری با موفقیت تغییر کرد");
                     window.location.replace("http://office.narbon.ir:4488/NarTik");
                 </script>
-            <?php
-        }
-        else {
-            ?>
+            //<?php
+//        }
+//        else {
+//            ?>
                 <script>
-                    window.alert("<?php echo mysqli_error($connection); ?>");
+                    window.alert("//<?php echo mysqli_error($connection); ?>");
                     window.location.replace("http://office.narbon.ir:4488/NarTik");
                 </script>
-            <?php
-        }
-    }
+            //<?php
+//        }
+//    }
     
 ?>
