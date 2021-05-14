@@ -139,7 +139,7 @@
     }
     
     // Update username
-    if (isset($_POST["updateusername"])) {
+    if (isset($_POST["usernameupdate"])) {
         $n_username = mysqli_real_escape_string($connection, $_POST["username"]);
         
         if (isset($n_username)) {
