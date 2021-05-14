@@ -328,16 +328,20 @@ else {
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" name="email" class="form-control" placeholder="<?php echo $email;?> ایمیل کنونی شما">
-                                        <br>
-                                        <button type="submit" name="mailupdate" class="btn btn-primary btn-sm">تغییر ایمیل</button>
+                                        <form method="post" action="index.php">
+                                            <input type="email" name="email" class="form-control" placeholder="<?php echo $email;?> ایمیل کنونی شما">
+                                            <br>
+                                            <button type="submit" name="emailupdate" class="btn btn-primary btn-sm">تغییر ایمیل</button>
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="phone" class="form-control" placeholder="<?php echo $phone;?> شماره همراه کنونی شما">
-                                        <br>
-                                        <button type="submit" name="phoneupdate" class="btn btn-primary btn-sm">تغییر شماره همراه</button>
+                                        <form action="index.php" method="post">
+                                            <input type="text" name="phone" class="form-control" placeholder="<?php echo $phone;?> شماره همراه کنونی شما">
+                                            <br>
+                                            <button type="submit" name="phoneupdate" class="btn btn-primary btn-sm">تغییر شماره همراه</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

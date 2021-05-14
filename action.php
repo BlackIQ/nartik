@@ -172,4 +172,72 @@
         }
     }
     
+    // Update phone
+    if (isset($_POST["phoneupdate"])) {
+        $n_phone = mysqli_real_escape_string($connection, $_POST["phone"]);
+        
+        if (isset($n_phone)) {
+            $u_phone = "UPDATE people SET phone='$n_phone' WHERE id='$userid'";
+            
+            if (mysqli_query($connection, $u_phone)) {
+                ?>
+                    <script>
+                        window.alert("شماره تلفن با موفقیت تغییر کرد");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
+            else {
+                ?>
+                    <script>
+                        window.alert("<?php echo mysqli_error($connection); ?>");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
+        }
+        else {
+            ?>
+                <script>
+                    window.alert("شماره تلفن را وارد کنید");
+                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                </script>
+            <?php
+        }
+    }
+    
+    // Update email
+    if (isset($_POST["emailupdate"])) {
+        $n_email = mysqli_real_escape_string($connection, $_POST["email"]);
+        
+        if (isset($nـemail)) {
+            $u_email = "UPDATE people SET email='$n_email' WHERE id='$userid'";
+            
+            if (mysqli_query($connection, $u_email)) {
+                ?>
+                    <script>
+                        window.alert("ایمیل شما با موفقیت تغییر کرد");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
+            else {
+                ?>
+                    <script>
+                        window.alert("<?php echo mysqli_error($connection); ?>");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
+        }
+        else {
+            ?>
+                <script>
+                    window.alert("ایمیل را وارد کنید");
+                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                </script>
+            <?php
+        }
+    }
+    
 ?>
