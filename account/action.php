@@ -87,7 +87,7 @@
         $id = mysqli_real_escape_string($connection, $_POST['id']);
         $password = mysqli_real_escape_string($connection, $_POST['password']);
         
-        if (empty($email)) {
+        if (empty($id)) {
             array_push($errors, "لطفا ایمیل را وارد کنید");
         }
         if (empty($password)) {
