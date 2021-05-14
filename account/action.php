@@ -84,7 +84,7 @@
 
     // LOGIN USER
     if (isset($_POST['login_user'])) {
-        $email = mysqli_real_escape_string($connection, $_POST['email']);
+        $id = mysqli_real_escape_string($connection, $_POST['id']);
         $password = mysqli_real_escape_string($connection, $_POST['password']);
         
         if (empty($email)) {
@@ -100,9 +100,6 @@
             $results = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($results) == 1) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $id = $row["id"];
-                }
                 $_SESSION['status'] = true;
                 $_SESSION['id'] = $id;
                 $_SESSION['directory'] = 'nartik';
