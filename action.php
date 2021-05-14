@@ -139,5 +139,8 @@
     }
     
     // Get profile data
+    if (isset($_POST["profupdate"])) {
+        // echo 'Hi';
+    }
     
 ?>
