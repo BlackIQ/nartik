@@ -100,8 +100,11 @@
             $results = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($results) == 1) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $id = $row["id"];
+                }
                 $_SESSION['status'] = true;
-                $_SESSION['id'] = $email;
+                $_SESSION['id'] = $id;
                 $_SESSION['directory'] = 'nartik';
                 header('location: http://office.narbon.ir:4488/NarTik');
             }
