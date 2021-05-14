@@ -416,18 +416,18 @@ else {
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">خروج از حساب</h5>
+                <h5 style="float: left;" class="modal-title" id="exampleModalLongTitle">خروج از حساب</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body text-center">
-                <h1 class="text-danger">آیا شما میخواهید از حسابتان خارج شوید؟</h1>
+            <div class="modal-body">
+                <p class="text-danger"><b>آیا شما میخواهید از حسابتان خارج شوید؟</b></p>
                 <br>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
-                <button type="button" class="btn btn-danger"><a class="text-white" href="account/logout.php">خروح</a></button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><span style="color: black;">بستن</span></button>
+                <button type="button" class="btn btn-danger"><a class="text-white" href="account/logout.php"><span style="color: white;">حروج</span></a></button>
             </div>
         </div>
     </div>
