@@ -140,10 +140,9 @@
     
     // Get profile data
     if (isset($_POST["profupdate"])) {
+        $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
         
-        if (isset(mysqli_real_escape_string($connection, $_POST["username"]))) {
-            $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
-            
+        if (isset($newusername)) {            
             $updateq = "UPDATE people SET username='$newusername' WHERE id='$userid'";
             
             if (mysqli_query($connection, $updateq)) {
@@ -155,35 +154,6 @@
                 <?php
             }
         }
-        
-        if (isset(mysqli_real_escape_string($connection, $_POST["email"]))) {
-            $newemail = mysqli_real_escape_string($connection, $_POST["email"]);
-            
-            $updateq = "UPDATE people SET email='$newemail' WHERE id='$userid'";
-            if (mysqli_query($connection, $updateq)) {
-                ?>
-                    <script>
-                        window.alert("ایمیل شما با موفقیت تغییر کرد");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
-                    </script>
-                <?php
-            }
-        }
-        
-        if (isset(mysqli_real_escape_string($connection, $_POST["phone"]))) {
-            $newphone = mysqli_real_escape_string($connection, $_POST["phone"]);
-            
-            $updateq = "UPDATE people SET phone='$newphone' WHERE id='$userid'";
-            if (mysqli_query($connection, $updateq)) {
-                ?>
-                    <script>
-                        window.alert("شماره شما با موفقیت تغییر کرد");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
-                    </script>
-                <?php
-            }
-        }
-        
         else {
             array_push($profile, "لطفا یک فیلد را پر کنید");
         }
