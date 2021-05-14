@@ -84,7 +84,7 @@ else {
                 <a class="navbar-brand" href=".">نارتیک</a>
                 <ul class="nav navbar-top-links navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toggle count-info" href="account/logout.php">
+                        <a class="dropdown-toggle count-info" data-toggle="modal" data-target="#confirmlogout">
                             <em class="fa fa-sign-out"></em>
                         </a>
                     </li>
@@ -410,3 +410,25 @@ else {
 
 </body>
 </html>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">خروج از حساب</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <h1 class="text-danger">آیا شما میخواهید از حسابتان خارج شوید؟</h1>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                <button type="button" class="btn btn-danger"><a class="text-white" href="account/logout.php">خروح</a></button>
+            </div>
+        </div>
+    </div>
+</div>
