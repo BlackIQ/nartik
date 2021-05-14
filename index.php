@@ -88,10 +88,7 @@ else {
         <div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12 main">
             <div class="row">
                 <ol class="breadcrumb">
-                    <li><a href=".">
-                        <em class="fa fa-home"></em>
-                    </a></li>
-                    <li class="active">داشبود</li>
+                    <p>امروز شنبه هست</p>
                 </ol>
             </div>
             <div class="row">
