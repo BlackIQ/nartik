@@ -329,7 +329,7 @@ else {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <form method="post" action="index.php">
-                                            <input type="email" name="email" class="form-control" placeholder="<?php echo $email;?> ایمیل کنونی شما" required>
+                                            <input type="email" name="mail" class="form-control" placeholder="<?php echo $email;?> ایمیل کنونی شما" required>
                                             <br>
                                             <button type="submit" name="emailupdate" class="btn btn-primary btn-sm">تغییر ایمیل</button>
                                         </form>

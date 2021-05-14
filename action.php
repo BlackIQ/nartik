@@ -208,9 +208,9 @@
     
     // Update email
     if (isset($_POST["emailupdate"])) {
-        $n_email = mysqli_real_escape_string($connection, $_POST["email"]);
+        $n_email = mysqli_real_escape_string($connection, $_POST["mail"]);
         
-        if (isset($nـemail)) {
+        if (isset($n_email)) {
             $u_email = "UPDATE people SET email='$n_email' WHERE id='$userid'";
             
             if (mysqli_query($connection, $u_email)) {
