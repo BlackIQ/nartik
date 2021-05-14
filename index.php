@@ -87,11 +87,6 @@ else {
         </nav>
         <div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12 main">
             <div class="row">
-                <ol class="breadcrumb">
-                    <p>امروز شنبه هست</p>
-                </ol>
-            </div>
-            <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">داشبورد</h1>
                 </div>
