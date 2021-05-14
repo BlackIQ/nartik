@@ -403,7 +403,7 @@ else {
 <!--<script src="http://office.narbon.ir:4488/pack/js/chart-data.js"></script>-->
 <!--<script src="http://office.narbon.ir:4488/pack/js/easypiechart.js"></script>-->
 <!--<script src="http://office.narbon.ir:4488/pack/js/easypiechart-data.js"></script>-->
-<!--<script src="http://office.narbon.ir:4488/pack/js/bootstrap-datepicker.js"></script>-->
+<script src="http://office.narbon.ir:4488/pack/js/bootstrap-datepicker.js"></script>
 <script src="http://office.narbon.ir:4488/pack/js/custom.js"></script>
 <!--<script>
     window.onload = function () {
