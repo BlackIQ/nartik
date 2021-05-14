@@ -153,6 +153,14 @@
                     </script>
                 <?php
             }
+            else {
+                ?>
+                    <script>
+                        window.alert("<?php echo mysqli_error($connection); ?>");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
         }
         else {
             ?>
