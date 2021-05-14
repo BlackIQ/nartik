@@ -139,16 +139,51 @@
     }
     
     // Get profile data
-//    if (isset($_POST["profupdate"]) && isset(mysqli_real_escape_string($connection, $_POST["username"]))) {
-//        $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
-//        
-//        $updateusename = "UPDATE people SET username='$newusername' WHERE id='$userid'";
-//        if (mysqli_query($connection, $updateusename)) {
-//            
-//        }
-//        else {
-//            
-//        }
-//    }
+    if (isset($_POST["profupdate"])) {
+        
+        if (isset(mysqli_real_escape_string($connection, $_POST["username"]))) {
+            $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
+            
+            $updateq = "UPDATE people SET username='$newusername' WHERE id='$userid'";
+            
+            if (mysqli_query($connection, $updateq)) {
+                ?>
+                    <script>
+                        window.alert("نام کاربری شما با موفقیت تغییر کرد");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
+        }
+        elseif (isset(mysqli_real_escape_string($connection, $_POST["email"]))) {
+            $newemail = isset(mysqli_real_escape_string($connection, $_POST["email"]));
+            
+            $updateq = "UPDATE people SET email='$newemail' WHERE id='$userid'";
+            if (mysqli_query($connection, $updateq)) {
+                ?>
+                    <script>
+                        window.alert("ایمیل شما با موفقیت تغییر کرد");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
+        }
+        elseif (isset(mysqli_real_escape_string($connection, $_POST["phone"]))) {
+            $newphone = isset(mysqli_real_escape_string($connection, $_POST["phone"]));
+            
+            $updateq = "UPDATE people SET phone='$newphone' WHERE id='$userid'";
+            if (mysqli_query($connection, $updateq)) {
+                ?>
+                    <script>
+                        window.alert("شماره شما با موفقیت تغییر کرد");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
+        }
+        else {
+            array_push($profile, "لطفا یک فیلد را پر کنید");
+        }
+    }
     
 ?>
