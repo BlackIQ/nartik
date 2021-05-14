@@ -157,7 +157,7 @@
         }
         
         if (isset(mysqli_real_escape_string($connection, $_POST["email"]))) {
-            $newemail = isset(mysqli_real_escape_string($connection, $_POST["email"]));
+            $newemail = mysqli_real_escape_string($connection, $_POST["email"]);
             
             $updateq = "UPDATE people SET email='$newemail' WHERE id='$userid'";
             if (mysqli_query($connection, $updateq)) {
@@ -171,7 +171,7 @@
         }
         
         if (isset(mysqli_real_escape_string($connection, $_POST["phone"]))) {
-            $newphone = isset(mysqli_real_escape_string($connection, $_POST["phone"]));
+            $newphone = mysqli_real_escape_string($connection, $_POST["phone"]);
             
             $updateq = "UPDATE people SET phone='$newphone' WHERE id='$userid'";
             if (mysqli_query($connection, $updateq)) {
