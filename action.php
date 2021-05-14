@@ -114,6 +114,28 @@
             <?php
         }
     }
+    
+    if (isset($_POST["profupdate"]) && isset(mysqli_real_escape_string($connection, $_POST["phone"]))) {
+        $newphone = mysqli_real_escape_string($connection, $_POST["phone"]);
+        
+        $updatephone = "UPDATE people SET phone='$newphone' WHERE id='$userid'";
+        if (mysqli_query($connection, $updatephone)) {
+            ?>
+                <script>
+                    window.alert("شماره تلفن با موفقیت تغییر کرد");
+                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                </script>
+            <?php
+        }
+        else {
+            ?>
+                <script>
+                    window.alert("<?php echo mysqli_error($connection); ?>");
+                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                </script>
+            <?php
+        }
+    }
 
     
 ?>
