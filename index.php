@@ -320,22 +320,27 @@ else {
                             <div class="form-group">
                                 <input type="text" name="username" class="form-control" placeholder="نام کاربری">
                                 <small><b><?php echo $username;?></b> نام کاربری کنونی شما</small>
+                                <br>
+                                <button type="submit" name="usernameupdate" class="btn btn-primary">تغییر نام کاربری</button>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="email" name="email" class="form-control" placeholder="ایمیل">
                                         <small><b><?php echo $email;?></b> ایمیل کنونی شما</small>
+                                        <br>
+                                        <button type="submit" name="mailupdate" class="btn btn-primary">تغییر ایمیل</button>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="text" name="phone" class="form-control" placeholder="شماره همراه">
                                         <small><b><?php echo $phone;?></b> تلفن همراه کنونی شما</small>
+                                        <br>
+                                        <button type="submit" name="phoneupdate" class="btn btn-primary">تغییر شماره همراه</button>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" name="profupdate" class="btn btn-primary">اپدیت پروفایل</button>
                         </form>
                         <div>
                             <hr>
