@@ -421,7 +421,9 @@ else {
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body text-center">
+                <h1><i class="fa fa-sign-out"></i></h1>
+                <br>
                 <p class="text-danger">آیا شما میخواهید از حسابتان خارج شوید</p>
             </div>
             <div class="modal-footer">
