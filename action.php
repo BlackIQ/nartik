@@ -139,24 +139,5 @@
     }
     
     // Get profile data
-    if (isset($_POST["profupdate"])) {
-        $newusername = mysqli_real_escape_string($connection, $_POST["username"]);
-        
-        if (isset($newusername)) {            
-            $updateq = "UPDATE people SET username='$newusername' WHERE id='$userid'";
-            
-            if (mysqli_query($connection, $updateq)) {
-                ?>
-                    <script>
-                        window.alert("نام کاربری شما با موفقیت تغییر کرد");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
-                    </script>
-                <?php
-            }
-        }
-        else {
-            array_push($profile, "لطفا یک فیلد را پر کنید");
-        }
-    }
     
 ?>
