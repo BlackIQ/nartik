@@ -342,26 +342,26 @@ else {
                         </div>
                         <h3>تغییر رمز</h3>
                         <br>
-                        <form class="">
+                        <form method="post" action="index.php" class="">
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="رمز کنونی">
+                                <input type="password" name="curpass" class="form-control" placeholder="رمز کنونی">
                                 <small>رمز<b> کنونی خود </b> را ورد کنید</small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="تایید رمز جدید">
+                                        <input type="password" name="conpass" class="form-control" placeholder="تایید رمز جدید">
                                         <small>رمر<b> جدید خود </b> را دوباره تکرار کنید</small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="رمز جدید">
+                                        <input type="password" name="newpass" class="form-control" placeholder="رمز جدید">
                                         <small>رمز<b> حدید خود </b> را وار کنید</small>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">تغییر رمز</button>
+                            <button type="submit" name="upass" class="btn btn-primary">تغییر رمز</button>
                         </form>
                     </div>
                 </div>

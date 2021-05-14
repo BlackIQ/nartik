@@ -26,6 +26,7 @@
             $phone = $row['phone'];
             $email = $row['email'];
             $username = $row['username'];
+            $password = $row["password"];
             $userid = $row['id'];
             $company = $row['company'];
         }
@@ -91,6 +92,51 @@
         }
     }
     
+    // Update Password
+    if (isset($_POST['upass'])) {
+        $newpass = mysqli_real_escape_string($connection, $_POST["newpass"]);
+        $conpass = mysqli_real_escape_string($connection, $_POST["conpass"]);
+        $curpass = mysqli_real_escape_string($connection, $_POST["curpass"]);
+        
+        if ($password == $curpass) {
+            if ($newpass == $conpass) {
+                $updatepassword = "UPDATE people SET password='$newpass' WHERE id='$userid'";
+                
+                if (mysqli_query($connection, $updatepassword)) {
+                    ?>
+                        <script>
+                            window.alert("رمز شما با موفقیت تغییر کرد");
+                            window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        </script>
+                    <?php
+                }
+                else {
+                    ?>
+                        <script>
+                            window.alert("<?php echo mysqli_error($connection); ?>");
+                            window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        </script>
+                    <?php
+                }
+            }
+            else {
+                ?>
+                    <script>
+                        window.alert("رمز جدید با تایید رمز تفاوت دارد");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    </script>
+                <?php
+            }
+        }
+        else {
+            ?>
+                <script>
+                    window.alert("رمز کنونی با رمز شما متفاوت است");
+                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                </script>
+            <?php
+        }
+    }
     
     // Get profile data
 //    if (isset($_POST["profupdate"]) && isset(mysqli_real_escape_string($connection, $_POST["username"]))) {
