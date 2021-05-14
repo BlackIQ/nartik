@@ -319,7 +319,7 @@ else {
                         <div>
                             <div class="form-group">
                                 <form method="post" action="index.php">
-                                    <input type="text" name="username" class="form-control" placeholder="<?php echo $username;?> نام کاربری کنونی شما">
+                                    <input type="text" name="username" class="form-control" placeholder="<?php echo $username;?> نام کاربری کنونی شما" required>
                                     <br>
                                     <button type="submit" name="usernameupdate" class="btn btn-primary btn-sm">تغییر نام کاربری</button>
                                 </form>
@@ -329,7 +329,7 @@ else {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <form method="post" action="index.php">
-                                            <input type="email" name="email" class="form-control" placeholder="<?php echo $email;?> ایمیل کنونی شما">
+                                            <input type="email" name="email" class="form-control" placeholder="<?php echo $email;?> ایمیل کنونی شما" required>
                                             <br>
                                             <button type="submit" name="emailupdate" class="btn btn-primary btn-sm">تغییر ایمیل</button>
                                         </form>
@@ -338,7 +338,7 @@ else {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <form action="index.php" method="post">
-                                            <input type="text" name="phone" class="form-control" placeholder="<?php echo $phone;?> شماره همراه کنونی شما">
+                                            <input type="text" name="phone" class="form-control" placeholder="<?php echo $phone;?> شماره همراه کنونی شما" required>
                                             <br>
                                             <button type="submit" name="phoneupdate" class="btn btn-primary btn-sm">تغییر شماره همراه</button>
                                         </form>
