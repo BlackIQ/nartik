@@ -424,7 +424,7 @@ else {
             <div class="modal-body text-center">
                 <h1><i class="fa fa-sign-out text-danger"></i></h1>
                 <br>
-                <p class="text-danger">آیا شما میخواهید از حسابتان خارج شوید</p>
+                <h3 class="text-danger">آیا شما میخواهید از حسابتان خارج شوید</h3>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"><span style="color: black;">بستن</span></button>
