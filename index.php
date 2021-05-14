@@ -316,11 +316,13 @@ else {
                     <div class="">
                         <h3>تنظیمات پروفایل</h3>
                         <br>
-                        <form action="index.php" method="post" class="">
+                        <div>
                             <div class="form-group">
-                                <input type="text" name="username" class="form-control" placeholder="<?php echo $username;?> نام کاربری کنونی شما">
-                                <br>
-                                <button type="submit" name="usernameupdate" class="btn btn-primary btn-sm">تغییر نام کاربری</button>
+                                <form method="post" action="index.php">
+                                    <input type="text" name="username" class="form-control" placeholder="<?php echo $username;?> نام کاربری کنونی شما">
+                                    <br>
+                                    <button type="submit" name="usernameupdate" class="btn btn-primary btn-sm">تغییر نام کاربری</button>
+                                </form>
                             </div>
                             <br>
                             <div class="row">
