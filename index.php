@@ -101,7 +101,7 @@ else {
             </a></li>
             <li class="active">داشبود</li>
         </ol>
-    </div><!--/.row-->
+    </div>
 
     <div class="row">
         <div class="col-lg-12">
@@ -111,7 +111,6 @@ else {
     
 
     <div class="panel panel-container">
-        
         <div class="row">
             <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
                 <div class="panel panel-teal panel-widget border-right">
@@ -168,7 +167,6 @@ else {
                 </div>
             </div>
         </div>
-        
     </div>
     <div class="row">
         <div class="col-md-4" id="tikreview">
@@ -274,7 +272,7 @@ else {
                 </div>
             </div>
         </div>
-    </div><!--/.row-->
+    </div>
     <div class="row">
         <div class="col-md-6">
             <div class="panel panel-default">
@@ -376,7 +374,7 @@ else {
                 </div>
             </div>
         </div>
-    </div><!--/.row-->
+    </div>
 
     <footer class="">
         <div class="container-fluid">
@@ -394,28 +392,13 @@ else {
             </p>
         </div>
     </footer>
-    
-</div>    <!--/.main-->
+    </div>
+</div>
 
 <script src="http://office.narbon.ir:4488/pack/js/jquery-1.11.1.min.js"></script>
 <script src="http://office.narbon.ir:4488/pack/js/bootstrap.min.js"></script>
-<!--<script src="http://office.narbon.ir:4488/pack/js/chart.min.js"></script>-->
-<!--<script src="http://office.narbon.ir:4488/pack/js/chart-data.js"></script>-->
-<!--<script src="http://office.narbon.ir:4488/pack/js/easypiechart.js"></script>-->
-<!--<script src="http://office.narbon.ir:4488/pack/js/easypiechart-data.js"></script>-->
 <script src="http://office.narbon.ir:4488/pack/js/bootstrap-datepicker.js"></script>
 <script src="http://office.narbon.ir:4488/pack/js/custom.js"></script>
-<!--<script>
-    window.onload = function () {
-        var chart1 = document.getElementById("line-chart").getContext("2d");
-        window.myLine = new Chart(chart1).Line(lineChartData, {
-            responsive: true,
-            scaleLineColor: "rgba(0,0,0,.2)",
-            scaleGridLineColor: "rgba(0,0,0,.05)",
-            scaleFontColor: "#c5c7cc"
-        });
-    };
-</script>-->
 
 </body>
 </html>
