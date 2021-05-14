@@ -298,7 +298,7 @@ else {
                         </div>
                         <hr>
                         <div>
-                            <p><a class="text-danger" href="account/logout.php">خروج از حساب کاربری <i class="fa fa-sign-out"></i></a></p>
+                            <p><a class="text-danger" data-toggle="modal" data-target=".bd-example-modal-sm">خروج از حساب کاربری <i class="fa fa-sign-out"></i></a></p>
                         </div>
                     </div>
                 </div>
