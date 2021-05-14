@@ -73,20 +73,6 @@
                 <?php
             }
         }
-        else {
-            ?>
-                <script>
-                    window.alert(
-                        <?php
-                            foreach ($send as $error) {
-                                echo $error;
-                            }
-                        ?>
-                    );
-                    window.location.replace("http://office.narbon.ir:4488/NarTik");
-                </script>
-            <?php
-        }
         
     }
     
