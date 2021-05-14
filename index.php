@@ -416,13 +416,13 @@ else {
     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 style="float: left;" class="modal-title" id="exampleModalLongTitle">خروج از حساب</h5>
+                <h5 style="float: left;" class="modal-title text-danger" id="exampleModalLongTitle">خروج از حساب</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body text-center">
-                <h1><i class="fa fa-sign-out"></i></h1>
+                <h1><i class="fa fa-sign-out text-danger"></i></h1>
                 <br>
                 <p class="text-danger">آیا شما میخواهید از حسابتان خارج شوید</p>
             </div>
