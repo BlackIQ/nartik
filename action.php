@@ -99,7 +99,7 @@
         $newphone = mysqli_real_escape_string($connection, $_POST["phone"]);
         
         if (isset($newusername)) {
-            $updateusename = "UPDATE people SET username='$newusername' WHERE id='$id'";
+            $updateusename = "UPDATE people SET username='$newusername' WHERE id='$userid'";
             if (mysqli_query($connection, $updateusename)) {
                 ?>
                     <script>
@@ -118,7 +118,7 @@
             }
         }
         if (isset($newphone)) {
-            $updatephone = "UPDATE people SET phone='$newphone' WHERE id='$id'";
+            $updatephone = "UPDATE people SET phone='$newphone' WHERE id='$userid'";
             if (mysqli_query($connection, $updatephone)) {
                 ?>
                     <script>
@@ -137,7 +137,7 @@
             }
         }
         if (isset($newemail)) {
-            $updateemail = "UPDATE people SET email='$newemail' WHERE id='$id'";
+            $updateemail = "UPDATE people SET email='$newemail' WHERE id='$userid'";
             if (mysqli_query($connection, $updateemail)) {
                 ?>
                     <script>
