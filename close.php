@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
         <title>سایت بسته است</title>
         <style>
@@ -42,7 +43,7 @@
                     	<br>
                         <p><b>سامانه در دسترس نمیباشد</b></p>
                         <br>
-                        <p>با عرض پوزش سامانه نارتیک از ساعت 11 شب تا 6 صبح بسته میباشد</p>
+                        <p>با عرض پوزش سامانه نارتیک از ساعت 12 شب تا 6 صبح بسته میباشد</p>
                         <br>
                         <br>
                         <p>با تشکر</p>
