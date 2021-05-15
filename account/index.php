@@ -36,12 +36,12 @@ if ($_SESSION['status'] == true) {
                 border: solid 1px white;
                 border-radius: 10px;
                 padding: 20px;
+                border-bottom-left-radius: none;
+                border-top-right-radius: none;
             }
             .blk {
                 color: black;
                 background: white;
-                border-bottom-left-radius: none;
-                border-top-right-radius: none;
             }
         </style>
     </head>
