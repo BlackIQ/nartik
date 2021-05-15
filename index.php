@@ -16,7 +16,6 @@ date_default_timezone_set('Iran');
 $hour = date("H");
 
 if (($hour <= 24 && $hour >= 9)) {
-    session_destroy();
     header("Location : http://office.narbon.ir:4488/NarTik/close.php");
 }
 else {
