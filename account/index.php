@@ -124,11 +124,12 @@ if ($_SESSION['status'] == true) {
                             <br>
                             <button type="submit" id="reg_user" name="reg_user" class="btn blk">ساخت حساب</button>
                         </form>
-                        <br>
-                        <br>
                     </div>
                 </div>
-                <div class="col-md-1"></div>
+                <div class="col-md-1">
+                    <br>
+                    <br>
+                </div>
                 <div class="col-md-5">
                     <div class="mform">
                         <h1 class="display-6 text-white">ورود به حساب کاربری</h1>
