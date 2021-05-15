@@ -36,8 +36,8 @@ if ($_SESSION['status'] == true) {
                 border: solid 1px white;
                 border-radius: 10px;
                 padding: 20px;
-                border-bottom-left-radius: none;
-                border-top-right-radius: none;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: opx;
             }
             .blk {
                 color: black;
