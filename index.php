@@ -16,10 +16,7 @@ date_default_timezone_set('Iran');
 $hour = date("H");
 
 if (hour <= 24 && $hour >= 6) {
-    echo "Close";
-}
-else {
-    if ($_SESSION['status'] == true) {
+        if ($_SESSION['status'] == true) {
         $id = $_SESSION['id'];
 
         $getdata = "SELECT * FROM people WHERE type='user' AND id='$id'";
@@ -45,6 +42,9 @@ else {
     else {
         header("Location: http://office.narbon.ir:4488/NarTik/account");
     }
+}
+else {
+    echo "Close";
 }
 
 ?>
