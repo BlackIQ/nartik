@@ -1,3 +1,25 @@
+<?php
+    $id = $_SESSION['id'];
+
+    $getdata = "SELECT * FROM people WHERE type='user' AND id='$id'";
+    $ressult = mysqli_query($connection, $getdata);
+
+    if (mysqli_num_rows($ressult) > 0) {
+        while ($row = mysqli_fetch_assoc($ressult)) {
+            $fname = $row['firstname'];
+            $lname = $row['lastname'];
+            $phone = $row['phone'];
+            $email = $row['email'];
+            $username = $row['username'];
+            $userid = $row['id'];
+            $company = $row['company'];
+        }
+    }
+
+    $gettiks = "SELECT * FROM tiks WHERE userid = '$userid' ORDER BY row DESC";
+    $tikres = mysqli_query($connection, $gettiks);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
