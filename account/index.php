@@ -39,7 +39,7 @@ if ($_SESSION['status'] == true) {
                 border-bottom-left-radius: 0px;
                 border-top-right-radius: 0px;
             }
-            input {
+            .inp {
                 border: solid 1px white;
                 border-radius: 20px;
                 border-bottom-left-radius: 0px;
@@ -63,51 +63,51 @@ if ($_SESSION['status'] == true) {
                             <?php include('error.php'); ?>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="fname" class="form-control border-white" placeholder="نام"
+                                    <input type="text" name="fname" class="form-control inp" placeholder="نام"
                                            aria-label="نام">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="lname" class="form-control border-white"
+                                    <input type="text" name="lname" class="form-control inp"
                                            placeholder="نام خانوادگی" aria-label="نام خانوادگی">
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="phone" class="form-control border-white"
+                                    <input type="text" name="phone" class="form-control inp"
                                            placeholder="شماره همراه" aria-label="شماره همراه">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="email" class="form-control border-white" placeholder="ایمیل"
+                                    <input type="text" name="email" class="form-control inp" placeholder="ایمیل"
                                            aria-label="ایمیل">
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="username" class="form-control border-white" placeholder="نام کاربری"
+                                    <input type="text" name="username" class="form-control inp" placeholder="نام کاربری"
                                            aria-label="نام کاربری">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="id" class="form-control border-white"
+                                    <input type="text" name="id" class="form-control inp"
                                            placeholder="کد ملی" aria-label="کد ملی">
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <input type="password" name="pass" class="form-control border-white" placeholder="رمز"
+                                    <input type="password" name="pass" class="form-control inp" placeholder="رمز"
                                            aria-label="رمز">
                                 </div>
                                 <div class="col">
-                                    <input type="password" name="conpass" class="form-control border-white"
+                                    <input type="password" name="conpass" class="form-control inp"
                                            placeholder="تایید رمز" aria-label="تایید رمز">
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <select name="company" class="form-control border-white">
+                                    <select name="company" class="form-control inp">
                                         <option selected>انتخاب شرکت</option>
                                         <option value="Narbon">ناربن</option>
                                         <option value="Milad">میلاد</option>
@@ -133,11 +133,11 @@ if ($_SESSION['status'] == true) {
                             <?php include('error.php'); ?>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="id" class="form-control border-white" placeholder="کد ملی"
+                                    <input type="text" name="id" class="form-control inp" placeholder="کد ملی"
                                            aria-label="کد ملی">
                                 </div>
                                 <div class="col">
-                                    <input type="password" name="password" class="form-control border-white"
+                                    <input type="password" name="password" class="form-control inp"
                                            placeholder="رمز حساب" aria-label="رمز جساب">
                                 </div>
                             </div>
