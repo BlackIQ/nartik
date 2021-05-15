@@ -39,6 +39,7 @@ if ($_SESSION['status'] == true) {
             }
             .blk {
                 color: black;
+                background: white;
             }
         </style>
     </head>
@@ -108,7 +109,7 @@ if ($_SESSION['status'] == true) {
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" id="reg_user" name="reg_user" class="btn btn-white blk">ساخت حساب</button>
+                            <button type="submit" id="reg_user" name="reg_user" class="btn blk">ساخت حساب</button>
                         </form>
                         <br>
                         <br>
@@ -133,7 +134,7 @@ if ($_SESSION['status'] == true) {
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" name="login_user" class="btn btn-white blk">ورود</button>
+                            <button type="submit" name="login_user" class="btn blk">ورود</button>
                         </form>
                     </div>
                 </div>
