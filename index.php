@@ -16,7 +16,7 @@ date_default_timezone_set('Iran');
 $hour = date("H");
 
 if (hour <= 24 && $hour >= 6) {
-    echo "Close";
+    include("close.php");
 }
 else {
     echo "Close";
