@@ -19,7 +19,6 @@ if (hour <= 24 && $hour >= 6) {
     include("main.php");
 }
 else {
-    echo "Close";
     if ($_SESSION['status'] == true) {
         include("close.php");
     }
