@@ -63,6 +63,9 @@ if ($_SESSION['status'] == true) {
                 border-bottom-left-radius: 0px;
                 border-top-right-radius: 0px;
             }
+            .sel {
+                color: black;
+            }
         </style>
     </head>
     <body>
@@ -121,7 +124,7 @@ if ($_SESSION['status'] == true) {
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <select name="company" class="form-control inp">
+                                    <select name="company" class="form-control inp sel">
                                         <option selected>انتخاب شرکت</option>
                                         <option value="Narbon">ناربن</option>
                                         <option value="Milad">میلاد</option>
