@@ -27,98 +27,112 @@ if ($_SESSION['status'] == true) {
                 font-family: 'nazanin';
                 background-color: gray;
             }
+            
+            * {
+                color: white;
+            }
+            
+            .mfirm {
+                border: solid 1px white;
+                border-radius: 10px;
+                padding: 20px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <h1 class="display-6 text-white">ساخت حساب جدید</h1>
-                    <hr class="border-white border">
-                    <br>
-                    <form action="index.php" method="post">
-                        <?php include('error.php'); ?>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" name="fname" class="form-control border-white" placeholder="نام"
-                                       aria-label="نام">
-                            </div>
-                            <div class="col">
-                                <input type="text" name="lname" class="form-control border-white"
-                                       placeholder="نام خانوادگی" aria-label="نام خانوادگی">
-                            </div>
-                        </div>
+                    <div class="mform">
+                        <h1 class="display-6 text-white">ساخت حساب جدید</h1>
+                        <hr class="border-white border">
                         <br>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" name="phone" class="form-control border-white"
-                                       placeholder="شماره همراه" aria-label="شماره همراه">
+                        <form action="index.php" method="post">
+                            <?php include('error.php'); ?>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" name="fname" class="form-control border-white" placeholder="نام"
+                                           aria-label="نام">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="lname" class="form-control border-white"
+                                           placeholder="نام خانوادگی" aria-label="نام خانوادگی">
+                                </div>
                             </div>
-                            <div class="col">
-                                <input type="text" name="email" class="form-control border-white" placeholder="ایمیل"
-                                       aria-label="ایمیل">
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" name="phone" class="form-control border-white"
+                                           placeholder="شماره همراه" aria-label="شماره همراه">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="email" class="form-control border-white" placeholder="ایمیل"
+                                           aria-label="ایمیل">
+                                </div>
                             </div>
-                        </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" name="username" class="form-control border-white" placeholder="نام کاربری"
+                                           aria-label="نام کاربری">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="id" class="form-control border-white"
+                                           placeholder="کد ملی" aria-label="کد ملی">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="password" name="pass" class="form-control border-white" placeholder="رمز"
+                                           aria-label="رمز">
+                                </div>
+                                <div class="col">
+                                    <input type="password" name="conpass" class="form-control border-white"
+                                           placeholder="تایید رمز" aria-label="تایید رمز">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <select name="company" class="form-control border-white">
+                                        <option selected>انتخاب شرکت</option>
+                                        <option value="Narbon">ناربن</option>
+                                        <option value="Milad">میلاد</option>
+                                        <option value="Microsoft">مایکروسافت</option>
+                                        <option value="Apple">اپل</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <button type="submit" id="reg_user" name="reg_user" class="btn btn-primary">ساخت حساب</button>
+                        </form>
                         <br>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" name="username" class="form-control border-white" placeholder="نام کاربری"
-                                       aria-label="نام کاربری">
-                            </div>
-                            <div class="col">
-                                <input type="text" name="id" class="form-control border-white"
-                                       placeholder="کد ملی" aria-label="کد ملی">
-                            </div>
-                        </div>
                         <br>
-                        <div class="row">
-                            <div class="col">
-                                <input type="password" name="pass" class="form-control border-white" placeholder="رمز"
-                                       aria-label="رمز">
-                            </div>
-                            <div class="col">
-                                <input type="password" name="conpass" class="form-control border-white"
-                                       placeholder="تایید رمز" aria-label="تایید رمز">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col">
-                                <select name="company" class="form-control border-white">
-                                    <option selected>انتخاب شرکت</option>
-                                    <option value="Narbon">ناربن</option>
-                                    <option value="Milad">میلاد</option>
-                                    <option value="Microsoft">مایکروسافت</option>
-                                    <option value="Apple">اپل</option>
-                                </select>
-                            </div>
-                        </div>
-                        <br>
-                        <button type="submit" id="reg_user" name="reg_user" class="btn btn-primary">ساخت حساب</button>
-                    </form>
-                    <br>
-                    <br>
+                    </div>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
-                    <h1 class="display-6 text-white">ورود به حساب کاربری</h1>
-                    <hr class="border-white border">
-                    <br>
-                    <form action="index.php" method="post">
-                        <?php include('error.php'); ?>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" name="id" class="form-control border-white" placeholder="کد ملی"
-                                       aria-label="کد ملی">
-                            </div>
-                            <div class="col">
-                                <input type="password" name="password" class="form-control border-white"
-                                       placeholder="رمز حساب" aria-label="رمز جساب">
-                            </div>
-                        </div>
+                    <div class="mform">
+                        <h1 class="display-6 text-white">ورود به حساب کاربری</h1>
+                        <hr class="border-white border">
                         <br>
-                        <button type="submit" name="login_user" class="btn btn-primary">ورود</button>
-                    </form>
+                        <form action="index.php" method="post">
+                            <?php include('error.php'); ?>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" name="id" class="form-control border-white" placeholder="کد ملی"
+                                           aria-label="کد ملی">
+                                </div>
+                                <div class="col">
+                                    <input type="password" name="password" class="form-control border-white"
+                                           placeholder="رمز حساب" aria-label="رمز جساب">
+                                </div>
+                            </div>
+                            <br>
+                            <button type="submit" name="login_user" class="btn btn-primary">ورود</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
