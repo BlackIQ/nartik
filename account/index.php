@@ -41,13 +41,18 @@ if ($_SESSION['status'] == true) {
             }
             .inp {
                 border: solid 1px white;
-                border-radius: 20px;
+                border-radius: 10px;
                 border-bottom-left-radius: 0px;
                 border-top-right-radius: 0px;
+                color: black;
             }
             .blk {
                 color: black;
                 background: white;
+                border: solid 1px white;
+                border-radius: 10px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 0px;
             }
         </style>
     </head>
