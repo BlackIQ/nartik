@@ -40,6 +40,8 @@ if ($_SESSION['status'] == true) {
             .blk {
                 color: black;
                 background: white;
+                border-bottom-left-radius: none;
+                border-top-right-radius: none;
             }
         </style>
     </head>
