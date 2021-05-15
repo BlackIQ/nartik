@@ -34,10 +34,16 @@ if ($_SESSION['status'] == true) {
             
             .mform {
                 border: solid 1px white;
-                border-radius: 10px;
+                border-radius: 50px;
                 padding: 20px;
                 border-bottom-left-radius: 0px;
-                border-top-right-radius: opx;
+                border-top-right-radius: 0px;
+            }
+            input {
+                border: solid 1px white;
+                border-radius: 20px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 0px;
             }
             .blk {
                 color: black;
