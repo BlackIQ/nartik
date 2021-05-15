@@ -16,6 +16,7 @@ date_default_timezone_set('Iran');
 $hour = date("H");
 
 if (($hour <= 24 && $hour >= 9)) {
+    session_destroy();
     echo "متاسفانه بسته هستیم";
 }
 else {
