@@ -32,7 +32,7 @@ if ($_SESSION['status'] == true) {
                 color: white;
             }
             
-            .mfirm {
+            .mform {
                 border: solid 1px white;
                 border-radius: 10px;
                 padding: 20px;
