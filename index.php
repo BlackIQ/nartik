@@ -15,16 +15,17 @@ date_default_timezone_set('Iran');
     
 $hour = date("H");
 
-if (hour <= 24 && $hour >= 6) {
+if (hour >= 24 && $hour <= 6) {
+    echo "Close";
+}
+else {
+    echo "Close";
     if ($_SESSION['status'] == true) {
         include("main.php");
     }
     else {
         header("Location: http://office.narbon.ir:4488/NarTik/account");
     }
-}
-else {
-    echo "Close";
 }
 
 ?>
