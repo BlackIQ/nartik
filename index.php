@@ -17,7 +17,7 @@ $hour = date("H");
 
 if (($hour <= 24 && $hour >= 9)) {
     session_destroy();
-    echo "متاسفانه بسته هستیم";
+    header("Location : http://office.narbon.ir:4488/NarTik/close.php");
 }
 else {
     if ($_SESSION['status'] == true) {
@@ -45,9 +45,6 @@ else {
         header("Location: http://office.narbon.ir:4488/NarTik/account");
     }
 }
-
-
-
 
 ?>
 
