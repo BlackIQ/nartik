@@ -59,7 +59,7 @@ if ($_SESSION['status'] == true) {
                 color: black;
                 background: white;
                 border: solid 1px white;
-                border-radius: 10px;
+                border-radius: 50px;
                 border-bottom-left-radius: 0px;
                 border-top-right-radius: 0px;
             }
@@ -70,7 +70,11 @@ if ($_SESSION['status'] == true) {
                 background-color: #f44336;
                 color: white;
                 padding: 15px;
-                text-align: center;
+                text-align: right;
+                border-radius: 10px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border: solid 2px red;
             }
         </style>
     </head>
