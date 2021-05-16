@@ -66,6 +66,12 @@ if ($_SESSION['status'] == true) {
             .sel {
                 color: black;
             }
+            .alrt {
+                background-color: #f44336;
+                color: white;
+                padding: 15px;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
