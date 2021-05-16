@@ -84,20 +84,6 @@
                 <?php
             }
         }
-        else {
-            ?>
-                <script>
-                    window.alert("<?php
-                        foreach ($errors as $er) {
-                            echo $er;
-                            echo "\n";
-                        }
-                    ?>");
-                    window.location.replace("http://office.narbon.ir:4488/NarTik/account");
-                </script>
-            <?php
-        }
-
     }
 
     // ...
