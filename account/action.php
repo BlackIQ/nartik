@@ -89,7 +89,7 @@
                 <script>
                     window.alert("<?php
                         foreach ($errors as $er) {
-                            echo $er;
+                            echo $er . "<br>";
                         }
                     ?>");
                     window.location.replace("http://office.narbon.ir:4488/NarTik/account");
