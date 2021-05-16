@@ -2,10 +2,7 @@
     session_start();
     
     // variable declaration
-    $username = "";
-    $email    = "";
     $errors = array();
-    $_SESSION['success'] = "";
 
     // MySQL Data
     $mysqlserver = "localhost";
@@ -62,7 +59,7 @@
         }
         
         if ($pass != $conpass) {
-            array_push($errors, "The two passwords do not match");
+            array_push($errors, "رمز ها با هم تفاوت دارند");
         }
 
         // register user if there are no errors in the form
@@ -71,10 +68,20 @@
             $dt = date("M , d , Y");
             $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company', '$pass', 'pending')";
             if (mysqli_query($connection, $query)) {
-                array_push($errors, "شما با موفقیت در صف نارتیک قرار گرفته اید");
+                ?>
+                    <script>
+                        window.alert("درخواست شما با موفقیت ثبت شد");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik/account");
+                    </script>
+                <?php
             }
             else {
-                array_push($errors, mysqli_error($connection));
+                ?>
+                    <script>
+                        window.alert("<?php echo mysqli_error($connection); ?>");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik/account");
+                    </script>
+                <?php
             }
         }
 
@@ -88,7 +95,7 @@
         $password = mysqli_real_escape_string($connection, $_POST['password']);
         
         if (empty($id)) {
-            array_push($errors, "لطفا ایمیل را وارد کنید");
+            array_push($errors, "لطفا کد ملی را وارد کنید");
         }
         if (empty($password)) {
             array_push($errors, "لطفا رمز را وارد کنید");
@@ -106,7 +113,12 @@
                 header('location: http://office.narbon.ir:4488/NarTik');
             }
             else {
-                array_push($errors, "ایمیل یا رمز عبور درست نیست. لطفا دوباره امتحان کنید");
+                ?>
+                    <script>
+                        window.alert("کد ملی یا رمز عبور اشتباه است");
+                        window.location.replace("http://office.narbon.ir:4488/NarTik/account");
+                    </script>
+                <?php
             }
         }
     }
