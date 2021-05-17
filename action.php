@@ -60,7 +60,7 @@
                 ?>
                     <script>
                         window.alert("تیکت شما با موفقیت ارسال شد");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        window.location.replace("http://127.0.0.1/NarTik");
                     </script>
                 <?php
             }
@@ -68,7 +68,7 @@
                 ?>
                     <script>
                         window.alert("<?php echo mysqli_error($connection); ?>");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        window.location.replace("http://127.0.0.1/NarTik");
                     </script>
                 <?php
             }
@@ -106,7 +106,7 @@
                     ?>
                         <script>
                             window.alert("رمز شما با موفقیت تغییر کرد");
-                            window.location.replace("http://office.narbon.ir:4488/NarTik");
+                            window.location.replace("http://127.0.0.1/NarTik");
                         </script>
                     <?php
                 }
@@ -114,7 +114,7 @@
                     ?>
                         <script>
                             window.alert("<?php echo mysqli_error($connection); ?>");
-                            window.location.replace("http://office.narbon.ir:4488/NarTik");
+                            window.location.replace("http://127.0.0.1/NarTik");
                         </script>
                     <?php
                 }
@@ -123,7 +123,7 @@
                 ?>
                     <script>
                         window.alert("رمز جدید با تایید رمز تفاوت دارد");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        window.location.replace("http://127.0.0.1/NarTik");
                     </script>
                 <?php
             }
@@ -132,7 +132,7 @@
             ?>
                 <script>
                     window.alert("رمز کنونی با رمز شما متفاوت است");
-                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    window.location.replace("http://127.0.0.1/NarTik");
                 </script>
             <?php
         }
@@ -149,7 +149,7 @@
                 ?>
                     <script>
                         window.alert("نام کاربری با موفقیت تغییر کرد");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        window.location.replace("http://127.0.0.1/NarTik");
                     </script>
                 <?php
             }
@@ -157,7 +157,7 @@
                 ?>
                     <script>
                         window.alert("<?php echo mysqli_error($connection); ?>");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        window.location.replace("http://127.0.0.1/NarTik");
                     </script>
                 <?php
             }
@@ -166,7 +166,7 @@
             ?>
                 <script>
                     window.alert("نام کاربری را وارد کنید");
-                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    window.location.replace("http://127.0.0.1/NarTik");
                 </script>
             <?php
         }
@@ -183,7 +183,7 @@
                 ?>
                     <script>
                         window.alert("شماره تلفن با موفقیت تغییر کرد");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        window.location.replace("http://127.0.0.1/NarTik");
                     </script>
                 <?php
             }
@@ -191,7 +191,7 @@
                 ?>
                     <script>
                         window.alert("<?php echo mysqli_error($connection); ?>");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        window.location.replace("http://127.0.0.1/NarTik");
                     </script>
                 <?php
             }
@@ -200,7 +200,7 @@
             ?>
                 <script>
                     window.alert("شماره تلفن را وارد کنید");
-                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    window.location.replace("http://127.0.0.1/NarTik");
                 </script>
             <?php
         }
@@ -217,7 +217,7 @@
                 ?>
                     <script>
                         window.alert("ایمیل شما با موفقیت تغییر کرد");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        window.location.replace("http://127.0.0.1/NarTik");
                     </script>
                 <?php
             }
@@ -225,7 +225,7 @@
                 ?>
                     <script>
                         window.alert("<?php echo mysqli_error($connection); ?>");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik");
+                        window.location.replace("http://127.0.0.1/NarTik");
                     </script>
                 <?php
             }
@@ -234,7 +234,7 @@
             ?>
                 <script>
                     window.alert("ایمیل را وارد کنید");
-                    window.location.replace("http://office.narbon.ir:4488/NarTik");
+                    window.location.replace("http://127.0.0.1/NarTik");
                 </script>
             <?php
         }

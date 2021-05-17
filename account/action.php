@@ -71,7 +71,7 @@
                 ?>
                     <script>
                         window.alert("درخواست شما با موفقیت ثبت شد");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik/account");
+                        window.location.replace("http://127.0.0.1/NarTik/account");
                     </script>
                 <?php
             }
@@ -79,7 +79,7 @@
                 ?>
                     <script>
                         window.alert("<?php echo mysqli_error($connection); ?>");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik/account");
+                        window.location.replace("http://127.0.0.1/NarTik/account");
                     </script>
                 <?php
             }
@@ -109,13 +109,13 @@
                 $_SESSION['status'] = true;
                 $_SESSION['id'] = $id;
                 $_SESSION['directory'] = 'nartik';
-                header('location: http://office.narbon.ir:4488/NarTik');
+                header('location: http://127.0.0.1/NarTik');
             }
             else {
                 ?>
                     <script>
                         window.alert("کد ملی یا رمز عبور اشتباه است");
-                        window.location.replace("http://office.narbon.ir:4488/NarTik/account");
+                        window.location.replace("http://127.0.0.1/NarTik/account");
                     </script>
                 <?php
             }

@@ -20,7 +20,7 @@ if (hour <= 24 && $hour >= 6) {
         include("main.php");
     }
     else {
-        header("Location: http://office.narbon.ir:4488/NarTik/account");
+        header("Location: http://127.0.0.1/NarTik/account");
     }
 }
 else {
