@@ -1,6 +1,5 @@
+-- Admin
 DROP TABLE IF EXISTS `admin`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `admin` (
   `row` int(11) NOT NULL AUTO_INCREMENT,
   `id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -11,17 +10,13 @@ CREATE TABLE `admin` (
   `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `admin` WRITE;
-/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (1, '0491599690','Majid','Mohammadi','09192186255','majid@gmail.com','mrmajid');
-/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+INSERT INTO `admin` VALUES (1, '0482222222','Mehrdad','Mirzaee','09366171566','mehrdad@gmail.com','mrmehrdad');
 UNLOCK TABLES;
 
+-- People
 DROP TABLE IF EXISTS `people`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `people` (
   `row` int(11) NOT NULL AUTO_INCREMENT,
   `id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -36,17 +31,13 @@ CREATE TABLE `people` (
   `type` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `people` WRITE;
-/*!40000 ALTER TABLE `people` DISABLE KEYS */;
 INSERT INTO `people` VALUES (1, '0481111111', 'Meysam','Mirzaee','09123438281','meysam@yahoo.com', 'Meysam-M', 'Apr 20, 2021 10:40:50', 'Narbon', 'mrmeysam' , 'user');
-/*!40000 ALTER TABLE `people` ENABLE KEYS */;
 UNLOCK TABLES;
 
+-- Tikets
 DROP TABLE IF EXISTS `tiks`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tiks`
 (
     `row`     int(11) NOT NULL AUTO_INCREMENT,
@@ -63,4 +54,3 @@ CREATE TABLE `tiks`
     `status`  text COLLATE utf8mb4_unicode_ci,
     PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
