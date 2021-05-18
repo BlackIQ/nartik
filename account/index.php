@@ -136,10 +136,10 @@ if ($_SESSION['status'] == true) {
                                 <div class="col">
                                     <select name="company" class="form-control inp sel">
                                         <option selected>انتخاب شرکت</option>
-                                        <option value="Narbon">ناربن</option>
-                                        <option value="Milad">میلاد</option>
-                                        <option value="Microsoft">مایکروسافت</option>
-                                        <option value="Apple">اپل</option>
+                                        <option class="sel" value="Narbon">ناربن</option>
+                                        <option class="sel" value="Milad">میلاد</option>
+                                        <option class="sel" value="Microsoft">مایکروسافت</option>
+                                        <option class="sel" value="Apple">اپل</option>
                                     </select>
                                 </div>
                             </div>
