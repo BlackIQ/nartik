@@ -29,10 +29,6 @@ if ($_SESSION['status'] == true) {
                 background-color: #f1f1f1;
             }
             
-            * {
-                color: blue;
-            }
-            
             .mform {
                 border: solid 1px black;
                 border-radius: 50px;
@@ -103,7 +99,6 @@ if ($_SESSION['status'] == true) {
                             <h1 class="display-6 text-primary"><span style="font-size: 25px;"><i class="fa fa-user-plus"></i></span> ساخت حساب کاربری</h1>                            <hr class="border-primary border">
                             <br>
                             <form action="index.php" method="post">
-                                <?php include('error.php'); ?>
                                 <div class="row">
                                     <div class="col">
                                         <input type="text" name="fname" class="form-control text-primary border-primary inp" placeholder="نام"
@@ -174,7 +169,6 @@ if ($_SESSION['status'] == true) {
                             <hr class="border-primary border">
                             <br>
                             <form action="index.php" method="post">
-                                <?php include('error.php'); ?>
                                 <div class="row">
                                     <div class="col">
                                         <input type="text" name="id" class="form-control text-primary border-primary inp" placeholder="کد ملی"
@@ -188,6 +182,10 @@ if ($_SESSION['status'] == true) {
                                 <br>
                                 <button type="submit" name="login_user" class="btn text-primary blk border-primary">ورود</button>
                             </form>
+                        </div>
+                        <br>
+                        <div class="">
+                            <?php include('error.php'); ?>
                         </div>
                     </div>
                 </div>
