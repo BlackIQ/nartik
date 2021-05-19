@@ -23,17 +23,17 @@ if ($_SESSION['status'] == true) {
             }
             
             body {
-                padding: 56px;
+                padding: 30px;
                 font-family: 'nazanin';
-                background-color: gray;
+                background-color: #f1f1f1;
             }
             
             * {
-                color: white;
+                color: blue;
             }
             
             .mform {
-                border: solid 1px white;
+                border: solid 1px black;
                 border-radius: 50px;
                 padding: 20px;
                 border-bottom-left-radius: 0px;
@@ -46,22 +46,28 @@ if ($_SESSION['status'] == true) {
                     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
                     0 100px 80px rgba(0, 0, 0, 0.12)
                 ;*/
-                box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 45px;
             }
             .inp {
-                border: solid 1px white;
+                border: solid 1px black;
                 border-radius: 10px;
                 border-bottom-left-radius: 0px;
                 border-top-right-radius: 0px;
                 color: black;
+            }
+            .inp:hover {
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 9px;
             }
             .blk {
                 color: black;
-                background: white;
-                border: solid 1px white;
+                background: #f1f1f1;
+                border: solid 1px black;
                 border-radius: 10px;
                 border-bottom-left-radius: 0px;
                 border-top-right-radius: 0px;
+            }
+            .blk:hover {
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 9px;
             }
             .sel {
                 color: black;
@@ -76,102 +82,113 @@ if ($_SESSION['status'] == true) {
                 border-top-right-radius: 0px;
                 border: solid 2px red;
             }
+            
+            .all {
+                border: solid 1px white;
+                border-radius: 50px;
+                padding: 50px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 0px;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 45px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="mform">
-                        <h1 class="display-6 text-white">ساخت حساب جدید</h1>
-                        <hr class="border-white border">
-                        <br>
-                        <form action="index.php" method="post">
-                            <?php include('error.php'); ?>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" name="fname" class="form-control inp" placeholder="نام"
-                                           aria-label="نام">
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="lname" class="form-control inp"
-                                           placeholder="نام خانوادگی" aria-label="نام خانوادگی">
-                                </div>
-                            </div>
+            <div class="all border-primary">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="mform border-primary">
+                            <h1 class="display-6 text-primary">ساخت حساب جدید</h1>
+                            <hr class="border-primary border">
                             <br>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" name="phone" class="form-control inp"
-                                           placeholder="شماره همراه" aria-label="شماره همراه">
+                            <form action="index.php" method="post">
+                                <?php include('error.php'); ?>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" name="fname" class="form-control text-primary border-primary inp" placeholder="نام"
+                                               aria-label="نام">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="lname" class="form-control text-primary border-primary inp"
+                                               placeholder="نام خانوادگی" aria-label="نام خانوادگی">
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="text" name="email" class="form-control inp" placeholder="ایمیل"
-                                           aria-label="ایمیل">
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" name="phone" class="form-control text-primary border-primary inp"
+                                               placeholder="شماره همراه" aria-label="شماره همراه">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="email" class="form-control text-primary border-primary inp" placeholder="ایمیل"
+                                               aria-label="ایمیل">
+                                    </div>
                                 </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" name="username" class="form-control inp" placeholder="نام کاربری"
-                                           aria-label="نام کاربری">
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" name="username" class="form-control text-primary border-primary inp" placeholder="نام کاربری"
+                                               aria-label="نام کاربری">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="id" class="form-control text-primary border-primary inp"
+                                               placeholder="کد ملی" aria-label="کد ملی">
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="text" name="id" class="form-control inp"
-                                           placeholder="کد ملی" aria-label="کد ملی">
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="password" name="pass" class="form-control text-primary border-primary inp" placeholder="رمز"
+                                               aria-label="رمز">
+                                    </div>
+                                    <div class="col">
+                                        <input type="password" name="conpass" class="form-control text-primary border-primary inp"
+                                               placeholder="تایید رمز" aria-label="تایید رمز">
+                                    </div>
                                 </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="password" name="pass" class="form-control inp" placeholder="رمز"
-                                           aria-label="رمز">
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <select name="company" class="form-control border-primary text-primary inp sel">
+                                            <option selected>انتخاب شرکت</option>
+                                            <option class="text-primary" value="Narbon">ناربن</option>
+                                            <option class="text-primary" value="Milad">میلاد</option>
+                                            <option class="text-primary" value="Microsoft">مایکروسافت</option>
+                                            <option class="text-primary" value="Apple">اپل</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="password" name="conpass" class="form-control inp"
-                                           placeholder="تایید رمز" aria-label="تایید رمز">
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col">
-                                    <select name="company" class="form-control inp sel">
-                                        <option selected>انتخاب شرکت</option>
-                                        <option class="sel" value="Narbon">ناربن</option>
-                                        <option class="sel" value="Milad">میلاد</option>
-                                        <option class="sel" value="Microsoft">مایکروسافت</option>
-                                        <option class="sel" value="Apple">اپل</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <br>
-                            <button type="submit" id="reg_user" name="reg_user" class="btn blk">ساخت حساب</button>
-                        </form>
+                                <br>
+                                <button type="submit" id="reg_user" name="reg_user" class="btn text-primary blk border-primary">ساخت حساب</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-1">
-                    <br>
-                    <br>
-                </div>
-                <div class="col-md-5">
-                    <div class="mform">
-                        <h1 class="display-6 text-white">ورود به حساب کاربری</h1>
-                        <hr class="border-white border">
+                    <div class="col-md-1">
                         <br>
-                        <form action="index.php" method="post">
-                            <?php include('error.php'); ?>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" name="id" class="form-control inp" placeholder="کد ملی"
-                                           aria-label="کد ملی">
-                                </div>
-                                <div class="col">
-                                    <input type="password" name="password" class="form-control inp"
-                                           placeholder="رمز حساب" aria-label="رمز جساب">
-                                </div>
-                            </div>
+                        <br>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="mform border-primary">
+                            <h1 class="display-6 text-primary">ورود به حساب کاربری</h1>
+                            <hr class="border-primary border">
                             <br>
-                            <button type="submit" name="login_user" class="btn blk">ورود</button>
-                        </form>
+                            <form action="index.php" method="post">
+                                <?php include('error.php'); ?>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" name="id" class="form-control text-primary border-primary inp" placeholder="کد ملی"
+                                               aria-label="کد ملی">
+                                    </div>
+                                    <div class="col">
+                                        <input type="password" name="password" class="form-control text-primary border-primary inp"
+                                               placeholder="رمز حساب" aria-label="رمز جساب">
+                                    </div>
+                                </div>
+                                <br>
+                                <button type="submit" name="login_user" class="btn text-primary blk border-primary">ورود</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
