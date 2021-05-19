@@ -13,6 +13,7 @@ if ($_SESSION['status'] == true) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
         <title>مدریت جساب کاربری</title>
         <style>
@@ -99,8 +100,7 @@ if ($_SESSION['status'] == true) {
                 <div class="row">
                     <div class="col-md-5">
                         <div class="mform border-primary">
-                            <h1 class="display-6 text-primary">ساخت حساب جدید</h1>
-                            <hr class="border-primary border">
+                            <h1 class="display-6 text-primary"><span style="font-size: 25px;"><i class="fa fa-user-plus"></i></span> ساخت حساب کاربری</h1>                            <hr class="border-primary border">
                             <br>
                             <form action="index.php" method="post">
                                 <?php include('error.php'); ?>
@@ -170,7 +170,7 @@ if ($_SESSION['status'] == true) {
                     </div>
                     <div class="col-md-5">
                         <div class="mform border-primary">
-                            <h1 class="display-6 text-primary">ورود به حساب کاربری</h1>
+                            <h1 class="display-6 text-primary"><span style="font-size: 25px;"><i class="fa fa-sign-in"></i></span> ورود به حساب کاربری</h1>
                             <hr class="border-primary border">
                             <br>
                             <form action="index.php" method="post">
