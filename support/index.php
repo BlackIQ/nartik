@@ -23,7 +23,7 @@ if (hour <= 24 && $hour >= 6) {
     }
 }
 else {
-    include("close.php");
+    include("../etc/close.php");
 }
 
 ?>
