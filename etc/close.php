@@ -36,8 +36,8 @@
                     <br>
                 </div>
                 <div class="col-md-6">
-                	<br>
-                	<br>
+                    <br>
+                    <br>
                     <div class="mform">
                     	<h1><i class="fa fa-lock"></i></h1>
                     	<br>
@@ -46,7 +46,7 @@
                         <p>با عرض پوزش سامانه نارتیک از ساعت 12 شب تا 6 صبح بسته میباشد</p>
                         <br>
                         <br>
-                        <p>با تشکر</p>
+                        <p><?php echo "با تشکر"; ?></p>
                     </div>
                 </div>
                 <div class="col-md-3">
