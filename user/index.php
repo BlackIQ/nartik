@@ -17,10 +17,15 @@ $hour = date("H");
 
 if (hour <= 24 && $hour >= 6) {
     if ($_SESSION['status'] == true) {
-        include("main.php");
+        if ($_SESSION['who'] == "user") {
+            include("main.php");
+        }
+        else {
+            header("Location: http://127.0.0.1/NarTik");
+        }
     }
     else {
-        header("Location: http://127.0.0.1/NarTik/account");
+        header("Location: http://127.0.0.1/NarTik");
     }
 }
 else {
