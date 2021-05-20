@@ -38,7 +38,7 @@
                 $_SESSION['email'] = $email;
                 $_SESSION["who"] = "support";
                 $_SESSION['success'] = "You are now logged in";
-                header('location: http://127.0.0.1/NarFirm');
+                header('location: http://127.0.0.1/NarTik/support');
             }
             else {
                 array_push($errors, "Wrong username/password combination");
