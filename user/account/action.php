@@ -107,6 +107,7 @@
 
             if (mysqli_num_rows($results) == 1) {
                 $_SESSION['status'] = true;
+                $_SESSION['who'] = "user";
                 $_SESSION['id'] = $id;
                 $_SESSION['directory'] = 'nartik';
                 header('location: http://127.0.0.1/NarTik');
