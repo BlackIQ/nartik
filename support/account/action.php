@@ -36,6 +36,7 @@
             if (mysqli_num_rows($results) == 1) {
                 $_SESSION['status'] = true;
                 $_SESSION['email'] = $email;
+                $_SESSION["who"] = "support";
                 $_SESSION['success'] = "You are now logged in";
                 header('location: http://127.0.0.1/NarFirm');
             }
