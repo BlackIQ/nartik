@@ -90,7 +90,7 @@ $_tikresult = mysqli_query($conn, $_tickets);
                 <a class="navbar-brand" href="../support">نارتیک</a>
                 <ul class="nav navbar-top-links navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toggle count-success" href="../account/logout.php">
+                        <a class="dropdown-toggle count-success" href="account/logout.php">
                             <em class="fa fa-sign-out"></em>
                         </a>
                     </li>
