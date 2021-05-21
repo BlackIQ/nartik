@@ -20,12 +20,15 @@ if (hour <= 24 && $hour >= 6) {
         if ($_SESSION['who'] == "user") {
             include("main.php");
         }
+        elseif ($_SESSION['who'] == "support") {
+            header("Location: http://127.0.0.1/NarTik/support");
+        }
         else {
             header("Location: http://127.0.0.1/NarTik");
         }
     }
     else {
-        header("Location: http://127.0.0.1/NarTik");
+        header("Location: http://127.0.0.1/NarTik/user/account");
     }
 }
 else {
