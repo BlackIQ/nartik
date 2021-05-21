@@ -7,8 +7,14 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
         <title>سایت بسته است</title>
         <style>
+            @font-face {
+                font-family: 'nazanin';
+                src: url('http://127.0.0.1/NarTik/pack/nazanin.TTF');
+                font-style: normal;
+            }
             body {
                 padding: 100px;
+                font-family: "nazanin";
                 background-color: #f1f1f1;
             }
                         
@@ -25,7 +31,7 @@
                     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
                     0 100px 80px rgba(0, 0, 0, 0.12)
                 ;*/
-                box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 45px;
             }
         </style>
     </head>
