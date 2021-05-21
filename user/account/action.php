@@ -66,7 +66,17 @@
         if (count($errors) == 0) {
 //            $password = md5($pass); // encrypt the password before saving in the database
             $dt = date("M , d , Y");
-            $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company', '$pass', 'pending')";
+            
+            $select_company = "SELECT * FROM company WHERE id = '$company'";
+            $rescompany = mysqli_query($connection, $select_company);
+            
+            if (mysqli_num_rows($rescompany) == 1) {
+                $row = mysqli_fetch_assoc($rescompany);
+                
+                $company_name = $row["name"];
+            }
+            
+            $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company_name', '$pass', 'pending')";
             if (mysqli_query($connection, $query)) {
                 ?>
                     <script>

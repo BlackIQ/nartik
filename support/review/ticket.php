@@ -6,12 +6,22 @@ if (count($tik) > 0) {
     }
     else {
         $person = $tik[0]['userid'];
-        $getname = "SELECT * FROM people WHERE id = '$person'";
+        $compan = $tik[0]["company"];
         
+        $getname = "SELECT * FROM people WHERE id = '$person'";
         if ($result = mysqli_query($connection, $getname)) {
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     $name = $row['firstname'] . " " . $row["lastname"];
+                }
+            }
+        }
+        
+        $getcompany = "SELECT * FROM company WHERE id = '$compan'";
+        if ($result = mysqli_query($connection, $getcompany)) {
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $company = $row["name"];
                 }
             }
         }
@@ -23,7 +33,7 @@ if (count($tik) > 0) {
             <h3><b><?php echo $tik[0]['title']; ?></b></h3>
             <h3><?php echo $tik[0]['explane']; ?></h3>
             <br>
-            <h4><?php echo $tik[0]['company']; ?></h4>
+            <h4><?php echo $company; ?></h4>
             <h4><?php echo $name; ?></h4>
             <br>
             <p><?php echo $tik[0]['dt']; ?> ارسال شده در</p>
