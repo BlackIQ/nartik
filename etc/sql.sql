@@ -36,6 +36,20 @@ LOCK TABLES `people` WRITE;
 INSERT INTO `people` VALUES (1, '0481111111', 'Meysam','Mirzaee','09123438281','meysam@yahoo.com', 'Meysam-M', 'Apr 20, 2021 10:40:50', 'Narbon', 'mrmeysam' , 'user');
 UNLOCK TABLES;
 
+-- Company
+DROP TABLE IF EXISTS `company`;
+CREATE TABLE `company` (
+  `row` int(11) NOT NULL AUTO_INCREMENT,
+  `id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `time` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`row`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `company` WRITE;
+INSERT INTO `company` VALUES (1, '1', 'Milad','2');
+UNLOCK TABLES;
+
 -- Tikets
 DROP TABLE IF EXISTS `tiks`;
 CREATE TABLE `tiks`
