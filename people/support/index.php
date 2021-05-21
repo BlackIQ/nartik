@@ -114,15 +114,6 @@ $_tikresult = mysqli_query($conn, $_tickets);
     
 <div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12 main">
     <div class="row">
-        <ol class="breadcrumb">
-            <li><a href=".">
-                <em class="fa fa-home text-success"></em>
-            </a></li>
-            <li class="active">داشبورد</li>
-        </ol>
-    </div><!--/.row-->
-
-    <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">داشبورد</h1>
         </div>
