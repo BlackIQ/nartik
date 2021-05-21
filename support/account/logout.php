@@ -4,4 +4,4 @@ session_start();
 
 session_destroy();
 
-header("Location: http://127.0.0.1/NarFirm");
+header("Location: http://127.0.0.1/NarTik/support");

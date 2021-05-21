@@ -22,10 +22,10 @@
         $password = mysqli_real_escape_string($connection, $_POST['password']);
         
         if (empty($email)) {
-            array_push($errors, "Email is required");
+            array_push($errors, "ایمیل الزامیست");
         }
         if (empty($password)) {
-            array_push($errors, "Password is required");
+            array_push($errors, "رمز الزامیست");
         }
 
         if (count($errors) == 0) {
@@ -41,7 +41,7 @@
                 header('location: http://127.0.0.1/NarTik/support');
             }
             else {
-                array_push($errors, "Wrong username/password combination");
+                array_push($errors, "ایمیل با رمز اشتباه است");
             }
         }
     }
