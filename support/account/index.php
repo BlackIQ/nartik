@@ -16,8 +16,14 @@ if ($_SESSION['status'] == true) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
         <title>Login</title>
         <style>
+            @font-face {
+                font-family: 'nazanin';
+                src: url('http://127.0.0.1/NarTik/pack/nazanin.TTF');
+                font-style: normal;
+            }
             body {
                 padding: 56px;
+                font-family: 'nazanin';
             }
             * {
                 color: darkgreen;
