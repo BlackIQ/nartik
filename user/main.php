@@ -26,7 +26,7 @@
         <style>
             @font-face {
                 font-family: 'nazanin';
-                src: url('../nazanin.TTF');
+                src: url('http://127.0.0.1/NarTik/pack/nazanin.TTF');
                 font-style: normal;
             }
 
