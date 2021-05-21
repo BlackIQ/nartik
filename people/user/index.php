@@ -4,7 +4,7 @@ session_start();
 
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
-    if ($who == "support") {
+    if ($who == "user") {
         
     }
     else {
