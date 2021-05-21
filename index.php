@@ -39,7 +39,6 @@ if ($_SESSION['status'] == true) {
         <link href="http://127.0.0.1/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://127.0.0.1/NarTik/pack/css/datepicker3.css" rel="stylesheet">
         <link href="http://127.0.0.1/NarTik/pack/css/styles.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     </head>
     <body>
