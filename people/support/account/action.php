@@ -40,7 +40,7 @@
                 $company_name = $row["name"];
             }
             
-            $query = "SELECT * FROM admin WHERE email='$email' AND password='$password'";
+            $query = "SELECT * FROM admin WHERE email = '$email' AND password = '$password' AND company = '$company_name'";
             $results = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($results) == 1) {
