@@ -9,6 +9,9 @@ if ($_SESSION['status'] == true) {
 
 include('action.php');
 
+$getc = "SELECT * FROM company";
+$resc = mysqli_query($connection, $getc);
+
 ?>
 
 <!doctype html>
@@ -60,10 +63,15 @@ include('action.php');
                                     <br>
                                     <select name="company" class="form-control bg-white border-success text-success">
                                         <option selected>انتخاب شرکت</option>
-                                        <option class="text-success" value="Narbon">ناربن</option>
-                                        <option class="text-success" value="Milad">میلاد</option>
-                                        <option class="text-success" value="Microsoft">مایکروسافت</option>
-                                        <option class="text-success" value="Apple">اپل</option>
+                                        <?php
+                                            if (mysqli_num_rows($resc) > 0) {
+                                                while ($row = mysqli_fetch_assoc($resc)) {
+                                                    ?>
+                                                        <option class="text-success" value="<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></option>
+                                                    <?php
+                                                }
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                             </div>
