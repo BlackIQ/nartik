@@ -8,11 +8,13 @@ CREATE TABLE `admin` (
   `phone` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`row`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 LOCK TABLES `admin` WRITE;
-INSERT INTO `admin` VALUES (1, '0482222222','Mehrdad','Mirzaee','09366171566','mehrdad@gmail.com','mrmehrdad');
+INSERT INTO `admin` VALUES (1, '0482222222','Mehrdad','Mirzaee','09366171566','mehrdad@gmail.com','mrmehrdad', 'Milad');
+INSERT INTO `admin` VALUES (2, '0481111111','Meysam','Mirzaee','09123432821','meysam@gmail.com','mrmeysam', 'Narbon');
 UNLOCK TABLES;
 
 -- People
@@ -30,11 +32,7 @@ CREATE TABLE `people` (
   `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `type` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`row`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-LOCK TABLES `people` WRITE;
-INSERT INTO `people` VALUES (1, '0481111111', 'Meysam','Mirzaee','09123438281','meysam@yahoo.com', 'Meysam-M', 'Apr 20, 2021 10:40:50', 'Narbon', 'mrmeysam' , 'user');
-UNLOCK TABLES;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Company
 DROP TABLE IF EXISTS `company`;
@@ -44,10 +42,11 @@ CREATE TABLE `company` (
   `name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `time` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`row`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 LOCK TABLES `company` WRITE;
-INSERT INTO `company` VALUES (1, '1', 'Milad','2');
+INSERT INTO `company` VALUES (1, '123', 'Milad', 2);
+INSERT INTO `company` VALUES (2, '456', 'Narbon', 3);
 UNLOCK TABLES;
 
 -- Tikets
@@ -67,4 +66,4 @@ CREATE TABLE `tiks`
     `answer`   text COLLATE utf8mb4_unicode_ci,
     `status`  text COLLATE utf8mb4_unicode_ci,
     PRIMARY KEY (`row`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
