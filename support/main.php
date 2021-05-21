@@ -19,13 +19,6 @@ $db = "nartik";
 
 $conn = mysqli_connect($server, $user, $passwd, $db);
 
-if ($_SESSION['status'] == true) {
-    
-}
-else {
-    header("Location: http://127.0.0.1/NarFirm");
-}
-
 $mail = $_SESSION['email'];
 
 $getdata = "SELECT * FROM admin WHERE email = '$mail'";
@@ -40,9 +33,6 @@ if (mysqli_num_rows($resdata) > 0) {
         $username = $row['username'];
         $userid = $row['userid'];
     }
-}
-else {
-    header("Location: http://127.0.0.1/NarFirm");
 }
 
 $_pending = "SELECT * FROM people WHERE type='pending'";
