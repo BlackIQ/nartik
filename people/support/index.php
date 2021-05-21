@@ -81,7 +81,7 @@ $_tikresult = mysqli_query($conn, $_tickets);
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>نارفیرم - داشبورد</title>
+    <title>نارتیک - داشبورد</title>
     <link href="http://127.0.0.1/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://127.0.0.1/NarTik/pack/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://127.0.0.1/NarTik/pack/css/datepicker3.css" rel="stylesheet">
