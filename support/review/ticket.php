@@ -5,23 +5,12 @@ if (count($tik) > 0) {
         echo '<h2>تیکت پیدا نشد</h2>';
     }
     else {
-        $person = $tik[0]['userid'];
-        $compan = $tik[0]["company"];
-        
+        $person = $tik[0]['userid'];        
         $getname = "SELECT * FROM people WHERE id = '$person'";
         if ($result = mysqli_query($connection, $getname)) {
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     $name = $row['firstname'] . " " . $row["lastname"];
-                }
-            }
-        }
-        
-        $getcompany = "SELECT * FROM company WHERE id = '$compan'";
-        if ($result = mysqli_query($connection, $getcompany)) {
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $company = $row["name"];
                 }
             }
         }
