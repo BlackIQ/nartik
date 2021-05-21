@@ -6,6 +6,18 @@ if ($_SESSION['status'] == true) {
     header("Location: http://127.0.0.1/NarTik");
 }
 
+// MySQL Data
+$mysqlserver = "localhost";
+$mysqluser = "narbon";
+$mysqlpassword = "narbon";
+$mysqldatabase = "nartik";
+
+// Create Connection
+$connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
+
+$getc = "SELECT * FROM company";
+$resc = mysqli_query($connection, $getc);
+
 ?>
 
 <!doctype html>
@@ -147,10 +159,15 @@ if ($_SESSION['status'] == true) {
                                     <div class="col">
                                         <select name="company" class="form-control border-primary text-primary inp sel">
                                             <option selected>انتخاب شرکت</option>
-                                            <option class="text-primary" value="Narbon">ناربن</option>
-                                            <option class="text-primary" value="Milad">میلاد</option>
-                                            <option class="text-primary" value="Microsoft">مایکروسافت</option>
-                                            <option class="text-primary" value="Apple">اپل</option>
+                                            <?php
+                                                if (mysqli_num_rows($resc) > 0) {
+                                                    while ($row = mysqli_fetch_assoc($resc)) {
+                                                        ?>
+                                                            <option class="text-primary" value="<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></option>
+                                                        <?php
+                                                    }
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
