@@ -48,15 +48,25 @@ if ($_SESSION['status'] == true) {
                 <br>
             </div>
             <div class="col-md-4 org">
-                <h
-                <button class="btn btn-lg btn-primary"><b>ورود کاربر</b></button>
+                <h1>به نارتیک خوش آمدید</h1>
+                <br>
+                <button onclick="user()" class="btn btn-lg btn-primary"><b>ورود کاربر</b></button>
                 &nbsp;
-                <button class="btn btn-lg btn-success"><b>ورود پشتیبان</b></button>
+                <button onclick="support()" class="btn btn-lg btn-success"><b>ورود پشتیبان</b></button>
             </div>
             <div class="col-md-4">
                 <br>
             </div>
         </div>
+        <script>
+            function user() {
+                window.location.replace("http://127.0.0.1/NarTik/people/user");
+            }
+            
+            function support() {
+                window.location.replace("http://127.0.0.1/NarTik/people/support");
+            }
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </body>
 </html>
