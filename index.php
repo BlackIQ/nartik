@@ -1,18 +1,11 @@
 <?php
 
-date_default_timezone_set('Iran');
-    
-$hour = date("H");
+session_start();
 
-if (hour <= 24 && $hour >= 6) {
-    if ($_SESSION['status'] == true) {
-        $who = $_SESSION["who"];
-        header("Location: http://127.0.0.1/NarTik/$who");
-    }
-    else {
-        header("Location: http://127.0.0.1/NarTik/home");
-    }
+if ($_SESSION['status'] == true) {
+    $who = $_SESSION['who'];
+    header("Location : http://127.0.0.1/NarTik/people/$who");
 }
 else {
-    include("pack/close.php");
+    echo 'Login first';
 }
