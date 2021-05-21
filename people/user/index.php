@@ -12,7 +12,7 @@ if ($_SESSION['status'] == true) {
     }
 }
 else {
-    header("Location: http://127.0.0.1");
+    header("Location: http://127.0.0.1/NarTik/people/user/account");
 }
 
 include("action.php");
