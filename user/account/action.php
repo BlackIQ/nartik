@@ -120,7 +120,11 @@
                 $_SESSION['who'] = "user";
                 $_SESSION['id'] = $id;
                 $_SESSION['directory'] = 'nartik';
-                header('location: http://127.0.0.1/NarTik/user');
+                ?>
+                    <script>
+                        window.location.replace("http://127.0.0.1/NarTik/user");
+                    </script>
+                <?php
             }
             else {
                 ?>

@@ -30,6 +30,6 @@ if (hour <= 24 && $hour >= 6) {
     }
 }
 else {
-    include("../etc/close.php");
+    include("../pack/close.php");
 }
 ?>
