@@ -4,4 +4,4 @@ session_start();
 
 session_destroy();
 
-header("Location: http://127.0.0.1/NarTik/account");
+header("Location: http://127.0.0.1/NarTik/user/account");
