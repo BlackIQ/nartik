@@ -1,5 +1,9 @@
 <?php
 
+date_default_timezone_set('Iran');
+    
+$hour = date("H");
+
 if (hour <= 24 && $hour >= 6) {
     if ($_SESSION['status'] == true) {
         if ($_SESSION["who"] == "user") {
