@@ -68,7 +68,6 @@ $tikres = mysqli_query($connection, $gettiks);
         <link href="http://127.0.0.1/NarTik/pack/css/datepicker3.css" rel="stylesheet">
         <link href="http://127.0.0.1/NarTik/pack/css/styles.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     </head>
     <body style="text-align: right;">
         <nav class="navbar bg-info navbar-fixed-top" role="navigation">
@@ -394,7 +393,7 @@ $tikres = mysqli_query($connection, $gettiks);
             <div class="modal-body text-center">
                 <h1><i class="fa fa-sign-out text-danger"></i></h1>
                 <br>
-                <h3 class="text-danger">آیا شما میخواهید از حسابتان خارج شوید</h3>
+                <h4 class="text-danger">آیا شما میخواهید از حسابتان خارج شوید</h4>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"><span style="color: black;">بستن</span></button>
