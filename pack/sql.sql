@@ -30,6 +30,7 @@ CREATE TABLE `people` (
   `username` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `dt` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `uid` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `type` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`row`)
