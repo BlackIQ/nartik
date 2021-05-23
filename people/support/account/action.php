@@ -37,7 +37,7 @@
             if (mysqli_num_rows($rescompany) == 1) {
                 $row = mysqli_fetch_assoc($rescompany);
                 
-                $company_name = $row["name"];
+                $company_name = $row["company"];
             }
             
             $query = "SELECT * FROM admin WHERE email = '$email' AND password = '$password' AND company = '$company_name'";
@@ -47,7 +47,7 @@
                 $_SESSION['status'] = true;
                 $_SESSION['email'] = $email;
                 $_SESSION["who"] = "support";
-                $_SESSION[] = $company;
+                $_SESSION["uid"] = $company;
                 $_SESSION['company'] = $company_name;
                 header('location: http://127.0.0.1/NarTik/people/support');
             }
