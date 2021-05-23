@@ -17,7 +17,7 @@ else {
 
 include('action.php');
 
-$company = $_SESSION["company"];
+$company = $_SESSION["uid"];
 
 if ($ansary[0] == true) {
     ?>
@@ -50,10 +50,10 @@ if (mysqli_num_rows($resdata) > 0) {
     }
 }
 
-$_pending = "SELECT * FROM people WHERE type='pending' AND company = '$company' ORDER BY row DESC";
+$_pending = "SELECT * FROM people WHERE type='pending' AND uid = '$company' ORDER BY row DESC";
 $_penresult = mysqli_query($conn, $_pending);
 
-$_tickets = "SELECT * FROM tiks WHERE answer = 'ny' AND company = '$company' ORDER BY row DESC";
+$_tickets = "SELECT * FROM tiks WHERE answer = 'ny' AND uid = '$company' ORDER BY row DESC";
 $_tikresult = mysqli_query($conn, $_tickets);
 
 ?>
