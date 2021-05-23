@@ -53,8 +53,8 @@ $resc = mysqli_query($connection, $getc);
                             <?php include('error.php'); ?>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="email" class="form-control bg-white border-success text-success" placeholder="ایمیل"
-                                           aria-label="ایمیل">
+                                    <input type="text" name="eid" class="form-control bg-white border-success text-success" placeholder="کد ورودی"
+                                           aria-label="کد ورود">
                                     <br>
                                     <input type="password" name="password" class="form-control bg-white border-success text-success"
                                            placeholder="رمز حساب" aria-label="رمز جساب">
