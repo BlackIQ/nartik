@@ -34,22 +34,6 @@ $db = "nartik";
 
 $conn = mysqli_connect($server, $user, $passwd, $db);
 
-$mail = $_SESSION['email'];
-
-$getdata = "SELECT * FROM admin WHERE email = '$mail'";
-$resdata = mysqli_query($connection, $getdata);
-
-if (mysqli_num_rows($resdata) > 0) {
-    while ($row = mysqli_fetch_assoc($resdata)) {
-        $fname = $row['firstname'];
-        $lname = $row['lastname'];
-        $phone = $row['phone'];
-        $email = $row['email'];
-        $username = $row['username'];
-        $userid = $row['userid'];
-    }
-}
-
 $_pending = "SELECT * FROM people WHERE type='pending' AND uid = '$company' ORDER BY row DESC";
 $_penresult = mysqli_query($conn, $_pending);
 
