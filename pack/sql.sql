@@ -9,12 +9,13 @@ CREATE TABLE `admin` (
   `email` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `uid` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 LOCK TABLES `admin` WRITE;
-INSERT INTO `admin` VALUES (1, '0482222222','Mehrdad','Mirzaee','09366171566','mehrdad@gmail.com','mrmehrdad', 'Milad');
-INSERT INTO `admin` VALUES (2, '0481111111','Meysam','Mirzaee','09123432821','meysam@gmail.com','mrmeysam', 'Narbon');
+INSERT INTO `admin` VALUES (1, '0482222222','Mehrdad','Mirzaee','09366171566','mehrdad@gmail.com','mrmehrdad', 'Milad', 10);
+INSERT INTO `admin` VALUES (2, '0481111111','Meysam','Mirzaee','09123432821','meysam@gmail.com','mrmeysam', 'Narbon', 20);
 UNLOCK TABLES;
 
 -- People
@@ -41,12 +42,17 @@ CREATE TABLE `company` (
   `id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `time` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `uid` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`row`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 LOCK TABLES `company` WRITE;
-INSERT INTO `company` VALUES (1, '123', 'Milad', 2);
-INSERT INTO `company` VALUES (2, '456', 'Narbon', 3);
+INSERT INTO `company` VALUES (1, '123', 'Google', 2, 10);
+INSERT INTO `company` VALUES (2, '456', 'Facebook', 3, 20);
+INSERT INTO `company` VALUES (3, '789', 'Twitter', 4, 10);
+INSERT INTO `company` VALUES (4, '987', 'Microsoft', 5, 20);
+INSERT INTO `company` VALUES (5, '654', 'Vania', 2, 10);
+INSERT INTO `company` VALUES (6, '321', 'Green', 1, 20);
 UNLOCK TABLES;
 
 -- Tikets
