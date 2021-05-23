@@ -76,7 +76,7 @@
                 $company_name = $row["name"];
             }
             
-            $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company_name', '$pass', 'pending')";
+            $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, uid, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company_name', '$company', '$pass', 'pending')";
             if (mysqli_query($connection, $query)) {
                 ?>
                     <script>
