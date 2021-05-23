@@ -215,7 +215,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                                 <?php
                             }
                             else {
-                                echo "<h2>هنوز کسی در صف تایید نیست</h2>";
+                                echo "<h2 style='text-align: right;'>هنوز کسی در صف تایید نیست</h2>";
                             }
                         ?>
                     </div>
@@ -279,7 +279,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                                 <?php
                             }
                             else {
-                                echo "<h2>تیکت جدیدی یافت نشد</h2>";
+                                echo "<h2 style='text-align: right;'>تیکت جدیدی یافت نشد</h2>";
                             }
                         ?>
                     </div>
@@ -298,6 +298,71 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <div class="">
                         <?php
                         include("review/ticket.php");
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    شرکت شما
+                    <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                        <em class="fa fa-toggle-up"></em>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div class="">
+                        <h2 style="text-align: right;">کامل میشه</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    طرف قرارداد ها
+                    <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                        <em class="fa fa-toggle-up"></em>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div style="text-align: center;">
+                        <?php
+                            $get_all = "SELECT * FROM company WHERE uid = '$company'";
+                            $res_all = mysqli_query($conn, $get_all);
+                            
+                            if (mysqli_num_rows($res_all) > 0) {
+                                ?>
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <td class=""><b>زمان</b></td>
+                                            <td class=""><b>کد شرکت</b></td>
+                                            <td class=""><b>شرکت</b></td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php
+                                        while ($row = mysqli_fetch_assoc($res_all)) {
+                                            ?>
+                                            <tr>
+                                                <td class=""><?php echo $row['time']; ?></td>
+                                                <td class=""><?php echo $row['id']; ?></td>
+                                                <td class=""><b><?php echo $row['name']; ?></b></td>
+                                            </tr>
+                                            <?php
+                                        }
+                                        ?>
+                                        </tbody>
+                                    </table>
+                                <?php
+                            }
+                            else {
+                                echo "<h2 style='text-align: right;'>شما هم اکنون با هیچ شرکتی قرارداد ندارید</h2>";
+                            }
                         ?>
                     </div>
                 </div>
