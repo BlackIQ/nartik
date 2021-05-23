@@ -40,6 +40,15 @@ $_penresult = mysqli_query($conn, $_pending);
 $_tickets = "SELECT * FROM tiks WHERE answer = 'ny' AND uid = '$company' ORDER BY row DESC";
 $_tikresult = mysqli_query($conn, $_tickets);
 
+$select_company = "SELECT * FROM admin WHERE uid = '$company'";
+$rescompany = mysqli_query($connection, $select_company);
+
+if (mysqli_num_rows($rescompany) == 1) {
+    $row = mysqli_fetch_assoc($rescompany);
+
+    $company_name = $row["company"];
+}
+
 ?>
 
 
@@ -67,7 +76,7 @@ $_tikresult = mysqli_query($conn, $_tickets);
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>نارتیک - داشبورد</title>
+    <title>نارتیک - <?php echo $company_name; ?></title>
     <link href="http://127.0.0.1/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://127.0.0.1/NarTik/pack/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://127.0.0.1/NarTik/pack/css/datepicker3.css" rel="stylesheet">
@@ -93,7 +102,7 @@ $_tikresult = mysqli_query($conn, $_tickets);
 <div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12 main">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">داشبورد</h1>
+            <h1 class="page-header" dir="rtl">داشبورد شرکت <?php echo $company_name; ?></h1>
         </div>
     </div><!--/.row-->
 
