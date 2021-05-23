@@ -18,7 +18,7 @@
         $password = mysqli_real_escape_string($connection, $_POST['password']);
         $company = mysqli_real_escape_string($connection, $_POST['company']);
         
-        if (empty($eidl)) {
+        if (empty($eid)) {
             array_push($errors, "کد ورود الزامیست");
         }
         if (empty($password)) {
