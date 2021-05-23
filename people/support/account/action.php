@@ -14,12 +14,12 @@
     
     // LOGIN USER
     if (isset($_POST['login_user'])) {
-        $email = mysqli_real_escape_string($connection, $_POST['email']);
+        $eid = mysqli_real_escape_string($connection, $_POST['eid']);
         $password = mysqli_real_escape_string($connection, $_POST['password']);
         $company = mysqli_real_escape_string($connection, $_POST['company']);
         
-        if (empty($email)) {
-            array_push($errors, "ایمیل الزامیست");
+        if (empty($eidl)) {
+            array_push($errors, "کد ورود الزامیست");
         }
         if (empty($password)) {
             array_push($errors, "رمز الزامیست");
@@ -33,19 +33,19 @@
             
             $select_company = "SELECT * FROM admin WHERE uid = '$company'";
             $rescompany = mysqli_query($connection, $select_company);
-            
+
             if (mysqli_num_rows($rescompany) == 1) {
                 $row = mysqli_fetch_assoc($rescompany);
-                
+
                 $company_name = $row["company"];
             }
             
-            $query = "SELECT * FROM admin WHERE email = '$email' AND password = '$password' AND company = '$company_name'";
+            $query = "SELECT * FROM admin WHERE id = '$eid' AND password = '$password' AND company = '$company_name'";
             $results = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($results) == 1) {
                 $_SESSION['status'] = true;
-                $_SESSION['email'] = $email;
+                $_SESSION['eid'] = $eid;
                 $_SESSION["who"] = "support";
                 $_SESSION["uid"] = $company;
                 $_SESSION['company'] = $company_name;
