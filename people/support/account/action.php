@@ -31,7 +31,7 @@
         if (count($errors) == 0) {
 //            $password = md5($password);
             
-            $select_company = "SELECT * FROM company WHERE id = '$company'";
+            $select_company = "SELECT * FROM admin WHERE uid = '$company'";
             $rescompany = mysqli_query($connection, $select_company);
             
             if (mysqli_num_rows($rescompany) == 1) {
@@ -47,6 +47,7 @@
                 $_SESSION['status'] = true;
                 $_SESSION['email'] = $email;
                 $_SESSION["who"] = "support";
+                $_SESSION[] = $company;
                 $_SESSION['company'] = $company_name;
                 header('location: http://127.0.0.1/NarTik/people/support');
             }
