@@ -9,7 +9,7 @@ if ($_SESSION['status'] == true) {
 
 include('action.php');
 
-$getc = "SELECT * FROM company";
+$getc = "SELECT * FROM admin";
 $resc = mysqli_query($connection, $getc);
 
 ?>
@@ -67,7 +67,7 @@ $resc = mysqli_query($connection, $getc);
                                             if (mysqli_num_rows($resc) > 0) {
                                                 while ($row = mysqli_fetch_assoc($resc)) {
                                                     ?>
-                                                        <option class="text-success" value="<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></option>
+                                                        <option class="text-success" value="<?php echo $row["uid"]; ?>"><?php echo $row["company"]; ?></option>
                                                     <?php
                                                 }
                                             }
