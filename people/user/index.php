@@ -31,6 +31,7 @@ if (mysqli_num_rows($ressult) > 0) {
         $username = $row['username'];
         $userid = $row['id'];
         $company = $row['company'];
+        $uid = $_SESSION["uid"];
     }
 }
 
