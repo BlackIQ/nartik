@@ -130,7 +130,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <div class="row no-padding"><em class="fa fa-xl fa-user-plus color-orange"></em>
                         <div class="large">
                             <?php
-                                $gpc = "SELECT count(*) as total FROM people WHERE type='pending' uid = '$company'";
+                                $gpc = "SELECT count(*) as total FROM people WHERE type='pending' AND uid = '$company'";
                                 $gpcr = mysqli_query($conn, $gpc);
                                 $gpcrd = mysqli_fetch_assoc($gpcr);
                                 echo $gpcrd['total'];
