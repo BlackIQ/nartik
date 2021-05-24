@@ -114,7 +114,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <div class="row no-padding"><em class="fa fa-xl fa-users color-blue"></em>
                         <div class="large">
                             <?php
-                                $guc = "SELECT count(*) as total FROM people WHERE type='user'";
+                                $guc = "SELECT count(*) as total FROM people WHERE type='user' AND uid = '$company'";
                                 $gucr = mysqli_query($conn, $guc);
                                 $gucrd = mysqli_fetch_assoc($gucr);
                                 echo $gucrd['total'];
@@ -130,7 +130,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <div class="row no-padding"><em class="fa fa-xl fa-user-plus color-orange"></em>
                         <div class="large">
                             <?php
-                                $gpc = "SELECT count(*) as total FROM people WHERE type='pending'";
+                                $gpc = "SELECT count(*) as total FROM people WHERE type='pending' uid = '$company'";
                                 $gpcr = mysqli_query($conn, $gpc);
                                 $gpcrd = mysqli_fetch_assoc($gpcr);
                                 echo $gpcrd['total'];
@@ -146,7 +146,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <div class="row no-padding"><em class="fa fa-xl fa-envelope color-teal"></em>
                         <div class="large">
                             <?php
-                                $gtc = "SELECT count(*) as total FROM tiks";
+                                $gtc = "SELECT count(*) as total FROM tiks WHERE uid = '$company'";
                                 $gtcr = mysqli_query($conn, $gtc);
                                 $gtcrd = mysqli_fetch_assoc($gtcr);
                                 echo $gtcrd['total'];
@@ -162,7 +162,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <div class="row no-padding"><em class="fa fa-xl fa-check text-success"></em>
                         <div class="large">
                             <?php
-                                $gac = "SELECT count(*) as total FROM tiks where answer != 'ny'";
+                                $gac = "SELECT count(*) as total FROM tiks WHERE answer != 'ny' AND uid = '$company'";
                                 $gacr = mysqli_query($conn, $gac);
                                 $gacrd = mysqli_fetch_assoc($gacr);
                                 echo $gacrd['total'];
