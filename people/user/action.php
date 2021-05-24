@@ -29,6 +29,7 @@
             $password = $row["password"];
             $userid = $row['id'];
             $company = $row['company'];
+            $uid = $row["uid"];
         }
     }
 
