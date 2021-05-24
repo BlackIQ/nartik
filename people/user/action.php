@@ -56,7 +56,7 @@
             
             $tikid = rand(1000, 9999);
             
-            $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, dl, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$dt', '$dl','file', '4:00', 'ny', false)";
+            $query = "INSERT INTO tiks (userid, tikid, title, explane, company, uid, dt, dl, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$uid', '$dt', '$dl','file', '4:00', 'ny', false)";
             if (mysqli_query($connection, $query)) {
                 ?>
                     <script>
