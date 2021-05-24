@@ -62,6 +62,7 @@ CREATE TABLE `tiks`
     `title`   text COLLATE utf8mb4_unicode_ci,
     `explane` text COLLATE utf8mb4_unicode_ci,
     `company` text COLLATE utf8mb4_unicode_ci,
+    `uid` text COLLATE utf8mb4_unicode_ci,
     `dt`    text COLLATE utf8mb4_unicode_ci,
     `dl`    text COLLATE utf8mb4_unicode_ci,
     `file`    text COLLATE utf8mb4_unicode_ci,
