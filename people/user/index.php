@@ -107,7 +107,7 @@ $tikres = mysqli_query($connection, $gettiks);
                             <div class="row no-padding"><em class="fa fa-xl fa-envelope color-orange"></em>
                                 <div class="large">
                                     <?php
-                                        $gtc = "SELECT count(*) as total FROM tiks WHERE userid = '$userid'";
+                                        $gtc = "SELECT count(*) as total FROM tiks WHERE userid = '$userid' AND uid = '$uid'";
                                         $gtcr = mysqli_query($connection, $gtc);
                                         $gtcrd = mysqli_fetch_assoc($gtcr);
                                         echo $gtcrd['total'];
