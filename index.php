@@ -48,11 +48,12 @@ if ($_SESSION['status'] == true) {
                 <br>
             </div>
             <div class="col-md-4 org">
+                <h1><i class="fa fa-home"></i></h1>
                 <h1>به نارتیک خوش آمدید</h1>
                 <br>
-                <button onclick="user()" class="btn btn-lg btn-primary"><b>ورود کاربر</b></button>
+                <button onclick="user()" class="btn btn-lg btn-primary"><b><i class="fa fa-user"></i> ورود کاربر</b></button>
                 &nbsp;
-                <button onclick="support()" class="btn btn-lg btn-success"><b>ورود پشتیبان</b></button>
+                <button onclick="support()" class="btn btn-lg btn-success"><b><i class="fa fa-support"></i> ورود پشتیبان</b></button>
             </div>
             <div class="col-md-4">
                 <br>
