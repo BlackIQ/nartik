@@ -78,6 +78,12 @@ $resc = mysqli_query($connection, $getc);
                             <br>
                             <button type="submit" name="login_user" class="btn btn-success text-white">ورود</button>
                         </form>
+                        <br>
+                        <hr class="border-success border">
+                        <div>
+                            <p><a class="text-success" style="text-decoration: none;" href="/">برگشت به خانه <i class="fa fa-home"></i></a></p>
+                            <p><a class="text-success" style="text-decoration: none;"  href="/">ورود به عنوان کاربر <i class="fa fa-support"></i></a></p>
+                        </div>
                     </div>
                 </div>
             </div>
