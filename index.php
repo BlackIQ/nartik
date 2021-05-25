@@ -35,6 +35,7 @@ if ($_SESSION['status'] == true) {
         </style>
         <title>نارتیک</title>
         <meta charset="utf-8">
+        <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="http://127.0.0.1/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://127.0.0.1/NarTik/pack/css/datepicker3.css" rel="stylesheet">
