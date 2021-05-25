@@ -207,11 +207,10 @@ $resc = mysqli_query($connection, $getc);
                         <div class="">
                             <?php include('error.php'); ?>
                         </div>
-                        <br>
-                        <hr class="border-success border">
+                        <hr class="border-primary border">
                         <div>
-                            <p><a class="text-success" style="text-decoration: none;" href="/NarTik">برگشت به خانه <i class="fa fa-home"></i></a></p>
-                            <p><a class="text-success" style="text-decoration: none;"  href="/NarTik/people/support">ورود به عنوان پشتیبان <i class="fa fa-support"></i></a></p>
+                            <p><a class="text-primary" style="text-decoration: none;" href="/NarTik">برگشت به خانه <i class="fa fa-home"></i></a></p>
+                            <p><a class="text-primary" style="text-decoration: none;"  href="/NarTik/people/support">ورود به عنوان پشتیبان <i class="fa fa-support"></i></a></p>
                         </div>
                     </div>
                 </div>
