@@ -81,8 +81,8 @@ $resc = mysqli_query($connection, $getc);
                         <br>
                         <hr class="border-success border">
                         <div>
-                            <p><a class="text-success" style="text-decoration: none;" href="/">برگشت به خانه <i class="fa fa-home"></i></a></p>
-                            <p><a class="text-success" style="text-decoration: none;"  href="/people/user">ورود به عنوان کاربر <i class="fa fa-user"></i></a></p>
+                            <p><a class="text-success" style="text-decoration: none;" href="/NarTik">برگشت به خانه <i class="fa fa-home"></i></a></p>
+                            <p><a class="text-success" style="text-decoration: none;"  href="/NarTik/people/user">ورود به عنوان کاربر <i class="fa fa-user"></i></a></p>
                         </div>
                     </div>
                 </div>
