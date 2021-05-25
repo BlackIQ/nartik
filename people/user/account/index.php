@@ -209,8 +209,8 @@ $resc = mysqli_query($connection, $getc);
                         </div>
                         <hr class="border-primary border">
                         <div>
-                            <p><a class="text-primary" style="text-decoration: none;" href="/NarTik">برگشت به خانه <i class="fa fa-home"></i></a></p>
-                            <p><a class="text-primary" style="text-decoration: none;"  href="/NarTik/people/support">ورود به عنوان پشتیبان <i class="fa fa-support"></i></a></p>
+                            <p><a class="text-primary" style="text-decoration: none;" href="/NarTik"><i class="fa fa-home"></i> برگشت به خانه</a></p>
+                            <p><a class="text-primary" style="text-decoration: none;"  href="/NarTik/people/support"><i class="fa fa-support"></i> ورود به عنوان پشتیبان</a></p>
                         </div>
                     </div>
                 </div>
