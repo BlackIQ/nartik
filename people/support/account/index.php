@@ -25,7 +25,7 @@ $resc = mysqli_query($connection, $getc);
         <style>
             @font-face {
                 font-family: 'nazanin';
-                src: url('http://127.0.0.1/NarTik/pack/nazanin.TTF');
+                src: url('http://127.0.0.1/NarTik/pack/fonts/nazanin.TTF');
                 font-style: normal;
             }
             body {
