@@ -17,27 +17,52 @@ if ($_SESSION['status'] == true) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
         <title>Login</title>
         <link rel="stylesheet" href="style.css" type="text/css">
-        <style>
-            @font-face {
-                font-family: 'nazanin';
-                src: url('http://127.0.0.1/NarTik/pack/fonts/nazanin.TTF');
-                font-style: normal;
-            }
-            body {
-                padding: 56px;
-                font-family: 'nazanin';
-            }
-            * {
-                color: darkgreen;
-            }
-        </style>
     </head>
-    <body class="bg-white">
+    <body class="main">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="navs">
+                        <h1>خرید سرویس</h1>
+                        <br>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
                     <div class="offer1">
-                        <h1>سرویس ساده</h1>
+                        <h1>سرویس برنزی</h1>
+                        <hr>
+                        <div class="expl">
+                            <h5>
+                                سرویس برنزی یک سرویس ساده است که بیشتر برای تست استفاده میشود.
+                                <br>
+                                شما همچنین میتوانید از این سرویس برای تست استفاده کنید
+                            </h5>
+                        </div>
+                        <hr>
+                        <div class="det">
+                            <h3><b>مدت : </b>سه ماهه</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer2">
+                        <h1>سرویس نقره ای</h1>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer3">
+                        <h1>سرویس طلایی</h1>
                         <hr>
                     </div>
                 </div>
