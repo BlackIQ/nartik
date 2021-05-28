@@ -6,77 +6,57 @@ if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
     header("Location: http://127.0.0.1/NarTik/people/$who");
 }
-else {
-}
-
 ?>
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        @font-face {
-            font-family: 'nazanin';
-            src: url('http://127.0.0.1/NarTik/pack/fonts/nazanin.TTF');
-            font-style: normal;
-        }
-
-        * {
-            font-family: "nazanin";
-        }
-        
-        .main {
-            background: #f4f4f4;
-        }
-        
-        textarea {
-            resize: none;
-            text-align: right;
-        }
-        input {
-            text-align: right;
-        }
-    </style>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>نارتیک - <?php echo $company_name; ?></title>
-    <link href="http://127.0.0.1/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1/NarTik/pack/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1/NarTik/pack/css/datepicker3.css" rel="stylesheet">
-    <link href="http://127.0.0.1/NarTik/pack/css/styles.css" rel="stylesheet">
-</head>
-<body class="main" style="text-align: right;">
-    <div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12">
-        <div class="row">
+<!doctype html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
+        <title>Login</title>
+        <style>
+            @font-face {
+                font-family: 'nazanin';
+                src: url('http://127.0.0.1/NarTik/pack/fonts/nazanin.TTF');
+                font-style: normal;
+            }
+            body {
+                padding: 56px;
+                font-family: 'nazanin';
+            }
+            * {
+                color: darkgreen;
+            }
             
-        </div>
-        <div class="row">
-            
-        </div>
-        <div class="row">
-            
-        </div>
-        <footer class="">
-            <div class="container-fluid">
-                <p class="back-link"><a class="text-danger" href="../">NarFirm</a></p>
-                <p class="back-link">Created by <a class="text-danger" href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
-                <p class="back-link">Powered By <a class="text-danger" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
-                <p class="back-link">
-                    <i class="fa fa-lg fa-linkedin-square text-danger"></i>
-                    &nbsp;
-                    <i class="fa fa-lg fa-github"></i>
-                    &nbsp;
-                    <i class="fa fa-lg fa-telegram text-primary"></i>
-                    &nbsp;
-                    <i class="fa fa-lg fa-instagram text-danger"></i>
-                </p>
+            .offer1 {
+                text-align: center;
+                border: solid 1px darkblue;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            .offer1 h1 {
+                color: darkblue;
+            }
+            .offer1 hr {
+                color: darkblue;
+                background: darkblue;
+                height: 1px;
+            }
+        </style>
+    </head>
+    <body class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="offer1">
+                        <h1>سرویس ساده</h1>
+                        <hr>
+                    </div>
+                </div>
             </div>
-        </footer>
-    </div>
-    <script src="http://127.0.0.1/NarTik/pack/js/jquery-1.11.1.min.js"></script>
-    <script src="http://127.0.0.1/NarTik/pack/js/bootstrap.min.js"></script>
-    <script src="http://127.0.0.1/NarTik/pack/js/bootstrap-datepicker.js"></script>
-    <script src="http://127.0.0.1/NarTik/pack/js/custom.js"></script>
-</body>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    </body>
 </html>
