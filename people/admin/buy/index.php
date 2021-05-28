@@ -16,6 +16,7 @@ if ($_SESSION['status'] == true) {
         <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
         <title>Login</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
         <style>
             @font-face {
                 font-family: 'nazanin';
@@ -28,21 +29,6 @@ if ($_SESSION['status'] == true) {
             }
             * {
                 color: darkgreen;
-            }
-            
-            .offer1 {
-                text-align: center;
-                border: solid 1px darkblue;
-                border-radius: 10px;
-                padding: 20px;
-            }
-            .offer1 h1 {
-                color: darkblue;
-            }
-            .offer1 hr {
-                color: darkblue;
-                background: darkblue;
-                height: 1px;
             }
         </style>
     </head>

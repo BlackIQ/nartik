@@ -1,0 +1,14 @@
+.offer1 {
+    text-align: center;
+    border: solid 1px darkblue;
+    border-radius: 10px;
+    padding: 20px;
+}
+.offer1 h1 {
+    color: darkblue;
+}
+.offer1 hr {
+    color: darkblue;
+    background: darkblue;
+    height: 1px;
+}
