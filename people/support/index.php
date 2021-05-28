@@ -103,7 +103,7 @@ if (mysqli_num_rows($rescompany) == 1) {
             <div class="col-lg-12">
                 <h1 class="page-header" dir="rtl">داشبورد شرکت <?php echo $company_name; ?></h1>
             </div>
-        </div><
+        </div>
         <div class="panel panel-container">
             <div class="row">
                 <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
