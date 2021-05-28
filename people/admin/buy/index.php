@@ -50,7 +50,7 @@ if ($_SESSION['status'] == true) {
                         </div>
                         <hr>
                         <div class="det">
-                            <h3><b>مدت : </b>سه ماهه</h3>
+                            <h3><b>مدت زمان سرویس</b>سه ماهه</h3>
                         </div>
                     </div>
                 </div>
