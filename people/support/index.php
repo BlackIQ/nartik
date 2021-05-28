@@ -77,6 +77,7 @@ if (mysqli_num_rows($rescompany) == 1) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>نارتیک - <?php echo $company_name; ?></title>
+    <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <link href="http://127.0.0.1/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://127.0.0.1/NarTik/pack/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://127.0.0.1/NarTik/pack/css/datepicker3.css" rel="stylesheet">
