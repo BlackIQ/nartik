@@ -15,8 +15,9 @@ if ($_SESSION['status'] == true) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
-        <title>Login</title>
+        <title>خرید سرویس</title>
         <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="offer.css" type="text/css">
     </head>
     <body class="main">
         <div class="container">
@@ -37,22 +38,17 @@ if ($_SESSION['status'] == true) {
             </div>
             <br>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="offer1">
-                        <h1>سرویس معمولی</h1>
-                        <hr>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="offer2">
-                        <h1>سرویس نقره ای</h1>
-                        <hr>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="offer3">
-                        <h1>سرویس طلایی</h1>
-                        <hr>
+                <div class="col-md-3">
+                    <div class="offer">
+                        <div class="offerheader1">
+                            <h1>سرویس یک</h1>
+                        </div>
+                        <div class="offerbody1">
+                            <h1>توضیحات</h1>
+                        </div>
+                        <div class="offerfooter1">
+                            <h1>فوتر</h1>
+                        </div>
                     </div>
                 </div>
             </div>
