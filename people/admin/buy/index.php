@@ -51,6 +51,45 @@ if ($_SESSION['status'] == true) {
                         </div>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="offer">
+                        <div class="offerheader2">
+                            <h1>سرویس دو</h1>
+                        </div>
+                        <div class="offerbody2">
+                            <h1>توضیحات</h1>
+                        </div>
+                        <div class="offerfooter2">
+                            <h1>فوتر</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="offer">
+                        <div class="offerheader3">
+                            <h1>سرویس سه</h1>
+                        </div>
+                        <div class="offerbody3">
+                            <h1>توضیحات</h1>
+                        </div>
+                        <div class="offerfooter3">
+                            <h1>فوتر</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="offer">
+                        <div class="offerheader4">
+                            <h1>سرویس چهار</h1>
+                        </div>
+                        <div class="offerbody4">
+                            <h1>توضیحات</h1>
+                        </div>
+                        <div class="offerfooter4">
+                            <h1>فوتر</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
