@@ -39,19 +39,8 @@ if ($_SESSION['status'] == true) {
             <div class="row">
                 <div class="col-md-4">
                     <div class="offer1">
-                        <h1>سرویس برنزی</h1>
+                        <h1>سرویس معمولی</h1>
                         <hr>
-                        <div class="expl">
-                            <h5>
-                                سرویس برنزی یک سرویس ساده است که بیشتر برای تست استفاده میشود.
-                                <br>
-                                شما همچنین میتوانید از این سرویس برای تست استفاده کنید
-                            </h5>
-                        </div>
-                        <hr>
-                        <div class="det">
-                            <h3><b>مدت زمان سرویس</b>سه ماهه</h3>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
