@@ -29,6 +29,7 @@ if ($_SESSION['status'] == true) {
             }
 
             body {
+                background: #f3f3f3;
                 padding: 56px;
                 font-family: 'nazanin';
             }
