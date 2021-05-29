@@ -16,8 +16,23 @@ if ($_SESSION['status'] == true) {
         <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
         <title>خرید سرویس</title>
-        <link rel="stylesheet" href="style.css" type="text/css">
         <link rel="stylesheet" href="offer.css" type="text/css">
+        <style>
+            @font-face {
+                font-family: 'nazanin';
+                src: url('http://127.0.0.1/NarTik/pack/fonts/nazanin.TTF');
+                font-style: normal;
+            }
+
+            .navs {
+                text-align: center;
+            }
+
+            body {
+                padding: 56px;
+                font-family: 'nazanin';
+            }
+        </style>
     </head>
     <body class="main">
         <div class="container">
