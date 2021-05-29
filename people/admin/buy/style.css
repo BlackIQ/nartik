@@ -16,59 +16,27 @@ body {
     font-family: 'nazanin';
 }
 
-.offer1 {
+.offer {
     text-align: center;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #772f1a;
-    background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+    background: white;
 }
-.offer1 h1 {
-    color: #fec84e;
-}
-.offer1 hr {
-    color: #fec84e;
-    background: #fec84e;
-    height: 2px;
-}
-
-.offer2 {
-    text-align: center;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #2f4353;
-    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
-}
-.offer2 h1 {
-    color: #f1f1f1;
-}
-.offer2 hr {
-    color: #f1f1f1;
-    background: #f1f1f1;
-    height: 2px;
-}
-
-.offer3 {
-    text-align: center;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #facc6b;
-    background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%);
-}
-.offer3 h1 {
-    color: #FFEF00;
-}
-.offer3 hr {
-    color: #FFEF00;
-    background: #FFEF00;
-    height: 2px;
-}
-
-.expl {
-    text-align: center;
+.offerheader1 {
     color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5%;
+    border: solid 1px purple;
+    background-color: purple;
 }
-.det {
-    text-align: right;
-    color: white;
+.offerbody1 {
+    padding: 5%;
+    color: purple;
+    border: solid 1px purple;
+    border-bottom-color: white;
+}
+.offerfooter1 {
+    padding: 5%;
+    color: purple;
+    border-top-color: white;
+    border: solid 1px purple;
 }
