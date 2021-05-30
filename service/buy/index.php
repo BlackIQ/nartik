@@ -30,6 +30,10 @@ if ($_SESSION['status'] == true) {
             .lft {
                 float: left;
             }
+            .det {
+                font-size: 18px;
+                text-align: right;
+            }
 
             .navs {
                 text-align: center;
@@ -103,7 +107,11 @@ if ($_SESSION['status'] == true) {
                             <h1>سرویس یک</h1>
                         </div>
                         <div class="offerbody1">
-                            <h3>توضیحات</h3>
+                            <p class="det">
+                                سرویس یک، یک سرویس ساده است که بیشتر برای تست نارتیک استفاده میشود.
+                                <br>
+                                با خرید این سرویس شما حتی میتوانید برای تمدید یا خرید سرویس جدید تخفیف بی نظیری بگیرید
+                            </p>
                         </div>
                         <div class="offerfooter1">
                             <h5>
@@ -117,6 +125,11 @@ if ($_SESSION['status'] == true) {
                                 <span class="lft">5 شرکت</span>
                             </h5>
                             <h5>
+                                <b class="rght">حداکثر کاربران</b>
+                                &nbsp;
+                                <span class="lft">25 کاربر</span>
+                            </h5>
+                            <h5>
                                 <b class="rght">سامانه ایمیل</b>
                                 &nbsp;
                                 <span class="lft">خیر</span>
@@ -125,6 +138,11 @@ if ($_SESSION['status'] == true) {
                                 <b class="rght">سامانه پیامکی</b>
                                 &nbsp;
                                 <span class="lft">خیر</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">شیوه بکاپ</b>
+                                &nbsp;
+                                <span class="lft">هفتگی</span>
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
@@ -153,6 +171,11 @@ if ($_SESSION['status'] == true) {
                                 <span class="lft">10 شرکت</span>
                             </h5>
                             <h5>
+                                <b class="rght">حداکثر کاربران</b>
+                                &nbsp;
+                                <span class="lft">50 کاربر</span>
+                            </h5>
+                            <h5>
                                 <b class="rght">سامانه ایمیل</b>
                                 &nbsp;
                                 <span class="lft">بله</span>
@@ -161,6 +184,11 @@ if ($_SESSION['status'] == true) {
                                 <b class="rght">سامانه پیامکی</b>
                                 &nbsp;
                                 <span class="lft">خیر</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">شیوه بکاپ</b>
+                                &nbsp;
+                                <span class="lft">سه روزه</span>
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
@@ -189,6 +217,11 @@ if ($_SESSION['status'] == true) {
                                 <span class="lft">15 شرکت</span>
                             </h5>
                             <h5>
+                                <b class="rght">حداکثر کاربران</b>
+                                &nbsp;
+                                <span class="lft">نامحدود</span>
+                            </h5>
+                            <h5>
                                 <b class="rght">سامانه ایمیل</b>
                                 &nbsp;
                                 <span class="lft">بله</span>
@@ -197,6 +230,11 @@ if ($_SESSION['status'] == true) {
                                 <b class="rght">سامانه پیامکی</b>
                                 &nbsp;
                                 <span class="lft">بله</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">شیوه بکاپ</b>
+                                &nbsp;
+                                <span class="lft">روزانه</span>
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
@@ -225,6 +263,11 @@ if ($_SESSION['status'] == true) {
                                 <span class="lft">نامحدود</span>
                             </h5>
                             <h5>
+                                <b class="rght">حداکثر کاربران</b>
+                                &nbsp;
+                                <span class="lft">نامحدود</span>
+                            </h5>
+                            <h5>
                                 <b class="rght">سامانه ایمیل</b>
                                 &nbsp;
                                 <span class="lft">بله</span>
@@ -233,6 +276,11 @@ if ($_SESSION['status'] == true) {
                                 <b class="rght">سامانه پیامکی</b>
                                 &nbsp;
                                 <span class="lft">بله</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">شیوه بکاپ</b>
+                                &nbsp;
+                                <span class="lft">شش ساعته</span>
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
