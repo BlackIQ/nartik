@@ -112,12 +112,8 @@ if ($_SESSION['status'] == true) {
                                 <span class="lft">سه ماهه</span>
                             </h5>
                             <hr>
-                            <input name="one" id="one" type="checkbox">
-                            &nbsp;
-                            <label for="one">بنده با شرایط موافق هستم</label>
-                            <br>
-                            <br>
-                            <button class="btn btn-green" disabled>خرید</button>
+                            <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
+                            <button class="btn btn-green">خرید</button>
                         </div>
                     </div>
                 </div>
@@ -136,11 +132,7 @@ if ($_SESSION['status'] == true) {
                                 <span class="lft">شش ماهه</span>
                             </h5>
                             <hr>
-                            <input name="two" id="two" type="checkbox">
-                            &nbsp;
-                            <label for="two">بنده با شرایط موافق هستم</label>
-                            <br>
-                            <br>
+                            <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
                             <button class="btn btn-red" disabled>خرید</button>
                         </div>
                     </div>
@@ -160,11 +152,7 @@ if ($_SESSION['status'] == true) {
                                 <span class="lft">نه ماهه</span>
                             </h5>
                             <hr>
-                            <input name="three" id="three" type="checkbox">
-                            &nbsp;
-                            <label for="three">بنده با شرایط موافق هستم</label>
-                            <br>
-                            <br>
+                            <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
                             <button class="btn btn-blue" disabled>خرید</button>
                         </div>
                     </div>
@@ -184,11 +172,7 @@ if ($_SESSION['status'] == true) {
                                 <span class="lft">دوازده ماهه</span>
                             </h5>
                             <hr>
-                            <input name="four" id="four" type="checkbox">
-                            &nbsp;
-                            <label for="four">بنده با شرایط موافق هستم</label>
-                            <br>
-                            <br>
+                            <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
                             <button class="btn btn-purple" disabled>خرید</button>
                         </div>
                     </div>
