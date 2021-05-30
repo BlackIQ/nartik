@@ -23,6 +23,13 @@ if ($_SESSION['status'] == true) {
                 src: url('http://127.0.0.1/NarTik/pack/fonts/nazanin.TTF');
                 font-style: normal;
             }
+            
+            .rght {
+                float: right;
+            }
+            .lft {
+                float: left;
+            }
 
             .navs {
                 text-align: center;
@@ -99,7 +106,11 @@ if ($_SESSION['status'] == true) {
                             <h3>توضیحات</h3>
                         </div>
                         <div class="offerfooter1">
-                            <h5>فوتر</h5>
+                            <h5>
+                                <b class="rght">مدت زمان سرویس</b>
+                                &nbsp;
+                                <span class="lft">سه ماهه</span>
+                            </h5>
                             <br>
                             <hr>
                             <input name="one" id="one" type="checkbox">
