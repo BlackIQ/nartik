@@ -157,7 +157,11 @@ if ($_SESSION['status'] == true) {
                             <h1>سرویس دو</h1>
                         </div>
                         <div class="offerbody2">
-                            <h3>توضیحات</h3>
+                            <p class="det">
+                                سرویس دوم یک سرویس معمولی است که به شما امکانات خوبی را ارائه میدهد.
+                                <br>
+                                مدت زمان این سرویس، مدت مناسبی است که همراه با مدت کم امکانات بالایی را ارايه میدهد.
+                            </p>
                         </div>
                         <div class="offerfooter2">
                             <h5>
@@ -188,7 +192,7 @@ if ($_SESSION['status'] == true) {
                             <h5>
                                 <b class="rght">شیوه بکاپ</b>
                                 &nbsp;
-                                <span class="lft">سه روزه</span>
+                                <span class="lft">پنج روزه</span>
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
@@ -219,7 +223,7 @@ if ($_SESSION['status'] == true) {
                             <h5>
                                 <b class="rght">حداکثر کاربران</b>
                                 &nbsp;
-                                <span class="lft">نامحدود</span>
+                                <span class="lft">75 کاربر</span>
                             </h5>
                             <h5>
                                 <b class="rght">سامانه ایمیل</b>
@@ -234,7 +238,7 @@ if ($_SESSION['status'] == true) {
                             <h5>
                                 <b class="rght">شیوه بکاپ</b>
                                 &nbsp;
-                                <span class="lft">روزانه</span>
+                                <span class="lft">سه روزه</span>
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
@@ -260,12 +264,12 @@ if ($_SESSION['status'] == true) {
                             <h5>
                                 <b class="rght">حداکثر شرکت ها</b>
                                 &nbsp;
-                                <span class="lft">نامحدود</span>
+                                <span class="lft">20 شرکت</span>
                             </h5>
                             <h5>
                                 <b class="rght">حداکثر کاربران</b>
                                 &nbsp;
-                                <span class="lft">نامحدود</span>
+                                <span class="lft">100 کاربر</span>
                             </h5>
                             <h5>
                                 <b class="rght">سامانه ایمیل</b>
@@ -280,7 +284,7 @@ if ($_SESSION['status'] == true) {
                             <h5>
                                 <b class="rght">شیوه بکاپ</b>
                                 &nbsp;
-                                <span class="lft">شش ساعته</span>
+                                <span class="lft">روزانه</span>
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
