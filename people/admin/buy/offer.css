@@ -4,25 +4,25 @@
 }
 
 /* Offer 1 */
-.offerheader4 {
+.offerheader1 {
     color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 5%;
-    border: solid 1px purple;
-    background-color: purple;
+    border: solid 1px green;
+    background-color: green;
 }
-.offerbody4 {
+.offerbody1 {
     padding: 5%;
-    color: purple;
-    border: solid 1px purple;
+    color: green;
+    border: solid 1px green;
     border-bottom-color: white;
 }
-.offerfooter4 {
+.offerfooter1 {
     padding: 5%;
-    color: purple;
+    color: green;
     border-top-color: white;
-    border: solid 1px purple;
+    border: solid 1px green;
 }
 
 /* Offer 2 */
@@ -70,23 +70,23 @@
 }
 
 /* Offer 4 */
-.offerheader1 {
+.offerheader4 {
     color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 5%;
-    border: solid 1px green;
-    background-color: green;
+    border: solid 1px purple;
+    background-color: purple;
 }
-.offerbody1 {
+.offerbody4 {
     padding: 5%;
-    color: green;
-    border: solid 1px green;
+    color: purple;
+    border: solid 1px purple;
     border-bottom-color: white;
 }
-.offerfooter1 {
+.offerfooter4 {
     padding: 5%;
-    color: green;
+    color: purple;
     border-top-color: white;
-    border: solid 1px green;
+    border: solid 1px purple;
 }
