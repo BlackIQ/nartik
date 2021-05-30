@@ -33,6 +33,7 @@ if ($_SESSION['status'] == true) {
                 padding: 56px;
                 font-family: 'nazanin';
             }
+            
             .btn-green {
                 background: green;
                 color: white;
@@ -101,6 +102,11 @@ if ($_SESSION['status'] == true) {
                             <h5>فوتر</h5>
                             <br>
                             <hr>
+                            <input name="one" id="one" type="checkbox">
+                            &nbsp;
+                            <label for="one">بنده با شرایط موافق هستم</label>
+                            <br>
+                            <br>
                             <button class="btn btn-green">خرید</button>
                         </div>
                     </div>
@@ -117,6 +123,11 @@ if ($_SESSION['status'] == true) {
                             <h5>فوتر</h5>
                             <br>
                             <hr>
+                            <input name="two" id="two" type="checkbox">
+                            &nbsp;
+                            <label for="two">بنده با شرایط موافق هستم</label>
+                            <br>
+                            <br>
                             <button class="btn btn-red">خرید</button>
                         </div>
                     </div>
@@ -133,6 +144,11 @@ if ($_SESSION['status'] == true) {
                             <h5>فوتر</h5>
                             <br>
                             <hr>
+                            <input name="three" id="three" type="checkbox">
+                            &nbsp;
+                            <label for="three">بنده با شرایط موافق هستم</label>
+                            <br>
+                            <br>
                             <button class="btn btn-blue">خرید</button>
                         </div>
                     </div>
@@ -149,6 +165,11 @@ if ($_SESSION['status'] == true) {
                             <h5>فوتر</h5>
                             <br>
                             <hr>
+                            <input name="four" id="four" type="checkbox">
+                            &nbsp;
+                            <label for="four">بنده با شرایط موافق هستم</label>
+                            <br>
+                            <br>
                             <button class="btn btn-purple">خرید</button>
                         </div>
                     </div>
