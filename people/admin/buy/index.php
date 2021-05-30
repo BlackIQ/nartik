@@ -33,6 +33,41 @@ if ($_SESSION['status'] == true) {
                 padding: 56px;
                 font-family: 'nazanin';
             }
+            .btn-green {
+                background: green;
+                color: white;
+            }
+            .btn-green:hover {
+                color: white;
+                background: #449d44;
+            }
+            
+            .btn-red {
+                background: red;
+                color: white;
+            }
+            .btn-red:hover {
+                color: white;
+                background: tomato;
+            }
+            
+            .btn-blue {
+                background: blue;
+                color: white;
+            }
+            .btn-blue:hover {
+                color: white;
+                background: #006dcc;
+            }
+            
+            .btn-purple {
+                background: purple;
+                color: white;
+            }
+            .btn-purple:hover {
+                color: white;
+                background: blueviolet;
+            }
         </style>
     </head>
     <body class="main">
@@ -66,7 +101,7 @@ if ($_SESSION['status'] == true) {
                             <h5>فوتر</h5>
                             <br>
                             <hr>
-                            <button></button>
+                            <button class="btn btn-green">خرید</button>
                         </div>
                     </div>
                 </div>
@@ -82,7 +117,7 @@ if ($_SESSION['status'] == true) {
                             <h5>فوتر</h5>
                             <br>
                             <hr>
-                            <button></button>
+                            <button class="btn btn-red">خرید</button>
                         </div>
                     </div>
                 </div>
@@ -98,7 +133,7 @@ if ($_SESSION['status'] == true) {
                             <h5>فوتر</h5>
                             <br>
                             <hr>
-                            <button></button>
+                            <button class="btn btn-blue">خرید</button>
                         </div>
                     </div>
                 </div>
@@ -114,7 +149,7 @@ if ($_SESSION['status'] == true) {
                             <h5>فوتر</h5>
                             <br>
                             <hr>
-                            <button></button>
+                            <button class="btn btn-purple">خرید</button>
                         </div>
                     </div>
                 </div>
