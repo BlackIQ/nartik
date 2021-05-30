@@ -60,10 +60,10 @@ if ($_SESSION['status'] == true) {
                             <h1>سرویس یک</h1>
                         </div>
                         <div class="offerbody1">
-                            <h1>توضیحات</h1>
+                            <h3>توضیحات</h3>
                         </div>
                         <div class="offerfooter1">
-                            <h1>فوتر</h1>
+                            <h5>فوتر</h5>
                         </div>
                     </div>
                 </div>
@@ -73,10 +73,10 @@ if ($_SESSION['status'] == true) {
                             <h1>سرویس دو</h1>
                         </div>
                         <div class="offerbody2">
-                            <h1>توضیحات</h1>
+                            <h3>توضیحات</h3>
                         </div>
                         <div class="offerfooter2">
-                            <h1>فوتر</h1>
+                            <h5>فوتر</h5>
                         </div>
                     </div>
                 </div>
@@ -86,10 +86,10 @@ if ($_SESSION['status'] == true) {
                             <h1>سرویس سه</h1>
                         </div>
                         <div class="offerbody3">
-                            <h1>توضیحات</h1>
+                            <h3>توضیحات</h3>
                         </div>
                         <div class="offerfooter3">
-                            <h1>فوتر</h1>
+                            <h5>فوتر</h5>
                         </div>
                     </div>
                 </div>
@@ -99,10 +99,10 @@ if ($_SESSION['status'] == true) {
                             <h1>سرویس چهار</h1>
                         </div>
                         <div class="offerbody4">
-                            <h1>توضیحات</h1>
+                            <h3>توضیحات</h3>
                         </div>
                         <div class="offerfooter4">
-                            <h1>فوتر</h1>
+                            <h5>فوتر</h5>
                         </div>
                     </div>
                 </div>
