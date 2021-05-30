@@ -64,6 +64,9 @@ if ($_SESSION['status'] == true) {
                         </div>
                         <div class="offerfooter1">
                             <h5>فوتر</h5>
+                            <br>
+                            <hr>
+                            <button></button>
                         </div>
                     </div>
                 </div>
@@ -77,6 +80,9 @@ if ($_SESSION['status'] == true) {
                         </div>
                         <div class="offerfooter2">
                             <h5>فوتر</h5>
+                            <br>
+                            <hr>
+                            <button></button>
                         </div>
                     </div>
                 </div>
@@ -90,6 +96,9 @@ if ($_SESSION['status'] == true) {
                         </div>
                         <div class="offerfooter3">
                             <h5>فوتر</h5>
+                            <br>
+                            <hr>
+                            <button></button>
                         </div>
                     </div>
                 </div>
@@ -103,6 +112,9 @@ if ($_SESSION['status'] == true) {
                         </div>
                         <div class="offerfooter4">
                             <h5>فوتر</h5>
+                            <br>
+                            <hr>
+                            <button></button>
                         </div>
                     </div>
                 </div>
