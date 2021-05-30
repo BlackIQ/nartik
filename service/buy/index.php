@@ -133,7 +133,7 @@ if ($_SESSION['status'] == true) {
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
-                            <button class="btn btn-red" disabled>خرید</button>
+                            <button class="btn btn-red">خرید</button>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@ if ($_SESSION['status'] == true) {
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
-                            <button class="btn btn-blue" disabled>خرید</button>
+                            <button class="btn btn-blue">خرید</button>
                         </div>
                     </div>
                 </div>
@@ -173,7 +173,7 @@ if ($_SESSION['status'] == true) {
                             </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
-                            <button class="btn btn-purple" disabled>خرید</button>
+                            <button class="btn btn-purple">خرید</button>
                         </div>
                     </div>
                 </div>
