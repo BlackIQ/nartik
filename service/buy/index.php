@@ -111,11 +111,27 @@ if ($_SESSION['status'] == true) {
                                 &nbsp;
                                 <span class="lft">سه ماهه</span>
                             </h5>
+                            <h5>
+                                <b class="rght">حداکثر شرکت ها</b>
+                                &nbsp;
+                                <span class="lft">5 شرکت</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">سامانه ایمیل</b>
+                                &nbsp;
+                                <span class="lft">خیر</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">سامانه پیامکی</b>
+                                &nbsp;
+                                <span class="lft">خیر</span>
+                            </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
                             <button class="btn btn-green">خرید</button>
                         </div>
                     </div>
+                    <br>
                 </div>
                 <div class="col-md-3">
                     <div class="offer">
@@ -131,11 +147,27 @@ if ($_SESSION['status'] == true) {
                                 &nbsp;
                                 <span class="lft">شش ماهه</span>
                             </h5>
+                            <h5>
+                                <b class="rght">حداکثر شرکت ها</b>
+                                &nbsp;
+                                <span class="lft">10 شرکت</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">سامانه ایمیل</b>
+                                &nbsp;
+                                <span class="lft">بله</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">سامانه پیامکی</b>
+                                &nbsp;
+                                <span class="lft">خیر</span>
+                            </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
                             <button class="btn btn-red">خرید</button>
                         </div>
                     </div>
+                    <br>
                 </div>
                 <div class="col-md-3">
                     <div class="offer">
@@ -151,11 +183,27 @@ if ($_SESSION['status'] == true) {
                                 &nbsp;
                                 <span class="lft">نه ماهه</span>
                             </h5>
+                            <h5>
+                                <b class="rght">حداکثر شرکت ها</b>
+                                &nbsp;
+                                <span class="lft">15 شرکت</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">سامانه ایمیل</b>
+                                &nbsp;
+                                <span class="lft">بله</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">سامانه پیامکی</b>
+                                &nbsp;
+                                <span class="lft">بله</span>
+                            </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
                             <button class="btn btn-blue">خرید</button>
                         </div>
                     </div>
+                    <br>
                 </div>
                 <div class="col-md-3">
                     <div class="offer">
@@ -171,12 +219,28 @@ if ($_SESSION['status'] == true) {
                                 &nbsp;
                                 <span class="lft">دوازده ماهه</span>
                             </h5>
+                            <h5>
+                                <b class="rght">حداکثر شرکت ها</b>
+                                &nbsp;
+                                <span class="lft">نامحدود</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">سامانه ایمیل</b>
+                                &nbsp;
+                                <span class="lft">بله</span>
+                            </h5>
+                            <h5>
+                                <b class="rght">سامانه پیامکی</b>
+                                &nbsp;
+                                <span class="lft">بله</span>
+                            </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
                             <button class="btn btn-purple">خرید</button>
                         </div>
                     </div>
                 </div>
+                <br>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
