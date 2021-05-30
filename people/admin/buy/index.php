@@ -107,7 +107,7 @@ if ($_SESSION['status'] == true) {
                             <label for="one">بنده با شرایط موافق هستم</label>
                             <br>
                             <br>
-                            <button class="btn btn-green">خرید</button>
+                            <button class="btn btn-green" disabled>خرید</button>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@ if ($_SESSION['status'] == true) {
                             <label for="two">بنده با شرایط موافق هستم</label>
                             <br>
                             <br>
-                            <button class="btn btn-red">خرید</button>
+                            <button class="btn btn-red" disabled>خرید</button>
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@ if ($_SESSION['status'] == true) {
                             <label for="three">بنده با شرایط موافق هستم</label>
                             <br>
                             <br>
-                            <button class="btn btn-blue">خرید</button>
+                            <button class="btn btn-blue" disabled>خرید</button>
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@ if ($_SESSION['status'] == true) {
                             <label for="four">بنده با شرایط موافق هستم</label>
                             <br>
                             <br>
-                            <button class="btn btn-purple">خرید</button>
+                            <button class="btn btn-purple" disabled>خرید</button>
                         </div>
                     </div>
                 </div>
