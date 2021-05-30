@@ -111,7 +111,6 @@ if ($_SESSION['status'] == true) {
                                 &nbsp;
                                 <span class="lft">سه ماهه</span>
                             </h5>
-                            <br>
                             <hr>
                             <input name="one" id="one" type="checkbox">
                             &nbsp;
@@ -132,7 +131,6 @@ if ($_SESSION['status'] == true) {
                         </div>
                         <div class="offerfooter2">
                             <h5>فوتر</h5>
-                            <br>
                             <hr>
                             <input name="two" id="two" type="checkbox">
                             &nbsp;
@@ -153,7 +151,6 @@ if ($_SESSION['status'] == true) {
                         </div>
                         <div class="offerfooter3">
                             <h5>فوتر</h5>
-                            <br>
                             <hr>
                             <input name="three" id="three" type="checkbox">
                             &nbsp;
@@ -174,7 +171,6 @@ if ($_SESSION['status'] == true) {
                         </div>
                         <div class="offerfooter4">
                             <h5>فوتر</h5>
-                            <br>
                             <hr>
                             <input name="four" id="four" type="checkbox">
                             &nbsp;
