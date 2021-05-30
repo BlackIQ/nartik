@@ -130,7 +130,11 @@ if ($_SESSION['status'] == true) {
                             <h3>توضیحات</h3>
                         </div>
                         <div class="offerfooter2">
-                            <h5>فوتر</h5>
+                            <h5>
+                                <b class="rght">مدت زمان سرویس</b>
+                                &nbsp;
+                                <span class="lft">شش ماهه</span>
+                            </h5>
                             <hr>
                             <input name="two" id="two" type="checkbox">
                             &nbsp;
@@ -150,7 +154,11 @@ if ($_SESSION['status'] == true) {
                             <h3>توضیحات</h3>
                         </div>
                         <div class="offerfooter3">
-                            <h5>فوتر</h5>
+                            <h5>
+                                <b class="rght">مدت زمان سرویس</b>
+                                &nbsp;
+                                <span class="lft">نه ماهه</span>
+                            </h5>
                             <hr>
                             <input name="three" id="three" type="checkbox">
                             &nbsp;
@@ -170,7 +178,11 @@ if ($_SESSION['status'] == true) {
                             <h3>توضیحات</h3>
                         </div>
                         <div class="offerfooter4">
-                            <h5>فوتر</h5>
+                            <h5>
+                                <b class="rght">مدت زمان سرویس</b>
+                                &nbsp;
+                                <span class="lft">دوازده ماهه</span>
+                            </h5>
                             <hr>
                             <input name="four" id="four" type="checkbox">
                             &nbsp;
