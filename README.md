@@ -4,4 +4,4 @@
 
 ---
 
-For [Narbon](https://narbon.ir)
+All by Neotrinost. 
