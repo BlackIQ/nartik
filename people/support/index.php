@@ -2,17 +2,19 @@
 
 session_start();
 
+include("../../pack/config.php");
+
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
     if ($who == "support") {
         
     }
     else {
-        header("Location: http://127.0.0.1/NarTik/people/$who");
+        header("Location: http://$serverip/NarTik/people/$who");
     }
 }
 else {
-    header("Location: http://127.0.0.1/NarTik/people/support/account");
+    header("Location: http://$serverip/NarTik/people/support/account");
 }
 
 include('action.php');
@@ -27,7 +29,6 @@ if ($ansary[0] == true) {
     <?php
 }
 
-include("../../pack/config.php");
 $server = $serverip;
 $user = $dbuser;
 $passwd = $dbpassword;
@@ -59,7 +60,7 @@ if (mysqli_num_rows($rescompany) == 1) {
     <style>
         @font-face {
             font-family: 'nazanin';
-            src: url('http://127.0.0.1/NarTik/pack/fonts/nazanin.TTF');
+            src: url('http://<?php echo $serverip; ?>/NarTik/pack/fonts/nazanin.TTF');
             font-style: normal;
         }
 
@@ -79,10 +80,10 @@ if (mysqli_num_rows($rescompany) == 1) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>نارتیک - <?php echo $company_name; ?></title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="http://127.0.0.1/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1/NarTik/pack/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1/NarTik/pack/css/datepicker3.css" rel="stylesheet">
-    <link href="http://127.0.0.1/NarTik/pack/css/styles.css" rel="stylesheet">
+    <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/datepicker3.css" rel="stylesheet">
+    <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/styles.css" rel="stylesheet">
 </head>
 <body style="text-align: right;">
     <nav class="navbar bg-success navbar-fixed-top" role="navigation">
@@ -370,9 +371,9 @@ if (mysqli_num_rows($rescompany) == 1) {
             </div>
         </footer>
     </div>
-    <script src="http://127.0.0.1/NarTik/pack/js/jquery-1.11.1.min.js"></script>
-    <script src="http://127.0.0.1/NarTik/pack/js/bootstrap.min.js"></script>
-    <script src="http://127.0.0.1/NarTik/pack/js/bootstrap-datepicker.js"></script>
-    <script src="http://127.0.0.1/NarTik/pack/js/custom.js"></script>
+    <script src="http://<?php echo $serverip; ?>/NarTik/pack/js/jquery-1.11.1.min.js"></script>
+    <script src="http://<?php echo $serverip; ?>/NarTik/pack/js/bootstrap.min.js"></script>
+    <script src="http://<?php echo $serverip; ?>/NarTik/pack/js/bootstrap-datepicker.js"></script>
+    <script src="http://<?php echo $serverip; ?>/NarTik/pack/js/custom.js"></script>
 </body>
 </html>

@@ -42,7 +42,7 @@
                 ?>
                     <script>
                         window.alert("به این تیکت جواب داده شد");
-                        window.location.replace("http://127.0.0.1/NarTik/people/support");
+                        window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
                     </script>
                 <?php
             }
@@ -75,7 +75,7 @@
             ?>
             <script>
                 window.alert("کاربر با موفقیت ثبت شد");
-                window.location.replace("http://127.0.0.1/NarTik/people/support");
+                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
             </script>
             <?php
         }
@@ -83,7 +83,7 @@
             ?>
             <script>
                 window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace("http://127.0.0.1/NarTik/people/support");
+                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
             </script>
             <?php
         }
@@ -97,7 +97,7 @@
             ?>
             <script>
                 window.alert("درخواست این کاربر قبول نشد");
-                window.location.replace("http://127.0.0.1/NarTik/people/support");
+                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
             </script>
             <?php
         }
@@ -105,7 +105,7 @@
             ?>
             <script>
                 window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace("http://127.0.0.1/NarTik/people/support");
+                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
             </script>
             <?php
         }
