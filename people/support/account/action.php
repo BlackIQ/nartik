@@ -50,7 +50,7 @@
                 $_SESSION["who"] = "support";
                 $_SESSION["uid"] = $company;
                 $_SESSION['company'] = $company_name;
-                header('location: http://127.0.0.1/NarTik/people/support');
+                header("location: http://$serverip/NarTik/people/support");
             }
             else {
                 array_push($errors, "ایمیل با رمز اشتباه است");
