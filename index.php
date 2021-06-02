@@ -2,9 +2,11 @@
 
 session_start();
 
+include("./pack/config.php");
+
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
-    header("Location : http://127.0.0.1/NarTik/people/$who");
+    header("Location : http://$serverip/NarTik/people/$who");
 }
 
 ?>
@@ -15,7 +17,7 @@ if ($_SESSION['status'] == true) {
         <style>
             @font-face {
                 font-family: 'nazanin';
-                src: url('http://127.0.0.1/NarTik/pack/fonts/nazanin.TTF');
+                src: url('http://<?php echo $serverip; ?>/NarTik/pack/fonts/nazanin.TTF');
                 font-style: normal;
             }
 
@@ -37,9 +39,9 @@ if ($_SESSION['status'] == true) {
         <meta charset="utf-8">
         <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="http://127.0.0.1/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://127.0.0.1/NarTik/pack/css/datepicker3.css" rel="stylesheet">
-        <link href="http://127.0.0.1/NarTik/pack/css/styles.css" rel="stylesheet">
+        <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/datepicker3.css" rel="stylesheet">
+        <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/styles.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     </head>
     <body>
@@ -61,11 +63,11 @@ if ($_SESSION['status'] == true) {
         </div>
         <script>
             function user() {
-                window.location.replace("http://127.0.0.1/NarTik/people/user");
+                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
             }
             
             function support() {
-                window.location.replace("http://127.0.0.1/NarTik/people/support");
+                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
             }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
