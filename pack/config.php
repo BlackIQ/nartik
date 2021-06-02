@@ -1,7 +1,7 @@
 <?php
 
 // IP
-$serverip = "127.0.0.1";
+$serverip = "192.168.1.12";
 
 // DB User
 $dbuser = "narbon";
