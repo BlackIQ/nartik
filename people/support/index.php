@@ -28,10 +28,10 @@ if ($ansary[0] == true) {
 }
 
 include("../../pack/config.php");
-$server = "localhost";
-$user = "narbon";
-$passwd = "narbon";
-$db = "nartik";
+$server = $serverip;
+$user = $dbuser;
+$passwd = $dbpassword;
+$db = $dbname;
 
 $conn = mysqli_connect($server, $user, $passwd, $db);
 
