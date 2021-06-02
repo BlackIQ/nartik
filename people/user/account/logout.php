@@ -1,5 +1,7 @@
 <?php
 
+include("../../../pack/config.php");
+
 session_start();
 
 session_destroy();

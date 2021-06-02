@@ -2,15 +2,16 @@
 
 session_start();
 
+include("../../../pack/config.php");
+
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
-    header("Location: http://127.0.0.1/NarTik/people/$who");
+    header("Location: http://$serverip/NarTik/people/$who");
 }
 
 include('action.php');
 
 // MySQL Data
-include("../../../pack/config.php");
 $mysqlserver = $serverip;
 $mysqluser = $dbuser;
 $mysqlpassword = $dbpassword;
@@ -35,7 +36,7 @@ $resc = mysqli_query($connection, $getc);
         <style>
             @font-face {
                 font-family: 'nazanin';
-                src: url('http://127.0.0.1/NarTik/pack/fonts/nazanin.TTF');
+                src: url('http://<?php echo $serverip; ?>/NarTik/pack/fonts/nazanin.TTF');
                 font-style: normal;
             }
             

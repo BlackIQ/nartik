@@ -83,7 +83,7 @@
                 ?>
                     <script>
                         window.alert("درخواست شما با موفقیت ثبت شد");
-                        window.location.replace("http://127.0.0.1/NarTik/people/user/account");
+                        window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user/account");
                     </script>
                 <?php
             }
@@ -91,7 +91,7 @@
                 ?>
                     <script>
                         window.alert("<?php echo mysqli_error($connection); ?>");
-                        window.location.replace("http://127.0.0.1/NarTik/people/user/account");
+                        window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user/account");
                     </script>
                 <?php
             }
@@ -124,7 +124,7 @@
                 $_SESSION['directory'] = 'nartik';
                 ?>
                     <script>
-                        window.location.replace("http://127.0.0.1/NarTik/people/user");
+                        window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
                     </script>
                 <?php
             }
@@ -132,7 +132,7 @@
                 ?>
                     <script>
                         window.alert("کد ملی یا رمز عبور اشتباه است");
-                        window.location.replace("http://127.0.0.1/NarTik/people/user/account");
+                        window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user/account");
                     </script>
                 <?php
             }
