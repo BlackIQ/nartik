@@ -27,6 +27,7 @@ if ($ansary[0] == true) {
     <?php
 }
 
+include("../../pack/config.php");
 $server = "localhost";
 $user = "narbon";
 $passwd = "narbon";

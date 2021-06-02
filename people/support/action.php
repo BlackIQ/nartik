@@ -6,10 +6,11 @@
     $ansary = array();
 
     // MySQL Data
-    $mysqlserver = "localhost";
-    $mysqluser = "narbon";
-    $mysqlpassword = "narbon";
-    $mysqldatabase = "nartik";
+    include("../../pack/config.php");
+    $mysqlserver = $serverip;
+    $mysqluser = $dbuser;
+    $mysqlpassword = $dbpassword;
+    $mysqldatabase = $dbname;
 
     // Create Connection
     $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
