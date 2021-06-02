@@ -7,7 +7,7 @@ $serverip = "127.0.0.1";
 $dbuser = "narbon";
 
 // DB Password
-$dbpassword = "nartik";
+$dbpassword = "narbon";
 
 // DB Name
 $dbname = "nartik";
