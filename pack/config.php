@@ -1,13 +1,13 @@
 <?php
 
 // IP
-$serverip = "";
+$serverip = "192.168.1.12";
 
 // DB User
-$dbuser = "";
+$dbuser = "narbon";
 
 // DB Password
-$dbpassword;
+$dbpassword = "nartik";
 
 // DB Name
-$dbname = "";
+$dbname = "nartik";
