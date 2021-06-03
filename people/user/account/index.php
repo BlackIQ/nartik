@@ -12,7 +12,7 @@ if ($_SESSION['status'] == true) {
 include('action.php');
 
 // MySQL Data
-$mysqlserver = $serverip;
+$mysqlserver = "localhost";
 $mysqluser = $dbuser;
 $mysqlpassword = $dbpassword;
 $mysqldatabase = $dbname;
