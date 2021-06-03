@@ -2,7 +2,7 @@
 
 session_start();
 
-include("./pack/config.php");
+include("pack/config.php");
 
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
