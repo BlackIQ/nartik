@@ -5,7 +5,7 @@
 
     // MySQL Data
     include("../../../pack/config.php");
-    $mysqlserver = $serverip;
+    $mysqlserver = "localhost";
     $mysqluser = $dbuser;
     $mysqlpassword = $dbpassword;
     $mysqldatabase = $dbname;

@@ -29,7 +29,7 @@ if ($ansary[0] == true) {
     <?php
 }
 
-$server = $serverip;
+$server = "localhost";
 $user = $dbuser;
 $passwd = $dbpassword;
 $db = $dbname;
