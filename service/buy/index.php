@@ -207,7 +207,11 @@ if ($_SESSION['status'] == true) {
                             <h1>سرویس سه</h1>
                         </div>
                         <div class="offerbody3">
-                            <h3>توضیحات</h3>
+                            <h3>
+                                سرویس سوم سرویسی است که فطعا برای شرکت شما مناسب است.
+                                <br>
+                                امکانات این سرویس بینظیر است و همچنین همچین قیمتی با این امکانات خیلی با ارزش است.
+                            </h3>
                         </div>
                         <div class="offerfooter3">
                             <h5>
@@ -253,7 +257,7 @@ if ($_SESSION['status'] == true) {
                             <h1>سرویس چهار</h1>
                         </div>
                         <div class="offerbody4">
-                            <h3>توضیحات</h3>
+                            
                         </div>
                         <div class="offerfooter4">
                             <h5>
