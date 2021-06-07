@@ -262,36 +262,6 @@ if ($_SESSION['status'] == true) {
                             </h3>
                         </div>
                         <div class="offerfooter4">
-                            <h5>
-                                <b class="rght">مدت زمان سرویس</b>
-                                &nbsp;
-                                <span class="lft">دوازده ماهه</span>
-                            </h5>
-                            <h5>
-                                <b class="rght">حداکثر شرکت ها</b>
-                                &nbsp;
-                                <span class="lft">20 شرکت</span>
-                            </h5>
-                            <h5>
-                                <b class="rght">حداکثر کاربران</b>
-                                &nbsp;
-                                <span class="lft">100 کاربر</span>
-                            </h5>
-                            <h5>
-                                <b class="rght">سامانه ایمیل</b>
-                                &nbsp;
-                                <span class="lft">بله</span>
-                            </h5>
-                            <h5>
-                                <b class="rght">سامانه پیامکی</b>
-                                &nbsp;
-                                <span class="lft">بله</span>
-                            </h5>
-                            <h5>
-                                <b class="rght">شیوه بکاپ</b>
-                                &nbsp;
-                                <span class="lft">روزانه</span>
-                            </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
                             <button class="btn btn-purple">خرید</button>
