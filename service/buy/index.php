@@ -262,6 +262,9 @@ if ($_SESSION['status'] == true) {
                             </h3>
                         </div>
                         <div class="offerfooter4">
+                            <h5>
+                                سرویس مزاکره ای
+                            </h5>
                             <hr>
                             <p>کلیک روی خرید بیانگر قبول کردن شرایط ما توسط شماست</p>
                             <button class="btn btn-purple">خرید</button>
