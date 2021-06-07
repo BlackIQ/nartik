@@ -258,7 +258,7 @@ if ($_SESSION['status'] == true) {
                         </div>
                         <div class="offerbody4">
                             <h3 class="det">
-                                
+                                این سرویس مخصوص شرکت هایی است که سرویس های دیگر جوابگوی شرکتشان نیست.
                             </h3>
                         </div>
                         <div class="offerfooter4">
