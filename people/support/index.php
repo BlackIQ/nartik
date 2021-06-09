@@ -303,7 +303,76 @@ if (mysqli_num_rows($rescompany) == 1) {
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4" id="tikreview">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        نمایش تیکت شرکت
+                        <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                                <em class="fa fa-toggle-up"></em>
+                            </span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        تیکت های شرکت
+                        <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                                <em class="fa fa-toggle-up"></em>
+                            </span>
+                    </div>
+                    <div class="panel-body">
+                        <div style="text-align: center;">
+                            <?php
+                            if (mysqli_num_rows($tikres) > 0) {
+                                ?>
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <td class=""><b>تاریخ</b></td>
+                                        <td class=""><b>موضوع</b></td>
+                                        <td class=""><b>وضعیت</b></td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    while ($tiks = mysqli_fetch_assoc($tikres)) {
+                                        ?>
+                                        <tr>
+                                            <td class=""><?php echo $tiks['dt']; ?></b></td>
+                                            <td class=""><b><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></b></td>
+                                            <td class="">
+                                                <?php
+                                                if ($tiks['answer'] != "ny") {
+                                                    echo "<i class='fa fa-check text-success'></i>";
+                                                }
+                                                else {
+                                                    echo "<i class='fa fa-times text-danger'></i>";
+                                                }
+                                                ?>
+                                            </td>
+                                        </tr>
+                                        <?php
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
+                                <?php
+                            }
+                            else {
+                                echo "<h2 style='text-align: right;'>در حال حاضر هیچ تیکت برای نمایش وحود ندارید</h2>";
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         تیکت جدید
