@@ -53,9 +53,16 @@ if ($_SESSION['status'] == true) {
                 <h1><i class="fa fa-home"></i></h1>
                 <h1>به نارتیک خوش آمدید</h1>
                 <br>
-                <button onclick="user()" class="btn btn-lg btn-primary"><b>ورود کاربر</b></button>
+                <button onclick="user()" class="btn btn-lg btn-success"><b>ورود کاربر</b></button>
                 &nbsp;
-                <button onclick="support()" class="btn btn-lg btn-success"><b>ورود پشتیبان</b></button>
+                <button onclick="support()" class="btn btn-lg btn-danger"><b>ورود پشتیبان</b></button>
+                <br>
+                <br>
+                <button onclick="jobs()" class="btn btn-lg bg-teal" style="color: white;"><b>خدمات ما</b></button>
+                &nbsp;
+                <button onclick="about()" class="btn btn-lg btn-warning"><b>درباره ما</b></button>
+                &nbsp;
+                <button onclick="contact()" class="btn btn-lg btn-info"><b>ارتباط با ما</b></button>
             </div>
             <div class="col-md-4">
                 <br>
@@ -63,11 +70,23 @@ if ($_SESSION['status'] == true) {
         </div>
         <script>
             function user() {
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace("people/user");
             }
             
             function support() {
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
+                window.location.replace("people/support");
+            }
+            
+            function jobs() {
+                window.location.replace("");
+            }
+            
+            function about() {
+                window.location.replace("");
+            }
+            
+            function contact() {
+                window.location.replace("");
             }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
