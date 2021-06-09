@@ -324,7 +324,8 @@ if (mysqli_num_rows($rescompany) == 1) {
                                         <table class="table table-bordered table-hover">
                                             <thead>
                                             <tr>
-                                                <td class=""><b>زمان</b></td>
+                                                <td class=""><b>تیکت ها</b></td>
+                                                <td class=""><b>کاربر ها</b></td>
                                                 <td class=""><b>کد شرکت</b></td>
                                                 <td class=""><b>شرکت</b></td>
                                             </tr>
@@ -332,9 +333,25 @@ if (mysqli_num_rows($rescompany) == 1) {
                                             <tbody>
                                             <?php
                                             while ($row = mysqli_fetch_assoc($res_all)) {
+                                                $name = $row["name"];
                                                 ?>
                                                 <tr>
-                                                    <td class=""><?php echo $row['time']; ?></td>
+                                                    <td class="">
+                                                        <?php
+                                                            $get_all_tikets = "SELECT count(*) as total FROM tiks WHERE company = '$name'";
+                                                            $gat = mysqli_query($conn, $get_all_tikets);
+                                                            $gatr = mysqli_fetch_assoc($gat);
+                                                            echo $gatr['total'];
+                                                        ?>
+                                                    </td>
+                                                    <td class="">
+                                                        <?php
+                                                            $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$name' AND type = 'user'";
+                                                            $gap = mysqli_query($conn, $get_all_people);
+                                                            $gapr = mysqli_fetch_assoc($gap);
+                                                            echo $gapr['total'];
+                                                        ?>
+                                                    </td>
                                                     <td class=""><?php echo $row['id']; ?></td>
                                                     <td class=""><b><?php echo $row['name']; ?></b></td>
                                                 </tr>
