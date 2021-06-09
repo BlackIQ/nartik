@@ -325,6 +325,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                                             <thead>
                                             <tr>
                                                 <td class=""><b>تیکت ها</b></td>
+                                                <td class=""><b>در صف</b></td>
                                                 <td class=""><b>کاربر ها</b></td>
                                                 <td class=""><b>کد شرکت</b></td>
                                                 <td class=""><b>شرکت</b></td>
@@ -342,6 +343,14 @@ if (mysqli_num_rows($rescompany) == 1) {
                                                             $gat = mysqli_query($conn, $get_all_tikets);
                                                             $gatr = mysqli_fetch_assoc($gat);
                                                             echo $gatr['total'];
+                                                        ?>
+                                                    </td>
+                                                    <td class="">
+                                                        <?php
+                                                        $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$name' AND type = 'pending'";
+                                                        $gap = mysqli_query($conn, $get_all_people);
+                                                        $gapr = mysqli_fetch_assoc($gap);
+                                                        echo $gapr['total'];
                                                         ?>
                                                     </td>
                                                     <td class="">
