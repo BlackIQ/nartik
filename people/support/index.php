@@ -328,6 +328,9 @@ if (mysqli_num_rows($rescompany) == 1) {
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"></div>
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -339,64 +342,64 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <div class="panel-body">
                         <div style="text-align: center;">
                             <?php
-                                $get_all = "SELECT * FROM company WHERE uid = '$company'";
-                                $res_all = mysqli_query($conn, $get_all);
+                            $get_all = "SELECT * FROM company WHERE uid = '$company'";
+                            $res_all = mysqli_query($conn, $get_all);
 
-                                if (mysqli_num_rows($res_all) > 0) {
-                                    ?>
-                                        <table class="table table-bordered table-hover">
-                                            <thead>
-                                            <tr>
-                                                <td class=""><b>تیکت ها</b></td>
-                                                <td class=""><b>در صف</b></td>
-                                                <td class=""><b>کاربر ها</b></td>
-                                                <td class=""><b>کد شرکت</b></td>
-                                                <td class=""><b>شرکت</b></td>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <?php
-                                            while ($row = mysqli_fetch_assoc($res_all)) {
-                                                $name = $row["name"];
-                                                ?>
-                                                <tr>
-                                                    <td class="">
-                                                        <?php
-                                                            $get_all_tikets = "SELECT count(*) as total FROM tiks WHERE company = '$name'";
-                                                            $gat = mysqli_query($conn, $get_all_tikets);
-                                                            $gatr = mysqli_fetch_assoc($gat);
-                                                            echo $gatr['total'];
-                                                        ?>
-                                                    </td>
-                                                    <td class="">
-                                                        <?php
-                                                        $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$name' AND type = 'pending'";
-                                                        $gap = mysqli_query($conn, $get_all_people);
-                                                        $gapr = mysqli_fetch_assoc($gap);
-                                                        echo $gapr['total'];
-                                                        ?>
-                                                    </td>
-                                                    <td class="">
-                                                        <?php
-                                                            $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$name' AND type = 'user'";
-                                                            $gap = mysqli_query($conn, $get_all_people);
-                                                            $gapr = mysqli_fetch_assoc($gap);
-                                                            echo $gapr['total'];
-                                                        ?>
-                                                    </td>
-                                                    <td class=""><?php echo $row['id']; ?></td>
-                                                    <td class=""><b><?php echo $row['name']; ?></b></td>
-                                                </tr>
-                                                <?php
-                                            }
-                                            ?>
-                                            </tbody>
-                                        </table>
+                            if (mysqli_num_rows($res_all) > 0) {
+                                ?>
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <td class=""><b>تیکت ها</b></td>
+                                        <td class=""><b>در صف</b></td>
+                                        <td class=""><b>کاربر ها</b></td>
+                                        <td class=""><b>کد شرکت</b></td>
+                                        <td class=""><b>شرکت</b></td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
                                     <?php
-                                }
-                                else {
-                                    echo "<h2 style='text-align: right;'>شما هم اکنون با هیچ شرکتی قرارداد ندارید</h2>";
-                                }
+                                    while ($row = mysqli_fetch_assoc($res_all)) {
+                                        $name = $row["name"];
+                                        ?>
+                                        <tr>
+                                            <td class="">
+                                                <?php
+                                                $get_all_tikets = "SELECT count(*) as total FROM tiks WHERE company = '$name'";
+                                                $gat = mysqli_query($conn, $get_all_tikets);
+                                                $gatr = mysqli_fetch_assoc($gat);
+                                                echo $gatr['total'];
+                                                ?>
+                                            </td>
+                                            <td class="">
+                                                <?php
+                                                $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$name' AND type = 'pending'";
+                                                $gap = mysqli_query($conn, $get_all_people);
+                                                $gapr = mysqli_fetch_assoc($gap);
+                                                echo $gapr['total'];
+                                                ?>
+                                            </td>
+                                            <td class="">
+                                                <?php
+                                                $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$name' AND type = 'user'";
+                                                $gap = mysqli_query($conn, $get_all_people);
+                                                $gapr = mysqli_fetch_assoc($gap);
+                                                echo $gapr['total'];
+                                                ?>
+                                            </td>
+                                            <td class=""><?php echo $row['id']; ?></td>
+                                            <td class=""><b><?php echo $row['name']; ?></b></td>
+                                        </tr>
+                                        <?php
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
+                                <?php
+                            }
+                            else {
+                                echo "<h2 style='text-align: right;'>شما هم اکنون با هیچ شرکتی قرارداد ندارید</h2>";
+                            }
                             ?>
                         </div>
                     </div>
