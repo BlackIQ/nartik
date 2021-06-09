@@ -78,7 +78,7 @@ if ($_SESSION['status'] == true) {
             }
             
             function jobs() {
-                window.location.replace("");
+                window.location.replace("service");
             }
             
             function about() {
