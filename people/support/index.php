@@ -304,6 +304,29 @@ if (mysqli_num_rows($rescompany) == 1) {
         </div>
         <div class="row">
             <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        تیکت جدید
+                        <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                                <em class="fa fa-toggle-up"></em>
+                            </span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="">
+                            <form class="" method="post" action="index.php">
+                                <div class="form-group">
+                                    <label for="title">موضوع تیکت</label>
+                                    <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="موضوع تیکت">
+                                </div>
+                                <div class="form-group">
+                                    <label for="des">توضیحات</label>
+                                    <textarea type="text" class="form-control" rows="5" name="text" id="des" aria-describedby="des" placeholder="توضیحات"></textarea>
+                                </div>
+                                <button type="submit" name="sendtik" class="btn btn-success">ارسال تیکت</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
                 <div class="panel panel-default">
