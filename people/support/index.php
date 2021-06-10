@@ -313,7 +313,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                     </div>
                     <div class="panel-body">
                         <div class="">
-
+                            <?php include("review/nartik.php"); ?>
                         </div>
                     </div>
                 </div>
