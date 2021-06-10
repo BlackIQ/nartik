@@ -399,7 +399,20 @@ if (mysqli_num_rows($rescompany) == 1) {
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        افزودن شرکت جدید
+                        <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                            <em class="fa fa-toggle-up"></em>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <div style="text-align: center;">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
