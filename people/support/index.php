@@ -8,7 +8,7 @@ if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
     if ($who == "support") {
         
-    }"http://<?php echo $serverip; ?>/NarTik/people/support"
+    }
     else {
         header("Location: http://$serverip/NarTik/people/$who");
     }
