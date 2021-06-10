@@ -4,6 +4,7 @@
     $prop = array();
     $tik = array();
     $ansary = array();
+    $send = array();
 
     $company = $_SESSION["uid"];
 
@@ -77,6 +78,47 @@
             }
         }
     }
+
+    // Insert new company ticket
+    if (isset($_POST['sendtik'])) {
+        date_default_timezone_set('Iran');
+
+        $title = mysqli_real_escape_string($connection, $_POST["title"]);
+        $text = mysqli_real_escape_string($connection, $_POST["text"]);
+
+        if (empty($title)) {
+            array_push($send, "موضوع تیکت الزامیست");
+        }
+        if (empty($text)) {
+            array_push($send, "متن تیکت الزامیست");
+        }
+
+        if (count($send) == 0) {
+            $dt = date("M d, Y H:i:s");
+
+            $tikid = rand(1000, 9999);
+
+            $query = "INSERT INTO nartiks () VALUES ()";
+            if (mysqli_query($connection, $query)) {
+                ?>
+                <script>
+                    window.alert("تیکت شما با موفقیت ارسال شد");
+                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                </script>
+                <?php
+            }
+            else {
+                ?>
+                <script>
+                    window.alert("<?php echo mysqli_error($connection); ?>");
+                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                </script>
+                <?php
+            }
+        }
+
+    }
+
     // Get ticket data
     if (isset($_GET['ticket'])) {
         $id = $_GET['ticket'];
