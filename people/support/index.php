@@ -497,7 +497,7 @@ if (mysqli_num_rows($rescompany) == 1) {
         </div>
         <footer class="">
             <div class="container-fluid">
-                <p class="back-link"><a class="text-success" href="../">NarFirm</a></p>
+                <p class="back-link"><a class="text-success" href="../">NarTik</a></p>
                 <p class="back-link">Created by <a class="text-success" href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
                 <p class="back-link">Powered By <a class="text-success" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
                 <p class="back-link">
