@@ -408,7 +408,14 @@ if (mysqli_num_rows($rescompany) == 1) {
                         </span>
                     </div>
                     <div class="panel-body">
-                        <div style="text-align: center;">
+                        <div>
+                            <form class="" method="post" action="index.php">
+                                <div class="form-group">
+                                    <label for="company">نام شرکت</label>
+                                    <input type="text" class="form-control" id="company" name="company" aria-describedby="company" placeholder="نام شرکت">
+                                </div>
+                                <button type="submit" name="addcompany" class="btn btn-success">افزودن</button>
+                            </form>
                         </div>
                     </div>
                 </div>
