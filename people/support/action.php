@@ -5,6 +5,7 @@
     $tik = array();
     $ansary = array();
     $send = array();
+    $com_tik = array();
 
     $company = $_SESSION["uid"];
 
@@ -117,6 +118,22 @@
             }
         }
 
+    }
+
+    // Get company ticket data
+    if (isset($_GET['comtik'])) {
+        $id = $_GET['comtik'];
+        $sql = "SELECT * FROM nartiks WHERE tikid = $id";
+        $getik = mysqli_query($connection, $sql);
+
+        if (mysqli_num_rows($getik) > 0) {
+            while ($pen = mysqli_fetch_assoc($getik)) {
+                array_push($com_tik, $pen);
+            }
+        }
+        else {
+            array_push($com_tik, false);
+        }
     }
 
     // Get ticket data
