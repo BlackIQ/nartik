@@ -98,7 +98,7 @@
 
             $tikid = rand(1000, 9999);
 
-            $query = "INSERT INTO nartiks () VALUES ()";
+            $query = "INSERT INTO nartiks (tikid, title, explane, company, dt, answer) VALUES ('$tikid', '$title', '$text', '$company', '$dt', 'ny')";
             if (mysqli_query($connection, $query)) {
                 ?>
                 <script>
