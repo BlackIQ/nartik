@@ -384,6 +384,9 @@ if (mysqli_num_rows($rescompany) == 1) {
                             </span>
                     </div>
                     <div class="panel-body">
+                        <?php
+                            include("review/send.php");
+                        ?>
                         <div class="">
                             <form class="" method="post" action="index.php">
                                 <div class="form-group">
