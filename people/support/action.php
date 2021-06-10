@@ -48,8 +48,25 @@
             }
         }
     }
-    
-    
+
+    // Add company
+    if (isset($_POST["addcompany"])) {
+        $company_name = mysqli_escape_string($connection, $_POST["company"]);
+
+        if (isset($company_name)) {
+            $id = rand(111, 999);
+
+            $add_company = "INSERT INTO company (id, name, time) VALUES ('$id', '$company_name', 2)";
+            if (mysqli_query($connection, $add_company)) {
+                ?>
+                    <script>
+                        window.alert("شرکت اضافه شد");
+                        window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
+                    </script>
+                <?php
+            }
+        }
+    }
     // Get ticket data
     if (isset($_GET['ticket'])) {
         $id = $_GET['ticket'];
