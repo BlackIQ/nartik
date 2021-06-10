@@ -5,6 +5,8 @@
     $tik = array();
     $ansary = array();
 
+    $company = $_SESSION["uid"];
+
     // MySQL Data
     include("../../pack/config.php");
     $mysqlserver = "localhost";
@@ -56,7 +58,7 @@
         if (isset($company_name)) {
             $id = rand(111, 999);
 
-            $add_company = "INSERT INTO company (id, name, timem, uid) VALUES ('$id', '$company_name', 2, '$company')";
+            $add_company = "INSERT INTO company (id, name, time, uid) VALUES ('$id', '$company_name', 2, '$company')";
             if (mysqli_query($connection, $add_company)) {
                 ?>
                     <script>
