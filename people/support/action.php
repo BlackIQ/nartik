@@ -65,6 +65,14 @@
                     </script>
                 <?php
             }
+            else {
+                ?>
+                <script>
+                    window.alert("<?php echo mysqli_error($connection); ?>");
+                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
+                </script>
+                <?php
+            }
         }
     }
     // Get ticket data
