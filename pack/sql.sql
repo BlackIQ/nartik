@@ -22,13 +22,14 @@
 DROP TABLE IF EXISTS `admin`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `admin` (
-  `row` int(11) NOT NULL AUTO_INCREMENT,
-  `id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `uid` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`row`)
+CREATE TABLE `admin`
+(
+    `row`      int(11) NOT NULL AUTO_INCREMENT,
+    `id`       text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `company`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `uid`      text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,11 +37,15 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-LOCK TABLES `admin` WRITE;
+LOCK
+TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (1,'milad','milad','Milad','10'),(2,'narbon','narbon','Narbon','20');
+INSERT INTO `admin`
+VALUES (1, 'milad', 'milad', 'Milad', '10'),
+       (2, 'narbon', 'narbon', 'Narbon', '20');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
-UNLOCK TABLES;
+UNLOCK
+TABLES;
 
 --
 -- Table structure for table `company`
@@ -49,25 +54,16 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `company`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `company` (
-  `row` int(11) NOT NULL AUTO_INCREMENT,
-  `id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `time` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `uid` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`row`)
+CREATE TABLE `company`
+(
+    `row`  int(11) NOT NULL AUTO_INCREMENT,
+    `id`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `time` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `uid`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `company`
---
-
-LOCK TABLES `company` WRITE;
-/*!40000 ALTER TABLE `company` DISABLE KEYS */;
-INSERT INTO `company` VALUES (1,'123','Google','2','10'),(2,'456','Facebook','3','20'),(3,'789','Twitter','4','10'),(4,'987','Microsoft','5','20'),(5,'654','Vania','2','10'),(6,'321','Green','1','20');
-/*!40000 ALTER TABLE `company` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `people`
@@ -76,32 +72,23 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `people`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `people` (
-  `row` int(11) NOT NULL AUTO_INCREMENT,
-  `id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `firstname` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lastname` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `username` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `dt` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `uid` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`row`)
+CREATE TABLE `people`
+(
+    `row`       int(11) NOT NULL AUTO_INCREMENT,
+    `id`        text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `firstname` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `lastname`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `phone`     text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `email`     text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `username`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `dt`        text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `company`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `uid`       text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `password`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `type`      text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `people`
---
-
-LOCK TABLES `people` WRITE;
-/*!40000 ALTER TABLE `people` DISABLE KEYS */;
-INSERT INTO `people` VALUES (1,'0481244859','امیرحسین','محمدی','09014784362','amir@yahoo.com','BlackIQ','May , 24 , 2021','Google','10','amir','user');
-/*!40000 ALTER TABLE `people` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `tiks`
@@ -110,34 +97,40 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `tiks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tiks` (
-  `row` int(11) NOT NULL AUTO_INCREMENT,
-  `userid` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tikid` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `explane` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `uid` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `dt` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `dl` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `total` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `answer` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`row`)
+CREATE TABLE `tiks`
+(
+    `row`     int(11) NOT NULL AUTO_INCREMENT,
+    `userid`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `tikid`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `title`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `explane` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `uid`     text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `dt`      text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `dl`      text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `file`    text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `total`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `answer`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `status`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `tiks`
---
-
-LOCK TABLES `tiks` WRITE;
-/*!40000 ALTER TABLE `tiks` DISABLE KEYS */;
-INSERT INTO `tiks` VALUES (1,'0481244859','4131','Test','TEEESTTTTTTT','Google','10','May 25, 2021 00:02:10','May 25, 2021 2:02:10','file','4:00','Answer','0');
-/*!40000 ALTER TABLE `tiks` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+DROP TABLE IF EXISTS `nartiks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `nartiks`
+(
+    `row`     int(11) NOT NULL AUTO_INCREMENT,
+    `tikid`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `title`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `explane` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `dt`      text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `answer`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`row`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
