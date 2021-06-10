@@ -45,6 +45,9 @@ $_tikresult = mysqli_query($conn, $_tickets);
 $select_company = "SELECT * FROM admin WHERE uid = '$company'";
 $rescompany = mysqli_query($connection, $select_company);
 
+$get_nartik = "SELECT * FROM nartiks WHERE company = '$company'";
+$tikres = mysqli_query($connection, $get_nartik);
+
 if (mysqli_num_rows($rescompany) == 1) {
     $row = mysqli_fetch_assoc($rescompany);
 
