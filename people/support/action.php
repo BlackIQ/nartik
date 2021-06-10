@@ -56,7 +56,7 @@
         if (isset($company_name)) {
             $id = rand(111, 999);
 
-            $add_company = "INSERT INTO company (id, name, time) VALUES ('$id', '$company_name', 2)";
+            $add_company = "INSERT INTO company (id, name, timem, uid) VALUES ('$id', '$company_name', 2, '$company')";
             if (mysqli_query($connection, $add_company)) {
                 ?>
                     <script>
