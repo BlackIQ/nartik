@@ -57,7 +57,7 @@ include('action.php');
                     <?php include('error.php'); ?>
                     <div class="row">
                         <div class="col">
-                            <input type="text" name="eid" class="form-control bg-white border-danger text-danger"
+                            <input type="text" name="username" class="form-control bg-white border-danger text-danger"
                                    placeholder="نام کاربری"
                                    aria-label="نام کاربری">
                             <br>
