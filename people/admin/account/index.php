@@ -1,4 +1,17 @@
+<?php
 
+session_start();
+
+include("../../../pack/config.php");
+
+if ($_SESSION['status'] == true) {
+    $who = $_SESSION['who'];
+    header("Location: http://$serverip/NarTik/people/$who");
+}
+
+include('action.php');
+
+?>
 
 <!doctype html>
 <html lang="fa" dir="rtl">
