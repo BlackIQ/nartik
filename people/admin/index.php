@@ -8,12 +8,10 @@ if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
     if ($who == "admin") {
 
-    }
-    else {
+    } else {
         header("Location: http://$serverip/NarTik/people/$who");
     }
-}
-else {
+} else {
     header("Location: http://$serverip/NarTik/people/admin/account");
 }
 
@@ -50,6 +48,7 @@ $tikres = mysqli_query($conn, $get_nartik);
             resize: none;
             text-align: right;
         }
+
         input {
             text-align: right;
         }
@@ -126,7 +125,9 @@ $tikres = mysqli_query($conn, $get_nartik);
                                     ?>
                                     <tr>
                                         <td class=""><?php echo $_rowtik['dt']; ?></td>
-                                        <td class=""><b><a href="index.php?ticket=<?php echo $_rowtik['tikid']; ?>"><?php echo $_rowtik['title']; ?></a></b></td>
+                                        <td class=""><b><a
+                                                        href="index.php?ticket=<?php echo $_rowtik['tikid']; ?>"><?php echo $_rowtik['title']; ?></a></b>
+                                        </td>
                                         <td class=""><?php echo $com; ?></td>
                                     </tr>
                                     <?php
@@ -135,8 +136,7 @@ $tikres = mysqli_query($conn, $get_nartik);
                                 </tbody>
                             </table>
                             <?php
-                        }
-                        else {
+                        } else {
                             echo "<h2 style='text-align: right;'>تیکت جدیدی یافت نشد</h2>";
                         }
                         ?>
@@ -162,11 +162,46 @@ $tikres = mysqli_query($conn, $get_nartik);
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    افزودن شرکت
+                    <span class="pull-right clickable panel-toggle panel-button-tab-left">
+                            <em class="fa fa-toggle-up"></em>
+                        </span>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <form class="" method="post" action="index.php">
+                            <div class="form-group">
+                                <label for="company">نام شرکت</label>
+                                <input type="text" class="form-control" id="company" name="company"
+                                       aria-describedby="company" placeholder="نام شرکت">
+                                <br>
+                                <label for="eid">کد ورودی</label>
+                                <input type="text" class="form-control" id="eid" name="eid"
+                                       aria-describedby="کد ورودی" placeholder="کد ورودی">
+                                <br>
+                                <label for="eid">رمز ورود</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                       aria-describedby="رمز ورود" placeholder="رمز ورود">
+                            </div>
+                            <button type="submit" name="addcompany" class="btn btn-danger">افزودن</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="">
         <div class="container-fluid">
             <p class="back-link"><a class="text-danger" href="../">NarTik</a></p>
-            <p class="back-link">Created by <a class="text-danger" href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
-            <p class="back-link">Powered By <a class="text-danger" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
+            <p class="back-link">Created by <a class="text-danger" href="https://www.github.com/BlackIQ">Amirhossein
+                    Mohammadi</a></p>
+            <p class="back-link">Powered By <a class="text-danger" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a>
+                <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
             <p class="back-link">
                 <i class="fa fa-lg fa-linkedin-square text-info"></i>
                 &nbsp;
