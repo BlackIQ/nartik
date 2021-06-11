@@ -64,13 +64,13 @@ $tikres = mysqli_query($conn, $get_nartik);
     <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/styles.css" rel="stylesheet">
 </head>
 <body style="text-align: right;">
-<nav class="navbar bg-success navbar-fixed-top" role="navigation">
+<nav class="navbar bg-danger navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="../support">نارتیک</a>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle count-success" href="account/logout.php">
+                    <a class="dropdown-toggle count-danger" href="account/logout.php">
                         <em class="fa fa-sign-out"></em>
                     </a>
                 </li>
@@ -164,9 +164,9 @@ $tikres = mysqli_query($conn, $get_nartik);
     </div>
     <footer class="">
         <div class="container-fluid">
-            <p class="back-link"><a class="text-success" href="../">NarTik</a></p>
-            <p class="back-link">Created by <a class="text-success" href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
-            <p class="back-link">Powered By <a class="text-success" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
+            <p class="back-link"><a class="text-danger" href="../">NarTik</a></p>
+            <p class="back-link">Created by <a class="text-danger" href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
+            <p class="back-link">Powered By <a class="text-danger" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
             <p class="back-link">
                 <i class="fa fa-lg fa-linkedin-square text-info"></i>
                 &nbsp;
