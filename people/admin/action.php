@@ -12,7 +12,25 @@
 
     // Create Connection
     $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
-    
+
+    // Answer The Ticket
+    if (isset($_POST["ans"])) {
+        $answer = mysqli_escape_string($connection, $_POST["answer"]);
+        $tikid = $_SESSION['tikid'];
+
+        if (isset($answer)) {
+            $doanswer = "UPDATE nartiks SET answer = '$answer' WHERE tikid = '$tikid'";
+            if (mysqli_query($connection, $doanswer)) {
+                ?>
+                <script>
+                    window.alert("به این تیکت جواب داده شد");
+                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
+                </script>
+                <?php
+            }
+        }
+    }
+
     // Get ticket data
     if (isset($_GET['ticket'])) {
         $id = $_GET['ticket'];
