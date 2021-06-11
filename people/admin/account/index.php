@@ -69,6 +69,11 @@ include('action.php');
                     <br>
                     <button type="submit" name="login_user" class="btn btn-danger text-white">ورود</button>
                 </form>
+                <br>
+                <hr class="border-danger border">
+                <div>
+                    <p><a class="text-danger" style="text-decoration: none;" href="/NarTik"><i class="fa fa-home"></i> برگشت به خانه</a></p>
+                </div>
             </div>
         </div>
     </div>
