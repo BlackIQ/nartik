@@ -53,9 +53,11 @@ if ($_SESSION['status'] == true) {
                 <h1><i class="fa fa-home"></i></h1>
                 <h1>به نارتیک خوش آمدید</h1>
                 <br>
-                <button onclick="user()" class="btn btn-lg btn-success"><b>ورود کاربر</b></button>
+                <button onclick="user()" class="btn btn-lg btn-primary"><b>ورود کاربر</b></button>
                 &nbsp;
-                <button onclick="support()" class="btn btn-lg btn-danger"><b>ورود پشتیبان</b></button>
+                <button onclick="support()" class="btn btn-lg btn-success"><b>ورود پشتیبان</b></button>
+                &nbsp;
+                <button onclick="admin()" class="btn btn-lg btn-danger"><b>ورود ادمین</b></button>
             </div>
             <div class="col-md-4">
                 <br>
