@@ -56,13 +56,6 @@ if ($_SESSION['status'] == true) {
                 <button onclick="user()" class="btn btn-lg btn-success"><b>ورود کاربر</b></button>
                 &nbsp;
                 <button onclick="support()" class="btn btn-lg btn-danger"><b>ورود پشتیبان</b></button>
-                <br>
-                <br>
-                <button onclick="jobs()" class="btn btn-lg bg-teal" style="color: white;"><b>خدمات ما</b></button>
-                &nbsp;
-                <button><b>درباره ما</b></button>
-                &nbsp;
-                <button><b>ارتباط با ما</b></button>
             </div>
             <div class="col-md-4">
                 <br>
@@ -77,16 +70,8 @@ if ($_SESSION['status'] == true) {
                 window.location.replace("people/support");
             }
             
-            function jobs() {
-                window.location.replace("service");
-            }
-            
-            function about() {
-                window.location.replace("");
-            }
-            
-            function contact() {
-                window.location.replace("");
+            function admin() {
+                window.location.replace("people/admin");
             }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
