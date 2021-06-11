@@ -47,5 +47,34 @@
             array_push($tik, false);
         }
     }
+
+    // Add company
+    if (isset($_POST["addcompany"])) {
+        $company_name = mysqli_escape_string($connection, $_POST["company"]);
+        $eid = mysqli_escape_string($connection, $_POST["eid"]);
+        $password = mysqli_escape_string($connection, $_POST["password"]);
+
+        if (isset($company_name)) {
+            $uid = rand(111, 999);
+
+            $add_company = "INSERT INTO admin (id, password, company, uid) VALUES ('$eid', '$password', '$company_name', '$uid')";
+            if (mysqli_query($connection, $add_company)) {
+                ?>
+                <script>
+                    window.alert("شرکت اضافه شد");
+                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/admin");
+                </script>
+                <?php
+            }
+            else {
+                ?>
+                <script>
+                    window.alert("<?php echo mysqli_error($connection); ?>");
+                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
+                </script>
+                <?php
+            }
+        }
+    }
     
 ?>
