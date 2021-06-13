@@ -84,7 +84,56 @@ $tikres = mysqli_query($conn, $get_nartik);
         </div>
     </div>
     <div class="panel panel-container">
-
+        <div class="row">
+            <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                <div class="panel panel-teal panel-widget border-right">
+                    <div class="row no-padding"><em class="fa fa-xl fa-users color-blue"></em>
+                        <div class="large">
+                            <?php
+                            $guc = "SELECT count(*) as total FROM people WHERE type='user'";
+                            $gucr = mysqli_query($conn, $guc);
+                            $gucrd = mysqli_fetch_assoc($gucr);
+                            echo $gucrd['total'];
+                            ?>
+                        </div>
+                        <br>
+                        <div class="text-muted">تعداد کاربر ها</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                <div class="panel panel-blue panel-widget border-right">
+                    <div class="row no-padding"><em class="fa fa-xl fa-envelope color-orange"></em>
+                        <div class="large">
+                            <?php
+                            $gpc = "SELECT count(*) as total FROM tiks";
+                            $gpcr = mysqli_query($conn, $gpc);
+                            $gpcrd = mysqli_fetch_assoc($gpcr);
+                            echo $gpcrd['total'];
+                            ?>
+                        </div>
+                        <br>
+                        <div class="text-muted">تعداد تیکت ها</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                <div class="panel panel-orange panel-widget border-right">
+                    <div class="row no-padding"><em class="fa fa-xl fa-bank color-teal"></em>
+                        <div class="large">
+                            <?php
+                            $gtc = "SELECT count(*) as total FROM admin";
+                            $gtcr = mysqli_query($conn, $gtc);
+                            $gtcrd = mysqli_fetch_assoc($gtcr);
+                            echo $gtcrd['total'];
+                            ?>
+                        </div>
+                        <br>
+                        <div class="text-muted">تعداد شرکت ها</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-6">
