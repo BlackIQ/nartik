@@ -6,7 +6,11 @@ include("../../../pack/config.php");
 
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
-    header("Location: http://$serverip/NarTik/people/$who");
+    ?>
+    <script>
+        window.location.replace("../../<?php echo $who; ?>")
+    </script>
+    <?php
 }
 
 include('action.php');
@@ -25,7 +29,7 @@ include('action.php');
     <style>
         @font-face {
             font-family: 'nazanin';
-            src: url('http://<?php echo $serverip; ?>/NarTik/pack/fonts/nazanin.TTF');
+            src: url('../../../pack/fonts/nazanin.TTF');
             font-style: normal;
         }
 
@@ -72,7 +76,7 @@ include('action.php');
                 <br>
                 <hr class="border-danger border">
                 <div>
-                    <p><a class="text-danger" style="text-decoration: none;" href="/NarTik"><i class="fa fa-home"></i> برگشت به خانه</a></p>
+                    <p><a class="text-danger" style="text-decoration: none;" href="../../../"><i class="fa fa-home"></i> برگشت به خانه</a></p>
                 </div>
             </div>
         </div>
