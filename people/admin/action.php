@@ -4,11 +4,11 @@
     $tik = array();
 
     // MySQL Data
-    include("../../pack/config.php");
-    $mysqlserver = "localhost";
-    $mysqluser = $dbuser;
-    $mysqlpassword = $dbpassword;
-    $mysqldatabase = $dbname;
+    include("../../../pack/config.php");
+    $mysqlserver = $ip;
+    $mysqluser = "narbon";
+    $mysqlpassword = "narbon";
+    $mysqldatabase = "nartik";
 
     // Create Connection
     $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
@@ -24,7 +24,7 @@
                 ?>
                 <script>
                     window.alert("به این تیکت جواب داده شد");
-                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
+                    window.location.replace(".");
                 </script>
                 <?php
             }
@@ -62,7 +62,7 @@
                 ?>
                 <script>
                     window.alert("شرکت اضافه شد");
-                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/admin");
+                    window.location.replace(".");
                 </script>
                 <?php
             }
@@ -70,7 +70,7 @@
                 ?>
                 <script>
                     window.alert("<?php echo mysqli_error($connection); ?>");
-                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/support");
+                    window.location.replace(".");
                 </script>
                 <?php
             }
