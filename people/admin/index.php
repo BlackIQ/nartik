@@ -6,23 +6,37 @@ include("../../pack/config.php");
 
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
-    if ($who == "admin") {
-
-    } else {
-        header("Location: http://$serverip/NarTik/people/$who");
+    if ($who != "admin") {
+        ?>
+        <script>
+            window.location.replace("../../")
+        </script>
+        <?php
     }
-} else {
-    header("Location: http://$serverip/NarTik/people/admin/account");
+    else {
+        ?>
+        <script>
+            window.location.replace("../<?php echo $who; ?>")
+        </script>
+        <?php
+    }
+}
+else {
+    ?>
+    <script>
+        window.location.replace("../../")
+    </script>
+    <?php
 }
 
 include('action.php');
 
-$server = "localhost";
-$user = $dbuser;
-$passwd = $dbpassword;
-$db = $dbname;
+$mysqlserver = $ip;
+$mysqluser = "narbon";
+$mysqlpassword = "narbon";
+$mysqldatabase = "nartik";
 
-$conn = mysqli_connect($server, $user, $passwd, $db);
+$conn = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
 
 $get_nartik = "SELECT * FROM nartiks WHERE answer = 'ny'";
 $tikres = mysqli_query($conn, $get_nartik);
@@ -36,7 +50,7 @@ $tikres = mysqli_query($conn, $get_nartik);
     <style>
         @font-face {
             font-family: 'nazanin';
-            src: url('http://<?php echo $serverip; ?>/NarTik/pack/fonts/nazanin.TTF');
+            src: url('../../../pack/fonts/nazanin.TTF');
             font-style: normal;
         }
 
@@ -57,10 +71,10 @@ $tikres = mysqli_query($conn, $get_nartik);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>نارتیک - ادمین</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/datepicker3.css" rel="stylesheet">
-    <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/styles.css" rel="stylesheet">
+    <link href="../../pack/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../pack/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../pack/css/datepicker3.css" rel="stylesheet">
+    <link href="../../pack/css/styles.css" rel="stylesheet">
 </head>
 <body style="text-align: right;">
 <nav class="navbar bg-danger navbar-fixed-top" role="navigation">
@@ -263,9 +277,9 @@ $tikres = mysqli_query($conn, $get_nartik);
         </div>
     </footer>
 </div>
-<script src="http://<?php echo $serverip; ?>/NarTik/pack/js/jquery-1.11.1.min.js"></script>
-<script src="http://<?php echo $serverip; ?>/NarTik/pack/js/bootstrap.min.js"></script>
-<script src="http://<?php echo $serverip; ?>/NarTik/pack/js/bootstrap-datepicker.js"></script>
-<script src="http://<?php echo $serverip; ?>/NarTik/pack/js/custom.js"></script>
+<script src="../../pack/js/jquery-1.11.1.min.js"></script>
+<script src="../../pack/js/bootstrap.min.js"></script>
+<script src="../../pack/js/bootstrap-datepicker.js"></script>
+<script src="../../pack/js/custom.js"></script>
 </body>
 </html>
