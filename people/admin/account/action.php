@@ -5,10 +5,10 @@ $errors = array();
 
 // MySQL Data
 include("../../../pack/config.php");
-$mysqlserver = "localhost";
-$mysqluser = $dbuser;
-$mysqlpassword = $dbpassword;
-$mysqldatabase = $dbname;
+$mysqlserver = $ip;
+$mysqluser = "narbon";
+$mysqlpassword = "narbon";
+$mysqldatabase = "nartik";
 
 // Create Connection
 $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
@@ -29,7 +29,7 @@ if (isset($_POST['login_user'])) {
         if ($username == "admin" && $password == "admin") {
             $_SESSION['status'] = true;
             $_SESSION["who"] = "admin";
-            header("location: http://$serverip/NarTik/people/admin");
+            header("location: ../");
         }
         else {
             array_push($errors, "نام کاربری یا رمز");
