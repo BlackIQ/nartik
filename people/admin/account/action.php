@@ -29,7 +29,11 @@ if (isset($_POST['login_user'])) {
         if ($username == "admin" && $password == "admin") {
             $_SESSION['status'] = true;
             $_SESSION["who"] = "admin";
-            header("location: ../");
+            ?>
+            <script>
+                window.location.replace("../")
+            </script>
+            <?php
         }
         else {
             array_push($errors, "نام کاربری یا رمز");
