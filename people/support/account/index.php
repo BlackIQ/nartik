@@ -6,7 +6,11 @@ include("../../../pack/config.php");
 
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
-    header("Location: http://$serverip/NarTik/people/$who");
+    ?>
+    <script>
+        window.location.replace("../../<?php echo $who; ?>")
+    </script>
+    <?php
 }
 
 include('action.php');
@@ -27,7 +31,7 @@ $resc = mysqli_query($connection, $getc);
         <style>
             @font-face {
                 font-family: 'nazanin';
-                src: url('http://<?php echo $serverip; ?>/NarTik/pack/fonts/nazanin.TTF');
+                src: url('../../../pack/fonts/nazanin.TTF');
                 font-style: normal;
             }
             body {
@@ -84,8 +88,8 @@ $resc = mysqli_query($connection, $getc);
                         <br>
                         <hr class="border-success border">
                         <div>
-                            <p><a class="text-success" style="text-decoration: none;" href="/NarTik"><i class="fa fa-home"></i> برگشت به خانه</a></p>
-                            <p><a class="text-success" style="text-decoration: none;"  href="/NarTik/people/user"><i class="fa fa-user"></i> ورود به عنوان کاربر</a></p>
+                            <p><a class="text-success" style="text-decoration: none;" href="../../../"><i class="fa fa-home"></i> برگشت به خانه</a></p>
+                            <p><a class="text-success" style="text-decoration: none;"  href="../../../"><i class="fa fa-user"></i> ورود به عنوان کاربر</a></p>
                         </div>
                     </div>
                 </div>
