@@ -50,7 +50,7 @@ $tikres = mysqli_query($conn, $get_nartik);
     <style>
         @font-face {
             font-family: 'nazanin';
-            src: url('../../../pack/fonts/nazanin.TTF');
+            src: url('../../pack/fonts/nazanin.TTF');
             font-style: normal;
         }
 
