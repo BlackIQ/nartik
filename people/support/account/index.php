@@ -57,7 +57,14 @@ $resc = mysqli_query($connection, $getc);
                         <hr class="border-success border">
                         <br>
                         <form action="index.php" method="post">
-                            <?php include('error.php'); ?>
+                            <?php  if (count($errors) > 0) : ?>
+                                <div class="alert alert-danger border-danger" role="alert">
+                                    <?php foreach ($errors as $error) : ?>
+                                        <h4 style="color: red;"><?php echo $error ?></h4>
+                                    <?php endforeach ?>
+                                </div>
+                                <br>
+                            <?php  endif ?>
                             <div class="row">
                                 <div class="col">
                                     <input type="text" name="eid" class="form-control bg-white border-success text-success" placeholder="کد ورودی"
