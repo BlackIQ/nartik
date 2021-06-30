@@ -163,7 +163,42 @@ $tikres = mysqli_query($connection, $gettiks);
                         <div class="panel-body">
                             <div class="">
                                 <?php
-                                include("alerts/ticket.php");
+
+                                if (count($tik) > 0) {
+                                    if ($tik[0] == false) {
+                                        echo '<h2>تیکت پیدا نشد</h2>';
+                                    }
+                                    else {
+                                        ?>
+                                        <div>
+                                            <b><?php echo $tik[0]['tikid']; ?></b>
+                                            <hr>
+                                            <h3><b><?php echo $tik[0]['title']; ?></b></h3>
+                                            <h3><?php echo $tik[0]['explane']; ?></h3>
+                                            <br>
+                                            <p><?php echo $tik[0]['dt'] . "&nbsp;"; ?>ارسال شده در</p>
+                                            <hr>
+                                            <h3>پاسخ</h3>
+                                            <p>
+                                                <?php
+                                                if ($tik[0]['answer'] == 'ny') {
+                                                    echo 'هنوز به این تیکت پاسخی داده نشده است.<br>لطفا شکیبا باشید.';
+                                                }
+                                                else {
+                                                    echo $tik[0]['answer'];
+                                                }
+                                                ?>
+                                            </p>
+                                            <hr>
+                                            <button class="btn btn-defult"><a style="color: black;" href="index.php">بستن تیکت</a></button>
+                                        </div>
+                                        <?php
+                                    }
+                                }
+                                else {
+                                    echo '<h2>یک تیکت را انتخاب کنید</h2>';
+                                }
+
                                 ?>
                             </div>
                         </div>
@@ -233,7 +268,21 @@ $tikres = mysqli_query($connection, $gettiks);
                         </div>
                         <div class="panel-body">
                             <div>
-                                <?php include("alerts/send.php"); ?>
+                                <?php
+
+                                if (count($send) > 0) {
+                                    ?>
+                                    <div class="alert alert-info text-center" role="alert">
+                                        <?php
+                                        foreach ($send as $error) {
+                                            echo '<h4>' . $error . '</h4>';
+                                        }
+                                        ?>
+                                    </div>
+                                    <?php
+                                }
+
+                                ?>
                             </div>
                             <div class="">
                                 <form class="" method="post" action="index.php">
@@ -308,6 +357,21 @@ $tikres = mysqli_query($connection, $gettiks);
                                     <br>
                                     <div class="row">
                                         <div class="col-md-6">
+                                            <?php
+
+                                            if (count($profile) > 0) {
+                                                ?>
+                                                <div class="alert alert-info text-center" role="alert">
+                                                    <?php
+                                                    foreach ($profile as $error) {
+                                                        echo '<h4>' . $error . '</h4>';
+                                                    }
+                                                    ?>
+                                                </div>
+                                                <?php
+                                            }
+
+                                            ?>
                                             <div class="form-group">
                                                 <form method="post" action="index.php">
                                                     <input type="email" name="mail" class="form-control" placeholder="<?php echo $email;?> ایمیل کنونی شما" required>
