@@ -96,7 +96,7 @@ $resc = mysqli_query($connection, $getc);
                         <hr class="border-success border">
                         <div>
                             <p><a class="text-success" style="text-decoration: none;" href="../../../"><i class="fa fa-home"></i> برگشت به خانه</a></p>
-                            <p><a class="text-success" style="text-decoration: none;"  href="../../../"><i class="fa fa-user"></i> ورود به عنوان کاربر</a></p>
+                            <p><a class="text-success" style="text-decoration: none;"  href="../../user"><i class="fa fa-user"></i> ورود به عنوان کاربر</a></p>
                         </div>
                     </div>
                 </div>
