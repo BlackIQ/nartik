@@ -67,9 +67,9 @@ $tikres = mysqli_query($connection, $gettiks);
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>نارتیک - داشبورد</title>
-        <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/datepicker3.css" rel="stylesheet">
-        <link href="http://<?php echo $serverip; ?>/NarTik/pack/css/styles.css" rel="stylesheet">
+        <link href="../../pack/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../pack/css/datepicker3.css" rel="stylesheet">
+        <link href="../../pack/css/styles.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     </head>
     <body style="text-align: right;">
@@ -439,12 +439,10 @@ $tikres = mysqli_query($connection, $gettiks);
                 </footer>
             </div>
         </div>
-
-        <script src="http://<?php echo $serverip; ?>/NarTik/pack/js/jquery-1.11.1.min.js"></script>
-        <script src="http://<?php echo $serverip; ?>/NarTik/pack/js/bootstrap.min.js"></script>
-        <script src="http://<?php echo $serverip; ?>/NarTik/pack/js/bootstrap-datepicker.js"></script>
-        <script src="http://<?php echo $serverip; ?>/NarTik/pack/js/custom.js"></script>
-
+        <script src="../../pack/js/jquery-1.11.1.min.js"></script>
+        <script src="../../pack/js/bootstrap.min.js"></script>
+        <script src="../../pack/js/bootstrap-datepicker.js"></script>
+        <script src="../../pack/js/custom.js"></script>
     </body>
 </html>
 
