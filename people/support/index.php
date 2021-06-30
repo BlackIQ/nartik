@@ -88,7 +88,6 @@ if (mysqli_num_rows($rescompany) == 1) {
     <title>نارتیک - <?php echo $company_name; ?></title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <link href="../../pack/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../pack/css/font-awesome.min.css" rel="stylesheet">
     <link href="../../pack/css/datepicker3.css" rel="stylesheet">
     <link href="../../pack/css/styles.css" rel="stylesheet">
 </head>
