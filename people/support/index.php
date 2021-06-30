@@ -238,7 +238,37 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <div class="panel-body">
                         <div class="">
                             <?php
-                            include("review/user.php");
+
+                            if (count($prop) > 0) {
+                                if ($prop[0] == false) {
+                                    echo '<h2>شخص پیدا نشد</h2>';
+                                }
+                                else {
+                                    ?>
+                                    <div>
+                                        <h2><?php echo $prop[0]['firstname'] . "&nbsp;" . $prop[0]['lastname'] ?></h2>
+                                        <h5><?php echo $prop[0]['id']; ?> کد ملی</h5>
+                                        <hr>
+                                        <h4><?php echo $prop[0]['company']; ?> شرکت</h4>
+                                        <br>
+                                        <h4><?php echo $prop[0]['phone']; ?> شماره همراه</h4>
+                                        <h4><?php echo $prop[0]['email']; ?> ایمیل</h4>
+                                        <br>
+                                        <p><?php echo $prop[0]['dt']; ?> ارسال شده در</p>
+                                        <br>
+                                        <button class="btn btn-success"><a style="color: white;" href="index.php?confirm=<?php echo $prop[0]['id']; ?>">تایید فرد</a></button>
+                                        &nbsp;
+                                        <button class="btn btn-danger"><a style="color: white;" href="index.php?reject=<?php echo $prop[0]['id']; ?>">رد کردن درخواست</a></button>
+                                        &nbsp;
+                                        <button class="btn btn-defult"><a style="color: black;" href="index.php">خروج</a></button>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            else {
+                                echo '<h2>یک شخص را برای نمایش انتخاب کنید</h2>';
+                            }
+
                             ?>
                         </div>
                     </div>
@@ -302,7 +332,88 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <div class="panel-body">
                         <div class="">
                             <?php
-                            include("review/ticket.php");
+
+                            if (count($tik) > 0) {
+                                if ($tik[0] == false) {
+                                    echo '<h2>تیکت پیدا نشد</h2>';
+                                }
+                                else {
+                                    $person = $tik[0]['userid'];
+                                    $getname = "SELECT * FROM people WHERE id = '$person'";
+                                    if ($result = mysqli_query($connection, $getname)) {
+                                        if (mysqli_num_rows($result) > 0) {
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                $name = $row['firstname'] . " " . $row["lastname"];
+                                            }
+                                        }
+                                    }
+
+                                    ?>
+                                    <div>
+                                        <h2 dir="rtl" id="exp"></h2>
+                                        <hr>
+                                        <h3><b><?php echo $tik[0]['title']; ?></b></h3>
+                                        <h3><?php echo $tik[0]['explane']; ?></h3>
+                                        <br>
+                                        <h4><?php echo $company; ?></h4>
+                                        <h4><?php echo $name; ?></h4>
+                                        <br>
+                                        <p><?php echo $tik[0]['dt']; ?> ارسال شده در</p>
+                                        <p><?php echo $tik[0]['dl']; ?> اتمام در</p>
+                                        <p><?php echo $tik[0]['tikid']; ?>شماره تیکت </p>
+                                        <hr>
+                                        <h4>پاسخ دادن به این تیکت</h4>
+                                        <div>
+                                            <form method="post" action="index.php">
+                                                <div>
+                                                    <input class="form-control" name="answer" type="text" placeholder="جواب">
+                                                    <br>
+                                                    <button name="ans" class="btn btn-success">ارسال جواب</button>
+                                                    &nbsp;
+                                                    <button class="btn btn-danger" type="reset"><span style="color: white;">ریست کردن</span></button>
+                                                    &nbsp;
+                                                    <button class="btn btn-defult"><a style="color: black;" href="index.php">خروج</a></button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <script>
+                                            // Set the date we're counting down to
+                                            var countDownDate = new Date("<?php echo $tik[0]['dl']; ?>").getTime();
+
+                                            // Update the count down every 1 second
+                                            var x = setInterval(function() {
+
+                                                // Get today's date and time
+                                                var now = new Date().getTime();
+
+                                                // Find the distance between now and the count down date
+                                                var distance = countDownDate - now;
+
+                                                // Time calculations for days, hours, minutes and seconds
+                                                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                                // Display the result in the element with id="demo"
+                                                document.getElementById("exp").innerHTML = hours + " ساعت " + minutes + " دقیقه " + seconds + " ثانیه ";
+
+                                                // If the count down is finished, write some text
+                                                if (distance < 0) {
+                                                    clearInterval(x);
+                                                    document.getElementById("exp").innerHTML = "تمام شده است";
+                                                }
+                                            }, 1000);
+                                        </script>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            else {
+                                echo '<h2>یک تیکت را برای نمایش انتخاب کنید</h2>';
+                            }
+
                             ?>
                         </div>
                     </div>
@@ -320,7 +431,44 @@ if (mysqli_num_rows($rescompany) == 1) {
                     </div>
                     <div class="panel-body">
                         <div class="">
-                            <?php include("review/nartik.php"); ?>
+                            <?php
+
+                            if (count($com_tik) > 0) {
+                                if ($com_tik[0] == false) {
+                                    echo '<h2>تیکت پیدا نشد</h2>';
+                                }
+                                else {
+                                    ?>
+                                    <div>
+                                        <b><?php echo $com_tik[0]['tikid']; ?></b>
+                                        <hr>
+                                        <h3><b><?php echo $com_tik[0]['title']; ?></b></h3>
+                                        <h3><?php echo $com_tik[0]['explane']; ?></h3>
+                                        <br>
+                                        <p><?php echo $com_tik[0]['dt'] . "&nbsp;"; ?>ارسال شده در</p>
+                                        <hr>
+                                        <h3>پاسخ</h3>
+                                        <p>
+                                            <?php
+                                            if ($com_tik[0]['answer'] == 'ny') {
+                                                echo 'هنوز به این تیکت پاسخی داده نشده است.<br>لطفا شکیبا باشید.';
+                                            }
+                                            else {
+                                                echo $com_tik[0]['answer'];
+                                            }
+                                            ?>
+                                        </p>
+                                        <hr>
+                                        <button class="btn btn-defult"><a style="color: black;" href="index.php">بستن تیکت</a></button>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            else {
+                                echo '<h2>یک تیکت را انتخاب کنید</h2>';
+                            }
+
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -389,7 +537,19 @@ if (mysqli_num_rows($rescompany) == 1) {
                     </div>
                     <div class="panel-body">
                         <?php
-                            include("review/send.php");
+
+                        if (count($send) > 0) {
+                            ?>
+                            <div class="alert alert-success text-center" role="alert">
+                                <?php
+                                foreach ($send as $error) {
+                                    echo '<h4>' . $error . '</h4>';
+                                }
+                                ?>
+                            </div>
+                            <?php
+                        }
+
                         ?>
                         <div class="">
                             <form class="" method="post" action="index.php">
