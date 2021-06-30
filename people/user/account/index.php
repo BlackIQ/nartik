@@ -156,13 +156,20 @@ $resc = mysqli_query($connection, $getc);
                         <br>
                         <hr class="border-primary border">
                         <div>
-                            <p><a class="text-primary" style="text-decoration: none;" href="/NarTik"><i class="fa fa-home"></i> برگشت به خانه</a></p>
-                            <p><a class="text-primary" style="text-decoration: none;"  href="/NarTik/people/support"><i class="fa fa-support"></i> ورود به عنوان پشتیبان</a></p>
+                            <p><a class="text-primary" style="text-decoration: none;" href="../../../"><i class="fa fa-home"></i> برگشت به خانه</a></p>
+                            <p><a class="text-primary" style="text-decoration: none;"  href="../../support"><i class="fa fa-support"></i> ورود به عنوان پشتیبان</a></p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <?php include('error.php'); ?>
+                        <?php  if (count($errors) > 0) : ?>
+                            <div class="alert alert-danger border-danger" role="alert">
+                                <?php foreach ($errors as $error) : ?>
+                                    <h4 style="color: red;"><?php echo $error ?></h4>
+                                <?php endforeach ?>
+                            </div>
+                            <br>
+                        <?php  endif ?>
                     </div>
                 </div>
             </div>
