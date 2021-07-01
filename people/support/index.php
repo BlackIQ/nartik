@@ -38,7 +38,7 @@ $mysqluser = "narbon";
 $mysqlpassword = "narbon";
 $mysqldatabase = "nartik";
 
-$conn = mysqli_connect($server, $user, $passwd, $db);
+$conn = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
 
 $_pending = "SELECT * FROM people WHERE type='pending' AND uid = '$company' ORDER BY row DESC";
 $_penresult = mysqli_query($conn, $_pending);
@@ -47,10 +47,10 @@ $_tickets = "SELECT * FROM tiks WHERE answer = 'ny' AND uid = '$company' ORDER B
 $_tikresult = mysqli_query($conn, $_tickets);
 
 $select_company = "SELECT * FROM admin WHERE uid = '$company'";
-$rescompany = mysqli_query($connection, $select_company);
+$rescompany = mysqli_query($conn, $select_company);
 
 $get_nartik = "SELECT * FROM nartiks WHERE company = '$company'";
-$tikres = mysqli_query($connection, $get_nartik);
+$tikres = mysqli_query($conn, $get_nartik);
 
 if (mysqli_num_rows($rescompany) == 1) {
     $row = mysqli_fetch_assoc($rescompany);
