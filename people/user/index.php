@@ -6,15 +6,20 @@ include("../../pack/config.php");
 
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
-    if ($who == "user") {
-        
-    }
-    else {
-        header("Location: http://$serverip/NarTik/people/$who");
+    if ($who != "user") {
+        ?>
+        <script>
+            window.location.replace("../<?php echo $who; ?>")
+        </script>
+        <?php
     }
 }
 else {
-    header("Location: http://$serverip/NarTik/people/user/account");
+    ?>
+    <script>
+        window.location.replace("account.php")
+    </script>
+    <?php
 }
 
 include("action.php");
