@@ -13,7 +13,7 @@ if ($_SESSION['status'] == true) {
 
 $errors = array();
 
-include("../../../pack/config.php");
+include("../../pack/config.php");
 $mysqlserver = $ip;
 $mysqluser = "narbon";
 $mysqlpassword = "narbon";
@@ -57,7 +57,7 @@ if (isset($_POST['login_user'])) {
             $_SESSION['company'] = $company_name;
             ?>
             <script>
-                window.location.replace("../")
+                window.location.replace("index.php")
             </script>
             <?php
         }
@@ -73,7 +73,7 @@ if (isset($_GET['logout'])) {
         session_destroy();
         ?>
         <script>
-            window.location.replace("../../../")
+            window.location.replace("../../")
         </script>
         <?php
     }

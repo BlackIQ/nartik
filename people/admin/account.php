@@ -13,7 +13,7 @@ if ($_SESSION['status'] == true) {
 
 $errors = array();
 
-include("../../../pack/config.php");
+include("../../pack/config.php");
 $mysqlserver = $ip;
 $mysqluser = "narbon";
 $mysqlpassword = "narbon";
@@ -38,7 +38,7 @@ if (isset($_POST['login_user'])) {
             $_SESSION["who"] = "admin";
             ?>
             <script>
-                window.location.replace("../")
+                window.location.replace("index.php")
             </script>
             <?php
         }
@@ -54,7 +54,7 @@ if (isset($_GET['logout'])) {
         session_destroy();
         ?>
         <script>
-            window.location.replace("../../../")
+            window.location.replace("../../")
         </script>
         <?php
     }
@@ -128,7 +128,7 @@ if (isset($_GET['logout'])) {
                 <br>
                 <hr class="border-danger border">
                 <div>
-                    <p><a class="text-danger" style="text-decoration: none;" href="../../../"><i class="fa fa-home"></i> برگشت به خانه</a></p>
+                    <p><a class="text-danger" style="text-decoration: none;" href="../../><i class="fa fa-home"></i> برگشت به خانه</a></p>
                 </div>
             </div>
         </div>
