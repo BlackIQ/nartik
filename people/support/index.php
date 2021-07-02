@@ -9,13 +9,6 @@ if ($_SESSION['status'] == true) {
     if ($who != "support") {
         ?>
         <script>
-            window.location.replace("../../")
-        </script>
-        <?php
-    }
-    else {
-        ?>
-        <script>
             window.location.replace("../<?php echo $who; ?>")
         </script>
         <?php
@@ -24,7 +17,7 @@ if ($_SESSION['status'] == true) {
 else {
     ?>
     <script>
-        window.location.replace("../../")
+        window.location.replace("account.php")
     </script>
     <?php
 }
