@@ -95,7 +95,7 @@ $resc = mysqli_query($connection, $getc);
         <style>
             @font-face {
                 font-family: 'nazanin';
-                src: url('../../../pack/fonts/nazanin.TTF');
+                src: url('../../pack/fonts/nazanin.TTF');
                 font-style: normal;
             }
             body {
