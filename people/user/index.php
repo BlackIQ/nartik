@@ -467,7 +467,7 @@ $tikres = mysqli_query($connection, $gettiks);
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"><span style="color: black;">بستن</span></button>
-                <button type="button" class="btn btn-danger"><a class="text-white" href="account/logout.php"><span style="color: white;">حروج</span></a></button>
+                <button type="button" class="btn btn-danger"><a class="text-white" href="../../pack/logout.php"><span style="color: white;">حروج</span></a></button>
             </div>
         </div>
     </div>
