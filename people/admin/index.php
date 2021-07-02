@@ -9,13 +9,6 @@ if ($_SESSION['status'] == true) {
     if ($who != "admin") {
         ?>
         <script>
-            window.location.replace("../../")
-        </script>
-        <?php
-    }
-    else {
-        ?>
-        <script>
             window.location.replace("../<?php echo $who; ?>")
         </script>
         <?php
@@ -24,7 +17,7 @@ if ($_SESSION['status'] == true) {
 else {
     ?>
     <script>
-        window.location.replace("../../")
+        window.location.replace("account.php")
     </script>
     <?php
 }
@@ -82,7 +75,7 @@ $tikres = mysqli_query($conn, $get_nartik);
             <a class="navbar-brand" href="../support">نارتیک</a>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle count-danger" href="account/logout.php">
+                    <a class="dropdown-toggle count-danger" href="../../pack/logout.php">
                         <em class="fa fa-sign-out"></em>
                     </a>
                 </li>
