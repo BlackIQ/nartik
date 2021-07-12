@@ -1,8 +1,8 @@
 # nartik
 
-- **Nar**bon **Tick**et web application, written in **PHP**.
+**User** and **Ticket** manager for companies.
 
-All by Neotrinost. 
+Working under **Neotrinost LLC** 2021 &copy;
 
 TODO
 
