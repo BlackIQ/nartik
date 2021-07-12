@@ -10,3 +10,4 @@ TODO
 - [ ] Add about us => Started : Jul, 11, 202 | Ended : XYZ
 - [ ] Add contact us => Started : Jul, 12, 202 | Ended : XYZ
 - [ ] Add how to buy => Started : Jul, 12, 202 | Ended : XYZ
+- [ ] Add logout in pack => Started : Jul, 13, 202 | Ended : XYZ
