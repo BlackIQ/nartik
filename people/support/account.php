@@ -67,18 +67,6 @@ if (isset($_POST['login_user'])) {
     }
 }
 
-if (isset($_GET['logout'])) {
-    $logout = $_GET['logout'];
-    if ($logout == true) {
-        session_destroy();
-        ?>
-        <script>
-            window.location.replace("../../")
-        </script>
-        <?php
-    }
-}
-
 $getc = "SELECT * FROM admin";
 $resc = mysqli_query($connection, $getc);
 
