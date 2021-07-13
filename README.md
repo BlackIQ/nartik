@@ -15,4 +15,4 @@ Working under **Neotrinost LLC** 2021 &copy;
 | 5 | &check; | Add logout in pack dir | Jul, 12, 2021 | Jul, 13, 2021 |
 | 6 | &check; | Remove add logout in `account.php` | Jul, 12, 2021 | Jul, 13, 2021 |
 | 7 | &check; | Rewrite all user Back-End | Jul, 13, 2021 | Jul, 13, 2021 |
-| 8 | &times; | Fix mysql connection | Jul, 13, 2021 | Jul, 13, 2021 |
+| 8 | &check; | Fix mysql connection | Jul, 13, 2021 | Jul, 13, 2021 |
