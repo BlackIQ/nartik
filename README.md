@@ -8,7 +8,7 @@ Working under **Neotrinost LLC** 2021 &copy;
 
 | row | Status | Description | Started | Ended |
 | :---: | :---: | :---: | :---: | :---: |
-| 1 | &times; | Put actions for all | Jul, 10, 2021 | |
+| 1 | &check; | Put actions for all | Jul, 10, 2021 | Jul, 13, 2021 |
 | 2 | &times; | Add about us | Jul, 11, 2021 | |
 | 3 | &times; | Add contact us | Jul, 11, 2021 | |
 | 4 | &times; | Add how to buy | Jul, 11, 2021 | |
