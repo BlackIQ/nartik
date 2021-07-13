@@ -8,10 +8,10 @@ $profile = array();
 
 // MySQL Data
 include("../../pack/config.php");
-$mysqlserver = "localhost";
-$mysqluser = $dbuser;
-$mysqlpassword = $dbpassword;
-$mysqldatabase = $dbname;
+$mysqlserver = $ip;
+$mysqluser = "narbon";
+$mysqlpassword = "narbon";
+$mysqldatabase = "nartik";
 
 // Create Connection
 $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
