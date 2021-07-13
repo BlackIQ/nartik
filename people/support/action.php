@@ -11,7 +11,7 @@ $errors = array();
 $company = $_SESSION["uid"];
 
 // MySQL Data
-include("../../../pack/config.php");
+include("../../pack/config.php");
 $mysqlserver = $ip;
 $mysqluser = "narbon";
 $mysqlpassword = "narbon";
