@@ -2,6 +2,8 @@
 
 session_start();
 
+include("action.php");
+
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
     header("Location: http://$serverip/NarTik/people/$who");
