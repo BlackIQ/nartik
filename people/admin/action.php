@@ -5,7 +5,7 @@ $tik = array();
 $errors = array();
 
 // MySQL Data
-include("../../../pack/config.php");
+include("../../pack/config.php");
 $mysqlserver = $ip;
 $mysqluser = "narbon";
 $mysqlpassword = "narbon";
