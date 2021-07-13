@@ -4,11 +4,13 @@
 
 Working under **Neotrinost LLC** 2021 &copy;
 
-TODO
+**TODO**
 
-- [ ] Put actions for all => Started : Jul, 10, 2021 | Ended : XYZ
-- [ ] Add about us => Started : Jul, 11, 2021 | Ended : XYZ
-- [ ] Add contact us => Started : Jul, 12, 2021 | Ended : XYZ
-- [ ] Add how to buy => Started : Jul, 12, 2021 | Ended : XYZ
-- [x] Add logout in pack => Started : Jul, 13, 2021 | Ended : Jul, 13, 2021
-- [ ] Remove logout in account.php => Started : Jul, 13, 2021 | Ended : XYZ
+| row | Status | Description | Started | Ended |
+| :---: | :---: | :---: | :---: | :---: |
+| 1 | &times; | Put actions for all | Jul, 10, 2021 | |
+| 2 | &times; | Add about us | Jul, 11, 2021 | |
+| 3 | &times; | Add contact us | Jul, 11, 2021 | |
+| 4 | &times; | Add how to buy | Jul, 11, 2021 | |
+| 5 | &check; | Add logout in pack dir | Jul, 12, 2021 | Jul, 13, 2021 |
+| 6 | &check; | Remove add logout in `account.php` | Jul, 12, 2021 | Jul, 13, 2021 |
