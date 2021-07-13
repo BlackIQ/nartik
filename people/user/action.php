@@ -3,6 +3,7 @@ session_start();
 
 $tik = array();
 $send = array();
+$errors = array();
 $profile = array();
 
 // MySQL Data
