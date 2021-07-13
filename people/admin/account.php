@@ -2,6 +2,8 @@
 
 session_start();
 
+include("action.php");
+
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
     ?>
@@ -9,43 +11,6 @@ if ($_SESSION['status'] == true) {
         window.location.replace("../../<?php echo $who; ?>")
     </script>
     <?php
-}
-
-$errors = array();
-
-include("../../pack/config.php");
-$mysqlserver = $ip;
-$mysqluser = "narbon";
-$mysqlpassword = "narbon";
-$mysqldatabase = "nartik";
-
-$connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
-
-if (isset($_POST['login_user'])) {
-    $username = mysqli_real_escape_string($connection, $_POST['username']);
-    $password = mysqli_real_escape_string($connection, $_POST['password']);
-
-    if (empty($username)) {
-        array_push($errors, "نام کاربری الزامیست");
-    }
-    if (empty($password)) {
-        array_push($errors, "رمز الزامیست");
-    }
-
-    if (count($errors) == 0) {
-        if ($username == "admin" && $password == "admin") {
-            $_SESSION['status'] = true;
-            $_SESSION["who"] = "admin";
-            ?>
-            <script>
-                window.location.replace("index.php")
-            </script>
-            <?php
-        }
-        else {
-            array_push($errors, "نام کاربری یا رمز");
-        }
-    }
 }
 
 ?>
