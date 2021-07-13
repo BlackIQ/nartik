@@ -2,6 +2,8 @@
 
 session_start();
 
+include("action.php");
+
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
     ?>
@@ -9,62 +11,6 @@ if ($_SESSION['status'] == true) {
         window.location.replace("../../<?php echo $who; ?>")
     </script>
     <?php
-}
-
-$errors = array();
-
-include("../../pack/config.php");
-$mysqlserver = $ip;
-$mysqluser = "narbon";
-$mysqlpassword = "narbon";
-$mysqldatabase = "nartik";
-
-$connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
-
-if (isset($_POST['login_user'])) {
-    $eid = mysqli_real_escape_string($connection, $_POST['eid']);
-    $password = mysqli_real_escape_string($connection, $_POST['password']);
-    $company = mysqli_real_escape_string($connection, $_POST['company']);
-
-    if (empty($eid)) {
-        array_push($errors, "کد ورود الزامیست");
-    }
-    if (empty($password)) {
-        array_push($errors, "رمز الزامیست");
-    }
-    if (empty($company)) {
-        array_push($errors, "شرکت الزامیست");
-    }
-
-    if (count($errors) == 0) {
-        $select_company = "SELECT * FROM admin WHERE uid = '$company'";
-        $rescompany = mysqli_query($connection, $select_company);
-
-        if (mysqli_num_rows($rescompany) == 1) {
-            $row = mysqli_fetch_assoc($rescompany);
-
-            $company_name = $row["company"];
-        }
-
-        $query = "SELECT * FROM admin WHERE id = '$eid' AND password = '$password' AND company = '$company_name'";
-        $results = mysqli_query($connection, $query);
-
-        if (mysqli_num_rows($results) == 1) {
-            $_SESSION['status'] = true;
-            $_SESSION['eid'] = $eid;
-            $_SESSION["who"] = "support";
-            $_SESSION["uid"] = $company;
-            $_SESSION['company'] = $company_name;
-            ?>
-            <script>
-                window.location.replace("index.php")
-            </script>
-            <?php
-        }
-        else {
-            array_push($errors, "ایمیل با رمز اشتباه است");
-        }
-    }
 }
 
 $getc = "SELECT * FROM admin";
