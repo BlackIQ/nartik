@@ -26,18 +26,17 @@ if ($_SESSION['status'] == true) {
     <title>Login</title>
     <style>
         @font-face {
-            font-family: 'nazanin';
-            src: url('../../pack/fonts/nazanin.TTF');
-            font-style: normal;
+            font-family: vazir;
+            src: url("../../pack/fonts/vazir/Vazir.ttf");
         }
 
         body {
             padding: 56px;
-            font-family: 'nazanin';
         }
 
         * {
-            color: red;
+            font-family: vazir, serif;
+            color: bred;
         }
 
         .login {

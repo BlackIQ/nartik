@@ -28,15 +28,16 @@ $resc = mysqli_query($connection, $getc);
         <title>Login</title>
         <style>
             @font-face {
-                font-family: 'nazanin';
-                src: url('../../pack/fonts/nazanin.TTF');
-                font-style: normal;
+                font-family: vazir;
+                src: url("../../pack/fonts/vazir/Vazir.ttf");
             }
+
             body {
                 padding: 56px;
-                font-family: 'nazanin';
             }
+
             * {
+                font-family: vazir, serif;
                 color: darkgreen;
             }
             .login {
