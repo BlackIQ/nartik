@@ -210,7 +210,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                                 <?php
                             }
                             else {
-                                echo "<h2 style='text-align: right;'>هنوز کسی در صف تایید نیست</h2>";
+                                echo "<p style='text-align: right;'>شخصی در صف تایید نیست</p>";
                             }
                         ?>
                     </div>
