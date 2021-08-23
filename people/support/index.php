@@ -205,7 +205,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                                         ?>
                                         <tr>
                                             <td class=""><?php echo $_rowser['dt']; ?></td>
-                                            <td class=""><a href="index.php?user=<?php echo $_rowser['id']; ?>"><?php echo $_rowser['firstname'] . " " . $_rowser['lastname']; ?></a></td>
+                                            <td class=""><a class="link" href="index.php?user=<?php echo $_rowser['id']; ?>"><?php echo $_rowser['firstname'] . " " . $_rowser['lastname']; ?></a></td>
                                             <td class=""><?php echo $_rowser['company']; ?></td>
                                         </tr>
                                         <?php
@@ -247,11 +247,11 @@ $tikres = mysqli_query($connection, $get_nartik);
                                     <br>
                                     <p><?php echo $prop[0]['dt']; ?> ارسال شده در</p>
                                     <br>
-                                    <button class="btn btn-success"><a style="color: white;" href="index.php?confirm=<?php echo $prop[0]['id']; ?>">تایید فرد</a></button>
+                                    <button class="btn btn-success"><a class="link" style="color: white;" href="index.php?confirm=<?php echo $prop[0]['id']; ?>">تایید فرد</a></button>
                                     &nbsp;
-                                    <button class="btn btn-danger"><a style="color: white;" href="index.php?reject=<?php echo $prop[0]['id']; ?>">رد کردن درخواست</a></button>
+                                    <button class="btn btn-danger"><a class="link" style="color: white;" href="index.php?reject=<?php echo $prop[0]['id']; ?>">رد کردن درخواست</a></button>
                                     &nbsp;
-                                    <button class="btn btn-defult"><a style="color: black;" href="index.php">خروج</a></button>
+                                    <button class="btn btn-secondary"><a class="link" style="color: white;" href="index.php">خروج</a></button>
                                 </div>
                                 <?php
                             }
@@ -278,7 +278,6 @@ $tikres = mysqli_query($connection, $get_nartik);
                                 <table class="table table-bordered table-hover tbl">
                                     <thead>
                                     <tr>
-                                        <td class=""><b>انقضا</b></td>
                                         <td class=""><b>موضوع</b></td>
                                         <td class=""><b>شرکت</b></td>
                                     </tr>
@@ -288,8 +287,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                                     while ($_rowtik = mysqli_fetch_assoc($_tikresult)) {
                                         ?>
                                         <tr>
-                                            <td class=""><?php echo $_rowtik['dl']; ?></td>
-                                            <td class=""><b><a href="index.php?ticket=<?php echo $_rowtik['tikid']; ?>"><?php echo $_rowtik['title']; ?></a></b></td>
+                                            <td class=""><b><a class="link" href="index.php?ticket=<?php echo $_rowtik['tikid']; ?>"><?php echo $_rowtik['title']; ?></a></b></td>
                                             <td class=""><?php echo $_rowtik['company']; ?></td>
                                         </tr>
                                         <?php
@@ -331,19 +329,18 @@ $tikres = mysqli_query($connection, $get_nartik);
 
                                 ?>
                                 <div>
-                                    <h2 dir="rtl" id="exp"></h2>
-                                    <hr>
-                                    <h3><b><?php echo $tik[0]['title']; ?></b></h3>
-                                    <h3><?php echo $tik[0]['explane']; ?></h3>
+                                    <h3><?php echo $tik[0]['title']; ?></h3>
+                                    <p>
+                                        <?php echo $tik[0]['explane']; ?>
+                                    </p>
                                     <br>
-                                    <h4><?php echo $company; ?></h4>
-                                    <h4><?php echo $name; ?></h4>
+                                    <p><?php echo $name; ?></p>
                                     <br>
                                     <p><?php echo $tik[0]['dt']; ?> ارسال شده در</p>
-                                    <p><?php echo $tik[0]['dl']; ?> اتمام در</p>
-                                    <p><?php echo $tik[0]['tikid']; ?>شماره تیکت </p>
+                                    <p><?php echo $tik[0]['tikid']; ?> شماره تیکت</p>
                                     <hr>
                                     <h4>پاسخ دادن به این تیکت</h4>
+                                    <br>
                                     <div>
                                         <form method="post" action="index.php">
                                             <div>
@@ -353,7 +350,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                                                 &nbsp;
                                                 <button class="btn btn-danger" type="reset"><span style="color: white;">ریست کردن</span></button>
                                                 &nbsp;
-                                                <button class="btn btn-defult"><a style="color: black;" href="index.php">خروج</a></button>
+                                                <button class="btn btn-secondary"><a class="link" style="color: white;" href="index.php">خروج</a></button>
                                             </div>
                                         </form>
                                     </div>
