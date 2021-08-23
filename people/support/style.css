@@ -21,26 +21,26 @@
     }
 
     .dialog .head {
-        color: blue;
+        color: green;
     }
 
     .dialog hr {
-        border: solid 1px blue;
+        border: solid 1px green;
     }
 
     .dialog .inp {
-        border-color: blue;
+        border-color: green;
     }
 
     .dialog .tbl {
-        border-color: blue;
+        border-color: green;
     }
 
     .one {
         background: white;
         padding: 2%;
         text-align: center;
-        color: blue;
+        color: green;
     }
 
 }
@@ -59,7 +59,7 @@
 
     input[type] {
         text-align: right;
-        color: aqua;
+        color: forestgreen;
         background: #333;
     }
 
@@ -71,19 +71,19 @@
     }
 
     .dialog .head {
-        color: aqua;
+        color: forestgreen;
     }
 
     .dialog hr {
-        border: solid 1px aqua;
+        border: solid 1px forestgreen;
     }
 
     .dialog .inp {
-        border-color: aqua;
+        border-color: forestgreen;
     }
 
     .dialog .tbl {
-        border-color: aqua;
+        border-color: forestgreen;
         color: white;
     }
 
@@ -91,7 +91,7 @@
         background: #333;
         padding: 2%;
         text-align: center;
-        color: aqua;
+        color: forestgreen;
     }
 
 }
