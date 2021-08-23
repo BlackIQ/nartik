@@ -76,26 +76,11 @@ $resc = mysqli_query($connection, $getc);
                             ?>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="eid" class="form-control bg-white border-success text-success" placeholder="کد ورودی"
-                                           aria-label="کد ورود">
+                                    <input type="text" name="username" class="form-control bg-white border-success text-success" placeholder="نام کاربری"
+                                           aria-label="نام کاربری">
                                     <br>
                                     <input type="password" name="password" class="form-control bg-white border-success text-success"
-                                           placeholder="رمز حساب" aria-label="رمز جساب">
-                                </div>
-                                <div>
-                                    <br>
-                                    <select name="company" class="form-control bg-white border-success text-success">
-                                        <option selected>انتخاب شرکت</option>
-                                        <?php
-                                            if (mysqli_num_rows($resc) > 0) {
-                                                while ($row = mysqli_fetch_assoc($resc)) {
-                                                    ?>
-                                                        <option class="text-success" value="<?php echo $row["uid"]; ?>"><?php echo $row["company"]; ?></option>
-                                                    <?php
-                                                }
-                                            }
-                                        ?>
-                                    </select>
+                                           placeholder="رمز ورود" aria-label="رمز ورود">
                                 </div>
                             </div>
                             <br>
