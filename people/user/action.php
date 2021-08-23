@@ -123,17 +123,16 @@ if (isset($_POST['login_user'])) {
             $_SESSION['status'] = true;
             $_SESSION['who'] = "user";
             $_SESSION['id'] = $id;
-            $_SESSION['directory'] = 'nartik';
             ?>
             <script>
-                window.location.replace("../")
+                window.location.replace(".")
             </script>
             <?php
         } else {
             ?>
             <script>
                 window.alert("کد ملی یا رمز عبور اشتباه است");
-                window.location.replace("../account");
+                window.location.replace(".");
             </script>
             <?php
         }
