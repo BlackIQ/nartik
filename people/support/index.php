@@ -122,7 +122,7 @@ function get_company($company_id, $conection) {
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body style="text-align: right;">
-    <nav class="mnav navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="mnav navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="../../">نارتیک</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -134,12 +134,11 @@ function get_company($company_id, $conection) {
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 </ul>
                 <div class="navbar-nav">
-                    <a class="nav-link active" href="../../pack/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب کاربری</a>
+                    <a class="nav-link active" href="../logout.php"><i class="fa fa-sign-out"></i> خروج از حساب کاربری</a>
                 </div>
             </div>
         </div>
     </nav>
-    <br>
     <div class="main">
         <div class="bar">
             <div class="row">
