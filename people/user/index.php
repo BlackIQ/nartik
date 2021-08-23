@@ -132,12 +132,11 @@ $tikres = mysqli_query($connection, $gettiks);
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>
             <div class="navbar-nav">
-                <a class="nav-link active" href="../../pack/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب کاربری</a>
+                <a class="nav-link active" href="../logout.php"><i class="fa fa-sign-out"></i> خروج از حساب کاربری</a>
             </div>
         </div>
     </div>
 </nav>
-<br>
 <div class="main">
     <div class="bar">
         <div class="row">
@@ -340,7 +339,7 @@ $tikres = mysqli_query($connection, $gettiks);
                     <hr>
                     <div>
                         <p>
-                            <a class="text-danger link" data-toggle="modal" data-target=".bd-example-modal-sm">
+                            <a class="text-danger link" href="../logout.php">
                                 خروج از حساب کاربری
                                 <i class="fa fa-sign-out"></i>
                             </a>
