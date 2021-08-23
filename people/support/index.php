@@ -138,7 +138,7 @@ function get_company($company_id, $conection) {
                         <?php
                             if (mysqli_num_rows($_penresult) > 0) {
                                 ?>
-                                <table class="table table-bordered table-hover inp">
+                                <table class="table table-bordered tbl">
                                     <thead>
                                     <tr>
                                         <td class=""><b>درخواست</b></td>
@@ -222,7 +222,7 @@ function get_company($company_id, $conection) {
                         <?php
                             if (mysqli_num_rows($_tikresult) > 0) {
                                 ?>
-                                <table class="table table-bordered table-hover tbl">
+                                <table class="table table-bordered tbl">
                                     <thead>
                                     <tr>
                                         <td class=""><b>موضوع</b></td>
@@ -341,7 +341,7 @@ function get_company($company_id, $conection) {
 
                         if (mysqli_num_rows($res_all) > 0) {
                             ?>
-                            <table class="table table-bordered table-hover tbl">
+                            <table class="table table-bordered tbl">
                                 <thead>
                                 <tr>
                                     <td class=""><b>تیکت ها</b></td>
