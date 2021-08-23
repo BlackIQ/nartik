@@ -13,8 +13,7 @@ if ($_SESSION['status'] == true) {
         </script>
         <?php
     }
-}
-else {
+} else {
     ?>
     <script>
         window.location.replace("account.php")
@@ -49,238 +48,276 @@ $tikres = mysqli_query($connection, $gettiks);
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            @font-face {
-                font-family: 'nazanin';
-                src: url('http://<?php echo $serverip; ?>/NarTik/pack/fonts/nazanin.TTF');
-                font-style: normal;
-            }
+<head>
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url("../../pack/fonts/vazir/Vazir.ttf");
+            font-style: normal;
+        }
 
-            * {
-                font-family: "nazanin";
-            }
+        * {
+            font-size: 13px;
+            font-family: vazir, serif;
+        }
 
-            textarea {
-                resize: none;
-                text-align: right;
-            }
-            input {
-                text-align: right;
-            }
-        </style>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>نارتیک - داشبورد</title>
-        <link href="../../pack/css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../pack/css/datepicker3.css" rel="stylesheet">
-        <link href="../../pack/css/styles.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    </head>
-    <body style="text-align: right;">
-        <nav class="navbar bg-info navbar-fixed-top" role="navigation">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href=".">نارتیک</a>
-                    <ul class="nav navbar-top-links navbar-right">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="modal" data-target=".bd-example-modal-sm">
-                                <em class="fa fa-sign-out"></em>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        .main {
+            padding: 56px;
+            background: #f5f5f5;
+            color: blue;
+        }
+
+        .bar {
+            padding: 1%;
+        }
+
+        .mnav {
+            color: blue;
+        }
+
+        textarea {
+            resize: none;
+            text-align: right;
+        }
+
+        input {
+            text-align: right;
+        }
+
+        .dialog {
+            color: blue;
+            padding: 3%;
+            background: #f2f2f2;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 5px;
+        }
+
+        .one {
+            border: solid 1px #ddd;
+            padding: 2%;
+            text-align: center;
+            background: #eee;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>نارتیک - داشبورد</title>
+    <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body style="text-align: right;">
+<nav class="mnav navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../../">نارتیک</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <div class="navbar-nav">
+                <a class="nav-link active" href="../../pack/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب کاربری</a>
             </div>
-        </nav>
-        <div class="col-sm-offset-0 col-lg-offset-0 col-sm-12 col-lg-12 main">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">داشبورد</h1>
-                </div>
-            </div>
-            <div class="panel panel-container">
-                <div class="row">
-                    <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-                        <div class="panel panel-teal panel-widget border-right">
-                            <div class="row no-padding"><em class="fa fa-xl fa-bank color-blue"></em>
-                                <div class="large"><?php echo $company; ?></div>
-                                <br>
-                                <div class="text-muted">شرکت</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-                        <div class="panel panel-blue panel-widget border-right">
-                            <div class="row no-padding"><em class="fa fa-xl fa-envelope color-orange"></em>
-                                <div class="large">
-                                    <?php
-                                        $gtc = "SELECT count(*) as total FROM tiks WHERE userid = '$userid' AND uid = '$uid'";
-                                        $gtcr = mysqli_query($connection, $gtc);
-                                        $gtcrd = mysqli_fetch_assoc($gtcr);
-                                        echo $gtcrd['total'];
-                                    ?>
-                                </div>
-                                <br>
-                                <div class="text-muted">تیکت های ارسال شده</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-                        <div class="panel panel-red panel-widget ">
-                            <div class="row no-padding"><em class="fa fa-xl fa-times color-red"></em>
-                                <div class="large">
-                                    <?php
-                                        $gtnc = "SELECT count(*) as total FROM tiks WHERE userid='$userid' AND answer='ny' AND uid = '$uid'";
-                                        $gtncr = mysqli_query($connection, $gtnc);
-                                        $gtncrd = mysqli_fetch_assoc($gtncr);
-                                        echo $gtncrd['total'];
-                                    ?>
-                                </div>
-                                <br>
-                                <div class="text-muted">تیکت های جواب گرفته نشده</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-                        <div class="panel panel-orange panel-widget border-right">
-                            <div class="row no-padding"><em class="fa fa-xl fa-check text-success"></em>
-                                <div class="large">
-                                    <?php
-                                        echo $gtcrd['total'] - $gtncrd['total'];
-                                    ?>
-                                </div>
-                                <br>
-                                <div class="text-muted">تیکت های جواب گرفته</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4" id="tikreview">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            نمایش تیکت
-                            <span class="pull-right clickable panel-toggle panel-button-tab-left">
-                                <em class="fa fa-toggle-up"></em>
-                            </span>
-                        </div>
-                        <div class="panel-body">
-                            <div class="">
-                                <?php
+        </div>
+    </div>
+</nav>
+<br>
+<div class="main">
+    <div class="bar">
 
-                                if (count($tik) > 0) {
-                                    if ($tik[0] == false) {
-                                        echo '<h2>تیکت پیدا نشد</h2>';
-                                    }
-                                    else {
-                                        ?>
-                                        <div>
-                                            <b><?php echo $tik[0]['tikid']; ?></b>
-                                            <hr>
-                                            <h3><b><?php echo $tik[0]['title']; ?></b></h3>
-                                            <h3><?php echo $tik[0]['explane']; ?></h3>
-                                            <br>
-                                            <p><?php echo $tik[0]['dt'] . "&nbsp;"; ?>ارسال شده در</p>
-                                            <hr>
-                                            <h3>پاسخ</h3>
-                                            <p>
-                                                <?php
-                                                if ($tik[0]['answer'] == 'ny') {
-                                                    echo 'هنوز به این تیکت پاسخی داده نشده است.<br>لطفا شکیبا باشید.';
-                                                }
-                                                else {
-                                                    echo $tik[0]['answer'];
-                                                }
-                                                ?>
-                                            </p>
-                                            <hr>
-                                            <button class="btn btn-defult"><a style="color: black;" href="index.php">بستن تیکت</a></button>
-                                        </div>
-                                        <?php
-                                    }
-                                }
-                                else {
-                                    echo '<h2>یک تیکت را انتخاب کنید</h2>';
-                                }
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="dialog">
+                <h4 class="head">نمایش تیکت</h4>
+                <hr>
+                <div class="">
+                    <?php
 
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            تیکت های من
-                            <span class="pull-right clickable panel-toggle panel-button-tab-left">
-                                <em class="fa fa-toggle-up"></em>
-                            </span>
-                        </div>
-                        <div class="panel-body">
-                            <div style="text-align: center;">
-                                <?php
-                                    if (mysqli_num_rows($tikres) > 0) {
-                                        ?>
-                                        <table class="table table-bordered table-hover">
-                                            <thead>
-                                            <tr>
-                                                <td class=""><b>تاریخ</b></td>
-                                                <td class=""><b>موضوع</b></td>
-                                                <td class=""><b>وضعیت</b></td>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <?php
-                                            while ($tiks = mysqli_fetch_assoc($tikres)) {
-                                                ?>
-                                                <tr>
-                                                    <td class=""><?php echo $tiks['dt']; ?></b></td>
-                                                    <td class=""><b><a href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></b></td>
-                                                    <td class="">
-                                                        <?php
-                                                        if ($tiks['answer'] != "ny") {
-                                                            echo "<i class='fa fa-check text-success'></i>";
-                                                        }
-                                                        else {
-                                                            echo "<i class='fa fa-times text-danger'></i>";
-                                                        }
-                                                        ?>
-                                                    </td>
-                                                </tr>
-                                                <?php 
-                                            }
-                                            ?>
-                                            </tbody>
-                                        </table>
-                                        <?php
-                                    }
-                                    else {
-                                        echo "<h2 style='text-align: right;'>در حال حاضر هیچ تیکت برای نمایش وحود ندارید</h2>";
-                                    }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            تیکت جدید
-                            <span class="pull-right clickable panel-toggle panel-button-tab-left">
-                                <em class="fa fa-toggle-up"></em>
-                            </span>
-                        </div>
-                        <div class="panel-body">
+                    if (count($tik) > 0) {
+                        if ($tik[0] == false) {
+                            echo '<p>تیکت پیدا نشد</p>';
+                        } else {
+                            ?>
                             <div>
+                                <b><?php echo $tik[0]['tikid']; ?></b>
+                                <hr>
+                                <h3><b><?php echo $tik[0]['title']; ?></b></h3>
+                                <h3><?php echo $tik[0]['explane']; ?></h3>
+                                <br>
+                                <p><?php echo $tik[0]['dt'] . "&nbsp;"; ?>ارسال شده در</p>
+                                <hr>
+                                <h3>پاسخ</h3>
+                                <p>
+                                    <?php
+                                    if ($tik[0]['answer'] == 'ny') {
+                                        echo 'هنوز به این تیکت پاسخی داده نشده است.<br>لطفا شکیبا باشید.';
+                                    } else {
+                                        echo $tik[0]['answer'];
+                                    }
+                                    ?>
+                                </p>
+                                <hr>
+                                <button class="btn btn-defult"><a style="color: black;" href="index.php">بستن
+                                        تیکت</a></button>
+                            </div>
+                            <?php
+                        }
+                    } else {
+                        echo '<p>یک تیکت را انتخاب کنید</p>';
+                    }
+
+                    ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dialog">
+                <h4 class="head">تیکت های من</h4>
+                <hr>
+                <div style="text-align: center;">
+                    <?php
+                    if (mysqli_num_rows($tikres) > 0) {
+                        ?>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <td class=""><b>تاریخ</b></td>
+                                <td class=""><b>موضوع</b></td>
+                                <td class=""><b>وضعیت</b></td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            while ($tiks = mysqli_fetch_assoc($tikres)) {
+                                ?>
+                                <tr>
+                                    <td class=""><?php echo $tiks['dt']; ?></b></td>
+                                    <td class=""><b><a
+                                                    href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></b>
+                                    </td>
+                                    <td class="">
+                                        <?php
+                                        if ($tiks['answer'] != "ny") {
+                                            echo "<i class='fa fa-check text-success'></i>";
+                                        } else {
+                                            echo "<i class='fa fa-times text-danger'></i>";
+                                        }
+                                        ?>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                            </tbody>
+                        </table>
+                        <?php
+                    } else {
+                        echo "<p style='text-align: right;'>در حال حاضر هیچ تیکت برای نمایش وحود ندارید</p>";
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dialog">
+                <h4 class="head">تیکت جدید</h4>
+                <hr>
+                <div>
+                    <?php
+
+                    if (count($send) > 0) {
+                        ?>
+                        <div class="alert alert-info" role="alert">
+                            <?php
+                            foreach ($send as $error) {
+                                echo '<p>' . $error . '</p>';
+                            }
+                            ?>
+                        </div>
+                        <?php
+                    }
+
+                    ?>
+                </div>
+                <div class="">
+                    <form class="" method="post" action="index.php">
+                        <label class="form-label" for="title">موضوع تیکت</label>
+                        <input type="text" class="form-control" id="title" name="title" aria-describedby="title"
+                               placeholder="موضوع تیکت">
+                        <br>
+                        <label class="form-label" for="des">توضیحات</label>
+                        <textarea class="form-control" rows="5" name="text" id="des"
+                                  aria-describedby="des" placeholder="توضیحات"></textarea>
+                        <br>
+                        <label class="form-label" for="record">همراه با تیکت صدای خود را نیز برای ما ارسال کنید</label>
+                        <p class="text-primary">
+                            کلیک کنید تا شروع به صبط صدا شود
+                            <i class="fa fa-microphone"></i>
+                        </p>
+                        <button type="submit" name="sendtik" class="btn btn-primary">ارسال تیکت</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="dialog">
+                <h4 class="head">پروفایل</h4>
+                <hr>
+                <div>
+                    <div>
+                        <h3 class="text-success"><?php echo $fname . "&nbsp;" . $lname; ?> <i
+                                    class="fa fa-user"></i></h3>
+                        <h3 class="text-info"><?php echo $company; ?> <i class="fa fa-bank"></i></h3>
+                        <hr>
+                        <p class="text-info"><?php echo $username; ?> <i class="fa fa-user"></i></p>
+                        <p class="text-muted"><?php echo $userid; ?> <i class="fa fa-id-card"></i></p>
+                        <br>
+                        <p class="text-primary"><?php echo $email; ?> <i class="fa fa-at"></i></p>
+                        <p class="text-warning"><?php echo $phone; ?> <i class="fa fa-phone"></i></p>
+                    </div>
+                    <hr>
+                    <div>
+                        <p><a class="text-danger" data-toggle="modal" data-target=".bd-example-modal-sm">خروج از
+                                حساب کاربری <i class="fa fa-sign-out"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="dialog">
+                <h4 class="head">تنظیمات</h4>
+                <hr>
+                <div class="">
+                    <h5>تنظیمات پروفایل</h5>
+                    <br>
+                    <div>
+                        <form method="post" action="index.php">
+                            <input type="text" name="username" class="form-control"
+                                   placeholder="<?php echo $username; ?> نام کاربری کنونی شما" required>
+                            <br>
+                            <button type="submit" name="usernameupdate" class="btn btn-primary btn-sm">تغییر نام
+                                کاربری
+                            </button>
+                        </form>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
                                 <?php
 
-                                if (count($send) > 0) {
+                                if (count($profile) > 0) {
                                     ?>
-                                    <div class="alert alert-info text-center" role="alert">
+                                    <div class="alert alert-info" role="alert">
                                         <?php
-                                        foreach ($send as $error) {
-                                            echo '<h4>' . $error . '</h4>';
+                                        foreach ($profile as $error) {
+                                            echo '<p>' . $error . '</p>';
                                         }
                                         ?>
                                     </div>
@@ -288,187 +325,55 @@ $tikres = mysqli_query($connection, $gettiks);
                                 }
 
                                 ?>
+                                <form method="post" action="index.php">
+                                    <input type="email" name="mail" class="form-control"
+                                           placeholder="<?php echo $email; ?> ایمیل کنونی شما" required>
+                                    <br>
+                                    <button type="submit" name="emailupdate" class="btn btn-primary btn-sm">
+                                        تغییر ایمیل
+                                    </button>
+                                </form>
                             </div>
-                            <div class="">
-                                <form class="" method="post" action="index.php">
-                                    <div class="form-group">
-                                        <label for="title">موضوع تیکت</label>
-                                        <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="موضوع تیکت">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="des">توضیحات</label>
-                                        <textarea type="text" class="form-control" rows="5" name="text" id="des" aria-describedby="des" placeholder="توضیحات"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="record">همراه با تیکت صدای خود را نیز برای ما ارسال کنید</label>
-                                        <p class="text-primary">کلیک کنید تا شروع به صبط صدا شود <i class="fa fa-microphone"></i></p>
-                                    </div>
-                                    <button type="submit" name="sendtik" class="btn btn-primary">ارسال تیکت</button>
+                            <div class="col-md-6">
+                                <form action="index.php" method="post">
+                                    <input type="text" name="phone" class="form-control"
+                                           placeholder="<?php echo $phone; ?> شماره همراه کنونی شما" required>
+                                    <br>
+                                    <button type="submit" name="phoneupdate" class="btn btn-primary btn-sm">
+                                        تغییر شماره همراه
+                                    </button>
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            پروفایل
-                            <span class="pull-right clickable panel-toggle panel-button-tab-left">
-                                <em class="fa fa-toggle-up"></em>
-                            </span>
-                        </div>
-                        <div class="panel-body">
-                            <div style="text-align: right;">
-                                <div>
-                                    <h3 class="text-success"><?php echo $fname . "&nbsp;" . $lname;?> <i class="fa fa-user"></i></h3>
-                                    <h3 class="text-info"><?php echo $company;?> <i class="fa fa-bank"></i></h3>
-                                    <hr>
-                                    <p class="text-info"><?php echo $username;?> <i class="fa fa-user"></i></p>
-                                    <p class="text-muted"><?php echo $userid;?> <i class="fa fa-id-card"></i></p>
-                                    <br>
-                                    <p class="text-primary"><?php echo $email;?> <i class="fa fa-at"></i></p>
-                                    <p class="text-warning"><?php echo $phone; ?> <i class="fa fa-phone"></i></p>
-                                </div>
-                                <hr>
-                                <div>
-                                    <p><a class="text-danger" data-toggle="modal" data-target=".bd-example-modal-sm">خروج از حساب کاربری <i class="fa fa-sign-out"></i></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            تنظیمات
-                            <span class="pull-right clickable panel-toggle panel-button-tab-left">
-                                <em class="fa fa-toggle-up"></em>
-                            </span>
-                        </div>
-                        <div class="panel-body">
+                        <hr>
+                        <h5>تغییر رمز</h5>
+                        <br>
+                        <form method="post" action="index.php" class="">
                             <div class="">
-                                <h3>تنظیمات پروفایل</h3>
-                                <br>
-                                <div>
-                                    <div class="form-group">
-                                        <form method="post" action="index.php">
-                                            <input type="text" name="username" class="form-control" placeholder="<?php echo $username;?> نام کاربری کنونی شما" required>
-                                            <br>
-                                            <button type="submit" name="usernameupdate" class="btn btn-primary btn-sm">تغییر نام کاربری</button>
-                                        </form>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <?php
-
-                                            if (count($profile) > 0) {
-                                                ?>
-                                                <div class="alert alert-info text-center" role="alert">
-                                                    <?php
-                                                    foreach ($profile as $error) {
-                                                        echo '<h4>' . $error . '</h4>';
-                                                    }
-                                                    ?>
-                                                </div>
-                                                <?php
-                                            }
-
-                                            ?>
-                                            <div class="form-group">
-                                                <form method="post" action="index.php">
-                                                    <input type="email" name="mail" class="form-control" placeholder="<?php echo $email;?> ایمیل کنونی شما" required>
-                                                    <br>
-                                                    <button type="submit" name="emailupdate" class="btn btn-primary btn-sm">تغییر ایمیل</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <form action="index.php" method="post">
-                                                    <input type="text" name="phone" class="form-control" placeholder="<?php echo $phone;?> شماره همراه کنونی شما" required>
-                                                    <br>
-                                                    <button type="submit" name="phoneupdate" class="btn btn-primary btn-sm">تغییر شماره همراه</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <hr>
-                                    </div>
-                                    <h3>تغییر رمز</h3>
-                                    <br>
-                                    <form method="post" action="index.php" class="">
-                                        <div class="form-group">
-                                            <input type="password" name="curpass" class="form-control" placeholder="رمز کنونی">
-                                            <small>رمز<b> کنونی خود </b> را ورد کنید</small>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="password" name="conpass" class="form-control" placeholder="تایید رمز جدید">
-                                                    <small>رمر<b> جدید خود </b> را دوباره تکرار کنید</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="password" name="newpass" class="form-control" placeholder="رمز جدید">
-                                                    <small>رمز<b> حدید خود </b> را وار کنید</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="submit" name="upass" class="btn btn-primary">تغییر رمز</button>
-                                    </form>
+                                <input type="password" name="curpass" class="form-control" placeholder="رمز کنونی">
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="password" name="conpass" class="form-control"
+                                           placeholder="تایید رمز جدید">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="password" name="newpass" class="form-control"
+                                           placeholder="رمز جدید">
                                 </div>
                             </div>
-                        </div>
+                            <br>
+                            <button type="submit" name="upass" class="btn btn-primary">تغییر رمز</button>
+                        </form>
                     </div>
                 </div>
-                <footer class="">
-                    <div class="container-fluid">
-                        <p class="back-link"><a href=".">NarTik</a></p>
-                        <p class="back-link">Created by <a href="https://www.github.com/BlackIQ">Amirhossein Mohammadi</a></p>
-                        <p class="back-link">Powered By <a href="https://www.linkedin.com/company/neotrinost">Neotrinost</a> <i class="fa fa-copyright"></i> <?php echo date("Y"); ?></p>
-                        <p class="back-link">
-                            <i class="fa fa-lg fa-linkedin-square text-info"></i>
-                            &nbsp;
-                            <i class="fa fa-lg fa-github"></i>
-                            &nbsp;
-                            <i class="fa fa-lg fa-telegram text-primary"></i>
-                            &nbsp;
-                            <i class="fa fa-lg fa-instagram text-danger"></i>
-                        </p>
-                    </div>
-                </footer>
-            </div>
-        </div>
-        <script src="../../pack/js/jquery-1.11.1.min.js"></script>
-        <script src="../../pack/js/bootstrap.min.js"></script>
-        <script src="../../pack/js/bootstrap-datepicker.js"></script>
-        <script src="../../pack/js/custom.js"></script>
-    </body>
-</html>
-
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 style="float: left;" class="modal-title text-danger" id="exampleModalLongTitle">خروج از حساب</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                <h1><i class="fa fa-sign-out text-danger"></i></h1>
-                <br>
-                <h4 class="text-danger">آیا شما میخواهید از حسابتان خارج شوید</h4>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"><span style="color: black;">بستن</span></button>
-                <button type="button" class="btn btn-danger"><a class="text-white" href="../../pack/logout.php"><span style="color: white;">حروج</span></a></button>
             </div>
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+</html>
