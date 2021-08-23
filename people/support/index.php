@@ -35,6 +35,13 @@ $_tikresult = mysqli_query($connection, $_tickets);
 $get_nartik = "SELECT * FROM nartiks WHERE company = '$company'";
 $tikres = mysqli_query($connection, $get_nartik);
 
+function get_company($company_id, $conection) {
+    $get_company_q = "SELECT * FROM company WHERE id = '$company_id'";
+    $get_company_r = mysqli_query($conection, $get_company_q);
+    $row_company = mysqli_fetch_assoc($get_company_r);
+    return $row_company["name"];
+}
+
 ?>
 
 
@@ -206,7 +213,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                                         <tr>
                                             <td class=""><?php echo $_rowser['dt']; ?></td>
                                             <td class=""><a class="link" href="index.php?user=<?php echo $_rowser['id']; ?>"><?php echo $_rowser['firstname'] . " " . $_rowser['lastname']; ?></a></td>
-                                            <td class=""><?php echo $_rowser['company']; ?></td>
+                                            <td class=""><?php echo get_company($_rowser['company'], $connection); ?></td>
                                         </tr>
                                         <?php
                                     }
@@ -240,7 +247,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                                     <h2><?php echo $prop[0]['firstname'] . "&nbsp;" . $prop[0]['lastname'] ?></h2>
                                     <h5><?php echo $prop[0]['id']; ?> کد ملی</h5>
                                     <hr>
-                                    <h4><?php echo $prop[0]['company']; ?> شرکت</h4>
+                                    <h4><?php echo get_company($prop[0]['company'], $connection); ?> شرکت</h4>
                                     <br>
                                     <h4><?php echo $prop[0]['phone']; ?> شماره همراه</h4>
                                     <h4><?php echo $prop[0]['email']; ?> ایمیل</h4>
@@ -288,7 +295,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                                         ?>
                                         <tr>
                                             <td class=""><b><a class="link" href="index.php?ticket=<?php echo $_rowtik['tikid']; ?>"><?php echo $_rowtik['title']; ?></a></b></td>
-                                            <td class=""><?php echo $_rowtik['company']; ?></td>
+                                            <td class=""><?php echo get_company($_rowtik['company'], $connection); ?></td>
                                         </tr>
                                         <?php
                                     }
