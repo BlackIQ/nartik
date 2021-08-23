@@ -9,25 +9,6 @@ $profile = array();
 // Nartik configuration
 include("../../pack/config.php");
 
-$id = $_SESSION['id'];
-
-$getdata = "SELECT * FROM people WHERE type='user' AND id='$id'";
-$ressult = mysqli_query($connection, $getdata);
-
-if (mysqli_num_rows($ressult) > 0) {
-    while ($row = mysqli_fetch_assoc($ressult)) {
-        $fname = $row['firstname'];
-        $lname = $row['lastname'];
-        $phone = $row['phone'];
-        $email = $row['email'];
-        $username = $row['username'];
-        $password = $row["password"];
-        $userid = $row['id'];
-        $company = $row['company'];
-        $uid = $row["id"];
-    }
-}
-
 if (isset($_POST['reg_user'])) {
     $name = mysqli_real_escape_string($connection, $_POST['fname']);
     $lastname = mysqli_real_escape_string($connection, $_POST['lname']);
@@ -74,29 +55,19 @@ if (isset($_POST['reg_user'])) {
     if (count($errors) == 0) {
         $dt = date("M , d , Y");
 
-        $select_company = "SELECT * FROM admin WHERE id = '$company'";
-        $rescompany = mysqli_query($connection, $select_company);
-
-        if (mysqli_num_rows($rescompany) == 1) {
-            $row = mysqli_fetch_assoc($rescompany);
-
-            $company_name = $row["name"];
-            $u_id = $row['uid'];
-        }
-
-        $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, uid, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company_name', '$u_id', '$pass', 'pending')";
+        $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company', , '$pass', 'pending')";
         if (mysqli_query($connection, $query)) {
             ?>
             <script>
                 window.alert("درخواست شما با موفقیت ثبت شد");
-                window.location.replace("../../")
+                window.location.replace(".")
             </script>
             <?php
         } else {
             ?>
             <script>
                 window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace("../../");
+                window.location.replace(".");
             </script>
             <?php
         }
@@ -115,7 +86,6 @@ if (isset($_POST['login_user'])) {
     }
 
     if (count($errors) == 0) {
-//            $password = md5($password);
         $query = "SELECT * FROM people WHERE type='user' AND id='$id' AND password='$password'";
         $results = mysqli_query($connection, $query);
 
