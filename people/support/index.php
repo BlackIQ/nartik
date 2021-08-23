@@ -395,12 +395,12 @@ $tikres = mysqli_query($connection, $get_nartik);
                                 <tbody>
                                 <?php
                                 while ($row = mysqli_fetch_assoc($res_all)) {
-                                    $name = $row["name"];
+                                    $com = $row["id"];
                                     ?>
                                     <tr>
                                         <td class="">
                                             <?php
-                                            $get_all_tikets = "SELECT count(*) as total FROM tiks WHERE company = '$name'";
+                                            $get_all_tikets = "SELECT count(*) as total FROM tiks WHERE company = '$com'";
                                             $gat = mysqli_query($connection, $get_all_tikets);
                                             $gatr = mysqli_fetch_assoc($gat);
                                             echo $gatr['total'];
@@ -408,7 +408,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                                         </td>
                                         <td class="">
                                             <?php
-                                            $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$name' AND type = 'pending'";
+                                            $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$com' AND type = 'pending'";
                                             $gap = mysqli_query($connection, $get_all_people);
                                             $gapr = mysqli_fetch_assoc($gap);
                                             echo $gapr['total'];
@@ -416,13 +416,13 @@ $tikres = mysqli_query($connection, $get_nartik);
                                         </td>
                                         <td class="">
                                             <?php
-                                            $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$name' AND type = 'user'";
+                                            $get_all_people = "SELECT count(*) as total FROM people WHERE company = '$com' AND type = 'user'";
                                             $gap = mysqli_query($connection, $get_all_people);
                                             $gapr = mysqli_fetch_assoc($gap);
                                             echo $gapr['total'];
                                             ?>
                                         </td>
-                                        <td class=""><?php echo $row['id']; ?></td>
+                                        <td class=""><?php echo $com; ?></td>
                                         <td class=""><b><?php echo $row['name']; ?></b></td>
                                     </tr>
                                     <?php

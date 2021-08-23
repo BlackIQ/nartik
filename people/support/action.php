@@ -122,7 +122,7 @@ if (isset($_GET['confirm'])) {
         ?>
         <script>
             window.alert("کاربر با موفقیت ثبت شد");
-            window.location.replace(",");
+            window.location.replace(".");
         </script>
         <?php
     } else {
