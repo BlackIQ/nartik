@@ -59,17 +59,11 @@ $tikres = mysqli_query($connection, $gettiks);
         }
 
         .main {
-            padding: 56px;
-            background: #f5f5f5;
-            color: blue;
+            padding: 5%;
         }
 
         .bar {
             padding: 1%;
-        }
-
-        .mnav {
-            color: blue;
         }
 
         textarea {
@@ -81,19 +75,37 @@ $tikres = mysqli_query($connection, $gettiks);
             text-align: right;
         }
 
+        .link {
+            text-decoration: none;
+        }
+
         .dialog {
-            color: blue;
             padding: 3%;
-            background: #f2f2f2;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            border-radius: 5px;
+            border: solid 1px blue;
+            border-radius: 0px;
+        }
+
+        .dialog .head {
+            color: blue;
+        }
+
+        .dialog hr {
+            border: solid 1px blue;
+        }
+
+        .dialog .inp {
+            border-color: blue;
+        }
+
+        .dialog .tbl {
+            border-color: blue;
         }
 
         .one {
-            border: solid 1px #ddd;
+            border: solid 1px blue;
             padding: 2%;
             text-align: center;
-            background: #eee;
+            color: blue;
         }
     </style>
     <meta charset="utf-8">
@@ -104,7 +116,7 @@ $tikres = mysqli_query($connection, $gettiks);
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body style="text-align: right;">
-<nav class="mnav navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="mnav navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="../../">نارتیک</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -196,8 +208,11 @@ $tikres = mysqli_query($connection, $gettiks);
                                     ?>
                                 </p>
                                 <hr>
-                                <button class="btn btn-defult"><a style="color: black;" href="index.php">بستن
-                                        تیکت</a></button>
+                                <button class="btn btn-sm btn-primary">
+                                    <a class="link" style="color: white;" href="index.php">
+                                        بستن تیکت
+                                    </a>
+                                </button>
                             </div>
                             <?php
                         }
@@ -208,6 +223,7 @@ $tikres = mysqli_query($connection, $gettiks);
                     ?>
                 </div>
             </div>
+            <br>
         </div>
         <div class="col-md-4">
             <div class="dialog">
@@ -217,7 +233,7 @@ $tikres = mysqli_query($connection, $gettiks);
                     <?php
                     if (mysqli_num_rows($tikres) > 0) {
                         ?>
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered table-hover tbl">
                             <thead>
                             <tr>
                                 <td class=""><b>تاریخ</b></td>
@@ -231,8 +247,12 @@ $tikres = mysqli_query($connection, $gettiks);
                                 ?>
                                 <tr>
                                     <td class=""><?php echo $tiks['dt']; ?></b></td>
-                                    <td class=""><b><a
-                                                    href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></b>
+                                    <td class="">
+                                        <b>
+                                            <a class="link" href="index.php?ticket=<?php echo $tiks['tikid']; ?>#tikreview">
+                                                <?php echo $tiks['title']; ?>
+                                            </a>
+                                        </b>
                                     </td>
                                     <td class="">
                                         <?php
@@ -256,6 +276,7 @@ $tikres = mysqli_query($connection, $gettiks);
                     ?>
                 </div>
             </div>
+            <br>
         </div>
         <div class="col-md-4">
             <div class="dialog">
@@ -281,18 +302,13 @@ $tikres = mysqli_query($connection, $gettiks);
                 <div class="">
                     <form class="" method="post" action="index.php">
                         <label class="form-label" for="title">موضوع تیکت</label>
-                        <input type="text" class="form-control" id="title" name="title" aria-describedby="title"
+                        <input type="text" class="form-control inp" id="title" name="title" aria-describedby="title"
                                placeholder="موضوع تیکت">
                         <br>
                         <label class="form-label" for="des">توضیحات</label>
-                        <textarea class="form-control" rows="5" name="text" id="des"
+                        <textarea class="form-control inp" rows="5" name="text" id="des"
                                   aria-describedby="des" placeholder="توضیحات"></textarea>
                         <br>
-                        <label class="form-label" for="record">همراه با تیکت صدای خود را نیز برای ما ارسال کنید</label>
-                        <p class="text-primary">
-                            کلیک کنید تا شروع به صبط صدا شود
-                            <i class="fa fa-microphone"></i>
-                        </p>
                         <button type="submit" name="sendtik" class="btn btn-primary">ارسال تیکت</button>
                     </form>
                 </div>
@@ -319,11 +335,16 @@ $tikres = mysqli_query($connection, $gettiks);
                     </div>
                     <hr>
                     <div>
-                        <p><a class="text-danger" data-toggle="modal" data-target=".bd-example-modal-sm">خروج از
-                                حساب کاربری <i class="fa fa-sign-out"></i></a></p>
+                        <p>
+                            <a class="text-danger link" data-toggle="modal" data-target=".bd-example-modal-sm">
+                                خروج از حساب کاربری
+                                <i class="fa fa-sign-out"></i>
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
+            <br>
         </div>
         <div class="col-md-6">
             <div class="dialog">
@@ -334,7 +355,7 @@ $tikres = mysqli_query($connection, $gettiks);
                     <br>
                     <div>
                         <form method="post" action="index.php">
-                            <input type="text" name="username" class="form-control"
+                            <input type="text" name="username" class="form-control inp"
                                    placeholder="<?php echo $username; ?> نام کاربری کنونی شما" required>
                             <br>
                             <button type="submit" name="usernameupdate" class="btn btn-primary btn-sm">تغییر نام
@@ -360,17 +381,18 @@ $tikres = mysqli_query($connection, $gettiks);
 
                                 ?>
                                 <form method="post" action="index.php">
-                                    <input type="email" name="mail" class="form-control"
+                                    <input type="email" name="mail" class="form-control inp"
                                            placeholder="<?php echo $email; ?> ایمیل کنونی شما" required>
                                     <br>
                                     <button type="submit" name="emailupdate" class="btn btn-primary btn-sm">
                                         تغییر ایمیل
                                     </button>
                                 </form>
+                                <br>
                             </div>
                             <div class="col-md-6">
                                 <form action="index.php" method="post">
-                                    <input type="text" name="phone" class="form-control"
+                                    <input type="text" name="phone" class="form-control inp"
                                            placeholder="<?php echo $phone; ?> شماره همراه کنونی شما" required>
                                     <br>
                                     <button type="submit" name="phoneupdate" class="btn btn-primary btn-sm">
@@ -384,16 +406,17 @@ $tikres = mysqli_query($connection, $gettiks);
                         <br>
                         <form method="post" action="index.php" class="">
                             <div class="">
-                                <input type="password" name="curpass" class="form-control" placeholder="رمز کنونی">
+                                <input type="password" name="curpass" class="form-control inp" placeholder="رمز کنونی">
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="password" name="conpass" class="form-control"
+                                    <input type="password" name="conpass" class="form-control inp"
                                            placeholder="تایید رمز جدید">
+                                    <br>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="password" name="newpass" class="form-control"
+                                    <input type="password" name="newpass" class="form-control inp"
                                            placeholder="رمز جدید">
                                 </div>
                             </div>
