@@ -4,12 +4,8 @@ session_start();
 $tik = array();
 $errors = array();
 
-// MySQL Data
+// Nartik configuration
 include("../../pack/config.php");
-$mysqlserver = $ip;
-$mysqluser = "narbon";
-$mysqlpassword = "narbon";
-$mysqldatabase = "nartik";
 
 // Create Connection
 $connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
