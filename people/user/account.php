@@ -26,6 +26,7 @@ $resc = mysqli_query($connection, $getc);
             @font-face {
                 font-family: vazir;
                 src: url("../../pack/fonts/vazir/Vazir.ttf");
+                font-style: normal;
             }
 
             body {
@@ -33,6 +34,7 @@ $resc = mysqli_query($connection, $getc);
             }
 
             * {
+                font-size: 13px;
                 font-family: vazir, serif;
                 color: blue;
             }

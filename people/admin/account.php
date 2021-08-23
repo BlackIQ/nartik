@@ -28,6 +28,7 @@ if ($_SESSION['status'] == true) {
         @font-face {
             font-family: vazir;
             src: url("../../pack/fonts/vazir/Vazir.ttf");
+            font-style: normal;
         }
 
         body {
@@ -35,8 +36,9 @@ if ($_SESSION['status'] == true) {
         }
 
         * {
+            font-size: 13px;
             font-family: vazir, serif;
-            color: bred;
+            color: red;
         }
 
         .login {
