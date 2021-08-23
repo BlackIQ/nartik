@@ -7,9 +7,6 @@ $errors = array();
 // Nartik configuration
 include("../../pack/config.php");
 
-// Create Connection
-$connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
-
 // Login User
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($connection, $_POST['username']);
