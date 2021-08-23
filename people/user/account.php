@@ -54,7 +54,7 @@ $resc = mysqli_query($connection, $getc);
                         <h1 class="display-6 text-primary">ساخت حساب جدید</h1>
                         <hr class="border-primary border">
                         <br>
-                        <form action="index.php" method="post">
+                        <form action="account.php" method="post">
                             <div class="row">
                                 <div class="col">
                                     <input type="text" name="fname" class="form-control text-primary border-primary inp" placeholder="نام"
@@ -126,7 +126,7 @@ $resc = mysqli_query($connection, $getc);
                         <h1 class="display-6 text-primary">ورود کاربر</h1>
                         <hr class="border-primary border">
                         <br>
-                        <form action="index.php" method="post">
+                        <form action="account.php" method="post">
                             <div class="row">
                                 <div class="col">
                                     <input type="text" name="id" class="form-control bg-white border-primary text-primary"
@@ -152,14 +152,21 @@ $resc = mysqli_query($connection, $getc);
                     </div>
                     <br>
                     <div>
-                        <?php  if (count($errors) > 0) : ?>
-                            <div class="alert alert-danger border-danger" role="alert">
-                                <?php foreach ($errors as $error) : ?>
-                                    <h4 style="color: red;"><?php echo $error ?></h4>
-                                <?php endforeach ?>
+                        <?php
+                        if (count($errors) > 0) {
+                            ?>
+                            <div class="alert alert-danger alert-dismissible fade show alrt" role="alert">
+                                <!--                                    <p><strong>Maybe something important!</strong></p>-->
+                                <?php
+                                foreach ($errors as $error) {
+                                    echo "<p>" . $error . "</p>";
+                                }
+                                ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
-                            <br>
-                        <?php  endif ?>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
