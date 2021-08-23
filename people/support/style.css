@@ -1,0 +1,97 @@
+@media (prefers-color-scheme: light) {
+    .main {
+        padding: 5%;
+        background: #f6f6f6;
+    }
+
+    textarea {
+        resize: none;
+        text-align: right;
+    }
+
+    input {
+        text-align: right;
+    }
+
+    .dialog {
+        padding: 3%;
+        border-radius: 0px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background: white;
+    }
+
+    .dialog .head {
+        color: blue;
+    }
+
+    .dialog hr {
+        border: solid 1px blue;
+    }
+
+    .dialog .inp {
+        border-color: blue;
+    }
+
+    .dialog .tbl {
+        border-color: blue;
+    }
+
+    .one {
+        background: white;
+        padding: 2%;
+        text-align: center;
+        color: blue;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    .main {
+        padding: 5%;
+        background: #222;
+    }
+
+    textarea[type] {
+        resize: none;
+        background: #333;
+        text-align: right;
+    }
+
+    input[type] {
+        text-align: right;
+        color: aqua;
+        background: #333;
+    }
+
+    .dialog {
+        padding: 3%;
+        border-radius: 0px;
+        color: white;
+        background: #333;
+    }
+
+    .dialog .head {
+        color: aqua;
+    }
+
+    .dialog hr {
+        border: solid 1px aqua;
+    }
+
+    .dialog .inp {
+        border-color: aqua;
+    }
+
+    .dialog .tbl {
+        border-color: aqua;
+        color: white;
+    }
+
+    .one {
+        background: #333;
+        padding: 2%;
+        text-align: center;
+        color: aqua;
+    }
+
+}
