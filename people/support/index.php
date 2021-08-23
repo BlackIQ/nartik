@@ -26,13 +26,6 @@ include('action.php');
 
 $company = $_SESSION["uid"];
 
-$mysqlserver = $ip;
-$mysqluser = "narbon";
-$mysqlpassword = "narbon";
-$mysqldatabase = "nartik";
-
-$conn = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
-
 $_pending = "SELECT * FROM people WHERE type='pending' AND uid = '$company' ORDER BY row DESC";
 $_penresult = mysqli_query($conn, $_pending);
 

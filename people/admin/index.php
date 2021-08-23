@@ -24,13 +24,6 @@ else {
 
 include('action.php');
 
-$mysqlserver = $ip;
-$mysqluser = "narbon";
-$mysqlpassword = "narbon";
-$mysqldatabase = "nartik";
-
-$conn = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
-
 $get_nartik = "SELECT * FROM nartiks WHERE answer = 'ny'";
 $tikres = mysqli_query($conn, $get_nartik);
 
