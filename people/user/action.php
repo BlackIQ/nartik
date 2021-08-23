@@ -167,14 +167,14 @@ if (isset($_POST['sendtik'])) {
             ?>
             <script>
                 window.alert("تیکت شما با موفقیت ارسال شد");
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace(".")
             </script>
             <?php
         } else {
             ?>
             <script>
                 window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace(".")
             </script>
             <?php
         }
@@ -211,14 +211,14 @@ if (isset($_POST['upass'])) {
                 ?>
                 <script>
                     window.alert("رمز شما با موفقیت تغییر کرد");
-                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                    window.location.replace(".")
                 </script>
                 <?php
             } else {
                 ?>
                 <script>
                     window.alert("<?php echo mysqli_error($connection); ?>");
-                    window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                    window.location.replace(".")
                 </script>
                 <?php
             }
@@ -226,7 +226,7 @@ if (isset($_POST['upass'])) {
             ?>
             <script>
                 window.alert("رمز جدید با تایید رمز تفاوت دارد");
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace(".")
             </script>
             <?php
         }
@@ -234,7 +234,7 @@ if (isset($_POST['upass'])) {
         ?>
         <script>
             window.alert("رمز کنونی با رمز شما متفاوت است");
-            window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+            window.location.replace(".")
         </script>
         <?php
     }
@@ -251,14 +251,14 @@ if (isset($_POST["usernameupdate"])) {
             ?>
             <script>
                 window.alert("نام کاربری با موفقیت تغییر کرد");
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace(".")
             </script>
             <?php
         } else {
             ?>
             <script>
                 window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace(".")
             </script>
             <?php
         }
@@ -266,7 +266,7 @@ if (isset($_POST["usernameupdate"])) {
         ?>
         <script>
             window.alert("نام کاربری را وارد کنید");
-            window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+            window.location.replace(".")
         </script>
         <?php
     }
@@ -283,14 +283,14 @@ if (isset($_POST["phoneupdate"])) {
             ?>
             <script>
                 window.alert("شماره تلفن با موفقیت تغییر کرد");
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace(".")
             </script>
             <?php
         } else {
             ?>
             <script>
                 window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace(".")
             </script>
             <?php
         }
@@ -298,7 +298,7 @@ if (isset($_POST["phoneupdate"])) {
         ?>
         <script>
             window.alert("شماره تلفن را وارد کنید");
-            window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+            window.location.replace(".")
         </script>
         <?php
     }
@@ -315,14 +315,14 @@ if (isset($_POST["emailupdate"])) {
             ?>
             <script>
                 window.alert("ایمیل شما با موفقیت تغییر کرد");
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace(".")
             </script>
             <?php
         } else {
             ?>
             <script>
                 window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+                window.location.replace(".")
             </script>
             <?php
         }
@@ -330,7 +330,7 @@ if (isset($_POST["emailupdate"])) {
         ?>
         <script>
             window.alert("ایمیل را وارد کنید");
-            window.location.replace("http://<?php echo $serverip; ?>/NarTik/people/user");
+            window.location.replace(".")
         </script>
         <?php
     }
