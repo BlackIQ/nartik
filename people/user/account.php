@@ -9,7 +9,7 @@ if ($_SESSION['status'] == true) {
     header("Location: http://$serverip/NarTik/people/$who");
 }
 
-$getc = "SELECT * FROM company";
+$getc = "SELECT * FROM admin";
 $resc = mysqli_query($connection, $getc);
 
 ?>
@@ -107,7 +107,7 @@ $resc = mysqli_query($connection, $getc);
                                         if (mysqli_num_rows($resc) > 0) {
                                             while ($row = mysqli_fetch_assoc($resc)) {
                                                 ?>
-                                                <option class="text-primary" value="<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></option>
+                                                <option class="text-primary" value="<?php echo $row["id"]; ?>"><?php echo $row["company"]; ?></option>
                                                 <?php
                                             }
                                         }

@@ -74,13 +74,13 @@ if (isset($_POST['reg_user'])) {
     if (count($errors) == 0) {
         $dt = date("M , d , Y");
 
-        $select_company = "SELECT * FROM company WHERE id = '$company'";
+        $select_company = "SELECT * FROM admin WHERE id = '$company'";
         $rescompany = mysqli_query($connection, $select_company);
 
         if (mysqli_num_rows($rescompany) == 1) {
             $row = mysqli_fetch_assoc($rescompany);
 
-            $company_name = $row["name"];
+            $company_name = $row["company"];
             $uid = $row['uid'];
         }
 
