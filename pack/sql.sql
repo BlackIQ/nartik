@@ -16,24 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `admin`
---
-
-DROP TABLE IF EXISTS `admin`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `admin`
-(
-    `row`      int(11) NOT NULL AUTO_INCREMENT,
-    `id`       text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `company`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `uid`      text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    PRIMARY KEY (`row`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `company`
 --
 
@@ -45,8 +27,6 @@ CREATE TABLE `company`
     `row`  int(11) NOT NULL AUTO_INCREMENT,
     `id`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `time` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `uid`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     PRIMARY KEY (`row`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -69,7 +49,6 @@ CREATE TABLE `people`
     `username`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `dt`        text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `company`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `uid`       text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `password`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `type`      text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     PRIMARY KEY (`row`)
@@ -91,11 +70,8 @@ CREATE TABLE `tiks`
     `title`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `explane` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `company` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `uid`     text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `dt`      text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `dl`      text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `file`    text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `total`   text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `answer`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `status`  text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     PRIMARY KEY (`row`)
