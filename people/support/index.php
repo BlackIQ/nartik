@@ -49,74 +49,11 @@ function get_company($company_id, $conection) {
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        @font-face {
-            font-family: vazir;
-            src: url("../../pack/fonts/vazir/Vazir.ttf");
-            font-style: normal;
-        }
-
-        * {
-            font-size: 13px;
-            font-family: vazir, serif;
-        }
-
-        .main {
-            padding: 5%;
-            background: #f6f6f6;
-        }
-
-        .bar {
-            padding: 1%;
-        }
-
-        textarea {
-            resize: none;
-            text-align: right;
-        }
-
-        input {
-            text-align: right;
-        }
-
-        .link {
-            text-decoration: none;
-        }
-
-        .dialog {
-            padding: 3%;
-            /*border: solid 1px green;*/
-            border-radius: 0px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            background: white;
-        }
-
-        .dialog .head {
-            color: green;
-        }
-
-        .dialog hr {
-            border: solid 1px green;
-        }
-
-        .dialog .inp {
-            border-color: green;
-        }
-
-        .dialog .tbl {
-            border-color: green;
-        }
-
-        .one {
-            background: white;
-            padding: 2%;
-            text-align: center;
-            color: green;
-        }
-    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>نارتیک - پشتیبان</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="../../pack/css/main.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
