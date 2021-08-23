@@ -60,6 +60,7 @@ $tikres = mysqli_query($connection, $gettiks);
 
         .main {
             padding: 5%;
+            background: #f6f6f6;
         }
 
         .bar {
@@ -81,8 +82,10 @@ $tikres = mysqli_query($connection, $gettiks);
 
         .dialog {
             padding: 3%;
-            border: solid 1px blue;
+            /*border: solid 1px green;*/
             border-radius: 0px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background: white;
         }
 
         .dialog .head {
@@ -102,7 +105,7 @@ $tikres = mysqli_query($connection, $gettiks);
         }
 
         .one {
-            border: solid 1px blue;
+            background: white;
             padding: 2%;
             text-align: center;
             color: blue;
