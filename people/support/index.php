@@ -593,7 +593,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                                             ?>
                                         </td>
                                         <td class=""><?php echo $row['id']; ?></td>
-                                        <td class=""><b><?php echo $row['company']; ?></b></td>
+                                        <td class=""><b><?php echo $row['name']; ?></b></td>
                                     </tr>
                                     <?php
                                 }
