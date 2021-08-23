@@ -81,7 +81,7 @@ if ($_SESSION['status'] == true) {
                 <br>
                 <hr class="border-danger border">
                 <div>
-                    <p><a class="text-danger" style="text-decoration: none;" href="../../><i class="fa fa-home"></i> برگشت به خانه</a></p>
+                    <p><a class="text-danger" style="text-decoration: none;" href="../../"><i class="fa fa-home"></i> برگشت به خانه</a></p>
                 </div>
             </div>
         </div>

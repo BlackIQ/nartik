@@ -145,8 +145,8 @@ $resc = mysqli_query($connection, $getc);
                         <br>
                         <hr class="border-primary border">
                         <div>
-                            <p><a class="text-primary" style="text-decoration: none;" href="../../../"><i class="fa fa-home"></i> برگشت به خانه</a></p>
-                            <p><a class="text-primary" style="text-decoration: none;"  href="../../support"><i class="fa fa-support"></i> ورود به عنوان پشتیبان</a></p>
+                            <p><a class="text-primary" style="text-decoration: none;" href="../../"><i class="fa fa-home"></i> برگشت به خانه</a></p>
+                            <p><a class="text-primary" style="text-decoration: none;"  href="../../people/support"><i class="fa fa-support"></i> ورود به عنوان پشتیبان</a></p>
                         </div>
                     </div>
                     <br>
