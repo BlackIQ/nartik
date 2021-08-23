@@ -26,23 +26,14 @@ include('action.php');
 
 $company = $_SESSION["uid"];
 
-$_pending = "SELECT * FROM people WHERE type='pending' AND uid = '$company' ORDER BY row DESC";
+$_pending = "SELECT * FROM people WHERE type='pending' ORDER BY row DESC";
 $_penresult = mysqli_query($connection, $_pending);
 
-$_tickets = "SELECT * FROM tiks WHERE answer = 'ny' AND uid = '$company' ORDER BY row DESC";
+$_tickets = "SELECT * FROM tiks WHERE answer = 'ny' ORDER BY row DESC";
 $_tikresult = mysqli_query($connection, $_tickets);
-
-$select_company = "SELECT * FROM admin WHERE uid = '$company'";
-$rescompany = mysqli_query($connection, $select_company);
 
 $get_nartik = "SELECT * FROM nartiks WHERE company = '$company'";
 $tikres = mysqli_query($connection, $get_nartik);
-
-if (mysqli_num_rows($rescompany) == 1) {
-    $row = mysqli_fetch_assoc($rescompany);
-
-    $company_name = $row["company"];
-}
 
 ?>
 
@@ -99,7 +90,7 @@ if (mysqli_num_rows($rescompany) == 1) {
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>نارتیک - <?php echo $company_name; ?></title>
+    <title>نارتیک - پشتیبان</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -129,7 +120,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                 <div class="col-md-3 one">
                     <p><i class="fa fa-check"></i></p>
                     <?php
-                    $guc = "SELECT count(*) as total FROM people WHERE type='user' AND uid = '$company'";
+                    $guc = "SELECT count(*) as total FROM people WHERE type='user'";
                     $gucr = mysqli_query($connection, $guc);
                     $gucrd = mysqli_fetch_assoc($gucr);
                     echo $gucrd['total'];
@@ -141,7 +132,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                 <div class="col-md-3 one">
                     <p><i class="fa fa-users"></i></p>
                     <?php
-                    $gpc = "SELECT count(*) as total FROM people WHERE type='pending' AND uid = '$company'";
+                    $gpc = "SELECT count(*) as total FROM people WHERE type='pending'";
                     $gpcr = mysqli_query($connection, $gpc);
                     $gpcrd = mysqli_fetch_assoc($gpcr);
                     echo $gpcrd['total'];
@@ -153,7 +144,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                 <div class="col-md-3 one">
                     <p><i class="fa fa-envelope"></i></p>
                     <?php
-                    $gtc = "SELECT count(*) as total FROM tiks WHERE uid = '$company'";
+                    $gtc = "SELECT count(*) as total FROM tiks";
                     $gtcr = mysqli_query($connection, $gtc);
                     $gtcrd = mysqli_fetch_assoc($gtcr);
                     echo $gtcrd['total'];
@@ -165,7 +156,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                 <div class="col-md-3 one">
                     <p><i class="fa fa-check"></i></p>
                     <?php
-                    $gac = "SELECT count(*) as total FROM tiks WHERE answer != 'ny' AND uid = '$company'";
+                    $gac = "SELECT count(*) as total FROM tiks WHERE answer != 'ny'";
                     $gacr = mysqli_query($connection, $gac);
                     $gacrd = mysqli_fetch_assoc($gacr);
                     echo $gacrd['total'];
@@ -351,36 +342,6 @@ if (mysqli_num_rows($rescompany) == 1) {
                                             </div>
                                         </form>
                                     </div>
-
-                                    <script>
-                                        // Set the date we're counting down to
-                                        var countDownDate = new Date("<?php echo $tik[0]['dl']; ?>").getTime();
-
-                                        // Update the count down every 1 second
-                                        var x = setInterval(function() {
-
-                                            // Get today's date and time
-                                            var now = new Date().getTime();
-
-                                            // Find the distance between now and the count down date
-                                            var distance = countDownDate - now;
-
-                                            // Time calculations for days, hours, minutes and seconds
-                                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                                            // Display the result in the element with id="demo"
-                                            document.getElementById("exp").innerHTML = hours + " ساعت " + minutes + " دقیقه " + seconds + " ثانیه ";
-
-                                            // If the count down is finished, write some text
-                                            if (distance < 0) {
-                                                clearInterval(x);
-                                                document.getElementById("exp").innerHTML = "تمام شده است";
-                                            }
-                                        }, 1000);
-                                    </script>
                                 </div>
                                 <?php
                             }
@@ -390,137 +351,6 @@ if (mysqli_num_rows($rescompany) == 1) {
                         }
 
                         ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="dialog">
-                    <h4 class="head">نمایش تیکت شرکت</h4>
-                    <hr>
-                    <div class="">
-                        <?php
-
-                        if (count($com_tik) > 0) {
-                            if ($com_tik[0] == false) {
-                                echo '<p>تیکت پیدا نشد</p>';
-                            }
-                            else {
-                                ?>
-                                <div>
-                                    <b><?php echo $com_tik[0]['tikid']; ?></b>
-                                    <hr>
-                                    <h3><b><?php echo $com_tik[0]['title']; ?></b></h3>
-                                    <h3><?php echo $com_tik[0]['explane']; ?></h3>
-                                    <br>
-                                    <p><?php echo $com_tik[0]['dt'] . "&nbsp;"; ?>ارسال شده در</p>
-                                    <hr>
-                                    <h3>پاسخ</h3>
-                                    <p>
-                                        <?php
-                                        if ($com_tik[0]['answer'] == 'ny') {
-                                            echo 'هنوز به این تیکت پاسخی داده نشده است.<br>لطفا شکیبا باشید.';
-                                        }
-                                        else {
-                                            echo $com_tik[0]['answer'];
-                                        }
-                                        ?>
-                                    </p>
-                                    <hr>
-                                    <button class="btn btn-defult"><a style="color: black;" href="index.php">بستن تیکت</a></button>
-                                </div>
-                                <?php
-                            }
-                        }
-                        else {
-                            echo '<p>یک تیکت را انتخاب کنید</p>';
-                        }
-
-                        ?>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="dialog">
-                    <h4 class="head">تیکت های شرکت</h4>
-                    <hr>
-                    <div style="text-align: center;">
-                        <?php
-                        if (mysqli_num_rows($tikres) > 0) {
-                            ?>
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <td class=""><b>تاریخ</b></td>
-                                    <td class=""><b>موضوع</b></td>
-                                    <td class=""><b>وضعیت</b></td>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                while ($tiks = mysqli_fetch_assoc($tikres)) {
-                                    ?>
-                                    <tr>
-                                        <td class=""><?php echo $tiks['dt']; ?></b></td>
-                                        <td class=""><b><a href="index.php?comtik=<?php echo $tiks['tikid']; ?>#tikreview"><?php echo $tiks['title']; ?></a></b></td>
-                                        <td class="">
-                                            <?php
-                                            if ($tiks['answer'] != "ny") {
-                                                echo "<i class='fa fa-check text-success'></i>";
-                                            }
-                                            else {
-                                                echo "<i class='fa fa-times text-danger'></i>";
-                                            }
-                                            ?>
-                                        </td>
-                                    </tr>
-                                    <?php
-                                }
-                                ?>
-                                </tbody>
-                            </table>
-                            <?php
-                        }
-                        else {
-                            echo "<p style='text-align: right;'>در حال حاضر هیچ تیکت برای نمایش وحود ندارید</p>";
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="dialog">
-                    <h4 class="head">تیکت جدید</h4>
-                    <hr>
-                    <div class="">
-                        <?php
-
-                        if (count($send) > 0) {
-                            ?>
-                            <div class="alert alert-success text-center" role="alert">
-                                <?php
-                                foreach ($send as $error) {
-                                    echo '<h4>' . $error . '</h4>';
-                                }
-                                ?>
-                            </div>
-                            <?php
-                        }
-
-                        ?>
-                        <div class="">
-                            <form class="" method="post" action="index.php">
-                                <label class="form-label" for="title">موضوع تیکت</label>
-                                <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="موضوع تیکت">
-                                <br>
-                                <label class="form-label" for="des">توضیحات</label>
-                                <textarea class="form-control" rows="5" name="text" id="des" aria-describedby="des" placeholder="توضیحات"></textarea>
-                                <br>
-                                <button type="submit" name="sendtik" class="btn btn-success">ارسال تیکت</button>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -547,7 +377,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <hr>
                     <div style="text-align: center;">
                         <?php
-                        $get_all = "SELECT * FROM company WHERE uid = '$company'";
+                        $get_all = "SELECT * FROM company";
                         $res_all = mysqli_query($connection, $get_all);
 
                         if (mysqli_num_rows($res_all) > 0) {
