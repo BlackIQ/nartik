@@ -127,7 +127,44 @@ $tikres = mysqli_query($connection, $gettiks);
 <br>
 <div class="main">
     <div class="bar">
-
+        <div class="row">
+            <div class="col-md-3 one">
+                <p><i class="fa fa-bank"></i></p>
+                <?php echo $company; ?>
+                <br>
+                <div class="text-muted">شرکت</div>
+            </div>
+            <div class="col-md-3 one">
+                <p><i class="fa fa-paper-plane-o"></i></p>
+                <?php
+                $gtc = "SELECT count(*) as total FROM tiks WHERE userid = '$userid' AND uid = '$uid'";
+                $gtcr = mysqli_query($connection, $gtc);
+                $gtcrd = mysqli_fetch_assoc($gtcr);
+                echo $gtcrd['total'];
+                ?>
+                <br>
+                <div class="text-muted">تیکت های ارسال شده</div>
+            </div>
+            <div class="col-md-3 one">
+                <p><i class="fa fa-times"></i></p>
+                <?php
+                $gtnc = "SELECT count(*) as total FROM tiks WHERE userid='$userid' AND answer='ny' AND uid = '$uid'";
+                $gtncr = mysqli_query($connection, $gtnc);
+                $gtncrd = mysqli_fetch_assoc($gtncr);
+                echo $gtncrd['total'];
+                ?>
+                <br>
+                <div class="text-muted">تیکت های جواب گرفته نشده</div>
+            </div>
+            <div class="col-md-3 one">
+                <p><i class="fa fa-check"></i></p>
+                <?php
+                echo $gtcrd['total'] - $gtncrd['total'];
+                ?>
+                <br>
+                <div class="text-muted">تیکت های جواب گرفته</div>
+            </div>
+        </div>
     </div>
     <br>
     <div class="row">
