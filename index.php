@@ -20,9 +20,8 @@ if ($_SESSION['status'] == true) {
     <head>
         <style>
             @font-face {
-                font-family: 'nazanin';
-                src: url('pack/fonts/nazanin.TTF');
-                font-style: normal;
+                font-family: vazir;
+                src: url("pack/fonts/vazir/Vazir.ttf");
             }
 
             body {
@@ -30,11 +29,11 @@ if ($_SESSION['status'] == true) {
                 text-align: center;
                 direction: rtl;
             }
-            
+
             * {
-                font-family: 'nazanin';
+                font-family: vazir, serif;
             }
-            
+
             .org {
                 margin-top: 15%;
             }
@@ -54,14 +53,14 @@ if ($_SESSION['status'] == true) {
                 <br>
             </div>
             <div class="col-md-4 org">
-                <h1><i class="fa fa-home"></i></h1>
-                <h1>به نارتیک خوش آمدید</h1>
+                <h2><i class="fa fa-home"></i></h2>
+                <h2>به نارتیک خوش آمدید</h2>
                 <br>
-                <button onclick="user()" class="btn btn-lg btn-primary"><b>ورود کاربر</b></button>
+                <button onclick="user()" class="btn btn-primary"><b>ورود کاربر</b></button>
                 &nbsp;
-                <button onclick="support()" class="btn btn-lg btn-success"><b>ورود پشتیبان</b></button>
+                <button onclick="support()" class="btn btn-success"><b>ورود پشتیبان</b></button>
                 &nbsp;
-                <button onclick="admin()" class="btn btn-lg btn-danger"><b>ورود ادمین</b></button>
+                <button onclick="admin()" class="btn btn-danger"><b>ورود ادمین</b></button>
             </div>
             <div class="col-md-4">
                 <br>
