@@ -47,74 +47,11 @@ $tikres = mysqli_query($connection, $gettiks);
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        @font-face {
-            font-family: vazir;
-            src: url("../../pack/fonts/vazir/Vazir.ttf");
-            font-style: normal;
-        }
-
-        * {
-            font-size: 13px;
-            font-family: vazir, serif;
-        }
-
-        .main {
-            padding: 5%;
-            background: #f6f6f6;
-        }
-
-        .bar {
-            padding: 1%;
-        }
-
-        textarea {
-            resize: none;
-            text-align: right;
-        }
-
-        input {
-            text-align: right;
-        }
-
-        .link {
-            text-decoration: none;
-        }
-
-        .dialog {
-            padding: 3%;
-            /*border: solid 1px green;*/
-            border-radius: 0px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            background: white;
-        }
-
-        .dialog .head {
-            color: blue;
-        }
-
-        .dialog hr {
-            border: solid 1px blue;
-        }
-
-        .dialog .inp {
-            border-color: blue;
-        }
-
-        .dialog .tbl {
-            border-color: blue;
-        }
-
-        .one {
-            background: white;
-            padding: 2%;
-            text-align: center;
-            color: blue;
-        }
-    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>نارتیک - داشبورد</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="../../pack/css/main.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -236,7 +173,7 @@ $tikres = mysqli_query($connection, $gettiks);
                     <?php
                     if (mysqli_num_rows($tikres) > 0) {
                         ?>
-                        <table class="table table-bordered table-hover tbl">
+                        <table class="table table-bordered tbl">
                             <thead>
                             <tr>
                                 <td class=""><b>تاریخ</b></td>
@@ -309,7 +246,7 @@ $tikres = mysqli_query($connection, $gettiks);
                                placeholder="موضوع تیکت">
                         <br>
                         <label class="form-label" for="des">توضیحات</label>
-                        <textarea class="form-control inp" rows="5" name="text" id="des"
+                        <textarea type="text" class="form-control inp" rows="5" name="text" id="des"
                                   aria-describedby="des" placeholder="توضیحات"></textarea>
                         <br>
                         <button type="submit" name="sendtik" class="btn btn-primary">ارسال تیکت</button>
