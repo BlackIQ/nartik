@@ -10,15 +10,8 @@ $errors = array();
 
 $company = $_SESSION["uid"];
 
-// MySQL Data
+// Nartik configuration
 include("../../pack/config.php");
-$mysqlserver = $ip;
-$mysqluser = "narbon";
-$mysqlpassword = "narbon";
-$mysqldatabase = "nartik";
-
-// Create Connection
-$connection = mysqli_connect($mysqlserver, $mysqluser, $mysqlpassword, $mysqldatabase);
 
 if (isset($_POST['login_user'])) {
     $eid = mysqli_real_escape_string($connection, $_POST['eid']);
