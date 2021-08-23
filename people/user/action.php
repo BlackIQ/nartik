@@ -7,7 +7,7 @@ $errors = array();
 $profile = array();
 
 // Nartik configuration
-include("../../pack/config.php");
+include("../../pack/configs/config.php");
 
 $userid = $_SESSION['id'];
 

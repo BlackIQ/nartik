@@ -2,7 +2,8 @@
 
 session_start();
 
-include("../../pack/config.php");
+// Nartik configuration
+include("../../pack/configs/config.php");
 
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];

@@ -11,7 +11,7 @@ $errors = array();
 $company = $_SESSION["uid"];
 
 // Nartik configuration
-include("../../pack/config.php");
+include("../../pack/configs/config.php");
 
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($connection, $_POST['username']);

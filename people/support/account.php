@@ -8,7 +8,7 @@ if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
     ?>
     <script>
-        window.location.replace("../people/<?php echo $who; ?>")
+        window.location.replace("../<?php echo $who; ?>")
     </script>
     <?php
 }
