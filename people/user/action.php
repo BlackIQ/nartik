@@ -24,7 +24,7 @@ if (mysqli_num_rows($ressult) > 0) {
         $password = $row["password"];
         $userid = $row['id'];
         $company = $row['company'];
-        $uid = $row["uid"];
+        $uid = $row["id"];
     }
 }
 
@@ -80,11 +80,11 @@ if (isset($_POST['reg_user'])) {
         if (mysqli_num_rows($rescompany) == 1) {
             $row = mysqli_fetch_assoc($rescompany);
 
-            $company_name = $row["company"];
-            $uid = $row['uid'];
+            $company_name = $row["name"];
+            $u_id = $row['uid'];
         }
 
-        $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, uid, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company_name', '$uid', '$pass', 'pending')";
+        $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, uid, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company_name', '$u_id', '$pass', 'pending')";
         if (mysqli_query($connection, $query)) {
             ?>
             <script>
