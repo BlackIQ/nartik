@@ -54,15 +54,11 @@ $tikres = mysqli_query($connection, $get_nartik);
         }
 
         .main {
-            padding: 56px;
-            background: #f5f5f5;
-            color: green;
+            padding: 5%;
         }
+
         .bar {
             padding: 1%;
-        }
-        .mnav {
-            color: green;
         }
 
         textarea {
@@ -74,18 +70,37 @@ $tikres = mysqli_query($connection, $get_nartik);
             text-align: right;
         }
 
-        .dialog {
-            color: green;
-            padding: 3%;
-            background: #f2f2f2;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            border-radius: 5px;
+        .link {
+            text-decoration: none;
         }
+
+        .dialog {
+            padding: 3%;
+            border: solid 1px green;
+            border-radius: 0px;
+        }
+
+        .dialog .head {
+            color: green;
+        }
+
+        .dialog hr {
+            border: solid 1px green;
+        }
+
+        .dialog .inp {
+            border-color: green;
+        }
+
+        .dialog .tbl {
+            border-color: green;
+        }
+
         .one {
-            border: solid 1px #ddd;
+            border: solid 1px green;
             padding: 2%;
             text-align: center;
-            background: #eee;
+            color: green;
         }
     </style>
     <meta charset="utf-8">
@@ -176,7 +191,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                         <?php
                             if (mysqli_num_rows($_penresult) > 0) {
                                 ?>
-                                <table class="table table-bordered table-hover">
+                                <table class="table table-bordered table-hover inp">
                                     <thead>
                                     <tr>
                                         <td class=""><b>درخواست</b></td>
@@ -260,7 +275,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                         <?php
                             if (mysqli_num_rows($_tikresult) > 0) {
                                 ?>
-                                <table class="table table-bordered table-hover">
+                                <table class="table table-bordered table-hover tbl">
                                     <thead>
                                     <tr>
                                         <td class=""><b>انقضا</b></td>
@@ -332,7 +347,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                                     <div>
                                         <form method="post" action="index.php">
                                             <div>
-                                                <input class="form-control" name="answer" type="text" placeholder="جواب">
+                                                <input class="form-control inp" name="answer" type="text" placeholder="جواب">
                                                 <br>
                                                 <button name="ans" class="btn btn-success">ارسال جواب</button>
                                                 &nbsp;
@@ -364,7 +379,7 @@ $tikres = mysqli_query($connection, $get_nartik);
                     <div>
                         <form class="" method="post" action="index.php">
                             <label class="form-label" for="company">نام شرکت</label>
-                            <input type="text" class="form-control" id="company" name="company" aria-describedby="company" placeholder="نام شرکت">
+                            <input type="text" class="form-control inp" id="company" name="company" aria-describedby="company" placeholder="نام شرکت">
                             <br>
                             <button type="submit" name="addcompany" class="btn btn-success">افزودن</button>
                         </form>
@@ -382,7 +397,7 @@ $tikres = mysqli_query($connection, $get_nartik);
 
                         if (mysqli_num_rows($res_all) > 0) {
                             ?>
-                            <table class="table table-bordered table-hover">
+                            <table class="table table-bordered table-hover tbl">
                                 <thead>
                                 <tr>
                                     <td class=""><b>تیکت ها</b></td>
