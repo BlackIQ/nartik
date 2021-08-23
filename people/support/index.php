@@ -547,7 +547,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                     <hr>
                     <div style="text-align: center;">
                         <?php
-                        $get_all = "SELECT * FROM admin WHERE uid = '$company'";
+                        $get_all = "SELECT * FROM company WHERE uid = '$company'";
                         $res_all = mysqli_query($connection, $get_all);
 
                         if (mysqli_num_rows($res_all) > 0) {
