@@ -603,7 +603,7 @@ if (mysqli_num_rows($rescompany) == 1) {
                             <?php
                         }
                         else {
-                            echo "<h2 style='text-align: right;'>شما هم اکنون با هیچ شرکتی قرارداد ندارید</h2>";
+                            echo "<p style='text-align: right;'>شما هم اکنون با هیچ شرکتی قرارداد ندارید</p>";
                         }
                         ?>
                     </div>
