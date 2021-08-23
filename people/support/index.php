@@ -62,6 +62,7 @@ function get_company($company_id, $conection) {
 
         .main {
             padding: 5%;
+            background: #f6f6f6;
         }
 
         .bar {
@@ -83,8 +84,10 @@ function get_company($company_id, $conection) {
 
         .dialog {
             padding: 3%;
-            border: solid 1px green;
+            /*border: solid 1px green;*/
             border-radius: 0px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background: white;
         }
 
         .dialog .head {
@@ -104,7 +107,7 @@ function get_company($company_id, $conection) {
         }
 
         .one {
-            border: solid 1px green;
+            background: white;
             padding: 2%;
             text-align: center;
             color: green;
