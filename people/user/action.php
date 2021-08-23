@@ -9,6 +9,13 @@ $profile = array();
 // Nartik configuration
 include("../../pack/config.php");
 
+$userid = $_SESSION['id'];
+
+$gd = "SELECT * FROM people WHERE type='user' AND id='$userid'";
+$res_gd = mysqli_query($connection, $gd);
+$row_gd = mysqli_fetch_assoc($res_gd);
+$company_id = $row_gd["company"];
+
 if (isset($_POST['reg_user'])) {
     $name = mysqli_real_escape_string($connection, $_POST['fname']);
     $lastname = mysqli_real_escape_string($connection, $_POST['lname']);
@@ -55,7 +62,7 @@ if (isset($_POST['reg_user'])) {
     if (count($errors) == 0) {
         $dt = date("M , d , Y");
 
-        $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company', , '$pass', 'pending')";
+        $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company', '$pass', 'pending')";
         if (mysqli_query($connection, $query)) {
             ?>
             <script>
@@ -109,7 +116,6 @@ if (isset($_POST['login_user'])) {
     }
 }
 
-// Get data of ticket
 if (isset($_POST['sendtik'])) {
     date_default_timezone_set('Iran');
 
@@ -132,7 +138,7 @@ if (isset($_POST['sendtik'])) {
 
         $tikid = rand(1000, 9999);
 
-        $query = "INSERT INTO tiks (userid, tikid, title, explane, company, uid, dt, dl, file, total, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company', '$uid', '$dt', '$dl','file', '4:00', 'ny', false)";
+        $query = "INSERT INTO tiks (userid, tikid, title, explane, company, dt, file, answer, status) VALUES ('$userid', '$tikid', '$title', '$text','$company_id', '$dt', 'file', 'ny', false)";
         if (mysqli_query($connection, $query)) {
             ?>
             <script>
