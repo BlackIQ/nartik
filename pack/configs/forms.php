@@ -53,7 +53,7 @@ if (isset($_POST['login_support'])) {
     }
 
     if (count($errors) == 0) {
-        if ($username == "admin" && $password == "admin") {
+        if ($username == "admin" && $password == "Rtnt2000") {
             $_SESSION['status'] = true;
             $_SESSION["who"] = "support";
             ?>
