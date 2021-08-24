@@ -12,6 +12,7 @@ if ($_SESSION['status'] == true) {
 }
 
 include('pack/configs/config.php');
+include('pack/configs/forms.php');
 
 $getc = "SELECT * FROM company";
 $resc = mysqli_query($connection, $getc);
