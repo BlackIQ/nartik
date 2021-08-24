@@ -32,7 +32,9 @@ $resc = mysqli_query($connection, $getc);
 <body>
 <div class="main">
     <div class="text">
-        <h1>به سامانه ثبت درخواست سرویس شرکت ناربن خوش آمدید</h1>
+        <span style="font-size: 75px; font-weight: bold">نارتیک</span>
+        <br>
+        <span style="font-size: 25px; font-weight: bold">سامانه ثبت درخواست سرویس شرکت ناربن</span>
         <br>
         <br>
         <br>

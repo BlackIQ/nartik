@@ -22,11 +22,14 @@ body {
     -o-background-size: cover;
     height: 100vh;
     padding: 5%;
+    /*filter: blur(1px);*/
+    opacity: 80%;
     color: white;
 }
 
 .text {
-    color: white;
+    padding: 5%;
+    color: black;
     text-align: right;
 }
 
