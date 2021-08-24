@@ -4,7 +4,44 @@ session_start();
 
 include('config.php');
 
+$errors = array();
+
 if (isset($_POST['login_user'])) {
+    $id = mysqli_real_escape_string($connection, $_POST['id']);
+    $password = mysqli_real_escape_string($connection, $_POST['password']);
+
+    if (empty($id)) {
+        array_push($errors, "لطفا کد ملی را وارد کنید");
+    }
+    if (empty($password)) {
+        array_push($errors, "لطفا رمز را وارد کنید");
+    }
+
+    if (count($errors) == 0) {
+        $query = "SELECT * FROM people WHERE type='user' AND id='$id' AND password='$password'";
+        $results = mysqli_query($connection, $query);
+
+        if (mysqli_num_rows($results) == 1) {
+            $_SESSION['status'] = true;
+            $_SESSION['who'] = "user";
+            $_SESSION['id'] = $id;
+            ?>
+            <script>
+                window.location.replace("people/user")
+            </script>
+            <?php
+        } else {
+            ?>
+            <script>
+                window.alert("کد ملی یا رمز عبور اشتباه است");
+                window.location.replace(".");
+            </script>
+            <?php
+        }
+    }
+}
+
+if (isset($_POST['login_support'])) {
     $username = mysqli_real_escape_string($connection, $_POST['username']);
     $password = mysqli_real_escape_string($connection, $_POST['password']);
 
@@ -21,7 +58,7 @@ if (isset($_POST['login_user'])) {
             $_SESSION["who"] = "support";
             ?>
             <script>
-                window.location.replace("index.php")
+                window.location.replace("people/support")
             </script>
             <?php
         } else {
@@ -30,7 +67,7 @@ if (isset($_POST['login_user'])) {
     }
 }
 
-if (isset($_POST['reg_user'])) {
+if (isset($_POST['create_user'])) {
     $name = mysqli_real_escape_string($connection, $_POST['fname']);
     $lastname = mysqli_real_escape_string($connection, $_POST['lname']);
     $phone = mysqli_real_escape_string($connection, $_POST['phone']);
@@ -88,41 +125,6 @@ if (isset($_POST['reg_user'])) {
             ?>
             <script>
                 window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace(".");
-            </script>
-            <?php
-        }
-    }
-}
-
-if (isset($_POST['login_user'])) {
-    $id = mysqli_real_escape_string($connection, $_POST['id']);
-    $password = mysqli_real_escape_string($connection, $_POST['password']);
-
-    if (empty($id)) {
-        array_push($errors, "لطفا کد ملی را وارد کنید");
-    }
-    if (empty($password)) {
-        array_push($errors, "لطفا رمز را وارد کنید");
-    }
-
-    if (count($errors) == 0) {
-        $query = "SELECT * FROM people WHERE type='user' AND id='$id' AND password='$password'";
-        $results = mysqli_query($connection, $query);
-
-        if (mysqli_num_rows($results) == 1) {
-            $_SESSION['status'] = true;
-            $_SESSION['who'] = "user";
-            $_SESSION['id'] = $id;
-            ?>
-            <script>
-                window.location.replace(".")
-            </script>
-            <?php
-        } else {
-            ?>
-            <script>
-                window.alert("کد ملی یا رمز عبور اشتباه است");
                 window.location.replace(".");
             </script>
             <?php
