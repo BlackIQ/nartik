@@ -32,9 +32,9 @@ $resc = mysqli_query($connection, $getc);
 <body>
 <div class="main">
     <div class="text">
-        <span style="font-size: 75px; font-weight: bold">نارتیک</span>
+        <span style="font-size: 75px; font-weight: bold; color: white">نارتیک</span>
         <br>
-        <span style="font-size: 25px; font-weight: bold">سامانه ثبت درخواست سرویس شرکت ناربن</span>
+        <span style="font-size: 25px; font-weight: bold; color: #fff;">سامانه ثبت درخواست سرویس شرکت ناربن</span>
         <br>
         <br>
         <br>
