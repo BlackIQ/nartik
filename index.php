@@ -38,18 +38,18 @@ $resc = mysqli_query($connection, $getc);
         <br>
         <br>
         <br>
-        <button type="button" class="btn btn-primary mbtn" data-bs-toggle="modal" data-bs-target="#loginuser">
+        <button type="button" class="btn mbtn" data-bs-toggle="modal" data-bs-target="#loginuser">
             ورود کاربر
         </button>
         <br>
         <br>
-        <button type="button" class="btn btn-info mbtn" style="color: white" data-bs-toggle="modal"
+        <button type="button" class="btn mbtn"" data-bs-toggle="modal"
                 data-bs-target="#create">
             ساخت حساب کاربری
         </button>
         <br>
         <br>
-        <button type="button" class="btn btn-success mbtn" data-bs-toggle="modal" data-bs-target="#loginsupport">
+        <button type="button" class="btn mbtn" data-bs-toggle="modal" data-bs-target="#loginsupport">
             ورود پشتیبان
         </button>
         <br>
