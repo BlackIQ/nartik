@@ -61,12 +61,12 @@ if ($_SESSION['status'] == true) {
             </button>
             <br>
             <br>
-            <button type="button" class="btn btn-info mbtn" style="color: white" data-bs-toggle="modal" data-bs-target="#loginuser">
+            <button type="button" class="btn btn-info mbtn" style="color: white" data-bs-toggle="modal" data-bs-target="#create">
                 ساخت حساب کاربری
             </button>
             <br>
             <br>
-            <button type="button" class="btn btn-success mbtn" data-bs-toggle="modal" data-bs-target="#loginuser">
+            <button type="button" class="btn btn-success mbtn" data-bs-toggle="modal" data-bs-target="#loginsupport">
                 ورود پشتیبان
             </button>
             <br>
