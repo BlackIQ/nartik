@@ -11,53 +11,16 @@ if ($_SESSION['status'] == true) {
     <?php
 }
 
+include('pack/configs/config.php');
+
+$getc = "SELECT * FROM company";
+$resc = mysqli_query($connection, $getc);
+
 ?>
 
 <!doctype html>
 <html>
 <head>
-    <style>
-        body {
-            user-select: none;
-        }
-        
-        @font-face {
-            font-family: vazir;
-            src: url("pack/fonts/vazir/Vazir.ttf");
-        }
-
-        * {
-            font-family: vazir, sans-serif;
-        }
-
-        .main {
-            /*background: url('https://wallpapercave.com/wp/wp3797593.jpg') no-repeat center center;*/
-            background: url('https://wallpapercave.com/wp/wp8272239.jpg') no-repeat center center;
-            text-align: right;
-            direction: rtl;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            background-size: cover;
-            -o-background-size: cover;
-            height: 100vh;
-            padding: 5%;
-            color: white;
-        }
-
-        .text {
-            color: white;
-            text-align: right;
-        }
-
-        .mbtn {
-            width: 25%;
-        }
-
-        .center {
-            direction: rtl;
-            text-align: right;
-        }
-    </style>
     <title>نارتیک</title>
     <meta charset="utf-8">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
@@ -158,75 +121,75 @@ if ($_SESSION['status'] == true) {
                 </div>
                 <div class="modal-body center">
                     <div class="row">
-                        <div class="col">
-                            <input type="text" name="fname" class="form-control text-primary border-primary inp"
-                                   placeholder="نام"
-                                   aria-label="نام">
+                        <div class="col-md-6">
+                            <label class="form-label" for="fname">نام</label>
+                            <input type="text" id="fname" name="fname" class="form-control text-info border-info" placeholder="نام">
+                            <br>
                         </div>
-                        <div class="col">
-                            <input type="text" name="lname" class="form-control text-primary border-primary inp"
-                                   placeholder="نام خانوادگی" aria-label="نام خانوادگی">
+                        <div class="col-md-6">
+                            <label class="form-label" for="lname">نام خانوادگی</label>
+                            <input type="text" id="lname" name="lname" class="form-control text-info border-info" placeholder="نام خانوادگی">
+                            <br>
                         </div>
                     </div>
-                    <br>
                     <div class="row">
-                        <div class="col">
-                            <input type="text" name="phone" class="form-control text-primary border-primary inp"
-                                   placeholder="شماره همراه" aria-label="شماره همراه">
+                        <div class="col-md-6">
+                            <label class="form-label" for="phone">شماره همراه</label>
+                            <input type="text" id="phone" name="phone" class="form-control text-info border-info" placeholder="شماره همراه">
+                            <br>
                         </div>
-                        <div class="col">
-                            <input type="text" name="email" class="form-control text-primary border-primary inp"
-                                   placeholder="ایمیل"
-                                   aria-label="ایمیل">
+                        <div class="col-md-6">
+                            <label class="form-label" for="email">ایمیل</label>
+                            <input type="text" id="email" name="email" class="form-control text-info border-info" placeholder="ایمیل">
+                            <br>
                         </div>
                     </div>
-                    <br>
                     <div class="row">
-                        <div class="col">
-                            <input type="text" name="username" class="form-control text-primary border-primary inp"
-                                   placeholder="نام کاربری"
-                                   aria-label="نام کاربری">
+                        <div class="col-md-6">
+                            <label class="form-label" for="username">نام کاربری</label>
+                            <input type="text" id="username" name="username" class="form-control text-info border-info" placeholder="نام کاربری">
+                            <br>
                         </div>
-                        <div class="col">
-                            <input type="text" name="id" class="form-control text-primary border-primary inp"
-                                   placeholder="کد ملی" aria-label="کد ملی">
+                        <div class="col-md-6">
+                            <label class="form-label" for="id">کد ملی</label>
+                            <input type="text" id="id" name="id" class="form-control text-info border-info" placeholder="کد ملی">
+                            <br>
                         </div>
                     </div>
-                    <br>
                     <div class="row">
-                        <div class="col">
-                            <input type="password" name="pass" class="form-control text-primary border-primary inp"
-                                   placeholder="رمز"
-                                   aria-label="رمز">
+                        <div class="col-md-6">
+                            <label class="form-label" for="password">رمز</label>
+                            <input type="password" id="password" name="pass" class="form-control text-info border-info" placeholder="رمز">
+                            <br>
                         </div>
-                        <div class="col">
-                            <input type="password" name="conpass"
-                                   class="form-control text-primary border-primary inp"
-                                   placeholder="تایید رمز" aria-label="تایید رمز">
+                        <div class="col-md-6">
+                            <label class="form-label" for="conpass">تایید رمز</label>
+                            <input type="password" id="conpass" name="conpass" class="form-control text-info border-info" placeholder="تایید رمز">
+                            <br>
                         </div>
                     </div>
-<!--                    <br>-->
-<!--                    <div class="row">-->
-<!--                        <div class="col">-->
-<!--                            <select name="company" class="form-control border-primary text-primary inp sel">-->
-<!--                                <option selected>انتخاب شرکت</option>-->
-<!--                                --><?php
-//                                if (mysqli_num_rows($resc) > 0) {
-//                                    while ($row = mysqli_fetch_assoc($resc)) {
-//                                        ?>
-<!--                                        <option class="text-primary"-->
-<!--                                                value="--><?php //echo $row["id"]; ?><!--">--><?php //echo $row["id"]; ?><!--</option>-->
-<!--                                        --><?php
-//                                    }
-//                                }
-//                                ?>
-<!--                            </select>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="form-label" id="company">انتخاب شرکت</label>
+                            <select id="company" name="company" class="form-control border-info text-info">
+                                <option selected>انتخاب شرکت</option>
+                                <?php
+                                if (mysqli_num_rows($resc) > 0) {
+                                    while ($row = mysqli_fetch_assoc($resc)) {
+                                        ?>
+                                        <option class="text-info"
+                                                value="<?php echo $row["id"]; ?>"><?php echo $row["id"]; ?></option>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">خروج</button>
-                    <button type="submit" name="create_user" class="btn btn-info text-white" style="color: white">ورود</button>
+                    <button type="submit" name="create_user" class="btn btn-info text-white" style="color: white">ساخت حساب</button>
                 </div>
             </div>
         </div>
