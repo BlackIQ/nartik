@@ -17,6 +17,10 @@ if ($_SESSION['status'] == true) {
 <html>
 <head>
     <style>
+        body {
+            user-select: none;
+        }
+        
         @font-face {
             font-family: vazir;
             src: url("pack/fonts/vazir/Vazir.ttf");
@@ -144,20 +148,87 @@ if ($_SESSION['status'] == true) {
     </div>
 </form>
 
-<div class="modal fade" id="create" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+<form method="post" action="index.php">
+    <div class="modal fade" id="create" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ساخت حساب کاربری جدید</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body center">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="fname" class="form-control text-primary border-primary inp"
+                                   placeholder="نام"
+                                   aria-label="نام">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="lname" class="form-control text-primary border-primary inp"
+                                   placeholder="نام خانوادگی" aria-label="نام خانوادگی">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="phone" class="form-control text-primary border-primary inp"
+                                   placeholder="شماره همراه" aria-label="شماره همراه">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="email" class="form-control text-primary border-primary inp"
+                                   placeholder="ایمیل"
+                                   aria-label="ایمیل">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="username" class="form-control text-primary border-primary inp"
+                                   placeholder="نام کاربری"
+                                   aria-label="نام کاربری">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="id" class="form-control text-primary border-primary inp"
+                                   placeholder="کد ملی" aria-label="کد ملی">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <input type="password" name="pass" class="form-control text-primary border-primary inp"
+                                   placeholder="رمز"
+                                   aria-label="رمز">
+                        </div>
+                        <div class="col">
+                            <input type="password" name="conpass"
+                                   class="form-control text-primary border-primary inp"
+                                   placeholder="تایید رمز" aria-label="تایید رمز">
+                        </div>
+                    </div>
+<!--                    <br>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col">-->
+<!--                            <select name="company" class="form-control border-primary text-primary inp sel">-->
+<!--                                <option selected>انتخاب شرکت</option>-->
+<!--                                --><?php
+//                                if (mysqli_num_rows($resc) > 0) {
+//                                    while ($row = mysqli_fetch_assoc($resc)) {
+//                                        ?>
+<!--                                        <option class="text-primary"-->
+<!--                                                value="--><?php //echo $row["id"]; ?><!--">--><?php //echo $row["id"]; ?><!--</option>-->
+<!--                                        --><?php
+//                                    }
+//                                }
+//                                ?>
+<!--                            </select>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">خروج</button>
+                    <button type="submit" name="create_user" class="btn btn-info text-white" style="color: white">ورود</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</form>
