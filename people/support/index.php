@@ -316,7 +316,7 @@ function get_company($company_id, $conection) {
         </div>
         <br>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="dialog">
                     <h4 class="head">افزودن شرکت جدید</h4>
                     <hr>
@@ -330,7 +330,7 @@ function get_company($company_id, $conection) {
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="dialog">
                     <h4 class="head">طرف قرارداد ها</h4>
                     <hr>
@@ -344,6 +344,7 @@ function get_company($company_id, $conection) {
                             <table class="table table-bordered tbl">
                                 <thead>
                                 <tr>
+                                    <td class=""><b>تغییرات</b></td>
                                     <td class=""><b>تیکت ها</b></td>
                                     <td class=""><b>در صف</b></td>
                                     <td class=""><b>کاربر ها</b></td>
@@ -357,6 +358,9 @@ function get_company($company_id, $conection) {
                                     $com = $row["id"];
                                     ?>
                                     <tr>
+                                        <td class="">
+                                            <a href="index.php?delete=<?php echo $com; ?>" class="link text-danger"><i class="fa fa-trash-o"></i></a>
+                                        </td>
                                         <td class="">
                                             <?php
                                             $get_all_tikets = "SELECT count(*) as total FROM tiks WHERE company = '$com'";
