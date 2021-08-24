@@ -22,8 +22,6 @@ body {
     -o-background-size: cover;
     height: 100vh;
     padding: 3%;
-    /*filter: blur(1px);*/
-    /*opacity: 80%;*/
     color: white;
 }
 
@@ -34,7 +32,6 @@ body {
 
 .main .mbtn {
     color: black;
-    /*width: 25%;*/
     background: #aaa;
     font-weight: bold;
 }
