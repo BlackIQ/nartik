@@ -24,7 +24,8 @@ if ($_SESSION['status'] == true) {
 
             .main {
                 font-family: vazir, sans-serif;
-                background: url('https://wallpapercave.com/wp/wp3797593.jpg') no-repeat center center;
+                /*background: url('https://wallpapercave.com/wp/wp3797593.jpg') no-repeat center center;*/
+                background: url('https://wallpapercave.com/wp/wp8272239.jpg') no-repeat center center;
                 text-align: right;
                 direction: rtl;
                 -webkit-background-size: cover;
@@ -52,7 +53,7 @@ if ($_SESSION['status'] == true) {
     <body>
     <div class="main">
         <div class="text">
-            <h1>به نارتیک خوش آمدید</h1>
+            <h1>به سامانه ثبت درخواست سرویس شرکت ناربن خوش آمدید</h1>
             <br>
             <br>
             <br>
