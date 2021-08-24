@@ -49,6 +49,7 @@ $resc = mysqli_query($connection, $getc);
             border-radius: 10px;
             padding: 20px;
         }
+
         .new {
             cursor: pointer;
         }
@@ -89,7 +90,8 @@ $resc = mysqli_query($connection, $getc);
                         </a>
                     </p>
                     <p class="new">
-                        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-primary" style="text-decoration: none;">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-primary"
+                           style="text-decoration: none;">
                             <i class="fa fa-plus"></i>
                             ساخت حساب جدید
                         </a>
@@ -124,20 +126,22 @@ $resc = mysqli_query($connection, $getc);
 </html>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">ساخت حساب جدید</h5>
-                <a href="." class="text-danger"><i class="fa fa-times text-danger"></i></a>
-            </div>
-            <div class="modal-body">
-                <div class="">
-                    <br>
-                    <form action="account.php" method="post">
+<form action="account.php" method="post">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ساخت حساب جدید</h5>
+                    <a href="." class="text-danger"><i class="fa fa-times text-danger"></i></a>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <br>
+
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="fname" class="form-control text-primary border-primary inp" placeholder="نام"
+                                <input type="text" name="fname" class="form-control text-primary border-primary inp"
+                                       placeholder="نام"
                                        aria-label="نام">
                             </div>
                             <div class="col">
@@ -152,14 +156,16 @@ $resc = mysqli_query($connection, $getc);
                                        placeholder="شماره همراه" aria-label="شماره همراه">
                             </div>
                             <div class="col">
-                                <input type="text" name="email" class="form-control text-primary border-primary inp" placeholder="ایمیل"
+                                <input type="text" name="email" class="form-control text-primary border-primary inp"
+                                       placeholder="ایمیل"
                                        aria-label="ایمیل">
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="username" class="form-control text-primary border-primary inp" placeholder="نام کاربری"
+                                <input type="text" name="username" class="form-control text-primary border-primary inp"
+                                       placeholder="نام کاربری"
                                        aria-label="نام کاربری">
                             </div>
                             <div class="col">
@@ -170,11 +176,13 @@ $resc = mysqli_query($connection, $getc);
                         <br>
                         <div class="row">
                             <div class="col">
-                                <input type="password" name="pass" class="form-control text-primary border-primary inp" placeholder="رمز"
+                                <input type="password" name="pass" class="form-control text-primary border-primary inp"
+                                       placeholder="رمز"
                                        aria-label="رمز">
                             </div>
                             <div class="col">
-                                <input type="password" name="conpass" class="form-control text-primary border-primary inp"
+                                <input type="password" name="conpass"
+                                       class="form-control text-primary border-primary inp"
                                        placeholder="تایید رمز" aria-label="تایید رمز">
                             </div>
                         </div>
@@ -187,7 +195,8 @@ $resc = mysqli_query($connection, $getc);
                                     if (mysqli_num_rows($resc) > 0) {
                                         while ($row = mysqli_fetch_assoc($resc)) {
                                             ?>
-                                            <option class="text-primary" value="<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></option>
+                                            <option class="text-primary"
+                                                    value="<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></option>
                                             <?php
                                         }
                                     }
@@ -195,13 +204,13 @@ $resc = mysqli_query($connection, $getc);
                                 </select>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" id="reg_user" name="reg_user" class="btn btn-primary">ساخت حساب</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">خروج</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger"><a href="." style="color: white; text-decoration: none;">خروج</a></button>
+                    <button type="submit" id="reg_user" name="reg_user" class="btn btn-primary">ساخت حساب</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</form>
