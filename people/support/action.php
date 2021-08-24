@@ -130,4 +130,25 @@ if (isset($_GET['reject'])) {
     }
 }
 
+// Delete company
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    $sql = "DELETE FROM company WHERE id = '$id'";
+    if (mysqli_query($connection, $sql)) {
+        ?>
+        <script>
+            window.alert("شرکت با موفقیت حذف گردید");
+            window.location.replace(".");
+        </script>
+        <?php
+    } else {
+        ?>
+        <script>
+            window.alert("<?php echo mysqli_error($connection); ?>");
+            window.location.replace(".");
+        </script>
+        <?php
+    }
+}
+
 ?>
