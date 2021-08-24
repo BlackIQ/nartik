@@ -127,12 +127,17 @@ if ($_SESSION['status'] == true) {
                     <h5 class="modal-title" id="exampleModalLabel">ورود پشتیبان</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    ...
+                <div class="modal-body center">
+                    <label class="form-label" for="username">نام کاربری</label>
+                    <input type="text" name="username" id="username" class="form-control border-success text-success" placeholder="نام کاربری">
+                    <br>
+                    <label class="form-label" for="password">رمز حساب</label>
+                    <input type="password" name="password" id="password" class="form-control border-success text-success"
+                           placeholder="رمز ورود">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">خروج</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" name="login_support" class="btn btn-success text-white">ورود</button>
                 </div>
             </div>
         </div>
