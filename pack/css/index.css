@@ -23,13 +23,12 @@ body {
     height: 100vh;
     padding: 5%;
     /*filter: blur(1px);*/
-    opacity: 80%;
+    /*opacity: 80%;*/
     color: white;
 }
 
 .text {
     padding: 5%;
-    color: black;
     text-align: right;
 }
 
