@@ -196,7 +196,7 @@ $resc = mysqli_query($connection, $getc);
                                         while ($row = mysqli_fetch_assoc($resc)) {
                                             ?>
                                             <option class="text-primary"
-                                                    value="<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></option>
+                                                    value="<?php echo $row["id"]; ?>"><?php echo $row["id"]; ?></option>
                                             <?php
                                         }
                                     }
