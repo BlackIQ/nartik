@@ -13,32 +13,6 @@ $company = $_SESSION["uid"];
 // Nartik configuration
 include("../../pack/configs/config.php");
 
-if (isset($_POST['login_user'])) {
-    $username = mysqli_real_escape_string($connection, $_POST['username']);
-    $password = mysqli_real_escape_string($connection, $_POST['password']);
-
-    if (empty($username)) {
-        array_push($errors, "نام کاربری الزامیست");
-    }
-    if (empty($password)) {
-        array_push($errors, "رمز ورود الزامیست");
-    }
-
-    if (count($errors) == 0) {
-        if ($username == "admin" && $password == "admin") {
-            $_SESSION['status'] = true;
-            $_SESSION["who"] = "support";
-            ?>
-            <script>
-                window.location.replace("index.php")
-            </script>
-            <?php
-        } else {
-            array_push($errors, "ایمیل با رمز اشتباه است");
-        }
-    }
-}
-
 // Get user data
 if (isset($_GET['user'])) {
     $id = $_GET['user'];
