@@ -25,12 +25,10 @@ else {
 
 include('action.php');
 
-$company = $_SESSION["uid"];
-
-$_pending = "SELECT * FROM people WHERE type='pending' ORDER BY row DESC";
+$_pending = "SELECT * FROM people WHERE type='pending' ORDER BY `row` DESC";
 $_penresult = mysqli_query($connection, $_pending);
 
-$_tickets = "SELECT * FROM tiks WHERE answer = 'ny' ORDER BY row DESC";
+$_tickets = "SELECT * FROM tiks WHERE answer = 'ny' ORDER BY `row` DESC";
 $_tikresult = mysqli_query($connection, $_tickets);
 
 $get_nartik = "SELECT * FROM nartiks WHERE company = '$company'";
@@ -53,6 +51,14 @@ function get_company($company_id, $conection) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>نارتیک - پشتیبان</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        .trow {
+            cursor: pointer;
+        }
+        .trow:hover {
+            opacity: 70%;
+        }
+    </style>
     <link href="../../pack/css/main.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -141,7 +147,7 @@ function get_company($company_id, $conection) {
                                 <table class="table table-bordered tbl">
                                     <thead>
                                     <tr>
-                                        <td class=""><b>درخواست</b></td>
+                                        <td class=""><b>تاریخ درخواست</b></td>
                                         <td class=""><b>نام کامل</b></td>
                                         <td class=""><b>شرکت</b></td>
                                     </tr>
@@ -150,9 +156,9 @@ function get_company($company_id, $conection) {
                                     <?php
                                     while ($_rowser = mysqli_fetch_assoc($_penresult)) {
                                         ?>
-                                        <tr>
+                                        <tr class="trow" onclick="location.href='index.php?user=<?php echo $_rowser['id']; ?>'">
                                             <td class=""><?php echo $_rowser['dt']; ?></td>
-                                            <td class=""><a class="link" href="index.php?user=<?php echo $_rowser['id']; ?>"><?php echo $_rowser['firstname'] . " " . $_rowser['lastname']; ?></a></td>
+                                            <td class=""><?php echo $_rowser['firstname'] . " " . $_rowser['lastname']; ?></td>
                                             <td class=""><?php echo get_company($_rowser['company'], $connection); ?></td>
                                         </tr>
                                         <?php
@@ -187,7 +193,7 @@ function get_company($company_id, $conection) {
                                     <h2><?php echo $prop[0]['firstname'] . "&nbsp;" . $prop[0]['lastname'] ?></h2>
                                     <h5><?php echo $prop[0]['id']; ?> کد ملی</h5>
                                     <hr>
-                                    <h4><?php echo get_company($prop[0]['company'], $connection); ?> شرکت</h4>
+                                    <h4>شرکت <?php echo get_company($prop[0]['company'], $connection); ?></h4>
                                     <br>
                                     <h4><?php echo $prop[0]['phone']; ?> شماره همراه</h4>
                                     <h4><?php echo $prop[0]['email']; ?> ایمیل</h4>
@@ -233,8 +239,8 @@ function get_company($company_id, $conection) {
                                     <?php
                                     while ($_rowtik = mysqli_fetch_assoc($_tikresult)) {
                                         ?>
-                                        <tr>
-                                            <td class=""><b><a class="link" href="index.php?ticket=<?php echo $_rowtik['tikid']; ?>"><?php echo $_rowtik['title']; ?></a></b></td>
+                                        <tr class="trow" onclick="location.href='index.php?ticket=<?php echo $_rowtik['tikid']; ?>'">
+                                            <td class=""><b><?php echo $_rowtik['title']; ?></b></td>
                                             <td class=""><?php echo get_company($_rowtik['company'], $connection); ?></td>
                                         </tr>
                                         <?php
@@ -291,13 +297,11 @@ function get_company($company_id, $conection) {
                                     <div>
                                         <form method="post" action="index.php">
                                             <div>
-                                                <input class="form-control inp" name="answer" type="text" placeholder="جواب">
+                                                <textarea rows="5" class="form-control inp" name="answer" type="text" placeholder="جواب"></textarea>
                                                 <br>
                                                 <button name="ans" class="btn btn-success">ارسال جواب</button>
                                                 &nbsp;
-                                                <button class="btn btn-danger" type="reset"><span style="color: white;">ریست کردن</span></button>
-                                                &nbsp;
-                                                <button class="btn btn-secondary"><a class="link" style="color: white;" href="index.php">خروج</a></button>
+                                                <button class="btn btn-secondary"><a class="link" style="color: white;" href="index.php">بستن تیکت</a></button>
                                             </div>
                                         </form>
                                     </div>
