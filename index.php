@@ -25,12 +25,35 @@ $resc = mysqli_query($connection, $getc);
     <title>نارتیک</title>
     <link href="pack/css/index.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
+    <style>
+        .errordiv {
+            direction: rtl;
+            text-align: right;
+            font-size: 15px;
+            width:25%
+        }
+    </style>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
 <div class="main">
+    <?php
+    if (count($errors) > 0) {
+        ?>
+        <div class="errordiv">
+            <div class="alert alert-danger" role="alert">
+                <?php
+                    foreach ($errors as $error) {
+                        echo $error . "<br>";
+                    }
+                ?>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
     <div class="text">
         <span style="font-size: 75px; font-weight: bold; color: white">نارتیک</span>
         <br>
