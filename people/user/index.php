@@ -291,79 +291,27 @@ $tikres = mysqli_query($connection, $gettiks);
                 <h4 class="head">تنظیمات</h4>
                 <hr>
                 <div class="">
-                    <h5>تنظیمات پروفایل</h5>
+                    <h5>تغییر رمز</h5>
                     <br>
-                    <div>
-                        <form method="post" action="index.php">
-                            <input type="text" name="username" class="form-control inp"
-                                   placeholder="<?php echo $username; ?> نام کاربری کنونی شما" required>
-                            <br>
-                            <button type="submit" name="usernameupdate" class="btn btn-primary btn-sm">تغییر نام
-                                کاربری
-                            </button>
-                        </form>
+                    <form method="post" action="index.php" class="">
+                        <div class="">
+                            <input type="password" name="curpass" class="form-control inp" placeholder="رمز کنونی">
+                        </div>
                         <br>
                         <div class="row">
                             <div class="col-md-6">
-                                <?php
-
-                                if (count($profile) > 0) {
-                                    ?>
-                                    <div class="alert alert-info" role="alert">
-                                        <?php
-                                        foreach ($profile as $error) {
-                                            echo '<p>' . $error . '</p>';
-                                        }
-                                        ?>
-                                    </div>
-                                    <?php
-                                }
-
-                                ?>
-                                <form method="post" action="index.php">
-                                    <input type="email" name="mail" class="form-control inp"
-                                           placeholder="<?php echo $email; ?> ایمیل کنونی شما" required>
-                                    <br>
-                                    <button type="submit" name="emailupdate" class="btn btn-primary btn-sm">
-                                        تغییر ایمیل
-                                    </button>
-                                </form>
+                                <input type="password" name="conpass" class="form-control inp"
+                                        placeholder="تایید رمز جدید">
                                 <br>
                             </div>
                             <div class="col-md-6">
-                                <form action="index.php" method="post">
-                                    <input type="text" name="phone" class="form-control inp"
-                                           placeholder="<?php echo $phone; ?> شماره همراه کنونی شما" required>
-                                    <br>
-                                    <button type="submit" name="phoneupdate" class="btn btn-primary btn-sm">
-                                        تغییر شماره همراه
-                                    </button>
-                                </form>
+                                <input type="password" name="newpass" class="form-control inp"
+                                        placeholder="رمز جدید">
                             </div>
                         </div>
-                        <hr>
-                        <h5>تغییر رمز</h5>
                         <br>
-                        <form method="post" action="index.php" class="">
-                            <div class="">
-                                <input type="password" name="curpass" class="form-control inp" placeholder="رمز کنونی">
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="password" name="conpass" class="form-control inp"
-                                           placeholder="تایید رمز جدید">
-                                    <br>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="password" name="newpass" class="form-control inp"
-                                           placeholder="رمز جدید">
-                                </div>
-                            </div>
-                            <br>
-                            <button type="submit" name="upass" class="btn btn-primary">تغییر رمز</button>
-                        </form>
-                    </div>
+                        <button type="submit" name="upass" class="btn btn-primary">تغییر رمز</button>
+                    </form>
                 </div>
             </div>
         </div>
