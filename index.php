@@ -127,61 +127,61 @@ $resc = mysqli_query($connection, $getc);
                     <div class="row">
                         <div class="col-md-6">
                             <label class="form-label" for="fname">نام</label>
-                            <input type="text" id="fname" name="fname" class="form-control text-info border-info" placeholder="نام">
+                            <input type="text" id="fname" name="fname" class="form-control text-primary border-primary" placeholder="نام">
                             <br>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="lname">نام خانوادگی</label>
-                            <input type="text" id="lname" name="lname" class="form-control text-info border-info" placeholder="نام خانوادگی">
+                            <input type="text" id="lname" name="lname" class="form-control text-primary border-primary" placeholder="نام خانوادگی">
                             <br>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <label class="form-label" for="phone">شماره همراه</label>
-                            <input type="text" id="phone" name="phone" class="form-control text-info border-info" placeholder="شماره همراه">
+                            <input type="text" id="phone" name="phone" class="form-control text-primary border-primary" placeholder="شماره همراه">
                             <br>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="email">ایمیل</label>
-                            <input type="text" id="email" name="email" class="form-control text-info border-info" placeholder="ایمیل">
+                            <input type="text" id="email" name="email" class="form-control text-primary border-primary" placeholder="ایمیل">
                             <br>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <label class="form-label" for="username">نام کاربری</label>
-                            <input type="text" id="username" name="username" class="form-control text-info border-info" placeholder="نام کاربری">
+                            <input type="text" id="username" name="username" class="form-control text-primary border-primary" placeholder="نام کاربری">
                             <br>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="id">کد ملی</label>
-                            <input type="text" id="id" name="id" class="form-control text-info border-info" placeholder="کد ملی">
+                            <input type="text" id="id" name="id" class="form-control text-primary border-primary" placeholder="کد ملی">
                             <br>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <label class="form-label" for="password">رمز</label>
-                            <input type="password" id="password" name="pass" class="form-control text-info border-info" placeholder="رمز">
+                            <input type="password" id="password" name="pass" class="form-control text-primary border-primary" placeholder="رمز">
                             <br>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="conpass">تایید رمز</label>
-                            <input type="password" id="conpass" name="conpass" class="form-control text-info border-info" placeholder="تایید رمز">
+                            <input type="password" id="conpass" name="conpass" class="form-control text-primary border-primary" placeholder="تایید رمز">
                             <br>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <label class="form-label" id="company">انتخاب شرکت</label>
-                            <select id="company" name="company" class="form-control border-info text-info">
+                            <select id="company" name="company" class="form-control border-primary text-primary">
                                 <option selected>انتخاب شرکت</option>
                                 <?php
                                 if (mysqli_num_rows($resc) > 0) {
                                     while ($row = mysqli_fetch_assoc($resc)) {
                                         ?>
-                                        <option class="text-info"
+                                        <option class="text-primary"
                                                 value="<?php echo $row["id"]; ?>"><?php echo $row["id"]; ?></option>
                                         <?php
                                     }
@@ -193,7 +193,7 @@ $resc = mysqli_query($connection, $getc);
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">خروج</button>
-                    <button type="submit" name="create_user" class="btn btn-info text-white" style="color: white">ساخت حساب</button>
+                    <button type="submit" name="create_user" class="btn btn-primary text-white" style="color: white">ساخت حساب</button>
                 </div>
             </div>
         </div>
