@@ -16,6 +16,7 @@ $res_gd = mysqli_query($connection, $gd);
 $row_gd = mysqli_fetch_assoc($res_gd);
 $company_id = $row_gd["company"];
 
+// Send ticket
 if (isset($_POST['sendtik'])) {
     date_default_timezone_set('Iran');
 
@@ -110,102 +111,6 @@ if (isset($_POST['upass'])) {
         ?>
         <script>
             window.alert("رمز کنونی با رمز شما متفاوت است");
-            window.location.replace(".")
-        </script>
-        <?php
-    }
-}
-
-// Update username
-if (isset($_POST["usernameupdate"])) {
-    $n_username = mysqli_real_escape_string($connection, $_POST["username"]);
-
-    if (isset($n_username)) {
-        $u_username = "UPDATE people SET username='$n_username' WHERE id='$userid'";
-
-        if (mysqli_query($connection, $u_username)) {
-            ?>
-            <script>
-                window.alert("نام کاربری با موفقیت تغییر کرد");
-                window.location.replace(".")
-            </script>
-            <?php
-        } else {
-            ?>
-            <script>
-                window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace(".")
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            window.alert("نام کاربری را وارد کنید");
-            window.location.replace(".")
-        </script>
-        <?php
-    }
-}
-
-// Update phone
-if (isset($_POST["phoneupdate"])) {
-    $n_phone = mysqli_real_escape_string($connection, $_POST["phone"]);
-
-    if (isset($n_phone)) {
-        $u_phone = "UPDATE people SET phone='$n_phone' WHERE id='$userid'";
-
-        if (mysqli_query($connection, $u_phone)) {
-            ?>
-            <script>
-                window.alert("شماره تلفن با موفقیت تغییر کرد");
-                window.location.replace(".")
-            </script>
-            <?php
-        } else {
-            ?>
-            <script>
-                window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace(".")
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            window.alert("شماره تلفن را وارد کنید");
-            window.location.replace(".")
-        </script>
-        <?php
-    }
-}
-
-// Update email
-if (isset($_POST["emailupdate"])) {
-    $n_email = mysqli_real_escape_string($connection, $_POST["mail"]);
-
-    if (isset($n_email)) {
-        $u_email = "UPDATE people SET email='$n_email' WHERE id='$userid'";
-
-        if (mysqli_query($connection, $u_email)) {
-            ?>
-            <script>
-                window.alert("ایمیل شما با موفقیت تغییر کرد");
-                window.location.replace(".")
-            </script>
-            <?php
-        } else {
-            ?>
-            <script>
-                window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace(".")
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            window.alert("ایمیل را وارد کنید");
             window.location.replace(".")
         </script>
         <?php
