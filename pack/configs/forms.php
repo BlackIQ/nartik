@@ -6,6 +6,14 @@ include('config.php');
 
 $errors = array();
 
+$get_all_mails = "SELECT email FROM people";
+$get_mails_result = mysqli_query($connection, $get_all_mails);
+$emails = mysqli_fetch_assoc($get_mails_result);
+
+$get_all_phones = "SELECT phone FROM people";
+$get_phones_result = mysqli_query($connection, $get_all_phones);
+$phones = mysqli_fetch_assoc($get_phones_result);
+
 if (isset($_POST['login_user'])) {
     $id = mysqli_real_escape_string($connection, $_POST['id']);
     $password = mysqli_real_escape_string($connection, $_POST['password']);
@@ -110,24 +118,41 @@ if (isset($_POST['create_user'])) {
         array_push($errors, "رمز ها با هم تفاوت دارند");
     }
 
-    if (count($errors) == 0) {
-        $dt = date("M , d , Y");
+    foreach ($emails as $mail) {
+        if ($mail != $email) {
+            foreach ($phones as $phne) {
+                if ($phne != $phone) {
+                    if (count($errors) == 0) {
+                        $dt = date("M , d , Y");
 
-        $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company', '$pass', 'pending')";
-        if (mysqli_query($connection, $query)) {
-            ?>
-            <script>
-                window.alert("درخواست شما با موفقیت ثبت شد");
-                window.location.replace(".")
-            </script>
-            <?php
-        } else {
-            ?>
-            <script>
-                window.alert("<?php echo mysqli_error($connection); ?>");
-                window.location.replace(".");
-            </script>
-            <?php
+                        $query = "INSERT INTO people (id, firstname, lastname, phone, email, username, dt, company, password, type) VALUES ('$id', '$name', '$lastname', '$phone', '$email', '$username', '$dt', '$company', '$pass', 'pending')";
+                        if (mysqli_query($connection, $query)) {
+                            ?>
+                            <script>
+                                window.alert("درخواست شما با موفقیت ثبت شد");
+                                window.location.replace(".")
+                            </script>
+                            <?php
+                        } else {
+                            ?>
+                            <script>
+                                window.alert("<?php echo mysqli_error($connection); ?>");
+                                window.location.replace(".");
+                            </script>
+                            <?php
+                        }
+                    }
+                    else {
+                        array_push($errors, mysqli_error($connection));
+                    }
+                }
+                else {
+                    array_push($errors, "تلفن وارد شده موجود میباشد.");
+                }
+            }
+        }
+        else {
+            array_push($errors, "ایمیل وارد شده موجود میباشد.");
         }
     }
 }
