@@ -1,12 +1,12 @@
 @font-face {
-    font-family: vazir;
-    src: url("../fonts/vazir/Vazir.ttf");
+    font-family: iransans;
+    src: url("../fonts/iransans/iransans.ttf");
     font-style: normal;
 }
 
 * {
     font-size: 13px;
-    font-family: vazir, serif;
+    font-family: iransans, serif;
 }
 
 .bar {

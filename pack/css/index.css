@@ -3,12 +3,12 @@ body {
 }
 
 @font-face {
-    font-family: vazir;
-    src: url("../fonts/vazir/Vazir.ttf");
+    font-family: iransans;
+    src: url("../fonts/iransans/iransans.ttf");
 }
 
 * {
-    font-family: vazir, sans-serif;
+    font-family: iransans, sans-serif;
 }
 
 .main {
@@ -72,6 +72,7 @@ body {
     background: rgba(255, 255, 255, 0.4);
 }
 .half .hints a {
+    cursor: pointer;
     color: white;
     text-decoration: none;
 }
