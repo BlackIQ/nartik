@@ -113,7 +113,9 @@ $resc = mysqli_query($connection, $getc);
                             <div class="col-md-12">
                                 <label class="form-label" id="company">انتخاب شرکت</label>
                                 <select id="company" name="company" class="form-control">
-                                    <option selected>انتخاب شرکت</option>
+                                    <option>انتخاب شرکت</option>
+                                    <option>انتخاب شرکت</option>
+                                    <option>انتخاب شرکت</option>
                                     <?php
                                     if (mysqli_num_rows($resc) > 0) {
                                         while ($row = mysqli_fetch_assoc($resc)) {
@@ -135,7 +137,7 @@ $resc = mysqli_query($connection, $getc);
                         <div class="hints">
                             <a onclick="return show('login-user', 'create-user');" class="nlink">ورود به عنوان کاربر</a>
                             <br>
-                            <a onclick="return show('login-support', 'create-user');" class="nlink">ساخت حساب پشتیبان</a>
+                            <a onclick="return show('login-support', 'create-user');" class="nlink">ورود به عنوان پشتیبان</a>
                         </div>
                     </form>
                 </div>
@@ -156,7 +158,7 @@ $resc = mysqli_query($connection, $getc);
                         <div class="hints">
                             <a onclick="return show('login-support', 'login-user');" class="nlink">ورود به عنوان پشتیبان</a>
                             <br>
-                            <a onclick="return show('create-user', 'login-support');" class="nlink">ساخت حساب کاربری</a>
+                            <a onclick="return show('create-user', 'login-user');" class="nlink">ساخت حساب کاربری</a>
                         </div>
                     </form>
                 </div>
