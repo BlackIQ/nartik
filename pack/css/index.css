@@ -21,22 +21,51 @@ body {
     background-size: cover;
     -o-background-size: cover;
     height: 100vh;
-    padding: 3%;
     color: white;
 }
 
-.text {
-    padding: 3%;
-    text-align: left;
-}
-
-.main .mbtn {
-    color: black;
-    background: #aaa;
-    font-weight: bold;
-}
-
-.center {
-    direction: rtl;
+.half {
     text-align: right;
+    direction: rtl;
+    height: 100vh;
+    color: white;
+    /* background-color: white; */
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+}
+.half form {
+    padding: 5%;
+}
+.half form input {
+    border: solid 1px white;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.0);
+    color: white;
+}
+.half form input:enabled {
+    border: solid 1px white;
+    color: white;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.0);
+}
+.half form input::placeholder {
+    color: white;
+}
+.half form select {
+    border: solid 1px white;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.0);
+}
+.half form select option {
+    border: solid 1px white;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.0);
+}
+.half form .xbtn {
+    color: white;
+    border: solid 1px white;
+}
+.half .hints a {
+    color: white;
+    text-decoration: none;
 }
