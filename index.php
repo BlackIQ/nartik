@@ -113,15 +113,12 @@ $resc = mysqli_query($connection, $getc);
                             <div class="col-md-12">
                                 <label class="form-label" id="company">انتخاب شرکت</label>
                                 <select id="company" name="company" class="form-control">
-                                    <option>انتخاب شرکت</option>
-                                    <option>انتخاب شرکت</option>
-                                    <option>انتخاب شرکت</option>
+                                    <option selected>انتخاب شرکت</option>
                                     <?php
                                     if (mysqli_num_rows($resc) > 0) {
                                         while ($row = mysqli_fetch_assoc($resc)) {
                                             ?>
-                                            <option class="text-primary"
-                                                    value="<?php echo $row["id"]; ?>"><?php echo $row["id"]; ?></option>
+                                            <option value="<?php echo $row["id"]; ?>"><?php echo $row["id"]; ?></option>
                                             <?php
                                         }
                                     }
