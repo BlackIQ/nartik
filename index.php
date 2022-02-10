@@ -11,7 +11,6 @@ if ($_SESSION['status'] == true) {
 }
 
 
-
 $getc = "SELECT * FROM company";
 $resc = mysqli_query($connection, $getc);
 
