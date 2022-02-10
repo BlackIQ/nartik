@@ -1,19 +1,13 @@
 <?php
 
-session_start();
+include('resources/config/config.php');
 
-$errors = array();
+session_start();
 
 if ($_SESSION['status'] == true) {
     $who = $_SESSION['who'];
-    ?>
-    <script>
-        window.location.replace("people/<?php echo $who; ?>");
-    </script>
-    <?php
+    header('location:' . $path . '/' . $who);
 }
-
-include('pack/configs/config.php');
 
 $get_table_status_query = "SELECT * FROM people";
 $get_table_status_result = mysqli_query($connection, $get_table_status_query);
