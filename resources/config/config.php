@@ -1,13 +1,7 @@
 <?php
 
-// Database config
-$server = "localhost";
-$user = "amir";
-$passwd = "amir";
-$db = "nartik";
-
 // Create connection
-$connection = mysqli_connect($server, $user, $passwd, $db);
+$connection = mysqli_connect('localhost', 'amir', 'amir', 'nartik');
 
 // Site
-// $host = "https://nartik.net";
+$path = 'http://' . $_SERVER['HTTP_HOST'] . '/nartik';
