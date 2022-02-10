@@ -12,7 +12,6 @@ body {
 
 .main {
   background: url("https://wallpapercave.com/wp/wp3797593.jpg") no-repeat center center;
-  /*background: url('https://wallpapercave.com/wp/wp8272239.jpg') no-repeat center center*/
   text-align: left;
   direction: rtl;
   -webkit-background-size: cover;
@@ -28,7 +27,6 @@ body {
   direction: rtl;
   height: 100vh;
   color: white;
-  /* background-color: white */
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
 }
