@@ -1,0 +1,95 @@
+body {
+  user-select: none;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("../../resources/fonts/iransans/iransans.ttf");
+}
+* {
+  font-family: iransans, sans-serif;
+}
+
+.main {
+  background: url("https://wallpapercave.com/wp/wp3797593.jpg") no-repeat center center;
+  /*background: url('https://wallpapercave.com/wp/wp8272239.jpg') no-repeat center center*/
+  text-align: left;
+  direction: rtl;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+.half {
+  text-align: right;
+  direction: rtl;
+  height: 100vh;
+  color: white;
+  /* background-color: white */
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.half form {
+  padding: 5%;
+}
+
+.half form input {
+  border: solid 2px white;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.half form input:enabled {
+  border: solid 2px white;
+  color: white;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.half form input::placeholder {
+  color: white;
+}
+
+.half form select {
+  color: black;
+  border: solid 2px white;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.half form select:enabled {
+  color: white;
+  border: solid 2px white;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.half form select option:enabled {
+  color: black;
+}
+
+.half form .xbtn {
+  color: white;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.half .hints a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.bar {
+  padding: 1%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */
